@@ -1,6 +1,28 @@
-# La Gran Noche de Retos — Fase 1: concursantes y equipos
+# La Gran Noche de Retos — Fase 2A
 
-Versión 2.1.0. La misma aplicación y la identidad navideña aprobada, con un flujo real de registro, sorteo por edades y confirmación. El modo individual no requiere backend. El modo Wi-Fi añade un servidor local opcional, sin cuentas, paquetes descargados ni servicios externos. Esta entrega se limita a la fase 1 de `FASE1_EQUIPOS.md`. Minijuegos, ruletas de retos, puntuación de partidas y premiación quedan fuera del flujo activo hasta aprobar la fase 2.
+Versión `2.2.0-fase2a`, rama de revisión `fase2-motor-concurso`. Integra el motor de concurso en la aplicación existente, conserva fase 1 y la identidad navideña. Solo **El actor dramático** está habilitado en esta entrega; 2B, 2C y 2D requieren autorización posterior.
+
+## Demostración aislada de fase 2A
+
+Desde esta carpeta, con Python 3:
+
+```sh
+python3 servidor_local.py --port 8092 --data-dir .datos-locales-demo-fase2
+```
+
+Abre `http://127.0.0.1:8092/index.html`. Importa `evidencia/sesion-demo-exportada.json` (17 personas ficticias y equipos confirmados), confirma la restauración y abre **5 · Concurso**. Sigue [GUIA_CONDUCTOR.md](GUIA_CONDUCTOR.md): crear evento aceptando la propuesta, sortear actor, representantes, reglas, turnos, reloj, revisión y confirmación. Con un acierto se proponen 100 puntos. Puedes deshacer/corregir con motivo y comprobar el historial. En la TV abre el enlace público que imprime la terminal. El puerto y la carpeta separados conservan tu partida estable.
+
+Para obtener esta entrega desde GitHub:
+
+```sh
+git clone --branch fase2-motor-concurso https://github.com/adaldupa/FiestaFamiliar.git
+cd FiestaFamiliar
+python3 servidor_local.py --port 8092 --data-dir .datos-locales-demo-fase2
+```
+
+El catálogo v1 y sus datos siguen intactos. El modelo versionado nuevo guarda copias por evento y ronda. Se evita repetir un juego completado salvo autorización explícita con motivo. La modalidad antes/después protege la identidad del reto hasta confirmar representantes cuando así se configura. Los puntos y desempates son propuestas configurables; no se presentan como decisiones definitivas.
+
+Ver [PLAN_FASE2.md](PLAN_FASE2.md), [MODELO_MINIJUEGOS.md](MODELO_MINIJUEGOS.md), [VERIFICACION_FASE2.md](VERIFICACION_FASE2.md) y [PENDIENTES_FASE2.md](PENDIENTES_FASE2.md). El alcance completo solicitado se conserva en [ESPECIFICACION_FASE2.md](ESPECIFICACION_FASE2.md); las fases posteriores no se declaran implementadas.
 
 ## Celular como conductor y TV sincronizada — misma Wi-Fi
 
@@ -22,19 +44,19 @@ La computadora y la terminal deben permanecer encendidas; todos los equipos debe
 
 La sesión compartida y el código se conservan en `.datos-locales/`, con archivos privados y exclusión en `.gitignore`. No se suben a GitHub. El código autoriza a ver edades y controlar la partida: compártelo solo con quien conduzca. La ruta pública se genera por una lista blanca independiente y no devuelve edades, métricas, pistas ni auditoría; las rutas privadas exigen el código. La conexión es HTTP dentro de tu Wi-Fi de confianza. Para renovar el código, detén el servidor, elimina solo `.datos-locales/control.key` y vuelve a iniciarlo; la sesión se conserva, pero los celulares deben introducir el nuevo código.
 
-El teléfono por HTTP de red local puede no disponer de Service Worker; eso no impide jugar sin Internet mientras siga conectado al servidor. Si se pierde la Wi-Fi, las escrituras compartidas se rechazan y no se crean partidas paralelas silenciosamente. Puedes volver al modo individual con el servidor estático de abajo. Exporta la sesión compartida e impórtala en el modo individual si quieres continuar con sus últimos cambios.
+El teléfono por HTTP de red local puede no disponer de Service Worker; eso no impide jugar sin Internet mientras siga conectado al servidor. Si se pierde la Wi-Fi, las escrituras compartidas se rechazan y no se crean partidas paralelas silenciosamente. Puedes trasladarte explícitamente al modo individual con el servidor estático de abajo en otro puerto. Si un origen ya usado como conductor Wi-Fi pierde el servidor, queda en solo lectura al recargar para evitar partidas paralelas silenciosas. Exporta la sesión compartida e impórtala en el modo individual si quieres continuar con sus últimos cambios.
 
 ## Ejecutar sin Internet
 
 Necesitas Python 3 instalado. Abre una terminal **dentro de esta carpeta** y ejecuta:
 
 ```sh
-python3 -m http.server 8080 --bind 127.0.0.1
+python3 -m http.server 8093 --bind 127.0.0.1
 ```
 
-En Windows puedes usar `py -m http.server 8080 --bind 127.0.0.1`. Abre `http://127.0.0.1:8080/index.html`. El servidor solo entrega archivos locales; no es un backend y no necesita Internet. No abras los HTML con `file://`, porque los módulos y la caché requieren un origen HTTP local.
+En Windows puedes usar `py -m http.server 8093 --bind 127.0.0.1`. Abre `http://127.0.0.1:8093/index.html`. El servidor solo entrega archivos locales; no es un backend y no necesita Internet. No abras los HTML con `file://`, porque los módulos y la caché requieren un origen HTTP local.
 
-Espera a que el conductor muestre **Listo sin conexión** y abre una vez `publico.html`. Los recursos se guardan en una caché del navegador. Después de prepararla, ambas vistas se pueden recargar aun con el servidor apagado; para instalar o actualizar la aplicación vuelve a ejecutar el servidor. Si el navegador no admite Service Worker o no permite almacenamiento, conserva el servidor local encendido. Todos los gráficos, fuentes y sonidos son locales; el sonido se sintetiza en el dispositivo.
+Espera a que el conductor muestre **Listo sin conexión** y abre una vez `publico.html`. La caché pública no descarga tarjetas ni módulos privados; el conductor prepara su caché privada por separado. Los recursos se guardan en una caché del navegador. Después de prepararla, ambas vistas se pueden recargar aun con el servidor apagado; para instalar o actualizar la aplicación vuelve a ejecutar el servidor. Si el navegador no admite Service Worker o no permite almacenamiento, conserva el servidor local encendido. Todos los gráficos, fuentes y sonidos son locales; el sonido se sintetiza en el dispositivo.
 
 ## Flujo de uso
 
@@ -52,7 +74,7 @@ Usa **escritorio extendido** por HDMI. Mantén `index.html` en la pantalla del c
 
 En el conductor puedes mostrar bienvenida o equipos, reducir movimiento y permitir sonido. En la TV se necesita un clic adicional para activar audio, por las reglas del navegador. El audio comienza desactivado. También se respeta la preferencia del sistema de reducir movimiento. Los nombres se muestran en páginas de hasta seis por equipo; usa el botón de página del conductor cuando haya más. No se oculta ningún concursante por truncamiento de la lista. Los controles tienen etiquetas, foco visible y tamaño mínimo de 48 px. Se puede participar sentado: esta fase no requiere movimiento físico.
 
-La TV recibe exclusivamente nombres, equipos, cantidades, estado de confirmación y datos mínimos de presentación. No recibe edades individuales, bombos, promedios, fecha de alta, auditoría, catálogo ni pistas secretas. Es una separación de presentación dentro de una aplicación local, no una barrera de autenticación: quien tiene acceso al perfil del navegador puede abrir el conductor.
+La TV recibe exclusivamente nombres, equipos, cantidades, estado de confirmación, reglas públicas, materiales, criterios, reloj, geometría de sorteo y puntos confirmados. No recibe edades individuales, bombos, promedios, fecha de alta, auditoría, catálogo ni pistas secretas. Es una separación de presentación dentro de una aplicación local, no una barrera de autenticación: quien tiene acceso al perfil del navegador puede abrir el conductor.
 
 ## Sincronización y conservación de datos
 
@@ -60,7 +82,7 @@ La TV recibe exclusivamente nombres, equipos, cantidades, estado de confirmació
 
 La fase 1 usa `retos.equipos.v2` (privada) y `retos.equipos.public.v2` (resumen público). Si encuentra `retos.session.v1`, copia los nombres con sus IDs y solicita completar las edades; la versión anterior no las tenía. **La clave v1 no se modifica ni se elimina:** conserva catálogo, pistas, equipos, resultados e historial. Puedes descargarla con «Exportar sesión anterior». La cantidad de equipos empieza sin seleccionar también en esta migración. Los espacios vacíos del formulario antiguo no se convierten en concursantes. No se inventan edades.
 
-El código de dominio y catálogo anteriores se conserva como referencia y con pruebas de regresión; no se ejecuta desde el flujo de fase 1. El ZIP `noche-de-retos-v1.1-respaldo.zip`, junto al paquete de esta entrega, conserva la aplicación anterior completa. No borres datos del sitio ni uses navegación privada para una sesión que quieras conservar. Ante datos corruptos se muestra un error y se permite descargar los valores guardados sin sobrescribirlos.
+El código de dominio y catálogo anteriores se conserva como referencia y con pruebas de regresión; no se ejecuta desde el flujo activo; 2A utiliza módulos propios integrados a la misma sesión. El ZIP `noche-de-retos-v1.1-respaldo.zip`, junto al paquete de esta entrega, conserva la aplicación anterior completa. No borres datos del sitio ni uses navegación privada para una sesión que quieras conservar. Ante datos corruptos se muestra un error y se permite descargar los valores guardados sin sobrescribirlos.
 
 ## Algoritmo reproducible
 
@@ -90,10 +112,11 @@ Con Node.js 22 o posterior, sin instalar dependencias:
 node tests/teams.test.js
 node tests/core.test.js
 node tests/demo-equipos.js
-python3 -m unittest discover -s tests -p test_lan.py -v
+node tests/contest.test.js
+python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-También puedes usar `npm test`. Hay 19 pruebas de fase 1, 9 de sincronización Wi-Fi y 26 de regresión del dominio anterior; estas últimas no implican activar la fase 2. `node tests/demo-equipos.js --save` regenera el informe reproducible a partir de la sesión exportada. Evidencia, métricas y límites de verificación: `VERIFICACION.md` y `evidencia/`.
+También puedes usar `npm test`. Son 85 pruebas: las 54 originales (26 del dominio anterior, 19 de equipos, 9 LAN), 26 nuevas del motor y 5 nuevas de la frontera LAN. Las pruebas multijuego usan fichas sintéticas identificadas como datos de prueba: no habilitan once juegos pendientes. `VERIFICACION_FASE2.md` distingue pruebas automáticas, ensayo real de navegador y validaciones pendientes.
 
 ## Estructura
 
@@ -102,6 +125,9 @@ También puedes usar `npm test`. Hay 19 pruebas de fase 1, 9 de sincronización 
 - `publico.html`, `src/publico.js`, `src/teams-show.js`: TV con resumen público y una segunda lista blanca.
 - `equipos.css`, `navidad.css`, `escenario.css`, `assets/`: composición navideña y recursos locales.
 - `servidor_local.py`, `src/lan-host.js`, `src/lan-public.js`: sincronización local opcional, control autenticado y resumen público.
-- `service-worker.js`: caché de recursos; no almacena ni elimina sesiones.
-- `src/core.js`, `src/show.js`, `src/wheel.js`, `catalogo/`: dominio y presentación anteriores conservados, no activos en esta fase.
+- `service-worker.js`, `src/offline-host.js`: cachés pública y privada separadas; no borran sesiones.
+- `src/contest-core.js`, `src/game-model.js`: eventos, catálogo versionado, turnos, reloj y libro de puntos.
+- `src/contest-host.js`, `src/contest-show.js`, `contest.css`: controles privados y presentación pública del concurso.
+- `concurso_publico.py`, `src/clock-sync.js`: proyección independiente y compensación horaria.
+- `src/core.js`, `src/show.js`, `src/wheel.js`, `catalogo/`: dominio anterior conservado; geometría compartida y catálogo privado inicial de 2A.
 - `tests/`, `evidencia/`: pruebas y demostración reproducible.
