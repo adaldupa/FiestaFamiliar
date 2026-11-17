@@ -1,0 +1,13 @@
+# Sesiones y claves reales: nunca publicar.
+.datos-locales/
+.datos-locales*/
+.env
+.env.*
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+sesion-*.json
+noche-equipos-sesion*.json
+concursantes*.json
