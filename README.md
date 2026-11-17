@@ -1,6 +1,17 @@
-# La Gran Noche de Retos — Fase 2A
+# La Gran Noche de Retos — Fase 2B
 
-Versión `2.2.0-fase2a`, rama de revisión `fase2-motor-concurso`. Integra el motor de concurso en la aplicación existente, conserva fase 1 y la identidad navideña. Solo **El actor dramático** está habilitado en esta entrega; 2B, 2C y 2D requieren autorización posterior.
+Versión `2.3.0-fase2b`, rama de revisión `fase2-motor-concurso`. Conserva equipos, concurso y navegación de las entregas anteriores, y añade la biblioteca editable y versionada. La fase 2C y la integración a main requieren aprobación posterior.
+
+## Biblioteca reutilizable · entrega 2B
+
+El administrador de **Biblioteca** ya es funcional. Permite cargar las doce fichas del documento acordado mediante vista previa y confirmación, sin modificar eventos anteriores. No se elimina ninguna revisión. Las fichas nuevas por tiempo, conteos, cercanía y robos están catalogadas y señaladas como dinámicas pendientes de 2C.
+
+El actor original de 2A sigue ejecutándose mediante su revisión compatible. Los juegos genéricos de turnos con puntos fijos o captura manual se pueden crear sin programar y seleccionar al crear una reunión. Las colecciones guardan versiones concretas.
+
+- [Guía de Biblioteca](GUIA_BIBLIOTECA.md)
+- [Verificación y evidencia de 2B](VERIFICACION_FASE2B.md)
+
+La carga de doce fichas no incluye todavía sus nuevos motores ni los bancos completos de tarjetas. No se inició 2C ni 2D. Main permanece separado hasta aprobación.
 
 ## Navegación del conductor
 
@@ -12,12 +23,12 @@ El panel muestra una sola sección principal a la vez. Menú lateral en computad
 | Participantes | Registro, edición e importación/exportación de personas. |
 | Equipos | Tres pasos internos: configurar; bombos y sorteo; revisar y confirmar. |
 | Concurso | Ronda completa: sorteo, representantes, reglas, tarjeta privada, reloj, captura, revisión y confirmación. |
-| Biblioteca | Acceso reservado; administración de fase 2B aún no implementada. |
+| Biblioteca | Crear, editar, duplicar, estados, archivo, importación/exportación, revisiones y colecciones. |
 | Resultados | Marcador, clasificación e historial de eventos/equipos. Premiación pendiente de 2D. |
 
 Cambiar de sección conserva los campos sin enviar mientras no haya otra operación que vuelva a dibujar el panel. Los datos guardados y el plazo del reloj sobreviven también a la recarga. Las tarjetas privadas se pliegan al salir de Concurso. La sección y el paso elegidos se recuperan por pestaña mediante sessionStorage, fuera del respaldo de la partida. Seleccionar una reunión histórica abre sus resultados, sin reactivarla ni cambiar el evento que está en marcha.
 
-Prueba de navegación real: `npm run test:navigation` (requiere Playwright). Instalación de herramientas de prueba opcionales: `npm install --no-save --package-lock=false playwright@1.62.1` y `npx playwright install chromium`. Si utilizas un Chromium propio, configura `CHROMIUM_PATH`. El comando crea servidores y datos ficticios aislados; genera capturas en `evidencia/navegacion/`. `npm test` conserva las suites anteriores y añade dos pruebas de navegación sin dependencias. Consulta [VERIFICACION_NAVEGACION.md](VERIFICACION_NAVEGACION.md).
+Prueba de navegación real: `npm run test:navigation` (requiere Playwright). Instalación de herramientas de prueba opcionales: `npm install --no-save --package-lock=false playwright@1.62.1` y `npx playwright install chromium`. Si utilizas un Chromium propio, configura `CHROMIUM_PATH`. El comando crea servidores y datos ficticios aislados; genera capturas en `evidencia/navegacion/`. `npm test` conserva las suites anteriores y añade pruebas de navegación, biblioteca y validación LAN sin dependencias. La suite visual de Biblioteca se ejecuta con `npm run test:library`, usando el mismo Playwright opcional. Consulta [VERIFICACION_NAVEGACION.md](VERIFICACION_NAVEGACION.md).
 
 ## Demostración aislada de fase 2A
 
@@ -133,7 +144,7 @@ node tests/contest.test.js
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-También puedes usar `npm test`. Son 85 pruebas: las 54 originales (26 del dominio anterior, 19 de equipos, 9 LAN), 26 nuevas del motor y 5 nuevas de la frontera LAN. Las pruebas multijuego usan fichas sintéticas identificadas como datos de prueba: no habilitan once juegos pendientes. `VERIFICACION_FASE2.md` distingue pruebas automáticas, ensayo real de navegador y validaciones pendientes.
+También puedes usar `npm test`. La entrega inicial de 2A tenía 85 pruebas; la navegación y 2B añaden sus suites sin eliminar las anteriores. El total y las salidas actuales están en `VERIFICACION_FASE2B.md`. Las pruebas multijuego usan fichas sintéticas identificadas como datos de prueba: no habilitan once juegos pendientes. `VERIFICACION_FASE2.md` distingue pruebas automáticas, ensayo real de navegador y validaciones pendientes.
 
 ## Estructura
 

@@ -2,6 +2,8 @@
 
 ## Implementado y probado
 
+- Fase 2B: administrador de fichas, estados, archivo sin eliminación, revisiones/restauración, JSON con vista previa y confirmación, doce fichas catalogadas, colecciones y selección de revisiones compatibles. Ver VERIFICACION_FASE2B.md.
+
 - Corrección de navegación: seis secciones independientes, menú lateral/compacto, tres pasos de equipos y operación completa de ronda desde Concurso. Evidencia y límites en VERIFICACION_NAVEGACION.md.
 
 - Fase 1 conservada: registro, equipos, bombos, confirmación, respaldo y sincronización.
@@ -19,13 +21,13 @@
 - Uso en celulares físicos Android/iPhone, TV física, navegadores alternativos y lectura con personas de 70+: no se han probado esos dispositivos/personas.
 - Restauración de omitidos y modalidad ciega: probadas automáticamente; falta ensayo manual completo de cada variante en el evento real.
 
-## Diseñado, no implementado en 2A
+## Diseñado, no implementado todavía
 
-- 2B: administrador de biblioteca (crear, editar, duplicar, buscar, activar/archivar, importar/exportar solo biblioteca y restaurar versiones), todas las dinámicas de los otros once juegos.
+- 2C: nuevos motores de las doce fichas acordadas: clasificación por tiempo, conteos, cercanía, robos y transacciones especiales; tarjetas y preguntas estructuradas. El administrador de biblioteca sí está implementado en 2B.
 - 2C: Duelo de Generaciones, banco editable de preguntas y enlace de ganador al siguiente reto. La regla de 10 puntos aprobada está documentada en la especificación, todavía no se ejecuta.
 - 2D: ceremonia de cuatro lugares y cierre audiovisual completo.
 - Motores por posición, cantidad de aciertos, cercanía y reglas especiales; fecha opcional editable. La consulta de eventos guardados ya está disponible desde Inicio sin reactivarlos.
-- Importación/exportación independiente de preguntas/biblioteca. El respaldo completo de sesión sí conserva biblioteca versionada, eventos y resultados.
+- Importación/exportación independiente de preguntas. La biblioteca ya tiene exportación/importación independiente en 2B; el respaldo completo sigue conservando también eventos y resultados.
 
 ## Pendiente de decisión del usuario
 

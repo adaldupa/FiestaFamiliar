@@ -1,0 +1,18 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> noche-de-retos@2.3.0-fase2b test:library
+> node --test tests/library.browser.cjs
+
+✔ biblioteca real: cargar doce, editar, duplicar, archivar, restaurar, filtrar, colecciones e importar/exportar (3489.955958ms)
+✔ reunión usa revisión compatible anterior sin ejecutar las nuevas dinámicas; motor y privacidad sobreviven (4108.053941ms)
+✔ móvil: edición, navegación con borrador, filtros, teclado y offline (5370.824126ms)
+✔ dos conductores LAN ven la misma biblioteca y preservan ediciones no guardadas (6629.639517ms)
+✔ ficha manual creada sin código se selecciona mediante colección y registra puntos reales (6804.048475ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26827.430557

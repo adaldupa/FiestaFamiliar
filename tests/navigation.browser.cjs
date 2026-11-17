@@ -9,7 +9,7 @@ const os=require('node:os');
 const fixture=JSON.parse(fs.readFileSync('evidencia/sesion-demo-exportada.json','utf8'));
 const KEY='retos.equipos.v2';
 let browser,server,base;
-const evidence='evidencia/navegacion';
+const evidence=process.env.NAV_EVIDENCE||'evidencia/navegacion';
 const errors=[];
 async function startServer(lan=false){
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'retos-nav-'));

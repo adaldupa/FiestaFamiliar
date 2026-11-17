@@ -15,6 +15,7 @@ import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import unquote, urlsplit
 from concurso_publico import contest_public_snapshot
+from biblioteca_validacion import validate_library
 
 ROOT = Path(__file__).resolve().parent
 MAX_BODY = 10_000_000
@@ -75,6 +76,7 @@ def public_snapshot(state):
             'presentation': {'view': p['view'], 'page': p['page'], 'sound': p.get('sound') is True, 'reducedMotion': p.get('reducedMotion') is True},
             'draw': draw, 'teams': teams}
     if 'contest' in state:
+        validate_library(state['contest'].get('library'))
         snapshot['contest'] = contest_public_snapshot(state['contest'])
     return snapshot
 
@@ -149,7 +151,7 @@ class Handler(SimpleHTTPRequestHandler):
         if any(p.startswith('.') for p in parts) or '..' in parts:
             return False
         name = route.lstrip('/') or 'index.html'
-        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg', 'contest.css', 'conductor-nav.css') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
+        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg', 'contest.css', 'conductor-nav.css', 'library.css') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
 
     def do_GET(self):
         route = unquote(urlsplit(self.path).path).rstrip('/')

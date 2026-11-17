@@ -47,6 +47,10 @@ def contest_public_snapshot(c):
     if not isinstance(c, dict) or c.get('schemaVersion') != 1 or not isinstance(c.get('events'), list):
         raise ValueError('Concurso inválido.')
     events = c['events']
+    for event in events:
+        for game in event.get('selectedGames', []):
+            if game.get('scoring', {}).get('mode') not in ('fixed', 'manual') or game.get('implementation') == 'planned':
+                raise ValueError('El evento contiene una dinámica aún no implementada.')
     ids = [text(e['id'], 120) for e in events]
     if len(set(ids)) != len(ids):
         raise ValueError('Eventos duplicados.')

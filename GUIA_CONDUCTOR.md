@@ -23,4 +23,6 @@ Usa el menú lateral en computadora o los seis botones compactos en celular. Se 
 
 Cambiar de sección no detiene ni reinicia el reloj. Si quieres detenerlo, pulsa **Pausar cronómetro**. Las tarjetas privadas se cierran al salir de Concurso. Tab, Mayús+Tab y Enter permiten navegar y activar controles; la sección actual se indica visualmente y mediante aria-current.
 
-En **Inicio → Reuniones guardadas**, elegir el evento abierto continúa Concurso; elegir uno terminado consulta Resultados. No se reabre una reunión terminada. **Biblioteca** es una reserva para 2B, sin herramientas de administración activas.
+En **Inicio → Reuniones guardadas**, elegir el evento abierto continúa Concurso; elegir uno terminado consulta Resultados. No se reabre una reunión terminada. **Biblioteca** ya permite administrar fichas y colecciones. Consulta [GUIA_BIBLIOTECA.md](GUIA_BIBLIOTECA.md); las nuevas dinámicas de los doce juegos siguen pendientes de 2C.
+
+Al crear reuniones, elige las revisiones compatibles que aparecen en Inicio. La revisión nueva de actor por tiempo y la original de 2A por puntos fijos se conservan separadas; ninguna reescribe resultados anteriores.

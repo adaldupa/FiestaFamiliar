@@ -25,3 +25,7 @@ La demostración se ejecutará con datos ficticios en otro puerto y carpeta de d
 ## Corrección de navegación de 2A
 
 Separar Inicio, Participantes, Equipos, Concurso, Biblioteca reservada y Resultados, con pasos internos de equipos. Mantener estado de interfaz por dispositivo fuera del motor. Sin modificaciones a sorteos, puntos, esquema de sesión o sincronización. Verificación específica en VERIFICACION_NAVEGACION.md. No iniciar 2B.
+
+## Autorización posterior: fase 2B
+
+El 17 de noviembre de 2026 el usuario aprobó la navegación y autorizó el administrador de biblioteca. El alcance actual está en PLAN_FASE2B.md y la evidencia en VERIFICACION_FASE2B.md. Las restricciones de no iniciar 2B descritas arriba corresponden al cierre anterior de 2A; no se autorizaron 2C, 2D ni integrar main.

@@ -1,6 +1,6 @@
 # Modelo de datos · fase 2A
 
-Contrato ejecutable: `src/game-model.js`. Este modelo está implementado y validado; su administrador visual y sus operaciones CRUD están reservados para 2B.
+Contrato ejecutable: `src/game-model.js`. Este modelo está implementado y validado; su administrador visual, revisiones e importación están implementados en 2B. No existe eliminación permanente.
 
 ## Biblioteca versionada
 
@@ -60,3 +60,18 @@ El orden de selección de representantes y revelación depende de `representativ
 Tres listas blancas: `contestPublicSnapshot` en JavaScript, `contest_public_snapshot` independiente en Python y `sanitizeContest` en la entrada de la TV. Solo se transmiten nombres, representantes confirmados, reglas públicas, materiales, tiempo, criterios, posiciones, puntos confirmados y geometría de ruleta. Se excluyen biblioteca completa, tarjetas, instrucciones privadas, edades, índices de tarjetas, borradores, ledger, auditoría y código de acceso.
 
 La caché pública instala únicamente módulos de presentación y recursos gráficos. El catálogo exige autenticación en el servidor Wi-Fi; la caché privada se prepara desde el conductor. En modo individual ambas vistas comparten el perfil del navegador: esta separación protege la presentación, no sustituye una cuenta de usuario ni bloquea a quien ya puede abrir el conductor en ese perfil.
+
+
+## Extensión compatible de 2B
+
+La versión de biblioteca sigue siendo 1. Los campos antiguos se aceptan sin cambios. Se añaden campos opcionales a la ficha: `preparation`, `steps[]`, `pending[]`, `repeatable`, `permanent`, `implementation` (`turns` o `planned`). `seconds` puede ser `null` únicamente para dinámicas futuras con pendientes explícitos. El motor ejecutable exige duración válida.
+
+La biblioteca añade `collections[]` y `audit[]`, opcionales en respaldos antiguos. Colección: ID, nombre, referencias `{id, ruleVersion}`, creación y actualización. Cada referencia debe existir en versions. Al actualizarla se conservan las fichas y sus revisiones. Auditoría: ID único, fecha, tipo y detalle.
+
+La configuración de puntos admite además posiciones, puntos por acierto y objetivo de cercanía, con validación. Configurar los seis tipos no equivale a implementar los seis motores. La entrega actual ejecuta fixed/manual por turnos.
+
+Crear/editar/restaurar agrega revisiones completas. Importar conserva versiones entrantes; las colisiones con contenido distinto reciben números nuevos, sin sobrescribir las existentes. Una ficha actual que se actualiza conserva su fecha original y pasa a otra revisión. Las colecciones entrantes con IDs en conflicto se conservan como colecciones adicionales con ID nuevo.
+
+`createEvent` acepta opcionalmente `selectedRevisions`, validadas contra el archivo de reglas. Solo se ofrecen revisiones activas compatibles de juegos actualmente activos. El evento conserva su propia copia, igual que en 2A. Las revisiones nuevas de actor por clasificación no alteran la revisión original ni sus eventos.
+
+Las plantillas distribuidas usan el contrato separado `noche-retos-public-templates` y omiten instrucciones privadas, tarjetas y objetivos secretos. El adaptador local valida las plantillas e inicializa esos campos vacíos o con una indicación para completarlos. El JSON de respaldo de biblioteca sí conserva los datos privados del conductor; no se distribuye como catálogo público.
