@@ -1,0 +1,293 @@
+{
+  "version": 2,
+  "people": [
+    {
+      "id": "32147b89-10d1-418f-b06b-3391996c88bb",
+      "name": "Prueba 01",
+      "age": 11,
+      "createdAt": "2026-11-16T21:53:58.444Z"
+    },
+    {
+      "id": "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+      "name": "Prueba 02",
+      "age": 12,
+      "createdAt": "2026-11-16T21:53:58.783Z"
+    },
+    {
+      "id": "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+      "name": "Prueba 03",
+      "age": 14,
+      "createdAt": "2026-11-16T21:53:59.123Z"
+    },
+    {
+      "id": "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+      "name": "Prueba 04",
+      "age": 18,
+      "createdAt": "2026-11-16T21:53:59.454Z"
+    },
+    {
+      "id": "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+      "name": "Prueba 05",
+      "age": 22,
+      "createdAt": "2026-11-16T21:53:59.782Z"
+    },
+    {
+      "id": "7470d36e-098f-4583-8e86-49862a06fd50",
+      "name": "Prueba 06",
+      "age": 27,
+      "createdAt": "2026-11-16T21:54:00.110Z"
+    },
+    {
+      "id": "70181223-95ab-43ed-9847-231847c626ec",
+      "name": "Prueba 07",
+      "age": 31,
+      "createdAt": "2026-11-16T21:54:00.444Z"
+    },
+    {
+      "id": "20df0538-69de-4047-aece-ecb0133eb3d6",
+      "name": "Prueba 08",
+      "age": 36,
+      "createdAt": "2026-11-16T21:54:00.850Z"
+    },
+    {
+      "id": "c16e93c9-a325-4eb0-ada8-f6a333527992",
+      "name": "Prueba 09",
+      "age": 40,
+      "createdAt": "2026-11-16T21:54:01.162Z"
+    },
+    {
+      "id": "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7",
+      "name": "Prueba 10",
+      "age": 45,
+      "createdAt": "2026-11-16T21:54:01.495Z"
+    },
+    {
+      "id": "3722c7eb-5e06-4a03-a30f-50ddc7979756",
+      "name": "Prueba 11",
+      "age": 49,
+      "createdAt": "2026-11-16T21:54:01.825Z"
+    },
+    {
+      "id": "285121e7-f7a7-47c2-9fa5-c33be02ddf1a",
+      "name": "Prueba 12",
+      "age": 55,
+      "createdAt": "2026-11-16T21:54:02.140Z"
+    },
+    {
+      "id": "8404ffe9-bf5b-46e0-99a8-5d137bb84687",
+      "name": "Prueba 13",
+      "age": 60,
+      "createdAt": "2026-11-16T21:54:02.470Z"
+    },
+    {
+      "id": "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+      "name": "Prueba 14",
+      "age": 65,
+      "createdAt": "2026-11-16T21:54:02.811Z"
+    },
+    {
+      "id": "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+      "name": "Prueba 15",
+      "age": 70,
+      "createdAt": "2026-11-16T21:54:03.143Z"
+    },
+    {
+      "id": "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+      "name": "Prueba 16",
+      "age": 75,
+      "createdAt": "2026-11-16T21:54:03.477Z"
+    },
+    {
+      "id": "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+      "name": "Prueba 17",
+      "age": 82,
+      "createdAt": "2026-11-16T21:54:03.807Z"
+    }
+  ],
+  "teamCount": 4,
+  "teamNames": [
+    "Estrella",
+    "Cascabel",
+    "Aurora",
+    "Abeto"
+  ],
+  "seed": "demo-navidad-4",
+  "result": {
+    "seed": "demo-navidad-4",
+    "candidateSeed": "demo-navidad-4:candidata:117",
+    "candidateIndex": 117,
+    "candidates": 200,
+    "teams": [
+      {
+        "id": "t1",
+        "capacity": 4,
+        "members": [
+          "32147b89-10d1-418f-b06b-3391996c88bb",
+          "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+          "70181223-95ab-43ed-9847-231847c626ec",
+          "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7"
+        ]
+      },
+      {
+        "id": "t2",
+        "capacity": 4,
+        "members": [
+          "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+          "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+          "7470d36e-098f-4583-8e86-49862a06fd50",
+          "285121e7-f7a7-47c2-9fa5-c33be02ddf1a"
+        ]
+      },
+      {
+        "id": "t3",
+        "capacity": 5,
+        "members": [
+          "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+          "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+          "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+          "c16e93c9-a325-4eb0-ada8-f6a333527992",
+          "8404ffe9-bf5b-46e0-99a8-5d137bb84687"
+        ]
+      },
+      {
+        "id": "t4",
+        "capacity": 4,
+        "members": [
+          "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+          "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+          "20df0538-69de-4047-aece-ecb0133eb3d6",
+          "3722c7eb-5e06-4a03-a30f-50ddc7979756"
+        ]
+      }
+    ],
+    "metrics": {
+      "rows": [
+        {
+          "id": "t1",
+          "count": 4,
+          "mean": 42.25,
+          "min": 11,
+          "max": 82,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "t2",
+          "count": 4,
+          "mean": 42.5,
+          "min": 18,
+          "max": 70,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "t3",
+          "count": 5,
+          "mean": 42.2,
+          "min": 14,
+          "max": 75,
+          "potCounts": [
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "t4",
+          "count": 4,
+          "mean": 40.5,
+          "min": 12,
+          "max": 65,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "capacityErrors": 0,
+      "potSpread": 1,
+      "meanSpread": 2,
+      "score": [
+        0,
+        1,
+        2
+      ]
+    },
+    "drawnAt": "2026-11-16T21:55:14.805Z",
+    "startedAt": 1794866114805,
+    "duration": 0,
+    "adjustments": []
+  },
+  "confirmed": true,
+  "confirmedAt": "2026-11-16T21:55:19.153Z",
+  "audit": [
+    {
+      "at": "2026-11-16T21:54:13.791Z",
+      "type": "draw",
+      "seed": "demo-navidad-2",
+      "candidateSeed": "demo-navidad-2:candidata:195",
+      "score": [
+        0,
+        1,
+        0.22222222222222143
+      ]
+    },
+    {
+      "at": "2026-11-16T21:54:52.050Z",
+      "type": "invalidate",
+      "reason": "Cambio del número de equipos",
+      "seed": "demo-navidad-2"
+    },
+    {
+      "at": "2026-11-16T21:54:52.381Z",
+      "type": "draw",
+      "seed": "demo-navidad-3",
+      "candidateSeed": "demo-navidad-3:candidata:68",
+      "score": [
+        0,
+        1,
+        0.1666666666666643
+      ]
+    },
+    {
+      "at": "2026-11-16T21:55:14.460Z",
+      "type": "invalidate",
+      "reason": "Cambio del número de equipos",
+      "seed": "demo-navidad-3"
+    },
+    {
+      "at": "2026-11-16T21:55:14.805Z",
+      "type": "draw",
+      "seed": "demo-navidad-4",
+      "candidateSeed": "demo-navidad-4:candidata:117",
+      "score": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "at": "2026-11-16T21:55:19.153Z",
+      "type": "confirm",
+      "seed": "demo-navidad-4"
+    }
+  ],
+  "presentation": {
+    "view": "teams",
+    "page": 0,
+    "sound": false,
+    "reducedMotion": false
+  },
+  "legacyAvailable": false
+}

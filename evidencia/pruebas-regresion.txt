@@ -1,0 +1,34 @@
+✔ 1000 sorteos: 17 personas únicas, tamaños exactos y quinto equipo variable (299.097705ms)
+✔ rechaza registro incompleto o nombres ambiguos (1.386473ms)
+✔ los doce retos salen sin repetir y no se sobrescribe un activo (29.242766ms)
+✔ los omitidos no se sortean; pueden recuperarse (1.419761ms)
+✔ representante no puede repetir si otro ha tenido menos oportunidades, salvo adaptación (1.162036ms)
+✔ no se puntúa ni revela un reto sin representantes (1.63454ms)
+✔ puntos con límites configurables; deshacer restaura puntos, participaciones y ronda (6.466358ms)
+✔ reglas especiales requieren aprobación y pueden permitir negativos (3.684632ms)
+✔ cronómetro pausa sin perder tiempo, continúa y vence después de una recarga (5.682531ms)
+✔ persistencia completa, incluidos catálogo editado e historial deshacible (26.792651ms)
+✔ privacidad: pistas canario, notas, bombos y preparación no atraviesan la proyección pública (2.571212ms)
+✔ todas las frases y respuestas del catálogo se excluyen aun con el reto revelado (12.402553ms)
+✔ la entrada pública y sus dependencias solo contienen presentación, nunca dominio privado (46.328764ms)
+✔ fichas completas y materiales sumados conservadoramente (38.290098ms)
+✔ importación rechaza datos rotos, equipos duplicados, relojes inválidos e historial corrupto (10.461319ms)
+✔ no se publica el conteo real como material del reto de estimación (1.201549ms)
+✔ bombos extremos y de un solo integrante respetan equilibrio y capacidades (175.381563ms)
+✔ un fallo de almacenamiento público no deja la sesión privada adelantada (3.448348ms)
+✔ empates de clasificación configurables sin adjudicar puntos extra (0.933311ms)
+✔ la ruleta termina en la casilla elegida para cualquier reto, también con catálogos editados (25.320964ms)
+✔ antes de confirmar representantes no se publica la selección ni la ruleta (4.737349ms)
+✔ tres rondas completas: selección distinta, reloj, representantes, puntos, privacidad y recarga (24.800932ms)
+✔ migración conserva sesión v1, historial antiguo y catálogo personalizado (5.089206ms)
+✔ recargar durante un giro conserva selección, orientación y momento de finalización (2.171236ms)
+✔ apertura y reducción de movimiento no modifican equipos ni puntos (1.508087ms)
+✔ el render público muestra fichas completas y excluye secretos en ambas páginas y fases (19.907113ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 780.036493

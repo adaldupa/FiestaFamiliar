@@ -1,0 +1,27 @@
+✔ 17 personas, k=2: cupos exactos, unicidad y balance en 60 semillas (1044.593241ms)
+✔ 17 personas, k=3: cupos exactos, unicidad y balance en 60 semillas (1033.982296ms)
+✔ 17 personas, k=4: cupos exactos, unicidad y balance en 60 semillas (1403.939561ms)
+✔ N variable, divisible y no divisible, k=2/3/4; sin omisiones ni duplicados (330.415349ms)
+✔ misma semilla y datos: resultado idéntico incluso con otro orden de entrada (34.603963ms)
+✔ resorteos cambian y respetan cupos; semilla candidata registrada (257.597086ms)
+✔ bombos cuantiles, edades empatadas y edades extremas (240.132013ms)
+✔ sin equipo seleccionado, pocos participantes o edad inválida: no sortea (6.830203ms)
+✔ homónimos permitidos y advertidos, IDs duplicados rechazados (4.916985ms)
+✔ editar edad invalida sorteo, recalcula bombos y obliga nuevo sorteo (103.014378ms)
+✔ confirmación bloquea sorteo y cambios; desbloqueo registrado (50.445067ms)
+✔ intercambio mantiene cupos y registra antes/después con métricas nuevas (32.585312ms)
+✔ persistencia y export/import recuperan confirmación, identidades y auditoría (35.073856ms)
+✔ migración conserva catálogo/resultados originales sin escribir la clave v1 (5.839862ms)
+✔ fallo al guardar resumen público revierte ambos archivos (4.358762ms)
+✔ importación rechaza IDs repetidos, omisiones, cupos rotos y confirmación falsa (69.56093ms)
+✔ privacidad por lista blanca: ni edades, ni pistas, ni métricas/auditoría en público (44.810041ms)
+✔ renderer escapa nombres y pagina sin perder concursantes (84.053711ms)
+✔ la TV importa solo renderer público y sonido; nunca lee sesión privada (55.658916ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4892.130502

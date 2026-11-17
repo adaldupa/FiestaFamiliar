@@ -1,0 +1,14 @@
+test_code_bootstrap_rejects_untrusted_host_and_other_origins (test_lan.LANTests.test_code_bootstrap_rejects_untrusted_host_and_other_origins) ... ok
+test_invalid_or_unauthorized_write_leaves_saved_data_intact (test_lan.LANTests.test_invalid_or_unauthorized_write_leaves_saved_data_intact) ... ok
+test_private_requires_code_and_public_excludes_all_private_fields (test_lan.LANTests.test_private_requires_code_and_public_excludes_all_private_fields) ... ok
+test_public_route_returns_no_private_state_before_first_save (test_lan.LANTests.test_public_route_returns_no_private_state_before_first_save) ... ok
+test_second_device_recovers_same_private_session_and_confirmation (test_lan.LANTests.test_second_device_recovers_same_private_session_and_confirmation) ... ok
+test_server_restart_keeps_session_revision_and_code (test_lan.LANTests.test_server_restart_keeps_session_revision_and_code) ... ok
+test_stale_writer_cannot_overwrite_newer_changes (test_lan.LANTests.test_stale_writer_cannot_overwrite_newer_changes) ... ok
+test_static_routes_never_serve_private_files_git_or_exports (test_lan.LANTests.test_static_routes_never_serve_private_files_git_or_exports) ... ok
+test_two_concurrent_writers_only_one_revision_wins (test_lan.LANTests.test_two_concurrent_writers_only_one_revision_wins) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 4.984s
+
+OK

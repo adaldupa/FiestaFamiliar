@@ -1,0 +1,64 @@
+tests/teams.test.js
+✔ 17 personas, k=2: cupos exactos, unicidad y balance en 60 semillas (739.031537ms)
+✔ 17 personas, k=3: cupos exactos, unicidad y balance en 60 semillas (753.217136ms)
+✔ 17 personas, k=4: cupos exactos, unicidad y balance en 60 semillas (790.706266ms)
+✔ N variable, divisible y no divisible, k=2/3/4; sin omisiones ni duplicados (242.589902ms)
+✔ misma semilla y datos: resultado idéntico incluso con otro orden de entrada (30.481835ms)
+✔ resorteos cambian y respetan cupos; semilla candidata registrada (182.061325ms)
+✔ bombos cuantiles, edades empatadas y edades extremas (115.33514ms)
+✔ sin equipo seleccionado, pocos participantes o edad inválida: no sortea (2.608998ms)
+✔ homónimos permitidos y advertidos, IDs duplicados rechazados (1.643797ms)
+✔ editar edad invalida sorteo, recalcula bombos y obliga nuevo sorteo (47.069016ms)
+✔ confirmación bloquea sorteo y cambios; desbloqueo registrado (20.26637ms)
+✔ intercambio mantiene cupos y registra antes/después con métricas nuevas (26.376543ms)
+✔ persistencia y export/import recuperan confirmación, identidades y auditoría (14.436235ms)
+✔ migración conserva catálogo/resultados originales sin escribir la clave v1 (0.688646ms)
+✔ fallo al guardar resumen público revierte ambos archivos (1.214875ms)
+✔ importación rechaza IDs repetidos, omisiones, cupos rotos y confirmación falsa (30.532415ms)
+✔ privacidad por lista blanca: ni edades, ni pistas, ni métricas/auditoría en público (27.397765ms)
+✔ renderer escapa nombres y pagina sin perder concursantes (25.538042ms)
+✔ la TV importa solo renderer público y sonido; nunca lee sesión privada (17.226062ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3099.954669
+
+tests/core.test.js
+✔ 1000 sorteos: 17 personas únicas, tamaños exactos y quinto equipo variable (148.235849ms)
+✔ rechaza registro incompleto o nombres ambiguos (0.859543ms)
+✔ los doce retos salen sin repetir y no se sobrescribe un activo (14.764547ms)
+✔ los omitidos no se sortean; pueden recuperarse (0.803123ms)
+✔ representante no puede repetir si otro ha tenido menos oportunidades, salvo adaptación (1.512634ms)
+✔ no se puntúa ni revela un reto sin representantes (2.555238ms)
+✔ puntos con límites configurables; deshacer restaura puntos, participaciones y ronda (4.386257ms)
+✔ reglas especiales requieren aprobación y pueden permitir negativos (3.538183ms)
+✔ cronómetro pausa sin perder tiempo, continúa y vence después de una recarga (1.194456ms)
+✔ persistencia completa, incluidos catálogo editado e historial deshacible (7.40423ms)
+✔ privacidad: pistas canario, notas, bombos y preparación no atraviesan la proyección pública (5.271095ms)
+✔ todas las frases y respuestas del catálogo se excluyen aun con el reto revelado (1.648822ms)
+✔ la entrada pública y sus dependencias solo contienen presentación, nunca dominio privado (17.96937ms)
+✔ fichas completas y materiales sumados conservadoramente (16.357503ms)
+✔ importación rechaza datos rotos, equipos duplicados, relojes inválidos e historial corrupto (7.739372ms)
+✔ no se publica el conteo real como material del reto de estimación (3.384017ms)
+✔ bombos extremos y de un solo integrante respetan equilibrio y capacidades (51.206553ms)
+✔ un fallo de almacenamiento público no deja la sesión privada adelantada (1.036614ms)
+✔ empates de clasificación configurables sin adjudicar puntos extra (0.798071ms)
+✔ la ruleta termina en la casilla elegida para cualquier reto, también con catálogos editados (9.465513ms)
+✔ antes de confirmar representantes no se publica la selección ni la ruleta (2.33511ms)
+✔ tres rondas completas: selección distinta, reloj, representantes, puntos, privacidad y recarga (14.073438ms)
+✔ migración conserva sesión v1, historial antiguo y catálogo personalizado (3.930126ms)
+✔ recargar durante un giro conserva selección, orientación y momento de finalización (0.939462ms)
+✔ apertura y reducción de movimiento no modifican equipos ni puntos (0.53886ms)
+✔ el render público muestra fichas completas y excluye secretos en ambas páginas y fases (6.846572ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 356.144683
