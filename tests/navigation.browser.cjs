@@ -55,7 +55,7 @@ test('escritorio: secciones independientes, borradores, pasos, teclado y ronda c
  await go(page,'inicio');assert.equal(await page.locator('#contest-create [name="name"]').inputValue(),'Borrador conservado');await page.locator('.new-meeting summary').click();
  await create(page);
  await page.locator('#contest-draw [name="seed"]').fill('navegacion-ronda');await page.locator('#contest-draw button').click();await phase(page,'selecting_game');
- await page.locator('#contest-reveal').click();await phase(page,'selecting_representatives');await page.locator('#contest-reps button').click();await phase(page,'presenting_rules');
+ await page.locator('#contest-reveal').click();await page.locator('[data-contest="instructions"]').click();await phase(page,'selecting_representatives');await page.locator('#contest-reps button').click();await phase(page,'presenting_rules');
  await shot(page,'escritorio-reglas');await page.locator('[data-contest="prepare"]').click();await phase(page,'preparing_challenge');
  await page.locator('.secret-card summary').click();await page.locator('#contest-phrase textarea').fill('CANARIO PRIVADO DE NAVEGACIÓN');await page.locator('#contest-phrase button').click();
  await page.locator('[data-contest="start"]').click();await phase(page,'timer_active');
@@ -85,7 +85,7 @@ test('escritorio: secciones independientes, borradores, pasos, teclado y ronda c
 test('celular 390 y 320 px: navegación compacta, borradores y reloj conservado',async()=>{
  const {context,page}=await fresh({width:390,height:844});
  for(const id of ['inicio','participantes','equipos','biblioteca','resultados']){await go(page,id);await assertFits(page);await shot(page,'celular-'+id);}
- await go(page,'inicio');await create(page);await page.locator('#contest-draw button').click();await page.locator('#contest-reveal').click();await page.locator('#contest-reps button').click();await page.locator('[data-contest="prepare"]').click();
+ await go(page,'inicio');await create(page);await page.locator('#contest-draw button').click();await page.locator('#contest-reveal').click();await page.locator('[data-contest="instructions"]').click();await page.locator('#contest-reps button').click();await page.locator('[data-contest="prepare"]').click();
  await page.locator('.secret-card summary').click();await page.locator('#contest-phrase textarea').fill('Tarjeta sin guardar');await go(page,'participantes');await go(page,'concurso');
  assert.equal(await page.locator('.secret-card').getAttribute('open'),null);await page.locator('.secret-card summary').click();assert.equal(await page.locator('#contest-phrase textarea').inputValue(),'Tarjeta sin guardar');await page.locator('.secret-card summary').click();
  await page.locator('[data-contest="start"]').click();await phase(page,'timer_active');const running=await state(page);await shot(page,'celular-concurso');
@@ -105,7 +105,7 @@ test('Wi-Fi: navegar no escribe revisiones; otro conductor y TV reciben el mismo
   const before=await host.request.get(lan.url+'/api/session',{headers:{Authorization:'Bearer '+code}}).then(r=>r.json());
   for(const id of ['participantes','equipos','inicio','resultados','concurso'])await go(remote,id);
   const after=await host.request.get(lan.url+'/api/session',{headers:{Authorization:'Bearer '+code}}).then(r=>r.json());assert.deepEqual(after,before);
-  await remote.locator('#contest-draw button').click();await remote.locator('#contest-reveal').click();await remote.locator('#contest-reps button').click();await remote.locator('[data-contest="prepare"]').click();await remote.locator('[data-contest="start"]').click();await phase(remote,'timer_active');
+  await remote.locator('#contest-draw button').click();await remote.locator('#contest-reveal').click();await remote.locator('[data-contest="instructions"]').click();await remote.locator('#contest-reps button').click();await remote.locator('[data-contest="prepare"]').click();await remote.locator('[data-contest="start"]').click();await phase(remote,'timer_active');
   const tv=await hostContext.newPage();await tv.goto(lan.url+'/publico.html');await tv.waitForSelector('.contest-clock');
   const payload=await host.request.get(lan.url+'/api/public').then(r=>r.json());assert.equal(payload.snapshot.contest.phase,'timer_active');
   await go(host,'concurso');await host.locator('[data-contest="pause"]').waitFor();await go(remote,'biblioteca');await go(remote,'concurso');

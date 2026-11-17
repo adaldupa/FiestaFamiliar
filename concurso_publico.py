@@ -1,7 +1,8 @@
 """Proyección independiente de fase 2A. No importar código de cliente ni copiar secretos."""
 import math
+from round_lifecycle import engine_for, lifecycle_at, screen_at, eligible, public_result, validate_modern
 
-PHASES = {'preparation', 'teams_confirmed', 'selecting_game', 'selecting_representatives', 'presenting_rules', 'preparing_challenge', 'timer_active', 'timer_paused', 'capturing_results', 'confirming_score', 'scoreboard_updated', 'next_round', 'event_finished'}
+PHASES = {'game_selected', 'engine_pending', 'round_finished', 'preparation', 'teams_confirmed', 'selecting_game', 'selecting_representatives', 'presenting_rules', 'preparing_challenge', 'timer_active', 'timer_paused', 'capturing_results', 'confirming_score', 'scoreboard_updated', 'next_round', 'event_finished'}
 
 
 def text(value, limit=5000):
@@ -22,13 +23,16 @@ def finite(value):
     return value
 
 
-def public_game(g):
+def public_game(g, modern=False):
     scoring = g['scoring']
-    return {'id': text(g['id'], 120), 'name': text(g['name']), 'mode': text(g['mode']), 'publicRules': text(g['publicRules']),
+    dto = {'id': text(g['id'], 120), 'name': text(g['name']), 'mode': text(g['mode']), 'publicRules': text(g['publicRules']),
             'materials': [{'name': text(m['name'], 200), 'quantity': finite(m['quantity']), 'unit': text(m['unit'], 80)} for m in g['materials']],
-            'seconds': integer(g['seconds'], 1, 3600),
+            'seconds': None if modern and g['seconds'] is None else integer(g['seconds'], 1, 3600),
             'scoring': {'mode': text(scoring['mode'], 80), 'pointsPerSuccess': integer(scoring['pointsPerSuccess']), 'min': integer(scoring['min']), 'max': integer(scoring['max']), 'decision': 'proposal'},
             'victory': text(g['victory']), 'tie': text(g['tie']), 'noFinish': text(g['noFinish']), 'accessibility': text(g['accessibility']), 'ruleVersion': integer(g['ruleVersion'], 1, 1000000)}
+    if modern:
+        dto.update({'preparation': g.get('preparation', 'Preparar materiales y explicar las reglas.'), 'steps': list(g.get('steps', [])), 'positions': list(g['scoring']['positions']) if 'positions' in g['scoring'] else None})
+    return dto
 
 
 def public_timer(t):
@@ -48,8 +52,10 @@ def contest_public_snapshot(c):
         raise ValueError('Concurso inválido.')
     events = c['events']
     for event in events:
+        if event.get('settings', {}).get('lifecycleVersion') == 1:
+            validate_modern(event)
         for game in event.get('selectedGames', []):
-            if game.get('scoring', {}).get('mode') not in ('fixed', 'manual') or game.get('implementation') == 'planned':
+            if event.get('settings', {}).get('lifecycleVersion') != 1 and (game.get('scoring', {}).get('mode') not in ('fixed', 'manual') or game.get('implementation') == 'planned'):
                 raise ValueError('El evento contiene una dinámica aún no implementada.')
     ids = [text(e['id'], 120) for e in events]
     if len(set(ids)) != len(ids):
@@ -59,6 +65,7 @@ def contest_public_snapshot(c):
     e = next((e for e in events if e['id'] == c['activeEventId']), None)
     if e is None or e['phase'] not in PHASES or e['status'] not in ('preparation', 'in_progress', 'finished'):
         raise ValueError('Evento activo inválido.')
+    modern = e.get('settings', {}).get('lifecycleVersion') == 1
     people = {text(p['id'], 120): text(p['name'], 120) for p in e['people']}
     if len(people) != len(e['people']):
         raise ValueError('Identidades duplicadas.')
@@ -108,6 +115,8 @@ def contest_public_snapshot(c):
     completed = {x['game']['id'] for x in rounds if x['status'] == 'completed' or x['attempts']}
     skipped = {x['game']['id'] for x in rounds if x['status'] == 'skipped' and not x['restoredAt']}
     available = [g for g in e['selectedGames'] if g['status'] == 'active' and g['id'] not in skipped and (g['id'] not in completed or any(a['gameId'] == g['id'] and not a['usedBy'] for a in e['replays']))]
+    if modern:
+        available = eligible(e, c['library'])
     turn = next((t for t in r['turns'] if t['teamId'] == r['currentTeamId']), None) if r else None
     hidden = r and r['game']['representativesBefore'] and not r['representativesConfirmed']
     game = r['game'] if r and not hidden else None
@@ -123,5 +132,9 @@ def contest_public_snapshot(c):
         if abs(rotation-expected) > 1e-8:
             raise ValueError('La animación no corresponde al juego seleccionado.')
         wheel = {'candidates': [{'id': text(gid, 120), 'title': text(choices[gid])} for gid in d['ids']], 'selectedId': text(d['selectedId'], 120), 'selectedIndex': index, 'rotation': rotation, 'startedAt': finite(d['startedAt']), 'duration': integer(d['duration'], 0, 2400)}
-    return {'schemaVersion': 1, 'eventId': e['id'], 'eventName': text(e['name'], 120), 'status': e['status'], 'phase': e['phase'], 'roundNumber': r['number'] if r else len(rounds), 'availableCount': len(available), 'teams': ranked,
-            'activeTeamId': turn['teamId'] if turn else None, 'timer': public_timer(turn['timer']) if turn else None, 'wheel': wheel, 'game': public_game(game) if game else None}
+    dto = {'schemaVersion': 1, 'eventId': e['id'], 'eventName': text(e['name'], 120), 'status': e['status'], 'phase': e['phase'], 'roundNumber': r['number'] if r else len(rounds), 'availableCount': len(available), 'teams': ranked,
+            'activeTeamId': turn['teamId'] if turn else None, 'timer': public_timer(turn['timer']) if turn else None, 'wheel': wheel, 'game': public_game(game, modern) if game else None}
+    if modern:
+        engine = engine_for(r['game']) if r and not hidden else None
+        dto.update({'lifecycle': lifecycle_at(e), 'screen': screen_at(e), 'roundId': r['id'] if r else None, 'engine': {'key': engine['key'], 'operational': engine['operational'], 'message': engine['message']} if engine else None, 'result': public_result(e, r)})
+    return dto

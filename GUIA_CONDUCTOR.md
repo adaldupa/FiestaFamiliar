@@ -1,3 +1,7 @@
+# Guía vigente
+
+Para ruleta, etapas y recuperación de 2C.1 consulta [GUIA_CONCURSO.md](GUIA_CONCURSO.md). El recorrido de puntos fijos siguiente se conserva como referencia de la revisión operativa original; las fichas nuevas requieren sus propios motores.
+
 # Guía del conductor · fase 2A
 
 1. Inicia el servidor local según README. Abre el conductor en la computadora y comparte con el celular únicamente su enlace privado. En la TV abre `publico.html`, sin código, en escritorio extendido.

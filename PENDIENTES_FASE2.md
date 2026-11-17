@@ -1,3 +1,13 @@
+# Estado tras 2C.1
+
+Implementado y probado: infraestructura de ruleta y ciclo de ronda descrita en [VERIFICACION_FASE2C1.md](VERIFICACION_FASE2C1.md). Biblioteca existente preservada; motores fijos/manuales anteriores conservados.
+
+Pendiente de implementación: motores por posición, conteo, cercanía y premios directos de Roba y Gana; bancos completos de tarjetas y Duelo de Generaciones; experiencia de premiación de 2D. El registro de modalidades no declara esos evaluadores funcionales.
+
+Pendiente de validación manual: dispositivos reales y Wi-Fi familiar. Pendiente de decisión del usuario: aprobación de esta entrega e integración a main. No se cambia ninguna regla aprobada por esta infraestructura.
+
+## Registro anterior
+
 # Estado y pendientes de fase 2
 
 ## Implementado y probado

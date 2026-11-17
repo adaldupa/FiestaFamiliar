@@ -1,6 +1,12 @@
-# La Gran Noche de Retos — Fase 2B
+# La Gran Noche de Retos — Fase 2C.1
 
-Versión `2.3.0-fase2b`, rama de revisión `fase2-motor-concurso`. Conserva equipos, concurso y navegación de las entregas anteriores, y añade la biblioteca editable y versionada. La fase 2C y la integración a main requieren aprobación posterior.
+Versión `2.4.0-fase2c1`, rama `fase2-motor-concurso`. Ruleta conectada con la Biblioteca existente, siete etapas de ronda, pantallas independientes de TV y recuperación local/LAN. No requiere volver a importar fichas. No fusionado a main.
+
+- [Demostración paso a paso](GUIA_CONCURSO.md)
+- [Pruebas, evidencia y límites de 2C.1](VERIFICACION_FASE2C1.md)
+- [Plan y alcance](PLAN_FASE2C1.md)
+
+Los motores de posición, conteo, cercanía y premios directos están registrados como **Motor pendiente de integración**: pueden seleccionarse y presentarse, pero no permiten registrar puntos ni simulan un cronómetro operativo. Los motores anteriores de puntos fijos y captura manual siguen disponibles mediante sus revisiones compatibles.
 
 ## Biblioteca reutilizable · entrega 2B
 
@@ -11,7 +17,7 @@ El actor original de 2A sigue ejecutándose mediante su revisión compatible. Lo
 - [Guía de Biblioteca](GUIA_BIBLIOTECA.md)
 - [Verificación y evidencia de 2B](VERIFICACION_FASE2B.md)
 
-La carga de doce fichas no incluye todavía sus nuevos motores ni los bancos completos de tarjetas. No se inició 2C ni 2D. Main permanece separado hasta aprobación.
+La carga de doce fichas no incluye todavía sus nuevos motores ni los bancos completos de tarjetas. La infraestructura 2C.1 se describe arriba. Los motores específicos y 2D siguen pendientes; main permanece separado hasta aprobación.
 
 ## Navegación del conductor
 

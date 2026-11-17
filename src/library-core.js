@@ -18,7 +18,7 @@ export function saveGame(s,input,{expectedVersion=null,reason='Edición de ficha
   need(isText(reason,1000),'Indica un motivo de edición.');
   const permanent=input.id===PERMANENT_ID||old?.permanent===true;
   const g=clone({...input,ruleVersion:old?old.ruleVersion+1:1,createdAt:old?.createdAt||date(now),updatedAt:date(now),permanent,repeatable:permanent?true:input.repeatable===true});
-  if(permanent)need(g.status!=='archived','Roba y Gana es permanente y no se puede archivar.');
+  if(permanent)need(g.status==='active','Roba y Gana debe permanecer activo; no se puede desactivar ni archivar.');
   validateGame(g);if(old)lib.games[lib.games.indexOf(old)]=g;else lib.games.push(g);
   lib.versions.push(clone(g));audit(lib,old?'game_updated':'game_created',{gameId:g.id,version:g.ruleVersion,previousVersion:old?.ruleVersion||null,reason},now);return g;
  });
@@ -37,7 +37,7 @@ export function restoreGameVersion(s,id,version,expectedVersion,now=Date.now()){
 export function saveCollection(s,{id=uid(),name,gameIds},now=Date.now()){
  return transaction(s,lib=>{
   need(isText(name,120)&&Array.isArray(gameIds)&&gameIds.length>0&&new Set(gameIds).size===gameIds.length,'La colección necesita nombre y minijuegos sin duplicados.');
-  const games=gameIds.map(id=>{const g=lib.games.find(g=>g.id===id);need(g&&g.status==='active','Selecciona solamente fichas activas.');return {id:g.id,ruleVersion:g.ruleVersion};});
+  const games=gameIds.map(id=>{const g=lib.games.find(g=>g.id===id);need(g&&(g.status==='active'||g.id===PERMANENT_ID),'Selecciona solamente fichas activas.');return {id:g.id,ruleVersion:g.ruleVersion};});
   lib.collections??=[];const old=lib.collections.find(c=>c.id===id),c={id,name:name.trim(),games,createdAt:old?.createdAt||date(now),updatedAt:date(now)};
   if(old)lib.collections[lib.collections.indexOf(old)]=c;else lib.collections.push(c);audit(lib,'collection_saved',{collectionId:id,versions:games},now);return c;
  });
@@ -112,3 +112,5 @@ export function parsePublicCatalogSeed(raw){
  });
  return validateLibrary({schemaVersion:1,games,versions:clone(games),collections:[],audit:[]});
 }
+// Seleccionable para el ciclo 2C.1 no significa que su motor ya pueda puntuar.
+export function eventRevisions(lib){return (lib?.games||[]).filter(g=>g.status==='active'||g.id===PERMANENT_ID).map(current=>({id:current.id,ruleVersion:current.ruleVersion,name:current.name,previous:false,versions:lib.versions.filter(g=>g.id===current.id&&(g.status==='active'||g.id===PERMANENT_ID)).sort((a,b)=>b.ruleVersion-a.ruleVersion).map(g=>({ruleVersion:g.ruleVersion,name:g.name,pending:g.implementation==='planned'||!['fixed','manual'].includes(g.scoring.mode)}))}));}

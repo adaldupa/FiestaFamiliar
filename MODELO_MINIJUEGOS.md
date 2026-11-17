@@ -75,3 +75,9 @@ Crear/editar/restaurar agrega revisiones completas. Importar conserva versiones 
 `createEvent` acepta opcionalmente `selectedRevisions`, validadas contra el archivo de reglas. Solo se ofrecen revisiones activas compatibles de juegos actualmente activos. El evento conserva su propia copia, igual que en 2A. Las revisiones nuevas de actor por clasificación no alteran la revisión original ni sus eventos.
 
 Las plantillas distribuidas usan el contrato separado `noche-retos-public-templates` y omiten instrucciones privadas, tarjetas y objetivos secretos. El adaptador local valida las plantillas e inicializa esos campos vacíos o con una indicación para completarlos. El JSON de respaldo de biblioteca sí conserva los datos privados del conductor; no se distribuye como catálogo público.
+
+## Extensión 2C.1
+
+`settings.lifecycleVersion: 1` habilita las siete etapas sin cambiar el esquema de sesiones previas. `ruleSnapshots` conserva copias exactas de las reglas aprobadas para el evento, incluidos ajustes explícitos de tiempo/puntos de motores operativos. Cada ronda guarda `ruleRef: {id, ruleVersion, eventSnapshot}` hacia esa copia inmutable. Cambiar la selección del evento o editar Biblioteca no modifica rondas anteriores. No se crea un catálogo paralelo.
+
+`src/round-engine.js` registra capacidad operativa por modalidad; el descriptor de ronda se valida contra sus reglas. Un motor pendiente no tiene reloj, resultados ficticios ni propuestas de puntos. El cierre incompleto guarda confirmación, motivo y fecha sin movimientos de puntuación. La proyección pública solo añade etapa, pantalla, resultado público y disponibilidad del motor; nunca envía tarjetas, instrucciones privadas, objetivos secretos ni referencias internas del archivo de reglas. Python aplica las mismas validaciones en LAN.
