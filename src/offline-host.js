@@ -1,4 +1,4 @@
-const CACHE='noche-retos-fase2a-host-v3';
+const CACHE='noche-retos-fase2a-host-v4';
 const FILES=['./','./index.html','./src/conductor.js','./src/teams-core.js','./src/contest-core.js','./src/contest-host.js','./src/game-model.js','./src/wheel.js','./src/lan-host.js','./src/offline-host.js','./catalogo/actor-fase2.json'];
 export async function ensurePrivateOffline(lan){
  const cache=await caches.open(CACHE);
