@@ -149,7 +149,7 @@ class Handler(SimpleHTTPRequestHandler):
         if any(p.startswith('.') for p in parts) or '..' in parts:
             return False
         name = route.lstrip('/') or 'index.html'
-        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg', 'contest.css') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
+        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg', 'contest.css', 'conductor-nav.css') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
 
     def do_GET(self):
         route = unquote(urlsplit(self.path).path).rstrip('/')

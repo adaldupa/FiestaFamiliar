@@ -2,6 +2,23 @@
 
 Versión `2.2.0-fase2a`, rama de revisión `fase2-motor-concurso`. Integra el motor de concurso en la aplicación existente, conserva fase 1 y la identidad navideña. Solo **El actor dramático** está habilitado en esta entrega; 2B, 2C y 2D requieren autorización posterior.
 
+## Navegación del conductor
+
+El panel muestra una sola sección principal a la vez. Menú lateral en computadora y menú compacto de seis botones en celular. La franja superior conserva el evento activo, la etapa y la ronda. La navegación es local a cada dispositivo; no cambia el estado público de la TV ni genera escrituras de la partida.
+
+| Sección | Uso |
+| --- | --- |
+| Inicio | Nueva reunión, continuar evento abierto, consultar reuniones guardadas, abrir TV, opciones de presentación, Wi-Fi y respaldo completo. |
+| Participantes | Registro, edición e importación/exportación de personas. |
+| Equipos | Tres pasos internos: configurar; bombos y sorteo; revisar y confirmar. |
+| Concurso | Ronda completa: sorteo, representantes, reglas, tarjeta privada, reloj, captura, revisión y confirmación. |
+| Biblioteca | Acceso reservado; administración de fase 2B aún no implementada. |
+| Resultados | Marcador, clasificación e historial de eventos/equipos. Premiación pendiente de 2D. |
+
+Cambiar de sección conserva los campos sin enviar mientras no haya otra operación que vuelva a dibujar el panel. Los datos guardados y el plazo del reloj sobreviven también a la recarga. Las tarjetas privadas se pliegan al salir de Concurso. La sección y el paso elegidos se recuperan por pestaña mediante sessionStorage, fuera del respaldo de la partida. Seleccionar una reunión histórica abre sus resultados, sin reactivarla ni cambiar el evento que está en marcha.
+
+Prueba de navegación real: `npm run test:navigation` (requiere Playwright). Instalación de herramientas de prueba opcionales: `npm install --no-save --package-lock=false playwright@1.62.1` y `npx playwright install chromium`. Si utilizas un Chromium propio, configura `CHROMIUM_PATH`. El comando crea servidores y datos ficticios aislados; genera capturas en `evidencia/navegacion/`. `npm test` conserva las suites anteriores y añade dos pruebas de navegación sin dependencias. Consulta [VERIFICACION_NAVEGACION.md](VERIFICACION_NAVEGACION.md).
+
 ## Demostración aislada de fase 2A
 
 Desde esta carpeta, con Python 3:
@@ -10,7 +27,7 @@ Desde esta carpeta, con Python 3:
 python3 servidor_local.py --port 8092 --data-dir .datos-locales-demo-fase2
 ```
 
-Abre `http://127.0.0.1:8092/index.html`. Importa `evidencia/sesion-demo-exportada.json` (17 personas ficticias y equipos confirmados), confirma la restauración y abre **5 · Concurso**. Sigue [GUIA_CONDUCTOR.md](GUIA_CONDUCTOR.md): crear evento aceptando la propuesta, sortear actor, representantes, reglas, turnos, reloj, revisión y confirmación. Con un acierto se proponen 100 puntos. Puedes deshacer/corregir con motivo y comprobar el historial. En la TV abre el enlace público que imprime la terminal. El puerto y la carpeta separados conservan tu partida estable.
+Abre `http://127.0.0.1:8092/index.html`. Importa `evidencia/sesion-demo-exportada.json` (17 personas ficticias y equipos confirmados), confirma la restauración desde **Inicio → Importar sesión**. En **Inicio → Nueva reunión** crea el evento; el panel abrirá **Concurso**. Sigue [GUIA_CONDUCTOR.md](GUIA_CONDUCTOR.md): aceptar la propuesta al crear el evento, sortear actor, representantes, reglas, turnos, reloj, revisión y confirmación. Con un acierto se proponen 100 puntos. Puedes deshacer/corregir con motivo y comprobar el historial. En la TV abre el enlace público que imprime la terminal. El puerto y la carpeta separados conservan tu partida estable.
 
 Para obtener esta entrega desde GitHub:
 

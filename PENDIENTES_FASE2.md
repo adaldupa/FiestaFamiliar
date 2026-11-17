@@ -2,6 +2,8 @@
 
 ## Implementado y probado
 
+- Corrección de navegación: seis secciones independientes, menú lateral/compacto, tres pasos de equipos y operación completa de ronda desde Concurso. Evidencia y límites en VERIFICACION_NAVEGACION.md.
+
 - Fase 1 conservada: registro, equipos, bombos, confirmación, respaldo y sincronización.
 - Evento independiente con copias de reglas, modalidad antes/después, puntos y tiempo configurables.
 - El actor dramático: sorteo persistente, representantes, tarjetas privadas, turno por equipo, reloj, captura, revisión y confirmación.
@@ -22,7 +24,7 @@
 - 2B: administrador de biblioteca (crear, editar, duplicar, buscar, activar/archivar, importar/exportar solo biblioteca y restaurar versiones), todas las dinámicas de los otros once juegos.
 - 2C: Duelo de Generaciones, banco editable de preguntas y enlace de ganador al siguiente reto. La regla de 10 puntos aprobada está documentada en la especificación, todavía no se ejecuta.
 - 2D: ceremonia de cuatro lugares y cierre audiovisual completo.
-- Motores por posición, cantidad de aciertos, cercanía y reglas especiales; selector de eventos históricos y fecha opcional editable.
+- Motores por posición, cantidad de aciertos, cercanía y reglas especiales; fecha opcional editable. La consulta de eventos guardados ya está disponible desde Inicio sin reactivarlos.
 - Importación/exportación independiente de preguntas/biblioteca. El respaldo completo de sesión sí conserva biblioteca versionada, eventos y resultados.
 
 ## Pendiente de decisión del usuario

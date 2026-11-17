@@ -21,3 +21,7 @@ Rama: `fase2-motor-concurso`, desde `main` 2.1.0. No integrar a main ni continua
 - `tests/contest.test.js`, `tests/test_contest_lan.py`: motor, compatibilidad, sincronización y privacidad.
 
 La demostración se ejecutará con datos ficticios en otro puerto y carpeta de datos para conservar la aplicación estable y sus sesiones reales.
+
+## Corrección de navegación de 2A
+
+Separar Inicio, Participantes, Equipos, Concurso, Biblioteca reservada y Resultados, con pasos internos de equipos. Mantener estado de interfaz por dispositivo fuera del motor. Sin modificaciones a sorteos, puntos, esquema de sesión o sincronización. Verificación específica en VERIFICACION_NAVEGACION.md. No iniciar 2B.

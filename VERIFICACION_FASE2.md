@@ -52,3 +52,7 @@ Se comprobó una ronda real de actor con cuatro turnos. Las tres rondas de juego
 La modalidad ciega y la omisión/restauración están comprobadas automáticamente; falta su ensayo manual completo en el evento real. La repetición excepcional y la tarjeta personalizada también se ensayaron en el navegador con datos ficticios. Audio sintetizado y movimiento reducido están implementados; queda pendiente audición en altavoces físicos. Tampoco se afirma haber probado teléfonos físicos, TV física, lectores de pantalla, todas las resoluciones ni usuarios de 70+.
 
 Los valores de puntuación son propuestas configurables aceptadas por evento. No se presenta ninguna decisión pendiente como definitiva. Estado detallado en `PENDIENTES_FASE2.md`.
+
+## Corrección posterior de navegación
+
+La estructura vertical descrita por la entrega inicial se reemplazó por seis secciones independientes. La nueva ejecución de pruebas y las capturas de escritorio/celular se registran por separado en [VERIFICACION_NAVEGACION.md](VERIFICACION_NAVEGACION.md), sin modificar la evidencia histórica anterior.

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test": "node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && python3 -m unittest discover -s tests -p 'test_*.py'"
+    "test": "node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && node tests/navigation.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:navigation": "node --test tests/navigation.browser.cjs"
   }
 }
