@@ -1,0 +1,206 @@
+{
+  "participants": 17,
+  "ages": [
+    11,
+    12,
+    14,
+    18,
+    22,
+    27,
+    31,
+    36,
+    40,
+    45,
+    49,
+    55,
+    60,
+    65,
+    70,
+    75,
+    82
+  ],
+  "reports": [
+    {
+      "k": 2,
+      "seed": "demo-navidad-2",
+      "candidateSeed": "demo-navidad-2:candidata:195",
+      "capacities": [
+        9,
+        8
+      ],
+      "meanSpread": 0.22222222222222143,
+      "potSpread": 1,
+      "score": [
+        0,
+        1,
+        0.22222222222222143
+      ],
+      "teams": [
+        {
+          "name": "Estrella",
+          "id": "t1",
+          "count": 9,
+          "mean": 41.77777777777778,
+          "min": 11,
+          "max": 82,
+          "potCounts": [
+            5,
+            4
+          ]
+        },
+        {
+          "name": "Cascabel",
+          "id": "t2",
+          "count": 8,
+          "mean": 42,
+          "min": 12,
+          "max": 75,
+          "potCounts": [
+            4,
+            4
+          ]
+        }
+      ],
+      "reloadConfirmed": true,
+      "publicContainsAges": false
+    },
+    {
+      "k": 3,
+      "seed": "demo-navidad-3",
+      "candidateSeed": "demo-navidad-3:candidata:68",
+      "capacities": [
+        6,
+        6,
+        5
+      ],
+      "meanSpread": 0.1666666666666643,
+      "potSpread": 1,
+      "score": [
+        0,
+        1,
+        0.1666666666666643
+      ],
+      "teams": [
+        {
+          "name": "Estrella",
+          "id": "t1",
+          "count": 6,
+          "mean": 41.833333333333336,
+          "min": 18,
+          "max": 70,
+          "potCounts": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "Cascabel",
+          "id": "t2",
+          "count": 6,
+          "mean": 41.833333333333336,
+          "min": 11,
+          "max": 75,
+          "potCounts": [
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "name": "Aurora",
+          "id": "t3",
+          "count": 5,
+          "mean": 42,
+          "min": 12,
+          "max": 82,
+          "potCounts": [
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "reloadConfirmed": true,
+      "publicContainsAges": false
+    },
+    {
+      "k": 4,
+      "seed": "demo-navidad-4",
+      "candidateSeed": "demo-navidad-4:candidata:117",
+      "capacities": [
+        4,
+        4,
+        5,
+        4
+      ],
+      "meanSpread": 2,
+      "potSpread": 1,
+      "score": [
+        0,
+        1,
+        2
+      ],
+      "teams": [
+        {
+          "name": "Estrella",
+          "id": "t1",
+          "count": 4,
+          "mean": 42.25,
+          "min": 11,
+          "max": 82,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cascabel",
+          "id": "t2",
+          "count": 4,
+          "mean": 42.5,
+          "min": 18,
+          "max": 70,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Aurora",
+          "id": "t3",
+          "count": 5,
+          "mean": 42.2,
+          "min": 14,
+          "max": 75,
+          "potCounts": [
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Abeto",
+          "id": "t4",
+          "count": 4,
+          "mean": 40.5,
+          "min": 12,
+          "max": 65,
+          "potCounts": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "reloadConfirmed": true,
+      "publicContainsAges": false
+    }
+  ]
+}
