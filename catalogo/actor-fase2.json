@@ -1,0 +1,29 @@
+{
+  "id": "actor",
+  "title": "El actor dramático",
+  "mode": "Representante + equipo",
+  "participants": "Un actor y su equipo por turno.",
+  "rules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+  "scoring": "100 puntos por acierto dentro del tiempo, propuesto y configurable.",
+  "tie": "Misma puntuación para todos los aciertos.",
+  "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+  "seated": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+  "preparation": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+  "seconds": 90,
+  "materials": [
+    {
+      "name": "Tarjetas",
+      "quantity": 4,
+      "unit": "unidades"
+    }
+  ],
+  "secrets": [
+    "Busco mis lentes y los tengo puestos",
+    "Intento envolver un regalo que no cabe",
+    "Una planta me pide agua",
+    "Preparo una sopa demasiado caliente"
+  ],
+  "maxPoints": 100,
+  "allowNegative": false,
+  "specialApproved": false
+}
