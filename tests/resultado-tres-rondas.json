@@ -1,0 +1,60 @@
+{
+  "fecha": "2026-11-16",
+  "origenPrueba": "http://127.0.0.1:8088",
+  "rondas": [
+    {
+      "ronda": 1,
+      "reto": "Manos de mantequilla",
+      "id": "guantes",
+      "relojPausado": "01:52",
+      "puntos": [
+        "100",
+        "75",
+        "50",
+        "25"
+      ],
+      "modalidadRepresentantes": "antes de revelar",
+      "secretosOcultos": true
+    },
+    {
+      "ronda": 2,
+      "reto": "¿Cuántos hay?",
+      "id": "cantidad",
+      "relojPausado": "01:19",
+      "puntos": [
+        "175",
+        "175",
+        "75",
+        "75"
+      ],
+      "modalidadRepresentantes": "después de revelar",
+      "secretosOcultos": true
+    },
+    {
+      "ronda": 3,
+      "reto": "El regalo sorpresa",
+      "id": "regalo",
+      "relojPausado": "00:50",
+      "puntos": [
+        "225",
+        "200",
+        "175",
+        "150"
+      ],
+      "modalidadRepresentantes": "antes de revelar",
+      "secretosOcultos": true
+    }
+  ],
+  "retosDistintos": 3,
+  "secretosEnPublico": false,
+  "recargaConservaSesion": true,
+  "offlineConServidorDetenido": true,
+  "vistaPreviaOffline": true,
+  "deshacerRestauraMismoReto": true,
+  "marcadorFinal": {
+    "Ambar": 225,
+    "Coral": 200,
+    "Cielo": 175,
+    "Lila": 150
+  }
+}
