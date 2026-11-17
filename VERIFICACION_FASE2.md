@@ -37,6 +37,8 @@ Conductor: `http://127.0.0.1:8092/index.html`. TV: `http://192.168.1.67:8092/pub
 9. Deshacer con motivo devolvió el marcador a cero; reconfirmar recuperó 100 sin duplicar.
 10. Se propuso corregir a 50. La TV conservó 100 durante la revisión; al confirmar pasó a 50. Una nueva recarga mantuvo 50/0/0/0. La captura `evidencia/fase2-tv-marcador.png` muestra ese resultado deliberadamente corregido.
 
+Ensayo adicional: se reinició el servidor conservando sesión y marcador, se autorizó expresamente una repetición con motivo y se comprobó que el giro revela automáticamente el nombre sin otra acción. Se preparó una segunda ronda, se escribió una tarjeta privada desde el formulario y se verificó su persistencia al recargar y su ausencia en el DOM de la TV. Esta segunda ronda queda preparada para continuar; todavía no aporta puntos.
+
 ## Offline comprobado
 
 En el puerto 8093 se prepararon las cachés y se importó una sesión ficticia completa por el formulario con confirmación. El conductor mostró «Listo sin conexión». Se abrió la TV y **se detuvo el servidor estático**. Ambas vistas se recargaron correctamente y recuperaron los cuatro marcadores de 100 puntos de esa sesión de prueba. No hubo backend ni acceso a Internet para recuperar la partida. Es una prueba individual distinta del ensayo LAN.
@@ -47,6 +49,6 @@ La caché pública ya no instala el catálogo ni módulos privados. La caché de
 
 Se comprobó una ronda real de actor con cuatro turnos. Las tres rondas de juegos distintos son una prueba automatizada del motor con fichas sintéticas, no la integración de los otros once juegos. Esa integración, biblioteca visual, Duelo y premiación siguen fuera de 2A.
 
-La edición de una tarjeta personalizada, modalidad ciega, omisión/restauración y repetición excepcional están comprobadas automáticamente; falta ensayo manual completo de esas variantes en el evento real. Audio sintetizado y movimiento reducido están implementados; queda pendiente audición en altavoces físicos. Tampoco se afirma haber probado teléfonos físicos, TV física, lectores de pantalla, todas las resoluciones ni usuarios de 70+.
+La modalidad ciega y la omisión/restauración están comprobadas automáticamente; falta su ensayo manual completo en el evento real. La repetición excepcional y la tarjeta personalizada también se ensayaron en el navegador con datos ficticios. Audio sintetizado y movimiento reducido están implementados; queda pendiente audición en altavoces físicos. Tampoco se afirma haber probado teléfonos físicos, TV física, lectores de pantalla, todas las resoluciones ni usuarios de 70+.
 
 Los valores de puntuación son propuestas configurables aceptadas por evento. No se presenta ninguna decisión pendiente como definitiva. Estado detallado en `PENDIENTES_FASE2.md`.

@@ -1,4 +1,4 @@
-const PUBLIC_CACHE='noche-retos-fase2a-public-v3',PRIVATE_CACHE='noche-retos-fase2a-host-v3';
+const PUBLIC_CACHE='noche-retos-fase2a-public-v4',PRIVATE_CACHE='noche-retos-fase2a-host-v4';
 // La instalación pública nunca descarga catálogo, conductor ni reglas privadas.
 const FILES=['./publico.html','./estilos.css','./navidad.css','./escenario.css','./equipos.css','./contest.css','./icon.svg','./src/teams-show.js','./src/contest-show.js','./src/wheel.js','./src/clock-sync.js','./src/lan-public.js','./src/publico.js','./src/effects.js','./assets/escenario.webp','./assets/titulares.otf','./assets/texto.otf','./assets/texto-negrita.otf'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(PUBLIC_CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));

@@ -15,7 +15,7 @@
 
 - Audio sintetizado, aviso de finalización y reducción de movimiento: controles conservados y rutas de código revisadas; falta audición en el equipo de sonido del evento.
 - Uso en celulares físicos Android/iPhone, TV física, navegadores alternativos y lectura con personas de 70+: no se han probado esos dispositivos/personas.
-- Restauración excepcional de omitidos, repetición autorizada y modalidad ciega: probadas automáticamente; falta ensayo manual completo de cada variante en el evento real.
+- Restauración de omitidos y modalidad ciega: probadas automáticamente; falta ensayo manual completo de cada variante en el evento real.
 
 ## Diseñado, no implementado en 2A
 
