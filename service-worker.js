@@ -1,4 +1,4 @@
-const CACHE='noche-retos-v13-wifi';
+const CACHE='noche-retos-v14-wifi';
 // Caché de recursos locales, nunca de la sesión. No se elimina localStorage.
 const FILES=['./','./index.html','./publico.html','./estilos.css','./navidad.css','./escenario.css','./equipos.css','./icon.svg','./src/core.js','./src/teams-core.js','./src/teams-show.js','./src/lan-host.js','./src/lan-public.js','./src/conductor.js','./src/publico.js','./src/show.js','./src/wheel.js','./src/effects.js','./catalogo/juegos.json','./assets/escenario.webp','./assets/titulares.otf','./assets/texto.otf','./assets/texto-negrita.otf'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
