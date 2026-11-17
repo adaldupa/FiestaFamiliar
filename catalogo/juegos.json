@@ -1,0 +1,388 @@
+[
+  {
+    "id": "galleta",
+    "title": "La galleta viajera",
+    "mode": "Individual",
+    "participants": "Un representante por equipo.",
+    "rules": "Mover una galleta desde la frente hacia la boca sin usar las manos. Participar y comer son voluntarios. Se puede cambiar por la alternativa sentada.",
+    "scoring": "Orden de logro propuesto: 100 / 75 / 50 / 25. Pendiente de aprobar.",
+    "tie": "Si coinciden, compartir la posición y su puntuación propuesta.",
+    "noFinish": "Si nadie termina, acordar 0 o una puntuación por avance antes de iniciar.",
+    "seated": "Deslizar una ficha por una ruta de mesa con una cuchara; sin comida ni movimientos de cuello.",
+    "preparation": "Confirmar alergias solo en privado; ofrecer alternativa y servilletas. No reutilizar alimentos.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Galletas",
+        "quantity": 17,
+        "unit": "unidades"
+      },
+      {
+        "name": "Servilletas",
+        "quantity": 17,
+        "unit": "unidades"
+      },
+      {
+        "name": "Cucharas",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Fichas",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "dibujo",
+    "title": "Picasso a oscuras",
+    "mode": "Representante + equipo",
+    "participants": "Un dibujante y su equipo por turno.",
+    "rules": "Dibujar sin mirar el papel mientras el equipo intenta adivinar. No se necesita venda; se puede usar un cartón para ocultar el dibujo al dibujante.",
+    "scoring": "100 puntos por acierto dentro del tiempo, propuesto y configurable.",
+    "tie": "Mismo puntaje para todos los aciertos; sin desempate de velocidad.",
+    "noFinish": "0 puntos propuestos si no se adivina.",
+    "seated": "Dibujar sentado y con el papel fijo. Si resulta incómodo, dibujar mirando con la mano no habitual, por acuerdo.",
+    "preparation": "Entregar la tarjeta solo al dibujante; usar tarjetas diferentes de dificultad similar.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Papel",
+        "quantity": 12,
+        "unit": "hojas"
+      },
+      {
+        "name": "Plumones",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Tarjetas",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Un paraguas que quiere volar",
+      "Una casa sobre una nube",
+      "Un gato mirando la lluvia",
+      "Una bicicleta con flores"
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "vasos",
+    "title": "La elección maldita",
+    "mode": "Representante",
+    "participants": "Un representante por equipo, por turno.",
+    "rules": "Elegir uno de seis vasos. El conductor revela la tarjeta elegida después de la elección.",
+    "scoring": "Tarjetas propuestas de 0 a 100 puntos. Cualquier valor negativo o especial requiere aprobación previa en el catálogo.",
+    "tie": "Compartir posición si el total coincide.",
+    "noFinish": "Si alguien declina, elegir mediante un compañero o acordar 0.",
+    "seated": "Elegir un número o señalar el vaso desde la silla.",
+    "preparation": "Preparar seis tarjetas y colocarlas ocultas. Reponer el mismo conjunto para cada equipo; verificar condiciones iguales.",
+    "seconds": 60,
+    "materials": [
+      {
+        "name": "Vasos",
+        "quantity": 6,
+        "unit": "unidades"
+      },
+      {
+        "name": "Tarjetas",
+        "quantity": 6,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Vaso 1: 25; vaso 2: 100; vaso 3: 0; vaso 4: 75; vaso 5: 50; vaso 6: 25. Propuesta: barajar tarjetas físicas antes de cada turno."
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "tarareo",
+    "title": "Tararea si puedes",
+    "mode": "Representante + equipo",
+    "participants": "Una persona tararea y su equipo adivina.",
+    "rules": "Tararear sin palabras una canción de una tarjeta privada; el equipo intenta adivinarla.",
+    "scoring": "100 puntos por acierto, propuesto y configurable.",
+    "tie": "Compartir la puntuación si hay varios aciertos.",
+    "noFinish": "0 propuesto si no se adivina; ofrecer otra tarjeta si no conoce la canción, por acuerdo previo.",
+    "seated": "Tararear sentado; como alternativa, marcar el ritmo sobre la mesa, sin exigir oído perfecto.",
+    "preparation": "Usar canciones conocidas por la familia y tarjetas físicas. No reproducir audio obligatorio.",
+    "seconds": 60,
+    "materials": [
+      {
+        "name": "Tarjetas",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Las mañanitas",
+      "Estrellita, ¿dónde estás?",
+      "La cucaracha",
+      "Campana sobre campana"
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "torre",
+    "title": "La torre traicionera",
+    "mode": "Representante",
+    "participants": "Un representante por equipo.",
+    "rules": "Construir una pirámide de seis vasos con una mano sobre una mesa firme.",
+    "scoring": "Por orden de finalización: 100 / 75 / 50 / 25, propuesta configurable.",
+    "tie": "Comparar vasos colocados correctamente; si persiste, compartir posición.",
+    "noFinish": "Si nadie termina, ordenar por vasos colocados correctamente; si todos tienen cero, 0 propuesto.",
+    "seated": "Construir sentado; permitir ambas manos o un apoyo según adaptación acordada.",
+    "preparation": "Dar seis vasos iguales a cada equipo y espacio de mesa similar.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Vasos",
+        "quantity": 24,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "caja",
+    "title": "La caja misteriosa",
+    "mode": "Representante",
+    "participants": "Un representante por equipo por turno.",
+    "rules": "Identificar un objeto por tacto en una caja opaca. No se usan vendas.",
+    "scoring": "100 puntos por acierto, propuesto y configurable.",
+    "tie": "Misma puntuación para cada acierto.",
+    "noFinish": "0 propuesto si no se identifica; permitir retirarse sin introducir la mano.",
+    "seated": "Caja a altura cómoda sobre la mesa; se puede describir la textura con ayuda de un compañero.",
+    "preparation": "Objetos limpios, sin filos, sin sustancias y sin sorpresas que asusten. Ocultar objetos a los siguientes equipos.",
+    "seconds": 60,
+    "materials": [
+      {
+        "name": "Caja opaca",
+        "quantity": 1,
+        "unit": "unidades"
+      },
+      {
+        "name": "Objetos seguros",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Turno 1: cuchara de madera; turno 2: esponja limpia; turno 3: pelota de tela; turno 4: cepillo suave. Preparar físicamente sin mostrarlos."
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "rebote",
+    "title": "Rebote imposible",
+    "mode": "Representante",
+    "participants": "Un representante por equipo; cinco intentos iguales.",
+    "rules": "Rebotar una pelota de ping-pong sobre la mesa para que entre en un vaso. Cada equipo tiene cinco intentos.",
+    "scoring": "Por número de aciertos: posiciones de 100 / 75 / 50 / 25, propuestas configurables.",
+    "tie": "Si coinciden los aciertos, compartir posición.",
+    "noFinish": "Si todos tienen cero aciertos, 0 para todos, propuesto.",
+    "seated": "Lanzar sentado, con distancia ajustada y acordada antes de empezar.",
+    "preparation": "Fijar los vasos y marcar las distancias; recuperar pelotas con ayuda.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Pelotas de ping-pong",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Vasos",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "guantes",
+    "title": "Manos de mantequilla",
+    "mode": "Representante",
+    "participants": "Un representante por equipo.",
+    "rules": "Envolver una caja con papel y cinta usando guantes de cocina grandes.",
+    "scoring": "100 / 75 / 50 / 25 por resultado, propuesto. Acordar antes si cuenta cobertura, cierre o tiempo.",
+    "tie": "Misma calidad acordada: compartir posición; evitar juicios improvisados.",
+    "noFinish": "Si nadie termina, comparar cobertura y cierre según criterios acordados; sin avance: 0 propuesto.",
+    "seated": "Envolver sentado. Permitir guantes más cómodos o compañero de apoyo.",
+    "preparation": "Preparar tiras de cinta; no usar tijeras con guantes. Cajas y papel equivalentes.",
+    "seconds": 120,
+    "materials": [
+      {
+        "name": "Guantes de cocina",
+        "quantity": 4,
+        "unit": "pares"
+      },
+      {
+        "name": "Cajas",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Papel de regalo",
+        "quantity": 8,
+        "unit": "hojas"
+      },
+      {
+        "name": "Cinta adhesiva",
+        "quantity": 2,
+        "unit": "rollos"
+      }
+    ],
+    "secrets": [],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "actor",
+    "title": "El actor dramático",
+    "mode": "Representante + equipo",
+    "participants": "Un actor y su equipo por turno.",
+    "rules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+    "scoring": "100 puntos por acierto dentro del tiempo, propuesto y configurable.",
+    "tie": "Misma puntuación para todos los aciertos.",
+    "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+    "seated": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+    "preparation": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Tarjetas",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Busco mis lentes y los tengo puestos",
+      "Intento envolver un regalo que no cabe",
+      "Una planta me pide agua",
+      "Preparo una sopa demasiado caliente"
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "pelota",
+    "title": "La pelota rebelde",
+    "mode": "Representante",
+    "participants": "Un representante por equipo; tres intentos iguales.",
+    "rules": "Deslizar una pelota suave hasta una zona marcada. Comparar la distancia del mejor intento al centro.",
+    "scoring": "100 / 75 / 50 / 25 por cercanía, propuesta configurable.",
+    "tie": "Misma distancia: compartir posición.",
+    "noFinish": "Si nadie alcanza la zona, comparar cercanía; si nadie puede intentar, acordar 0.",
+    "seated": "Deslizar desde una silla y sobre una mesa, con ayuda para recoger.",
+    "preparation": "Marcar línea de salida y zona; mantener recorrido libre y distancias acordadas.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Pelotas suaves",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Cinta para marcar",
+        "quantity": 1,
+        "unit": "rollos"
+      }
+    ],
+    "secrets": [],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "cantidad",
+    "title": "¿Cuántos hay?",
+    "mode": "Representante",
+    "participants": "Una estimación por equipo.",
+    "rules": "Observar un recipiente transparente y estimar cuántos objetos contiene. No se exige responder con rapidez.",
+    "scoring": "100 / 75 / 50 / 25 por cercanía al total, propuesta configurable.",
+    "tie": "Misma diferencia absoluta: compartir posición.",
+    "noFinish": "Si nadie entrega respuesta, 0 propuesto; ofrecer respuesta oral o escrita.",
+    "seated": "Observar sentado; acercar el recipiente para facilitar la visión.",
+    "preparation": "Contar previamente y escribir el total real en una tarjeta privada. Cambiar el ejemplo secreto por el total real.",
+    "seconds": 90,
+    "materials": [
+      {
+        "name": "Recipiente transparente",
+        "quantity": 1,
+        "unit": "unidades"
+      },
+      {
+        "name": "Objetos para contar",
+        "quantity": 1,
+        "unit": "lote sin cantidad pública"
+      },
+      {
+        "name": "Papel",
+        "quantity": 4,
+        "unit": "hojas"
+      }
+    ],
+    "secrets": [
+      "EJEMPLO: total 40. Sustituir por el conteo verificado antes de jugar."
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  },
+  {
+    "id": "regalo",
+    "title": "El regalo sorpresa",
+    "mode": "Equipo",
+    "participants": "Una elección por equipo.",
+    "rules": "Elegir un paquete con una tarjeta oculta. Revelar la recompensa después de confirmar la elección.",
+    "scoring": "Tarjetas propuestas de 0 a 100 puntos; sorpresas sin puntos opcionales. Aprobar límites antes de jugar.",
+    "tie": "Compartir posición si coincide la puntuación.",
+    "noFinish": "Si el equipo no elige, permitir que un compañero elija o acordar 0.",
+    "seated": "Acercar los paquetes a la mesa; se puede elegir verbalmente.",
+    "preparation": "Usar paquetes equivalentes y tarjetas físicas; sin castigos incómodos ni obligación de comer.",
+    "seconds": 60,
+    "materials": [
+      {
+        "name": "Paquetes",
+        "quantity": 4,
+        "unit": "unidades"
+      },
+      {
+        "name": "Tarjetas",
+        "quantity": 4,
+        "unit": "unidades"
+      }
+    ],
+    "secrets": [
+      "Ejemplo: paquete A 100; B 75; C 50; D 25. Barajar físicamente. Acordar antes si las tarjetas se reponen para cada equipo."
+    ],
+    "maxPoints": 100,
+    "allowNegative": false,
+    "specialApproved": false
+  }
+]
