@@ -1,0 +1,179 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> noche-de-retos@2.4.0-fase2c1 test
+> node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && node tests/navigation.test.js && node tests/library.test.js && node tests/rounds.test.js && node tests/integration.test.js && python3 -m unittest discover -s tests -p 'test_*.py'
+
+✔ 1000 sorteos: 17 personas únicas, tamaños exactos y quinto equipo variable (48.671392ms)
+✔ rechaza registro incompleto o nombres ambiguos (0.629088ms)
+✔ los doce retos salen sin repetir y no se sobrescribe un activo (1.923985ms)
+✔ los omitidos no se sortean; pueden recuperarse (0.437648ms)
+✔ representante no puede repetir si otro ha tenido menos oportunidades, salvo adaptación (0.865147ms)
+✔ no se puntúa ni revela un reto sin representantes (0.602735ms)
+✔ puntos con límites configurables; deshacer restaura puntos, participaciones y ronda (1.692871ms)
+✔ reglas especiales requieren aprobación y pueden permitir negativos (0.640774ms)
+✔ cronómetro pausa sin perder tiempo, continúa y vence después de una recarga (0.579989ms)
+✔ persistencia completa, incluidos catálogo editado e historial deshacible (2.285083ms)
+✔ privacidad: pistas canario, notas, bombos y preparación no atraviesan la proyección pública (1.05359ms)
+✔ todas las frases y respuestas del catálogo se excluyen aun con el reto revelado (0.734047ms)
+✔ la entrada pública y sus dependencias solo contienen presentación, nunca dominio privado (6.511413ms)
+✔ fichas completas y materiales sumados conservadoramente (8.387335ms)
+✔ importación rechaza datos rotos, equipos duplicados, relojes inválidos e historial corrupto (4.008447ms)
+✔ no se publica el conteo real como material del reto de estimación (0.285024ms)
+✔ bombos extremos y de un solo integrante respetan equilibrio y capacidades (35.053ms)
+✔ un fallo de almacenamiento público no deja la sesión privada adelantada (0.465293ms)
+✔ empates de clasificación configurables sin adjudicar puntos extra (0.332218ms)
+✔ la ruleta termina en la casilla elegida para cualquier reto, también con catálogos editados (2.808231ms)
+✔ antes de confirmar representantes no se publica la selección ni la ruleta (0.642258ms)
+✔ tres rondas completas: selección distinta, reloj, representantes, puntos, privacidad y recarga (5.430863ms)
+✔ migración conserva sesión v1, historial antiguo y catálogo personalizado (1.835144ms)
+✔ recargar durante un giro conserva selección, orientación y momento de finalización (0.81896ms)
+✔ apertura y reducción de movimiento no modifican equipos ni puntos (0.318446ms)
+✔ el render público muestra fichas completas y excluye secretos en ambas páginas y fases (2.851874ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 139.989316
+✔ 17 personas, k=2: cupos exactos, unicidad y balance en 60 semillas (260.750925ms)
+✔ 17 personas, k=3: cupos exactos, unicidad y balance en 60 semillas (276.827815ms)
+✔ 17 personas, k=4: cupos exactos, unicidad y balance en 60 semillas (353.939273ms)
+✔ N variable, divisible y no divisible, k=2/3/4; sin omisiones ni duplicados (91.610604ms)
+✔ misma semilla y datos: resultado idéntico incluso con otro orden de entrada (10.466515ms)
+✔ resorteos cambian y respetan cupos; semilla candidata registrada (58.646634ms)
+✔ bombos cuantiles, edades empatadas y edades extremas (43.413831ms)
+✔ sin equipo seleccionado, pocos participantes o edad inválida: no sortea (0.767255ms)
+✔ homónimos permitidos y advertidos, IDs duplicados rechazados (0.581891ms)
+✔ editar edad invalida sorteo, recalcula bombos y obliga nuevo sorteo (20.871257ms)
+✔ confirmación bloquea sorteo y cambios; desbloqueo registrado (9.420576ms)
+✔ intercambio mantiene cupos y registra antes/después con métricas nuevas (11.839392ms)
+✔ persistencia y export/import recuperan confirmación, identidades y auditoría (8.846149ms)
+✔ migración conserva catálogo/resultados originales sin escribir la clave v1 (0.32526ms)
+✔ fallo al guardar resumen público revierte ambos archivos (0.506241ms)
+✔ importación rechaza IDs repetidos, omisiones, cupos rotos y confirmación falsa (10.374423ms)
+✔ privacidad por lista blanca: ni edades, ni pistas, ni métricas/auditoría en público (8.084937ms)
+✔ renderer escapa nombres y pagina sin perder concursantes (9.82725ms)
+✔ la TV importa solo renderer público y sonido; nunca lee sesión privada (17.573035ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1203.252977
+✔ recupera equipos 4/4/4/5 e identidades sin alterar fase 1 (9.728207ms)
+✔ la propuesta requiere aceptación; duración y puntos son configurables (0.912377ms)
+✔ transiciones inválidas no asignan puntos ni inician reloj (0.990593ms)
+✔ una ronda completa: turnos, revisión, confirmación única y recarga (9.12179ms)
+✔ reloj con referencia absoluta pausa/reanuda y vence tras recargar (1.524083ms)
+✔ el reinicio de reloj está restringido a preparación o pausa (1.369165ms)
+✔ revisar y cancelar no modifica el marcador (3.017519ms)
+✔ corrección conserva movimientos anulados, vínculos y participación real (5.53883ms)
+✔ deshacer exige motivo y no borra historial; reconfirmar no duplica (4.197694ms)
+✔ antes de revelar: no se publica juego ni candidatos; sustitución motivada (2.62169ms)
+✔ representantes pertenecen a su equipo; cambios manuales necesitan motivo (1.395602ms)
+✔ prioriza a quienes menos jugaron y exige autorización de repetición (6.175765ms)
+✔ omitidos no regresan solos; restaurarlos conserva el registro (0.944972ms)
+✔ motor multijuego: tres rondas diferentes con semilla y ruleta coherente (12.478811ms)
+✔ diferentes semillas seleccionan todos los juegos en el motor (19.762045ms)
+✔ reglas copiadas aíslan eventos; el historial previo no cambia (5.13932ms)
+✔ no se pueden cambiar equipos mientras el evento esté abierto (1.170507ms)
+✔ importación rechaza referencias rotas, puntos adulterados y duplicados (6.291559ms)
+✔ puntos fuera de límites y excepciones sin aprobación se rechazan (0.994719ms)
+✔ privacidad en todas las fases y segunda lista blanca del navegador (6.903194ms)
+✔ persistencia completa conserva borrador y sesión v1 intacta (3.699361ms)
+✔ relojes de dispositivos con distinto desfase comparten el plazo del servidor (0.419283ms)
+✔ el service worker público no precarga recursos privados (0.32509ms)
+✔ misma semilla reproduce selección, geometría, representantes y tarjetas (0.848372ms)
+✔ corrección de turno y voluntariedad se reflejan sin penalizaciones (3.271902ms)
+✔ tarjeta escrita por el conductor es privada, recuperable y se bloquea al correr (1.758742ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 122.240405
+✔ navegación local: seis secciones, una selección y tres pasos internos (1.747836ms)
+✔ rutas desconocidas, datos corruptos y almacenamiento bloqueado no impiden navegar (0.295591ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8.377534
+✔ catálogo acordado: doce IDs estables, tiempos pendientes sin inventar y sin bancos ficticios (4.660039ms)
+✔ crear y editar genera revisiones inmutables con identidad y fechas conservadas (5.24611ms)
+✔ ediciones obsoletas y cambios inválidos fallan sin modificar datos (1.530431ms)
+✔ duplicar genera ID nuevo, sin convertir la copia en juego permanente (7.326354ms)
+✔ archivar conserva resultados, versiones y eventos; restaurar crea otra revisión (1.899188ms)
+✔ Roba y Gana no se archiva ni pierde protección al editar/importar (15.967935ms)
+✔ se configuran seis sistemas y se validan límites, excepción, posiciones y objetivo (0.529778ms)
+✔ vista previa detecta IDs existentes; importación exige consentimiento sin mutación parcial (9.377534ms)
+✔ exportar e importar recupera biblioteca, colecciones, revisiones y secretos privados (4.046213ms)
+✔ importación rechaza versiones, IDs y referencias inconsistentes antes de escribir (7.520312ms)
+✔ colecciones congelan revisiones y no cambian cuando se edita una ficha (1.160318ms)
+✔ importación conserva colecciones preexistentes con IDs en conflicto (0.904326ms)
+✔ búsqueda y filtros combinan categoría, estado y texto (4.442206ms)
+✔ actor actualiza reglas futuras sin cambiar el evento y permite elegir revisión compatible (8.376916ms)
+✔ crear evento con subset excluye otros juegos de la ruleta y congela reglas (1.877373ms)
+✔ sesión de fase 1 y sesión de 2A se recuperan; biblioteca nueva sobrevive persistencia (6.566727ms)
+✔ un respaldo no puede activar motores futuros mediante las reglas de un evento (0.927085ms)
+✔ cargar dos veces el catálogo no duplica fichas ni revisiones ya importadas (6.853115ms)
+✔ plantillas públicas no contienen instrucciones, tarjetas ni objetivos privados (0.543188ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 98.758125
+✔ siete estados explícitos sin ejecutar un motor pendiente (25.679571ms)
+✔ todos los juegos activos del evento participan realmente en el sorteo sembrado (486.630342ms)
+✔ no se sortean fichas desactivadas o archivadas posteriormente (33.881842ms)
+✔ no se duplica la ronda ni cambia la selección durante el giro o tras recarga (9.816615ms)
+✔ Roba y Gana se incluye aunque no se seleccione y sigue disponible tras un cierre (10.28708ms)
+✔ Roba y Gana inactivo en un respaldo antiguo no se pierde ni se vuelve inelegible (4.446337ms)
+✔ cierre incompleto exige confirmación, motivo y referencia a la ronda vigente (10.290968ms)
+✔ los cuatro motores futuros solo tienen contrato: no aceptan resultados ni cronómetro (62.995255ms)
+✔ ronda operativa completa recorre validación y finalización con una sola asignación (2.560021ms)
+✔ repetible se puede volver a sortear; un juego ordinario completado se excluye (2.38921ms)
+✔ una configuración nueva no reescribe rondas anteriores ni su versión exacta (1.948038ms)
+✔ guardar y recuperar conserva biblioteca, equipos y ronda pendiente sin fabricar resultados (34.982304ms)
+✔ DTO y renderer públicos excluyen tarjetas, respuestas, objetivo privado y herramientas (6.751836ms)
+✔ clasificación pública es independiente de la etapa y no modifica resultados (6.474839ms)
+✔ sesión antigua continúa sin perder ni reiniciar el reloj (0.975307ms)
+✔ respaldo adulterado no puede asignar puntos o tiempo a un motor pendiente (13.539752ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 729.342888
+✔ integración desde participantes nuevos: 2 equipos, recargas, turnos, marcador y otra reunión (234.285057ms)
+✔ integración desde participantes nuevos: 3 equipos, recargas, turnos, marcador y otra reunión (114.20654ms)
+✔ integración desde participantes nuevos: 4 equipos, recargas, turnos, marcador y otra reunión (117.745405ms)
+✔ no importa si no puede conservar la sesión actual (4.35488ms)
+✔ cierra el evento después de cerrar una ronda sin resultados (7.637658ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 516.195849
+........................
+----------------------------------------------------------------------
+Ran 24 tests in 12.064s
+
+OK

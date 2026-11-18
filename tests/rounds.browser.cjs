@@ -54,3 +54,20 @@ test('conductor móvil y TV por LAN, sin biblioteca duplicada ni rondas duplicad
   const raw=await host.request.get(lan.url+'/api/public').then(r=>r.text());for(const secret of ['privateInstructions','secretIndex','ruleSnapshots','"library"','"ledger"'])assert.ok(!raw.includes(secret));assert.ok(raw.includes('Motor pendiente de integración'));
  }finally{await hostContext?.close();await phoneContext?.close();lan.process.kill();fs.rmSync(lan.dir,{recursive:true,force:true});}
 });
+
+test('fase 1 sin evento: confirmar equipos conduce a crear reunión y abre la ruleta',async()=>{
+ const {context,page,errors}=await fresh();
+ await page.evaluate(KEY=>{const s=JSON.parse(localStorage.getItem(KEY));s.confirmed=false;s.confirmedAt=null;localStorage.setItem(KEY,JSON.stringify(s));},KEY);
+ await page.reload();await page.waitForSelector('.section-nav');
+ await page.locator('.section-nav [data-section="equipos"]').click();
+ await page.locator('[data-team-step="revision"]').first().click();
+ await page.locator('[data-action="confirm"]').click();await confirm(page);
+ await page.locator('#section-inicio').waitFor({state:'visible'});
+ assert.equal((await state(page)).confirmed,true);
+ await create(page,{actorOnly:true});
+ const e=await event(page),s=await state(page);
+ assert.deepEqual(e.teams.map(t=>t.members),s.result.teams.map(t=>t.members));
+ await page.locator('#contest-draw').waitFor({state:'visible'});
+ const tv=await tvFor(context);await screen(tv,'waiting');assert.deepEqual(errors,[]);
+ await context.close();
+});

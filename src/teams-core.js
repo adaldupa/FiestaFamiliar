@@ -30,3 +30,14 @@ export function publicSnapshot(s){const byId=new Map(s.people.map(p=>[p.id,p]));
 export function saveState(storage,s){const valid=validateState(s),oldPrivate=storage.getItem(PRIVATE_KEY),oldPublic=storage.getItem(PUBLIC_KEY);try{storage.setItem(PRIVATE_KEY,JSON.stringify(valid));storage.setItem(PUBLIC_KEY,JSON.stringify(publicSnapshot(valid)));}catch(e){try{oldPrivate===null?storage.removeItem(PRIVATE_KEY):storage.setItem(PRIVATE_KEY,oldPrivate);oldPublic===null?storage.removeItem(PUBLIC_KEY):storage.setItem(PUBLIC_KEY,oldPublic);}catch{}throw Error('No se pudo guardar la sesión. Exporta una copia y revisa el espacio del navegador.');}return valid;}
 export function loadState(storage){const current=storage.getItem(PRIVATE_KEY);if(current)return validateState(JSON.parse(current));const s=initialState(),legacy=storage.getItem(LEGACY_KEY);if(legacy){const old=JSON.parse(legacy);if(!old||old.version!==1||!Array.isArray(old.people))fail('La sesión anterior no se pudo leer; se conserva intacta.');const date=new Date().toISOString();s.people=old.people.filter(p=>typeof p.name==='string'&&p.name.trim()).map(p=>({id:p.id,name:p.name.trim(),age:null,createdAt:date}));s.legacyAvailable=true;s.audit.push({at:date,type:'migration',reason:'Nombres recuperados; completar edades. Sesión v1 original conservada.'});}return validateState(s);}
 export function parsePeopleFile(raw){const list=Array.isArray(raw)?raw:raw?.participants;if(!Array.isArray(list))fail('Se esperaba una lista o un objeto con participants.');const clean=list.map(p=>({id:p.id,name:p.name,age:p.age,createdAt:p.createdAt}));validatePeople(clean);return clean;}
+
+// Copia privada independiente antes de sustituir una sesión mediante importación.
+export const PREIMPORT_KEY='retos.equipos.preimport.v2';
+export function preserveBeforeImport(storage,state){
+ const snapshot=JSON.stringify(validateState(state));
+ const key=PREIMPORT_KEY+':'+newSeed();
+ storage.setItem(key,snapshot);
+ if(storage.getItem(key)!==snapshot)throw Error('No se pudo conservar la sesión actual. Importación cancelada.');
+ storage.setItem(PREIMPORT_KEY,key);
+ return key;
+}
