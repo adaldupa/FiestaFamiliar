@@ -14,7 +14,7 @@ ENGINES = {
 def engine_for(g):
     mode = g['scoring']['mode']
     key, ready, label = ENGINES[mode]
-    operational = ready and g.get('implementation') != 'planned'
+    operational = (ready or g.get('executionVersion') == 1) and g.get('implementation') != 'planned'
     return {'key': key, 'mode': mode, 'operational': operational, 'label': label,
             'message': 'Motor operativo' if operational else 'Motor pendiente de integración'}
 
@@ -74,6 +74,9 @@ def validate_modern(e):
     for r in e['rounds']:
         ref = r.get('ruleRef')
         require(isinstance(ref, dict) and ref.get('id') == r['game']['id'] and ref.get('ruleVersion') == r['game']['ruleVersion'] and type(ref.get('eventSnapshot')) is int and 0 <= ref['eventSnapshot'] < len(archive) and archive[ref['eventSnapshot']] == r['game'], 'Referencia de versión de ronda inválida.')
+        if 'full' in r:
+            from full_engines import validate_full
+            validate_full(e, r)
         engine = engine_for(r['game'])
         if 'engine' in r:
             require(r['engine'] == engine, 'Descriptor de motor inválido.')
@@ -83,6 +86,8 @@ def validate_modern(e):
                 require(t['timer'] is None and t['outcome'] is None and t['secretIndex'] is None, 'Un motor pendiente no permite cronómetros o resultados ficticios.')
         if r.get('closure') == 'unscored':
             require(r['status'] == 'skipped' and r['attempts'] == [] and date(r.get('closedAt')) and r.get('skipReason'), 'Cierre sin resultados inválido.')
+    used = [c for r in e['rounds'] for c in r.get('full', {}).get('usedCards', [])]
+    require(len(used) == len(set(used)), 'Tarjetas repetidas en el evento.')
     active = next((r for r in e['rounds'] if r['id'] == e['activeRoundId']), None)
     if e['phase'] in ['game_selected', 'engine_pending', 'round_finished']:
         require(active is not None, 'La fase necesita una ronda vigente.')

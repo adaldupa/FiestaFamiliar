@@ -7,7 +7,7 @@ export const ENGINE_REGISTRY=Object.freeze({
  closeness:{key:'closeness',mode:'closeness',operational:false,label:'Clasificación por cercanía'},
  special:{key:'direct-awards',mode:'special',operational:false,label:'Premios directos y transferencias'}
 });
-export function engineFor(game){const def=ENGINE_REGISTRY[game.scoring.mode];return {...def,operational:Boolean(def?.operational&&game.implementation!=='planned'),message:def?.operational&&game.implementation!=='planned'?'Motor operativo':'Motor pendiente de integración'};}
+export function engineFor(game){const def=ENGINE_REGISTRY[game.scoring.mode];return {...def,operational:Boolean((def?.operational||game.executionVersion===1)&&game.implementation!=='planned'),message:(def?.operational||game.executionVersion===1)&&game.implementation!=='planned'?'Motor operativo':'Motor pendiente de integración'};}
 export const isOperational=round=>Boolean(round&&engineFor(round.game).operational);
 export const LIFECYCLE=['preparation','spinning','selected','instructions','execution','validation','finished'];
 export const LIFECYCLE_LABELS={preparation:'Preparación',spinning:'Ruleta girando',selected:'Minijuego seleccionado',instructions:'Instrucciones',execution:'En ejecución',validation:'Validación de resultados',finished:'Ronda finalizada'};

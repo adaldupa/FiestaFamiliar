@@ -1,0 +1,6425 @@
+{
+  "version": 1,
+  "banks": {
+    "sonidos": [
+      {
+        "id": "sonidos-001",
+        "text": "Aeropuerto",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-002",
+        "text": "Estación de tren",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-003",
+        "text": "Playa",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-004",
+        "text": "Bosque",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-005",
+        "text": "Granja",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-006",
+        "text": "Mercado",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-007",
+        "text": "Hospital",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-008",
+        "text": "Escuela",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-009",
+        "text": "Restaurante",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-010",
+        "text": "Cocina",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-011",
+        "text": "Estadio",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-012",
+        "text": "Zoológico",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-013",
+        "text": "Circo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-014",
+        "text": "Taller mecánico",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-015",
+        "text": "Construcción",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-016",
+        "text": "Puerto",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-017",
+        "text": "Iglesia",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-018",
+        "text": "Discoteca",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-019",
+        "text": "Biblioteca",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-020",
+        "text": "Piscina",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-021",
+        "text": "Parque",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-022",
+        "text": "Cine",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-023",
+        "text": "Teatro",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-024",
+        "text": "Oficina",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-025",
+        "text": "Baño",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-026",
+        "text": "Lavandería",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-027",
+        "text": "Panadería",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-028",
+        "text": "Carnicería",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-029",
+        "text": "Peluquería",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-030",
+        "text": "Gimnasio",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-031",
+        "text": "Carretera",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-032",
+        "text": "Cafetería",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-033",
+        "text": "Fábrica",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-034",
+        "text": "Estacionamiento",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-035",
+        "text": "Supermercado",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-036",
+        "text": "Hotel",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-037",
+        "text": "Museo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-038",
+        "text": "Laboratorio",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-039",
+        "text": "Estación de bomberos",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-040",
+        "text": "Comisaría",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-041",
+        "text": "Consultorio dental",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-042",
+        "text": "Sala de conciertos",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-043",
+        "text": "Cancha de tenis",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-044",
+        "text": "Cancha de básquetbol",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-045",
+        "text": "Pista de hielo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-046",
+        "text": "Boliche",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-047",
+        "text": "Feria",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-048",
+        "text": "Acuario",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-049",
+        "text": "Selva",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-050",
+        "text": "Desierto",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-051",
+        "text": "Montaña",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-052",
+        "text": "Cueva",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-053",
+        "text": "Cascada",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-054",
+        "text": "Río",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-055",
+        "text": "Lago",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-056",
+        "text": "Volcán",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-057",
+        "text": "Isla",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-058",
+        "text": "Jardín",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-059",
+        "text": "Gallinero",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-060",
+        "text": "Establo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-061",
+        "text": "Perrera",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-062",
+        "text": "Aviario",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-063",
+        "text": "Terraza",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-064",
+        "text": "Azotea",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-065",
+        "text": "Sótano",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-066",
+        "text": "Ascensor",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-067",
+        "text": "Escalera",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-068",
+        "text": "Túnel",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-069",
+        "text": "Puente",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-070",
+        "text": "Tren subterráneo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-071",
+        "text": "Camión urbano",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-072",
+        "text": "Avión",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-073",
+        "text": "Barco",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-074",
+        "text": "Submarino",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-075",
+        "text": "Cohete",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-076",
+        "text": "Castillo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-077",
+        "text": "Palacio",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-078",
+        "text": "Catedral",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-079",
+        "text": "Monasterio",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-080",
+        "text": "Aserradero",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-081",
+        "text": "Molino",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-082",
+        "text": "Mina",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-083",
+        "text": "Planta eléctrica",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-084",
+        "text": "Invernadero",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-085",
+        "text": "Vivero",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-086",
+        "text": "Plaza de toros",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-087",
+        "text": "Hipódromo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-088",
+        "text": "Autódromo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-089",
+        "text": "Pista de atletismo",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-090",
+        "text": "Salón de clases",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-091",
+        "text": "Comedor escolar",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-092",
+        "text": "Sala de urgencias",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-093",
+        "text": "Quirófano",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-094",
+        "text": "Sala de espera",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-095",
+        "text": "Andén",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-096",
+        "text": "Terminal de autobuses",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-097",
+        "text": "Caseta de cobro",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-098",
+        "text": "Campo de fútbol",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-099",
+        "text": "Campo de golf",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-100",
+        "text": "Pista de baile",
+        "category": "Lugares"
+      },
+      {
+        "id": "sonidos-101",
+        "text": "Teléfono",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-102",
+        "text": "Reloj despertador",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-103",
+        "text": "Timbre",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-104",
+        "text": "Campana",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-105",
+        "text": "Silbato",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-106",
+        "text": "Tambor",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-107",
+        "text": "Guitarra",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-108",
+        "text": "Trompeta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-109",
+        "text": "Violín",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-110",
+        "text": "Piano",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-111",
+        "text": "Flauta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-112",
+        "text": "Maraca",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-113",
+        "text": "Acordeón",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-114",
+        "text": "Armónica",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-115",
+        "text": "Platillos",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-116",
+        "text": "Triángulo musical",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-117",
+        "text": "Saxofón",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-118",
+        "text": "Batería musical",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-119",
+        "text": "Bocina",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-120",
+        "text": "Radio",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-121",
+        "text": "Televisor",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-122",
+        "text": "Licuadora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-123",
+        "text": "Batidora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-124",
+        "text": "Cafetera",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-125",
+        "text": "Microondas",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-126",
+        "text": "Lavadora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-127",
+        "text": "Secadora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-128",
+        "text": "Aspiradora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-129",
+        "text": "Ventilador",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-130",
+        "text": "Secador de pelo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-131",
+        "text": "Máquina de coser",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-132",
+        "text": "Impresora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-133",
+        "text": "Teclado",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-134",
+        "text": "Ratón de computadora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-135",
+        "text": "Cámara fotográfica",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-136",
+        "text": "Motocicleta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-137",
+        "text": "Automóvil",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-138",
+        "text": "Camión",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-139",
+        "text": "Tractor",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-140",
+        "text": "Ambulancia",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-141",
+        "text": "Patrulla",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-142",
+        "text": "Camión de bomberos",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-143",
+        "text": "Helicóptero",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-144",
+        "text": "Bicicleta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-145",
+        "text": "Patineta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-146",
+        "text": "Tren",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-147",
+        "text": "Lancha",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-148",
+        "text": "Velero",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-149",
+        "text": "Sierra",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-150",
+        "text": "Taladro",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-151",
+        "text": "Martillo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-152",
+        "text": "Serrucho",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-153",
+        "text": "Destornillador",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-154",
+        "text": "Engrapadora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-155",
+        "text": "Tijeras",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-156",
+        "text": "Cierre de chamarra",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-157",
+        "text": "Llaves",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-158",
+        "text": "Monedas",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-159",
+        "text": "Papel",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-160",
+        "text": "Papel aluminio",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-161",
+        "text": "Bolsa de plástico",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-162",
+        "text": "Botella",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-163",
+        "text": "Copa",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-164",
+        "text": "Vaso",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-165",
+        "text": "Plato",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-166",
+        "text": "Cuchara",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-167",
+        "text": "Tenedor",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-168",
+        "text": "Olla de presión",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-169",
+        "text": "Sartén",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-170",
+        "text": "Tostador",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-171",
+        "text": "Sacacorchos",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-172",
+        "text": "Abrelatas",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-173",
+        "text": "Matraca",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-174",
+        "text": "Sonaja",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-175",
+        "text": "Caja de música",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-176",
+        "text": "Cascabel",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-177",
+        "text": "Pandereta",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-178",
+        "text": "Gong",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-179",
+        "text": "Claxon",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-180",
+        "text": "Sirena",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-181",
+        "text": "Petardo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-182",
+        "text": "Cohete de fuegos artificiales",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-183",
+        "text": "Arco y flecha",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-184",
+        "text": "Espada",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-185",
+        "text": "Escudo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-186",
+        "text": "Pelota",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-187",
+        "text": "Balón de fútbol",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-188",
+        "text": "Pelota de tenis",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-189",
+        "text": "Canica",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-190",
+        "text": "Dado",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-191",
+        "text": "Dominó",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-192",
+        "text": "Baraja",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-193",
+        "text": "Resorte",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-194",
+        "text": "Látigo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-195",
+        "text": "Cepillo de dientes eléctrico",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-196",
+        "text": "Rasuradora",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-197",
+        "text": "Manguera",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-198",
+        "text": "Regadera",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-199",
+        "text": "Grifo",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-200",
+        "text": "Inodoro",
+        "category": "Cosas"
+      },
+      {
+        "id": "sonidos-201",
+        "text": "Roncar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-202",
+        "text": "Estornudar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-203",
+        "text": "Toser",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-204",
+        "text": "Bostezar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-205",
+        "text": "Llorar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-206",
+        "text": "Reír",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-207",
+        "text": "Silbar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-208",
+        "text": "Aplaudir",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-209",
+        "text": "Chasquear los dedos",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-210",
+        "text": "Zapatear",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-211",
+        "text": "Correr",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-212",
+        "text": "Caminar sobre grava",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-213",
+        "text": "Caminar sobre hojas secas",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-214",
+        "text": "Saltar en un charco",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-215",
+        "text": "Nadar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-216",
+        "text": "Bucear",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-217",
+        "text": "Hacer gárgaras",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-218",
+        "text": "Cepillarse los dientes",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-219",
+        "text": "Lavarse las manos",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-220",
+        "text": "Ducharse",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-221",
+        "text": "Lavarse el pelo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-222",
+        "text": "Secarse el pelo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-223",
+        "text": "Afeitarse",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-224",
+        "text": "Barrer",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-225",
+        "text": "Trapear",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-226",
+        "text": "Aspirar la alfombra",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-227",
+        "text": "Lavar platos",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-228",
+        "text": "Lavar ropa a mano",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-229",
+        "text": "Tender ropa",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-230",
+        "text": "Planchar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-231",
+        "text": "Cortar papel",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-232",
+        "text": "Rasgar papel",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-233",
+        "text": "Arrugar papel",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-234",
+        "text": "Escribir a máquina",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-235",
+        "text": "Teclear en computadora",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-236",
+        "text": "Imprimir",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-237",
+        "text": "Marcar un teléfono",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-238",
+        "text": "Contestar una llamada",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-239",
+        "text": "Tomar una fotografía",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-240",
+        "text": "Abrir una puerta chirriante",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-241",
+        "text": "Cerrar una puerta de golpe",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-242",
+        "text": "Tocar la puerta",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-243",
+        "text": "Abrir una botella",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-244",
+        "text": "Servir agua",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-245",
+        "text": "Beber con popote",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-246",
+        "text": "Beber sopa",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-247",
+        "text": "Masticar una manzana",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-248",
+        "text": "Comer papas crujientes",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-249",
+        "text": "Freír un huevo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-250",
+        "text": "Hervir agua",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-251",
+        "text": "Batir huevos",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-252",
+        "text": "Moler café",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-253",
+        "text": "Licuar fruta",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-254",
+        "text": "Picar verduras",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-255",
+        "text": "Amasar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-256",
+        "text": "Aplastar una lata",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-257",
+        "text": "Reventar una burbuja",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-258",
+        "text": "Inflar un globo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-259",
+        "text": "Soltar un globo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-260",
+        "text": "Explotar un globo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-261",
+        "text": "Soplar velas",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-262",
+        "text": "Prender un cerillo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-263",
+        "text": "Encender una fogata",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-264",
+        "text": "Avivar el fuego",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-265",
+        "text": "Cortar madera",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-266",
+        "text": "Clavar un clavo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-267",
+        "text": "Taladrar una pared",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-268",
+        "text": "Serrar una tabla",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-269",
+        "text": "Lijar madera",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-270",
+        "text": "Arrancar un motor",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-271",
+        "text": "Acelerar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-272",
+        "text": "Frenar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-273",
+        "text": "Cambiar de velocidad",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-274",
+        "text": "Tocar el claxon",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-275",
+        "text": "Pedalear",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-276",
+        "text": "Derrapar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-277",
+        "text": "Remar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-278",
+        "text": "Izar una vela",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-279",
+        "text": "Lanzar un ancla",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-280",
+        "text": "Despegar en avión",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-281",
+        "text": "Aterrizar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-282",
+        "text": "Marchar",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-283",
+        "text": "Botar un balón",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-284",
+        "text": "Patear un balón",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-285",
+        "text": "Lanzar una pelota",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-286",
+        "text": "Golpear una pelota de tenis",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-287",
+        "text": "Tirar una bola de boliche",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-288",
+        "text": "Derribar fichas de dominó",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-289",
+        "text": "Barajar cartas",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-290",
+        "text": "Lanzar dados",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-291",
+        "text": "Girar una ruleta",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-292",
+        "text": "Abrir un cierre",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-293",
+        "text": "Abrochar velcro",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-294",
+        "text": "Sacudir monedas",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-295",
+        "text": "Arrastrar una silla",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-296",
+        "text": "Mover un mueble",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-297",
+        "text": "Romper hielo",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-298",
+        "text": "Aplastar nieve",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-299",
+        "text": "Soplar una flauta",
+        "category": "Acciones"
+      },
+      {
+        "id": "sonidos-300",
+        "text": "Tocar un tambor",
+        "category": "Acciones"
+      }
+    ],
+    "prohibidas": [
+      {
+        "id": "prohibidas-001",
+        "target": "Perro",
+        "forbidden": [
+          "ladrar",
+          "mascota",
+          "hueso"
+        ]
+      },
+      {
+        "id": "prohibidas-002",
+        "target": "Gato",
+        "forbidden": [
+          "maullar",
+          "bigotes",
+          "felino"
+        ]
+      },
+      {
+        "id": "prohibidas-003",
+        "target": "Caballo",
+        "forbidden": [
+          "relinchar",
+          "montar",
+          "crin"
+        ]
+      },
+      {
+        "id": "prohibidas-004",
+        "target": "Vaca",
+        "forbidden": [
+          "leche",
+          "mugir",
+          "granja"
+        ]
+      },
+      {
+        "id": "prohibidas-005",
+        "target": "Oveja",
+        "forbidden": [
+          "lana",
+          "balido",
+          "rebaño"
+        ]
+      },
+      {
+        "id": "prohibidas-006",
+        "target": "Cerdo",
+        "forbidden": [
+          "tocino",
+          "lodo",
+          "gruñir"
+        ]
+      },
+      {
+        "id": "prohibidas-007",
+        "target": "Gallina",
+        "forbidden": [
+          "huevo",
+          "plumas",
+          "corral"
+        ]
+      },
+      {
+        "id": "prohibidas-008",
+        "target": "Gallo",
+        "forbidden": [
+          "cantar",
+          "amanecer",
+          "cresta"
+        ]
+      },
+      {
+        "id": "prohibidas-009",
+        "target": "Pato",
+        "forbidden": [
+          "cuac",
+          "laguna",
+          "pico"
+        ]
+      },
+      {
+        "id": "prohibidas-010",
+        "target": "Pavo",
+        "forbidden": [
+          "Navidad",
+          "plumas",
+          "moco"
+        ]
+      },
+      {
+        "id": "prohibidas-011",
+        "target": "Conejo",
+        "forbidden": [
+          "zanahoria",
+          "orejas",
+          "saltar"
+        ]
+      },
+      {
+        "id": "prohibidas-012",
+        "target": "Ratón",
+        "forbidden": [
+          "queso",
+          "roedor",
+          "trampa"
+        ]
+      },
+      {
+        "id": "prohibidas-013",
+        "target": "León",
+        "forbidden": [
+          "melena",
+          "rey",
+          "rugido"
+        ]
+      },
+      {
+        "id": "prohibidas-014",
+        "target": "Tigre",
+        "forbidden": [
+          "rayas",
+          "felino",
+          "selva"
+        ]
+      },
+      {
+        "id": "prohibidas-015",
+        "target": "Elefante",
+        "forbidden": [
+          "trompa",
+          "colmillos",
+          "grande"
+        ]
+      },
+      {
+        "id": "prohibidas-016",
+        "target": "Jirafa",
+        "forbidden": [
+          "cuello",
+          "manchas",
+          "alta"
+        ]
+      },
+      {
+        "id": "prohibidas-017",
+        "target": "Cebra",
+        "forbidden": [
+          "rayas",
+          "blanco",
+          "negro"
+        ]
+      },
+      {
+        "id": "prohibidas-018",
+        "target": "Hipopótamo",
+        "forbidden": [
+          "río",
+          "boca",
+          "África"
+        ]
+      },
+      {
+        "id": "prohibidas-019",
+        "target": "Rinoceronte",
+        "forbidden": [
+          "cuerno",
+          "gris",
+          "grande"
+        ]
+      },
+      {
+        "id": "prohibidas-020",
+        "target": "Cocodrilo",
+        "forbidden": [
+          "reptil",
+          "dientes",
+          "río"
+        ]
+      },
+      {
+        "id": "prohibidas-021",
+        "target": "Tortuga",
+        "forbidden": [
+          "caparazón",
+          "lenta",
+          "reptil"
+        ]
+      },
+      {
+        "id": "prohibidas-022",
+        "target": "Serpiente",
+        "forbidden": [
+          "reptar",
+          "veneno",
+          "colmillos"
+        ]
+      },
+      {
+        "id": "prohibidas-023",
+        "target": "Lagartija",
+        "forbidden": [
+          "reptil",
+          "cola",
+          "pared"
+        ]
+      },
+      {
+        "id": "prohibidas-024",
+        "target": "Iguana",
+        "forbidden": [
+          "verde",
+          "reptil",
+          "cresta"
+        ]
+      },
+      {
+        "id": "prohibidas-025",
+        "target": "Camaleón",
+        "forbidden": [
+          "color",
+          "lengua",
+          "camuflaje"
+        ]
+      },
+      {
+        "id": "prohibidas-026",
+        "target": "Rana",
+        "forbidden": [
+          "saltar",
+          "charco",
+          "croar"
+        ]
+      },
+      {
+        "id": "prohibidas-027",
+        "target": "Sapo",
+        "forbidden": [
+          "verrugas",
+          "anfibio",
+          "croar"
+        ]
+      },
+      {
+        "id": "prohibidas-028",
+        "target": "Pez",
+        "forbidden": [
+          "agua",
+          "aletas",
+          "escamas"
+        ]
+      },
+      {
+        "id": "prohibidas-029",
+        "target": "Tiburón",
+        "forbidden": [
+          "aleta",
+          "dientes",
+          "mar"
+        ]
+      },
+      {
+        "id": "prohibidas-030",
+        "target": "Delfín",
+        "forbidden": [
+          "mar",
+          "inteligente",
+          "saltar"
+        ]
+      },
+      {
+        "id": "prohibidas-031",
+        "target": "Ballena",
+        "forbidden": [
+          "océano",
+          "enorme",
+          "chorro"
+        ]
+      },
+      {
+        "id": "prohibidas-032",
+        "target": "Pulpo",
+        "forbidden": [
+          "ocho",
+          "tentáculos",
+          "tinta"
+        ]
+      },
+      {
+        "id": "prohibidas-033",
+        "target": "Calamar",
+        "forbidden": [
+          "tinta",
+          "tentáculos",
+          "mar"
+        ]
+      },
+      {
+        "id": "prohibidas-034",
+        "target": "Cangrejo",
+        "forbidden": [
+          "pinzas",
+          "playa",
+          "lateral"
+        ]
+      },
+      {
+        "id": "prohibidas-035",
+        "target": "Camarón",
+        "forbidden": [
+          "marisco",
+          "rosa",
+          "antenas"
+        ]
+      },
+      {
+        "id": "prohibidas-036",
+        "target": "Langosta",
+        "forbidden": [
+          "pinzas",
+          "marisco",
+          "roja"
+        ]
+      },
+      {
+        "id": "prohibidas-037",
+        "target": "Estrella de mar",
+        "forbidden": [
+          "brazos",
+          "océano",
+          "cinco"
+        ]
+      },
+      {
+        "id": "prohibidas-038",
+        "target": "Caballito de mar",
+        "forbidden": [
+          "cola",
+          "pez",
+          "océano"
+        ]
+      },
+      {
+        "id": "prohibidas-039",
+        "target": "Medusa",
+        "forbidden": [
+          "tentáculos",
+          "picar",
+          "gelatina"
+        ]
+      },
+      {
+        "id": "prohibidas-040",
+        "target": "Caracol",
+        "forbidden": [
+          "concha",
+          "baba",
+          "lento"
+        ]
+      },
+      {
+        "id": "prohibidas-041",
+        "target": "Hormiga",
+        "forbidden": [
+          "colonia",
+          "pequeña",
+          "hormiguero"
+        ]
+      },
+      {
+        "id": "prohibidas-042",
+        "target": "Abeja",
+        "forbidden": [
+          "miel",
+          "panal",
+          "aguijón"
+        ]
+      },
+      {
+        "id": "prohibidas-043",
+        "target": "Avispa",
+        "forbidden": [
+          "aguijón",
+          "amarillo",
+          "nido"
+        ]
+      },
+      {
+        "id": "prohibidas-044",
+        "target": "Mariposa",
+        "forbidden": [
+          "alas",
+          "oruga",
+          "colores"
+        ]
+      },
+      {
+        "id": "prohibidas-045",
+        "target": "Libélula",
+        "forbidden": [
+          "alas",
+          "insecto",
+          "estanque"
+        ]
+      },
+      {
+        "id": "prohibidas-046",
+        "target": "Mosquito",
+        "forbidden": [
+          "picadura",
+          "sangre",
+          "zumbido"
+        ]
+      },
+      {
+        "id": "prohibidas-047",
+        "target": "Mosca",
+        "forbidden": [
+          "basura",
+          "alas",
+          "insecto"
+        ]
+      },
+      {
+        "id": "prohibidas-048",
+        "target": "Cucaracha",
+        "forbidden": [
+          "antenas",
+          "cocina",
+          "insecto"
+        ]
+      },
+      {
+        "id": "prohibidas-049",
+        "target": "Grillo",
+        "forbidden": [
+          "cantar",
+          "noche",
+          "saltar"
+        ]
+      },
+      {
+        "id": "prohibidas-050",
+        "target": "Saltamontes",
+        "forbidden": [
+          "verde",
+          "saltar",
+          "insecto"
+        ]
+      },
+      {
+        "id": "prohibidas-051",
+        "target": "Escarabajo",
+        "forbidden": [
+          "caparazón",
+          "insecto",
+          "patas"
+        ]
+      },
+      {
+        "id": "prohibidas-052",
+        "target": "Mariquita",
+        "forbidden": [
+          "puntos",
+          "roja",
+          "insecto"
+        ]
+      },
+      {
+        "id": "prohibidas-053",
+        "target": "Araña",
+        "forbidden": [
+          "ocho",
+          "telaraña",
+          "patas"
+        ]
+      },
+      {
+        "id": "prohibidas-054",
+        "target": "Escorpión",
+        "forbidden": [
+          "aguijón",
+          "pinzas",
+          "veneno"
+        ]
+      },
+      {
+        "id": "prohibidas-055",
+        "target": "Lombriz",
+        "forbidden": [
+          "tierra",
+          "gusano",
+          "anillos"
+        ]
+      },
+      {
+        "id": "prohibidas-056",
+        "target": "Búho",
+        "forbidden": [
+          "noche",
+          "ojos",
+          "ulular"
+        ]
+      },
+      {
+        "id": "prohibidas-057",
+        "target": "Águila",
+        "forbidden": [
+          "alas",
+          "garras",
+          "bandera"
+        ]
+      },
+      {
+        "id": "prohibidas-058",
+        "target": "Halcón",
+        "forbidden": [
+          "veloz",
+          "ave",
+          "cazar"
+        ]
+      },
+      {
+        "id": "prohibidas-059",
+        "target": "Loro",
+        "forbidden": [
+          "hablar",
+          "verde",
+          "pico"
+        ]
+      },
+      {
+        "id": "prohibidas-060",
+        "target": "Guacamaya",
+        "forbidden": [
+          "colores",
+          "plumas",
+          "pico"
+        ]
+      },
+      {
+        "id": "prohibidas-061",
+        "target": "Tucán",
+        "forbidden": [
+          "pico",
+          "selva",
+          "colores"
+        ]
+      },
+      {
+        "id": "prohibidas-062",
+        "target": "Colibrí",
+        "forbidden": [
+          "néctar",
+          "pequeño",
+          "alas"
+        ]
+      },
+      {
+        "id": "prohibidas-063",
+        "target": "Paloma",
+        "forbidden": [
+          "paz",
+          "plaza",
+          "blanca"
+        ]
+      },
+      {
+        "id": "prohibidas-064",
+        "target": "Cuervo",
+        "forbidden": [
+          "negro",
+          "graznar",
+          "ave"
+        ]
+      },
+      {
+        "id": "prohibidas-065",
+        "target": "Gorrión",
+        "forbidden": [
+          "pequeño",
+          "ave",
+          "ciudad"
+        ]
+      },
+      {
+        "id": "prohibidas-066",
+        "target": "Golondrina",
+        "forbidden": [
+          "migrar",
+          "nido",
+          "ave"
+        ]
+      },
+      {
+        "id": "prohibidas-067",
+        "target": "Pelícano",
+        "forbidden": [
+          "pico",
+          "bolsa",
+          "mar"
+        ]
+      },
+      {
+        "id": "prohibidas-068",
+        "target": "Flamenco",
+        "forbidden": [
+          "rosa",
+          "patas",
+          "laguna"
+        ]
+      },
+      {
+        "id": "prohibidas-069",
+        "target": "Pingüino",
+        "forbidden": [
+          "hielo",
+          "Antártida",
+          "ave"
+        ]
+      },
+      {
+        "id": "prohibidas-070",
+        "target": "Avestruz",
+        "forbidden": [
+          "correr",
+          "grande",
+          "ave"
+        ]
+      },
+      {
+        "id": "prohibidas-071",
+        "target": "Pavo real",
+        "forbidden": [
+          "cola",
+          "plumas",
+          "abanico"
+        ]
+      },
+      {
+        "id": "prohibidas-072",
+        "target": "Murciélago",
+        "forbidden": [
+          "noche",
+          "alas",
+          "cueva"
+        ]
+      },
+      {
+        "id": "prohibidas-073",
+        "target": "Mono",
+        "forbidden": [
+          "banana",
+          "árbol",
+          "primate"
+        ]
+      },
+      {
+        "id": "prohibidas-074",
+        "target": "Gorila",
+        "forbidden": [
+          "primate",
+          "fuerte",
+          "selva"
+        ]
+      },
+      {
+        "id": "prohibidas-075",
+        "target": "Orangután",
+        "forbidden": [
+          "rojo",
+          "primate",
+          "brazos"
+        ]
+      },
+      {
+        "id": "prohibidas-076",
+        "target": "Chimpancé",
+        "forbidden": [
+          "primate",
+          "selva",
+          "inteligente"
+        ]
+      },
+      {
+        "id": "prohibidas-077",
+        "target": "Oso",
+        "forbidden": [
+          "miel",
+          "hibernar",
+          "bosque"
+        ]
+      },
+      {
+        "id": "prohibidas-078",
+        "target": "Panda",
+        "forbidden": [
+          "bambú",
+          "blanco",
+          "negro"
+        ]
+      },
+      {
+        "id": "prohibidas-079",
+        "target": "Koala",
+        "forbidden": [
+          "eucalipto",
+          "Australia",
+          "árbol"
+        ]
+      },
+      {
+        "id": "prohibidas-080",
+        "target": "Canguro",
+        "forbidden": [
+          "bolsa",
+          "saltar",
+          "Australia"
+        ]
+      },
+      {
+        "id": "prohibidas-081",
+        "target": "Lobo",
+        "forbidden": [
+          "aullar",
+          "manada",
+          "luna"
+        ]
+      },
+      {
+        "id": "prohibidas-082",
+        "target": "Zorro",
+        "forbidden": [
+          "astuto",
+          "cola",
+          "rojo"
+        ]
+      },
+      {
+        "id": "prohibidas-083",
+        "target": "Mapache",
+        "forbidden": [
+          "antifaz",
+          "basura",
+          "cola"
+        ]
+      },
+      {
+        "id": "prohibidas-084",
+        "target": "Ardilla",
+        "forbidden": [
+          "nuez",
+          "árbol",
+          "cola"
+        ]
+      },
+      {
+        "id": "prohibidas-085",
+        "target": "Erizo",
+        "forbidden": [
+          "púas",
+          "pequeño",
+          "bola"
+        ]
+      },
+      {
+        "id": "prohibidas-086",
+        "target": "Puercoespín",
+        "forbidden": [
+          "púas",
+          "roedor",
+          "espinas"
+        ]
+      },
+      {
+        "id": "prohibidas-087",
+        "target": "Perezoso",
+        "forbidden": [
+          "lento",
+          "árbol",
+          "colgar"
+        ]
+      },
+      {
+        "id": "prohibidas-088",
+        "target": "Armadillo",
+        "forbidden": [
+          "caparazón",
+          "bola",
+          "mamífero"
+        ]
+      },
+      {
+        "id": "prohibidas-089",
+        "target": "Oso hormiguero",
+        "forbidden": [
+          "lengua",
+          "hormigas",
+          "hocico"
+        ]
+      },
+      {
+        "id": "prohibidas-090",
+        "target": "Tapir",
+        "forbidden": [
+          "trompa",
+          "selva",
+          "mamífero"
+        ]
+      },
+      {
+        "id": "prohibidas-091",
+        "target": "Venado",
+        "forbidden": [
+          "astas",
+          "bosque",
+          "correr"
+        ]
+      },
+      {
+        "id": "prohibidas-092",
+        "target": "Alce",
+        "forbidden": [
+          "astas",
+          "grande",
+          "norte"
+        ]
+      },
+      {
+        "id": "prohibidas-093",
+        "target": "Reno",
+        "forbidden": [
+          "Navidad",
+          "trineo",
+          "astas"
+        ]
+      },
+      {
+        "id": "prohibidas-094",
+        "target": "Bisonte",
+        "forbidden": [
+          "joroba",
+          "pradera",
+          "cuernos"
+        ]
+      },
+      {
+        "id": "prohibidas-095",
+        "target": "Búfalo",
+        "forbidden": [
+          "cuernos",
+          "manada",
+          "grande"
+        ]
+      },
+      {
+        "id": "prohibidas-096",
+        "target": "Camello",
+        "forbidden": [
+          "joroba",
+          "desierto",
+          "arena"
+        ]
+      },
+      {
+        "id": "prohibidas-097",
+        "target": "Llama",
+        "forbidden": [
+          "Andes",
+          "escupir",
+          "lana"
+        ]
+      },
+      {
+        "id": "prohibidas-098",
+        "target": "Alpaca",
+        "forbidden": [
+          "lana",
+          "Andes",
+          "suave"
+        ]
+      },
+      {
+        "id": "prohibidas-099",
+        "target": "Burro",
+        "forbidden": [
+          "rebuznar",
+          "orejas",
+          "carga"
+        ]
+      },
+      {
+        "id": "prohibidas-100",
+        "target": "Mula",
+        "forbidden": [
+          "burro",
+          "caballo",
+          "carga"
+        ]
+      },
+      {
+        "id": "prohibidas-101",
+        "target": "Taco",
+        "forbidden": [
+          "tortilla",
+          "salsa",
+          "México"
+        ]
+      },
+      {
+        "id": "prohibidas-102",
+        "target": "Enchilada",
+        "forbidden": [
+          "tortilla",
+          "chile",
+          "relleno"
+        ]
+      },
+      {
+        "id": "prohibidas-103",
+        "target": "Quesadilla",
+        "forbidden": [
+          "queso",
+          "tortilla",
+          "comal"
+        ]
+      },
+      {
+        "id": "prohibidas-104",
+        "target": "Tamal",
+        "forbidden": [
+          "masa",
+          "hoja",
+          "vapor"
+        ]
+      },
+      {
+        "id": "prohibidas-105",
+        "target": "Pozole",
+        "forbidden": [
+          "maíz",
+          "caldo",
+          "rábano"
+        ]
+      },
+      {
+        "id": "prohibidas-106",
+        "target": "Menudo",
+        "forbidden": [
+          "pancita",
+          "caldo",
+          "res"
+        ]
+      },
+      {
+        "id": "prohibidas-107",
+        "target": "Birria",
+        "forbidden": [
+          "carne",
+          "Jalisco",
+          "consomé"
+        ]
+      },
+      {
+        "id": "prohibidas-108",
+        "target": "Torta",
+        "forbidden": [
+          "bolillo",
+          "jamón",
+          "pan"
+        ]
+      },
+      {
+        "id": "prohibidas-109",
+        "target": "Mollete",
+        "forbidden": [
+          "frijoles",
+          "queso",
+          "bolillo"
+        ]
+      },
+      {
+        "id": "prohibidas-110",
+        "target": "Sope",
+        "forbidden": [
+          "masa",
+          "borde",
+          "frijoles"
+        ]
+      },
+      {
+        "id": "prohibidas-111",
+        "target": "Gordita",
+        "forbidden": [
+          "masa",
+          "relleno",
+          "comal"
+        ]
+      },
+      {
+        "id": "prohibidas-112",
+        "target": "Tostada",
+        "forbidden": [
+          "crujiente",
+          "tortilla",
+          "frijoles"
+        ]
+      },
+      {
+        "id": "prohibidas-113",
+        "target": "Chilaquiles",
+        "forbidden": [
+          "salsa",
+          "totopos",
+          "desayuno"
+        ]
+      },
+      {
+        "id": "prohibidas-114",
+        "target": "Guacamole",
+        "forbidden": [
+          "aguacate",
+          "salsa",
+          "molcajete"
+        ]
+      },
+      {
+        "id": "prohibidas-115",
+        "target": "Pico de gallo",
+        "forbidden": [
+          "jitomate",
+          "cebolla",
+          "chile"
+        ]
+      },
+      {
+        "id": "prohibidas-116",
+        "target": "Salsa verde",
+        "forbidden": [
+          "tomatillo",
+          "chile",
+          "molcajete"
+        ]
+      },
+      {
+        "id": "prohibidas-117",
+        "target": "Mole",
+        "forbidden": [
+          "chocolate",
+          "chiles",
+          "Puebla"
+        ]
+      },
+      {
+        "id": "prohibidas-118",
+        "target": "Arroz",
+        "forbidden": [
+          "grano",
+          "blanco",
+          "cereal"
+        ]
+      },
+      {
+        "id": "prohibidas-119",
+        "target": "Frijol",
+        "forbidden": [
+          "legumbre",
+          "olla",
+          "refrito"
+        ]
+      },
+      {
+        "id": "prohibidas-120",
+        "target": "Lenteja",
+        "forbidden": [
+          "legumbre",
+          "sopa",
+          "grano"
+        ]
+      },
+      {
+        "id": "prohibidas-121",
+        "target": "Garbanzo",
+        "forbidden": [
+          "hummus",
+          "legumbre",
+          "redondo"
+        ]
+      },
+      {
+        "id": "prohibidas-122",
+        "target": "Haba",
+        "forbidden": [
+          "verde",
+          "legumbre",
+          "vaina"
+        ]
+      },
+      {
+        "id": "prohibidas-123",
+        "target": "Maíz",
+        "forbidden": [
+          "elote",
+          "grano",
+          "tortilla"
+        ]
+      },
+      {
+        "id": "prohibidas-124",
+        "target": "Trigo",
+        "forbidden": [
+          "harina",
+          "pan",
+          "cereal"
+        ]
+      },
+      {
+        "id": "prohibidas-125",
+        "target": "Avena",
+        "forbidden": [
+          "cereal",
+          "hojuelas",
+          "desayuno"
+        ]
+      },
+      {
+        "id": "prohibidas-126",
+        "target": "Cebada",
+        "forbidden": [
+          "cerveza",
+          "cereal",
+          "grano"
+        ]
+      },
+      {
+        "id": "prohibidas-127",
+        "target": "Quinoa",
+        "forbidden": [
+          "semilla",
+          "Andes",
+          "grano"
+        ]
+      },
+      {
+        "id": "prohibidas-128",
+        "target": "Pan",
+        "forbidden": [
+          "harina",
+          "horno",
+          "masa"
+        ]
+      },
+      {
+        "id": "prohibidas-129",
+        "target": "Bolillo",
+        "forbidden": [
+          "pan",
+          "torta",
+          "migajón"
+        ]
+      },
+      {
+        "id": "prohibidas-130",
+        "target": "Concha",
+        "forbidden": [
+          "pan",
+          "dulce",
+          "costra"
+        ]
+      },
+      {
+        "id": "prohibidas-131",
+        "target": "Dona",
+        "forbidden": [
+          "agujero",
+          "glaseado",
+          "pan"
+        ]
+      },
+      {
+        "id": "prohibidas-132",
+        "target": "Churro",
+        "forbidden": [
+          "azúcar",
+          "frito",
+          "masa"
+        ]
+      },
+      {
+        "id": "prohibidas-133",
+        "target": "Galleta",
+        "forbidden": [
+          "horno",
+          "crujiente",
+          "harina"
+        ]
+      },
+      {
+        "id": "prohibidas-134",
+        "target": "Pastel",
+        "forbidden": [
+          "velas",
+          "cumpleaños",
+          "rebanada"
+        ]
+      },
+      {
+        "id": "prohibidas-135",
+        "target": "Flan",
+        "forbidden": [
+          "caramelo",
+          "leche",
+          "postre"
+        ]
+      },
+      {
+        "id": "prohibidas-136",
+        "target": "Gelatina",
+        "forbidden": [
+          "temblar",
+          "molde",
+          "postre"
+        ]
+      },
+      {
+        "id": "prohibidas-137",
+        "target": "Helado",
+        "forbidden": [
+          "frío",
+          "cono",
+          "crema"
+        ]
+      },
+      {
+        "id": "prohibidas-138",
+        "target": "Paleta",
+        "forbidden": [
+          "palito",
+          "hielo",
+          "dulce"
+        ]
+      },
+      {
+        "id": "prohibidas-139",
+        "target": "Chocolate",
+        "forbidden": [
+          "cacao",
+          "dulce",
+          "barra"
+        ]
+      },
+      {
+        "id": "prohibidas-140",
+        "target": "Caramelo",
+        "forbidden": [
+          "azúcar",
+          "dulce",
+          "envoltura"
+        ]
+      },
+      {
+        "id": "prohibidas-141",
+        "target": "Mazapán",
+        "forbidden": [
+          "cacahuate",
+          "polvo",
+          "dulce"
+        ]
+      },
+      {
+        "id": "prohibidas-142",
+        "target": "Alegría",
+        "forbidden": [
+          "amaranto",
+          "miel",
+          "dulce"
+        ]
+      },
+      {
+        "id": "prohibidas-143",
+        "target": "Cajeta",
+        "forbidden": [
+          "leche",
+          "cabra",
+          "dulce"
+        ]
+      },
+      {
+        "id": "prohibidas-144",
+        "target": "Mermelada",
+        "forbidden": [
+          "fruta",
+          "untar",
+          "frasco"
+        ]
+      },
+      {
+        "id": "prohibidas-145",
+        "target": "Miel",
+        "forbidden": [
+          "abeja",
+          "panal",
+          "dulce"
+        ]
+      },
+      {
+        "id": "prohibidas-146",
+        "target": "Azúcar",
+        "forbidden": [
+          "dulce",
+          "caña",
+          "cristales"
+        ]
+      },
+      {
+        "id": "prohibidas-147",
+        "target": "Sal",
+        "forbidden": [
+          "salado",
+          "mar",
+          "condimento"
+        ]
+      },
+      {
+        "id": "prohibidas-148",
+        "target": "Pimienta",
+        "forbidden": [
+          "negra",
+          "molino",
+          "condimento"
+        ]
+      },
+      {
+        "id": "prohibidas-149",
+        "target": "Canela",
+        "forbidden": [
+          "raja",
+          "aroma",
+          "especia"
+        ]
+      },
+      {
+        "id": "prohibidas-150",
+        "target": "Vainilla",
+        "forbidden": [
+          "aroma",
+          "postre",
+          "vaina"
+        ]
+      },
+      {
+        "id": "prohibidas-151",
+        "target": "Manzana",
+        "forbidden": [
+          "roja",
+          "árbol",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-152",
+        "target": "Pera",
+        "forbidden": [
+          "verde",
+          "fruta",
+          "jugosa"
+        ]
+      },
+      {
+        "id": "prohibidas-153",
+        "target": "Plátano",
+        "forbidden": [
+          "amarillo",
+          "cáscara",
+          "mono"
+        ]
+      },
+      {
+        "id": "prohibidas-154",
+        "target": "Naranja",
+        "forbidden": [
+          "cítrico",
+          "jugo",
+          "gajos"
+        ]
+      },
+      {
+        "id": "prohibidas-155",
+        "target": "Mandarina",
+        "forbidden": [
+          "gajos",
+          "cáscara",
+          "cítrico"
+        ]
+      },
+      {
+        "id": "prohibidas-156",
+        "target": "Limón",
+        "forbidden": [
+          "ácido",
+          "verde",
+          "cítrico"
+        ]
+      },
+      {
+        "id": "prohibidas-157",
+        "target": "Toronja",
+        "forbidden": [
+          "cítrico",
+          "amarga",
+          "rosa"
+        ]
+      },
+      {
+        "id": "prohibidas-158",
+        "target": "Fresa",
+        "forbidden": [
+          "roja",
+          "semillas",
+          "crema"
+        ]
+      },
+      {
+        "id": "prohibidas-159",
+        "target": "Frambuesa",
+        "forbidden": [
+          "roja",
+          "baya",
+          "pequeña"
+        ]
+      },
+      {
+        "id": "prohibidas-160",
+        "target": "Zarzamora",
+        "forbidden": [
+          "negra",
+          "baya",
+          "morada"
+        ]
+      },
+      {
+        "id": "prohibidas-161",
+        "target": "Arándano",
+        "forbidden": [
+          "azul",
+          "baya",
+          "pequeño"
+        ]
+      },
+      {
+        "id": "prohibidas-162",
+        "target": "Uva",
+        "forbidden": [
+          "racimo",
+          "vino",
+          "vid"
+        ]
+      },
+      {
+        "id": "prohibidas-163",
+        "target": "Mango",
+        "forbidden": [
+          "tropical",
+          "hueso",
+          "amarillo"
+        ]
+      },
+      {
+        "id": "prohibidas-164",
+        "target": "Papaya",
+        "forbidden": [
+          "semillas",
+          "naranja",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-165",
+        "target": "Piña",
+        "forbidden": [
+          "corona",
+          "tropical",
+          "cáscara"
+        ]
+      },
+      {
+        "id": "prohibidas-166",
+        "target": "Sandía",
+        "forbidden": [
+          "semillas",
+          "roja",
+          "verde"
+        ]
+      },
+      {
+        "id": "prohibidas-167",
+        "target": "Melón",
+        "forbidden": [
+          "naranja",
+          "semillas",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-168",
+        "target": "Durazno",
+        "forbidden": [
+          "pelusa",
+          "hueso",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-169",
+        "target": "Ciruela",
+        "forbidden": [
+          "hueso",
+          "morada",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-170",
+        "target": "Cereza",
+        "forbidden": [
+          "roja",
+          "tallo",
+          "hueso"
+        ]
+      },
+      {
+        "id": "prohibidas-171",
+        "target": "Guayaba",
+        "forbidden": [
+          "semillas",
+          "ponche",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-172",
+        "target": "Tuna",
+        "forbidden": [
+          "nopal",
+          "espinas",
+          "fruta"
+        ]
+      },
+      {
+        "id": "prohibidas-173",
+        "target": "Pitahaya",
+        "forbidden": [
+          "dragón",
+          "cactus",
+          "semillas"
+        ]
+      },
+      {
+        "id": "prohibidas-174",
+        "target": "Coco",
+        "forbidden": [
+          "palmera",
+          "agua",
+          "cáscara"
+        ]
+      },
+      {
+        "id": "prohibidas-175",
+        "target": "Aguacate",
+        "forbidden": [
+          "guacamole",
+          "hueso",
+          "verde"
+        ]
+      },
+      {
+        "id": "prohibidas-176",
+        "target": "Jitomate",
+        "forbidden": [
+          "rojo",
+          "salsa",
+          "ensalada"
+        ]
+      },
+      {
+        "id": "prohibidas-177",
+        "target": "Tomatillo",
+        "forbidden": [
+          "verde",
+          "cáscara",
+          "salsa"
+        ]
+      },
+      {
+        "id": "prohibidas-178",
+        "target": "Cebolla",
+        "forbidden": [
+          "llorar",
+          "capas",
+          "verdura"
+        ]
+      },
+      {
+        "id": "prohibidas-179",
+        "target": "Ajo",
+        "forbidden": [
+          "diente",
+          "olor",
+          "condimento"
+        ]
+      },
+      {
+        "id": "prohibidas-180",
+        "target": "Zanahoria",
+        "forbidden": [
+          "naranja",
+          "conejo",
+          "raíz"
+        ]
+      },
+      {
+        "id": "prohibidas-181",
+        "target": "Papa",
+        "forbidden": [
+          "tubérculo",
+          "fritas",
+          "puré"
+        ]
+      },
+      {
+        "id": "prohibidas-182",
+        "target": "Camote",
+        "forbidden": [
+          "dulce",
+          "tubérculo",
+          "naranja"
+        ]
+      },
+      {
+        "id": "prohibidas-183",
+        "target": "Betabel",
+        "forbidden": [
+          "rojo",
+          "raíz",
+          "jugo"
+        ]
+      },
+      {
+        "id": "prohibidas-184",
+        "target": "Rábano",
+        "forbidden": [
+          "rojo",
+          "pozole",
+          "picante"
+        ]
+      },
+      {
+        "id": "prohibidas-185",
+        "target": "Pepino",
+        "forbidden": [
+          "verde",
+          "semillas",
+          "ensalada"
+        ]
+      },
+      {
+        "id": "prohibidas-186",
+        "target": "Calabaza",
+        "forbidden": [
+          "semillas",
+          "naranja",
+          "flor"
+        ]
+      },
+      {
+        "id": "prohibidas-187",
+        "target": "Chayote",
+        "forbidden": [
+          "espinas",
+          "verde",
+          "verdura"
+        ]
+      },
+      {
+        "id": "prohibidas-188",
+        "target": "Brócoli",
+        "forbidden": [
+          "verde",
+          "árbol",
+          "verdura"
+        ]
+      },
+      {
+        "id": "prohibidas-189",
+        "target": "Coliflor",
+        "forbidden": [
+          "blanca",
+          "verdura",
+          "ramos"
+        ]
+      },
+      {
+        "id": "prohibidas-190",
+        "target": "Lechuga",
+        "forbidden": [
+          "hojas",
+          "ensalada",
+          "verde"
+        ]
+      },
+      {
+        "id": "prohibidas-191",
+        "target": "Espinaca",
+        "forbidden": [
+          "Popeye",
+          "hojas",
+          "verde"
+        ]
+      },
+      {
+        "id": "prohibidas-192",
+        "target": "Acelga",
+        "forbidden": [
+          "hojas",
+          "verde",
+          "tallo"
+        ]
+      },
+      {
+        "id": "prohibidas-193",
+        "target": "Nopal",
+        "forbidden": [
+          "cactus",
+          "espinas",
+          "verde"
+        ]
+      },
+      {
+        "id": "prohibidas-194",
+        "target": "Elote",
+        "forbidden": [
+          "mazorca",
+          "granos",
+          "maíz"
+        ]
+      },
+      {
+        "id": "prohibidas-195",
+        "target": "Champiñón",
+        "forbidden": [
+          "hongo",
+          "sombrero",
+          "blanco"
+        ]
+      },
+      {
+        "id": "prohibidas-196",
+        "target": "Queso",
+        "forbidden": [
+          "leche",
+          "lácteo",
+          "fundir"
+        ]
+      },
+      {
+        "id": "prohibidas-197",
+        "target": "Yogur",
+        "forbidden": [
+          "leche",
+          "fermentado",
+          "lácteo"
+        ]
+      },
+      {
+        "id": "prohibidas-198",
+        "target": "Mantequilla",
+        "forbidden": [
+          "leche",
+          "untar",
+          "grasa"
+        ]
+      },
+      {
+        "id": "prohibidas-199",
+        "target": "Crema",
+        "forbidden": [
+          "lácteo",
+          "espesa",
+          "leche"
+        ]
+      },
+      {
+        "id": "prohibidas-200",
+        "target": "Huevo",
+        "forbidden": [
+          "gallina",
+          "yema",
+          "cascarón"
+        ]
+      },
+      {
+        "id": "prohibidas-201",
+        "target": "Mesa",
+        "forbidden": [
+          "mueble",
+          "patas",
+          "comer"
+        ]
+      },
+      {
+        "id": "prohibidas-202",
+        "target": "Silla",
+        "forbidden": [
+          "sentar",
+          "respaldo",
+          "patas"
+        ]
+      },
+      {
+        "id": "prohibidas-203",
+        "target": "Sofá",
+        "forbidden": [
+          "sala",
+          "sentarse",
+          "cojín"
+        ]
+      },
+      {
+        "id": "prohibidas-204",
+        "target": "Cama",
+        "forbidden": [
+          "dormir",
+          "colchón",
+          "almohada"
+        ]
+      },
+      {
+        "id": "prohibidas-205",
+        "target": "Almohada",
+        "forbidden": [
+          "cabeza",
+          "dormir",
+          "cama"
+        ]
+      },
+      {
+        "id": "prohibidas-206",
+        "target": "Cobija",
+        "forbidden": [
+          "frío",
+          "cubrir",
+          "cama"
+        ]
+      },
+      {
+        "id": "prohibidas-207",
+        "target": "Colchón",
+        "forbidden": [
+          "dormir",
+          "resortes",
+          "cama"
+        ]
+      },
+      {
+        "id": "prohibidas-208",
+        "target": "Armario",
+        "forbidden": [
+          "ropa",
+          "guardar",
+          "puertas"
+        ]
+      },
+      {
+        "id": "prohibidas-209",
+        "target": "Cajón",
+        "forbidden": [
+          "mueble",
+          "guardar",
+          "jalar"
+        ]
+      },
+      {
+        "id": "prohibidas-210",
+        "target": "Espejo",
+        "forbidden": [
+          "reflejo",
+          "vidrio",
+          "mirar"
+        ]
+      },
+      {
+        "id": "prohibidas-211",
+        "target": "Lámpara",
+        "forbidden": [
+          "luz",
+          "foco",
+          "iluminar"
+        ]
+      },
+      {
+        "id": "prohibidas-212",
+        "target": "Foco",
+        "forbidden": [
+          "luz",
+          "electricidad",
+          "rosca"
+        ]
+      },
+      {
+        "id": "prohibidas-213",
+        "target": "Cortina",
+        "forbidden": [
+          "ventana",
+          "tela",
+          "tapar"
+        ]
+      },
+      {
+        "id": "prohibidas-214",
+        "target": "Persiana",
+        "forbidden": [
+          "ventana",
+          "láminas",
+          "luz"
+        ]
+      },
+      {
+        "id": "prohibidas-215",
+        "target": "Alfombra",
+        "forbidden": [
+          "piso",
+          "tela",
+          "pisar"
+        ]
+      },
+      {
+        "id": "prohibidas-216",
+        "target": "Tapete",
+        "forbidden": [
+          "entrada",
+          "piso",
+          "limpiar"
+        ]
+      },
+      {
+        "id": "prohibidas-217",
+        "target": "Puerta",
+        "forbidden": [
+          "abrir",
+          "cerrar",
+          "entrada"
+        ]
+      },
+      {
+        "id": "prohibidas-218",
+        "target": "Ventana",
+        "forbidden": [
+          "vidrio",
+          "aire",
+          "marco"
+        ]
+      },
+      {
+        "id": "prohibidas-219",
+        "target": "Llave",
+        "forbidden": [
+          "cerradura",
+          "abrir",
+          "metal"
+        ]
+      },
+      {
+        "id": "prohibidas-220",
+        "target": "Candado",
+        "forbidden": [
+          "cerrar",
+          "llave",
+          "seguro"
+        ]
+      },
+      {
+        "id": "prohibidas-221",
+        "target": "Martillo",
+        "forbidden": [
+          "clavo",
+          "golpear",
+          "herramienta"
+        ]
+      },
+      {
+        "id": "prohibidas-222",
+        "target": "Destornillador",
+        "forbidden": [
+          "tornillo",
+          "herramienta",
+          "girar"
+        ]
+      },
+      {
+        "id": "prohibidas-223",
+        "target": "Taladro",
+        "forbidden": [
+          "agujero",
+          "broca",
+          "herramienta"
+        ]
+      },
+      {
+        "id": "prohibidas-224",
+        "target": "Serrucho",
+        "forbidden": [
+          "cortar",
+          "madera",
+          "dientes"
+        ]
+      },
+      {
+        "id": "prohibidas-225",
+        "target": "Pinzas",
+        "forbidden": [
+          "agarrar",
+          "herramienta",
+          "metal"
+        ]
+      },
+      {
+        "id": "prohibidas-226",
+        "target": "Escalera",
+        "forbidden": [
+          "subir",
+          "peldaños",
+          "altura"
+        ]
+      },
+      {
+        "id": "prohibidas-227",
+        "target": "Cuerda",
+        "forbidden": [
+          "nudo",
+          "atar",
+          "lazo"
+        ]
+      },
+      {
+        "id": "prohibidas-228",
+        "target": "Cinta adhesiva",
+        "forbidden": [
+          "pegar",
+          "rollo",
+          "transparente"
+        ]
+      },
+      {
+        "id": "prohibidas-229",
+        "target": "Pegamento",
+        "forbidden": [
+          "pegar",
+          "unir",
+          "cola"
+        ]
+      },
+      {
+        "id": "prohibidas-230",
+        "target": "Tijeras",
+        "forbidden": [
+          "cortar",
+          "hojas",
+          "filo"
+        ]
+      },
+      {
+        "id": "prohibidas-231",
+        "target": "Papel",
+        "forbidden": [
+          "hoja",
+          "escribir",
+          "celulosa"
+        ]
+      },
+      {
+        "id": "prohibidas-232",
+        "target": "Cuaderno",
+        "forbidden": [
+          "hojas",
+          "escuela",
+          "apuntes"
+        ]
+      },
+      {
+        "id": "prohibidas-233",
+        "target": "Libro",
+        "forbidden": [
+          "leer",
+          "páginas",
+          "autor"
+        ]
+      },
+      {
+        "id": "prohibidas-234",
+        "target": "Lápiz",
+        "forbidden": [
+          "grafito",
+          "escribir",
+          "punta"
+        ]
+      },
+      {
+        "id": "prohibidas-235",
+        "target": "Bolígrafo",
+        "forbidden": [
+          "tinta",
+          "escribir",
+          "pluma"
+        ]
+      },
+      {
+        "id": "prohibidas-236",
+        "target": "Borrador",
+        "forbidden": [
+          "goma",
+          "lápiz",
+          "borrar"
+        ]
+      },
+      {
+        "id": "prohibidas-237",
+        "target": "Sacapuntas",
+        "forbidden": [
+          "lápiz",
+          "afilar",
+          "punta"
+        ]
+      },
+      {
+        "id": "prohibidas-238",
+        "target": "Regla",
+        "forbidden": [
+          "medir",
+          "centímetros",
+          "recta"
+        ]
+      },
+      {
+        "id": "prohibidas-239",
+        "target": "Compás",
+        "forbidden": [
+          "círculo",
+          "geometría",
+          "punta"
+        ]
+      },
+      {
+        "id": "prohibidas-240",
+        "target": "Mochila",
+        "forbidden": [
+          "escuela",
+          "espalda",
+          "guardar"
+        ]
+      },
+      {
+        "id": "prohibidas-241",
+        "target": "Estuche",
+        "forbidden": [
+          "lápices",
+          "guardar",
+          "cierre"
+        ]
+      },
+      {
+        "id": "prohibidas-242",
+        "target": "Pizarrón",
+        "forbidden": [
+          "escribir",
+          "clase",
+          "gis"
+        ]
+      },
+      {
+        "id": "prohibidas-243",
+        "target": "Gis",
+        "forbidden": [
+          "blanco",
+          "pizarrón",
+          "polvo"
+        ]
+      },
+      {
+        "id": "prohibidas-244",
+        "target": "Marcador",
+        "forbidden": [
+          "tinta",
+          "pizarrón",
+          "plumón"
+        ]
+      },
+      {
+        "id": "prohibidas-245",
+        "target": "Calculadora",
+        "forbidden": [
+          "números",
+          "operaciones",
+          "teclas"
+        ]
+      },
+      {
+        "id": "prohibidas-246",
+        "target": "Computadora",
+        "forbidden": [
+          "teclado",
+          "pantalla",
+          "programa"
+        ]
+      },
+      {
+        "id": "prohibidas-247",
+        "target": "Teclado",
+        "forbidden": [
+          "teclas",
+          "escribir",
+          "computadora"
+        ]
+      },
+      {
+        "id": "prohibidas-248",
+        "target": "Ratón de computadora",
+        "forbidden": [
+          "clic",
+          "teclado",
+          "cursor"
+        ]
+      },
+      {
+        "id": "prohibidas-249",
+        "target": "Monitor",
+        "forbidden": [
+          "pantalla",
+          "computadora",
+          "imagen"
+        ]
+      },
+      {
+        "id": "prohibidas-250",
+        "target": "Impresora",
+        "forbidden": [
+          "papel",
+          "tinta",
+          "imprimir"
+        ]
+      },
+      {
+        "id": "prohibidas-251",
+        "target": "Teléfono",
+        "forbidden": [
+          "llamada",
+          "hablar",
+          "celular"
+        ]
+      },
+      {
+        "id": "prohibidas-252",
+        "target": "Cargador",
+        "forbidden": [
+          "batería",
+          "enchufe",
+          "cable"
+        ]
+      },
+      {
+        "id": "prohibidas-253",
+        "target": "Audífonos",
+        "forbidden": [
+          "oídos",
+          "música",
+          "escuchar"
+        ]
+      },
+      {
+        "id": "prohibidas-254",
+        "target": "Bocina",
+        "forbidden": [
+          "sonido",
+          "música",
+          "volumen"
+        ]
+      },
+      {
+        "id": "prohibidas-255",
+        "target": "Micrófono",
+        "forbidden": [
+          "voz",
+          "sonido",
+          "cantar"
+        ]
+      },
+      {
+        "id": "prohibidas-256",
+        "target": "Radio",
+        "forbidden": [
+          "estación",
+          "frecuencia",
+          "escuchar"
+        ]
+      },
+      {
+        "id": "prohibidas-257",
+        "target": "Televisor",
+        "forbidden": [
+          "pantalla",
+          "canales",
+          "ver"
+        ]
+      },
+      {
+        "id": "prohibidas-258",
+        "target": "Control remoto",
+        "forbidden": [
+          "botones",
+          "televisión",
+          "distancia"
+        ]
+      },
+      {
+        "id": "prohibidas-259",
+        "target": "Cámara",
+        "forbidden": [
+          "fotos",
+          "lente",
+          "imagen"
+        ]
+      },
+      {
+        "id": "prohibidas-260",
+        "target": "Reloj",
+        "forbidden": [
+          "hora",
+          "manecillas",
+          "tiempo"
+        ]
+      },
+      {
+        "id": "prohibidas-261",
+        "target": "Calendario",
+        "forbidden": [
+          "fecha",
+          "mes",
+          "días"
+        ]
+      },
+      {
+        "id": "prohibidas-262",
+        "target": "Termómetro",
+        "forbidden": [
+          "temperatura",
+          "fiebre",
+          "grados"
+        ]
+      },
+      {
+        "id": "prohibidas-263",
+        "target": "Báscula",
+        "forbidden": [
+          "peso",
+          "kilos",
+          "medir"
+        ]
+      },
+      {
+        "id": "prohibidas-264",
+        "target": "Paraguas",
+        "forbidden": [
+          "lluvia",
+          "mojar",
+          "abrir"
+        ]
+      },
+      {
+        "id": "prohibidas-265",
+        "target": "Sombrero",
+        "forbidden": [
+          "cabeza",
+          "ala",
+          "sol"
+        ]
+      },
+      {
+        "id": "prohibidas-266",
+        "target": "Gorra",
+        "forbidden": [
+          "cabeza",
+          "visera",
+          "béisbol"
+        ]
+      },
+      {
+        "id": "prohibidas-267",
+        "target": "Bufanda",
+        "forbidden": [
+          "cuello",
+          "frío",
+          "tela"
+        ]
+      },
+      {
+        "id": "prohibidas-268",
+        "target": "Guantes",
+        "forbidden": [
+          "manos",
+          "dedos",
+          "frío"
+        ]
+      },
+      {
+        "id": "prohibidas-269",
+        "target": "Zapato",
+        "forbidden": [
+          "pie",
+          "suela",
+          "calzado"
+        ]
+      },
+      {
+        "id": "prohibidas-270",
+        "target": "Bota",
+        "forbidden": [
+          "pie",
+          "calzado",
+          "alta"
+        ]
+      },
+      {
+        "id": "prohibidas-271",
+        "target": "Sandalia",
+        "forbidden": [
+          "pie",
+          "calzado",
+          "verano"
+        ]
+      },
+      {
+        "id": "prohibidas-272",
+        "target": "Calcetín",
+        "forbidden": [
+          "pie",
+          "ropa",
+          "zapato"
+        ]
+      },
+      {
+        "id": "prohibidas-273",
+        "target": "Pantalón",
+        "forbidden": [
+          "piernas",
+          "ropa",
+          "cintura"
+        ]
+      },
+      {
+        "id": "prohibidas-274",
+        "target": "Camisa",
+        "forbidden": [
+          "botones",
+          "ropa",
+          "manga"
+        ]
+      },
+      {
+        "id": "prohibidas-275",
+        "target": "Falda",
+        "forbidden": [
+          "ropa",
+          "cintura",
+          "piernas"
+        ]
+      },
+      {
+        "id": "prohibidas-276",
+        "target": "Vestido",
+        "forbidden": [
+          "ropa",
+          "falda",
+          "prenda"
+        ]
+      },
+      {
+        "id": "prohibidas-277",
+        "target": "Chamarra",
+        "forbidden": [
+          "frío",
+          "ropa",
+          "abrigo"
+        ]
+      },
+      {
+        "id": "prohibidas-278",
+        "target": "Cinturón",
+        "forbidden": [
+          "cintura",
+          "hebilla",
+          "pantalón"
+        ]
+      },
+      {
+        "id": "prohibidas-279",
+        "target": "Corbata",
+        "forbidden": [
+          "cuello",
+          "nudo",
+          "traje"
+        ]
+      },
+      {
+        "id": "prohibidas-280",
+        "target": "Bolsa",
+        "forbidden": [
+          "guardar",
+          "asas",
+          "cargar"
+        ]
+      },
+      {
+        "id": "prohibidas-281",
+        "target": "Cartera",
+        "forbidden": [
+          "dinero",
+          "tarjetas",
+          "bolsillo"
+        ]
+      },
+      {
+        "id": "prohibidas-282",
+        "target": "Monedero",
+        "forbidden": [
+          "monedas",
+          "dinero",
+          "guardar"
+        ]
+      },
+      {
+        "id": "prohibidas-283",
+        "target": "Maleta",
+        "forbidden": [
+          "viaje",
+          "ropa",
+          "equipaje"
+        ]
+      },
+      {
+        "id": "prohibidas-284",
+        "target": "Peine",
+        "forbidden": [
+          "cabello",
+          "dientes",
+          "peinar"
+        ]
+      },
+      {
+        "id": "prohibidas-285",
+        "target": "Cepillo",
+        "forbidden": [
+          "cabello",
+          "cerdas",
+          "peinar"
+        ]
+      },
+      {
+        "id": "prohibidas-286",
+        "target": "Jabón",
+        "forbidden": [
+          "lavar",
+          "espuma",
+          "limpiar"
+        ]
+      },
+      {
+        "id": "prohibidas-287",
+        "target": "Champú",
+        "forbidden": [
+          "cabello",
+          "lavar",
+          "espuma"
+        ]
+      },
+      {
+        "id": "prohibidas-288",
+        "target": "Toalla",
+        "forbidden": [
+          "secar",
+          "baño",
+          "tela"
+        ]
+      },
+      {
+        "id": "prohibidas-289",
+        "target": "Esponja",
+        "forbidden": [
+          "lavar",
+          "absorber",
+          "espuma"
+        ]
+      },
+      {
+        "id": "prohibidas-290",
+        "target": "Cepillo dental",
+        "forbidden": [
+          "dientes",
+          "pasta",
+          "boca"
+        ]
+      },
+      {
+        "id": "prohibidas-291",
+        "target": "Pasta dental",
+        "forbidden": [
+          "dientes",
+          "cepillo",
+          "menta"
+        ]
+      },
+      {
+        "id": "prohibidas-292",
+        "target": "Vaso",
+        "forbidden": [
+          "beber",
+          "agua",
+          "recipiente"
+        ]
+      },
+      {
+        "id": "prohibidas-293",
+        "target": "Taza",
+        "forbidden": [
+          "café",
+          "asa",
+          "beber"
+        ]
+      },
+      {
+        "id": "prohibidas-294",
+        "target": "Plato",
+        "forbidden": [
+          "comida",
+          "redondo",
+          "vajilla"
+        ]
+      },
+      {
+        "id": "prohibidas-295",
+        "target": "Cuchara",
+        "forbidden": [
+          "sopa",
+          "cubierto",
+          "comer"
+        ]
+      },
+      {
+        "id": "prohibidas-296",
+        "target": "Tenedor",
+        "forbidden": [
+          "dientes",
+          "cubierto",
+          "comer"
+        ]
+      },
+      {
+        "id": "prohibidas-297",
+        "target": "Cuchillo",
+        "forbidden": [
+          "cortar",
+          "filo",
+          "cubierto"
+        ]
+      },
+      {
+        "id": "prohibidas-298",
+        "target": "Olla",
+        "forbidden": [
+          "cocinar",
+          "hervir",
+          "recipiente"
+        ]
+      },
+      {
+        "id": "prohibidas-299",
+        "target": "Sartén",
+        "forbidden": [
+          "freír",
+          "cocina",
+          "mango"
+        ]
+      },
+      {
+        "id": "prohibidas-300",
+        "target": "Colador",
+        "forbidden": [
+          "escurrir",
+          "agujeros",
+          "cocina"
+        ]
+      }
+    ],
+    "objetos": [
+      {
+        "id": "objetos-001",
+        "text": "Mesa"
+      },
+      {
+        "id": "objetos-002",
+        "text": "Silla"
+      },
+      {
+        "id": "objetos-003",
+        "text": "Sofá"
+      },
+      {
+        "id": "objetos-004",
+        "text": "Cama"
+      },
+      {
+        "id": "objetos-005",
+        "text": "Almohada"
+      },
+      {
+        "id": "objetos-006",
+        "text": "Cobija"
+      },
+      {
+        "id": "objetos-007",
+        "text": "Colchón"
+      },
+      {
+        "id": "objetos-008",
+        "text": "Armario"
+      },
+      {
+        "id": "objetos-009",
+        "text": "Cajón"
+      },
+      {
+        "id": "objetos-010",
+        "text": "Espejo"
+      },
+      {
+        "id": "objetos-011",
+        "text": "Lámpara"
+      },
+      {
+        "id": "objetos-012",
+        "text": "Foco"
+      },
+      {
+        "id": "objetos-013",
+        "text": "Cortina"
+      },
+      {
+        "id": "objetos-014",
+        "text": "Persiana"
+      },
+      {
+        "id": "objetos-015",
+        "text": "Alfombra"
+      },
+      {
+        "id": "objetos-016",
+        "text": "Tapete"
+      },
+      {
+        "id": "objetos-017",
+        "text": "Puerta"
+      },
+      {
+        "id": "objetos-018",
+        "text": "Ventana"
+      },
+      {
+        "id": "objetos-019",
+        "text": "Llave"
+      },
+      {
+        "id": "objetos-020",
+        "text": "Candado"
+      },
+      {
+        "id": "objetos-021",
+        "text": "Martillo"
+      },
+      {
+        "id": "objetos-022",
+        "text": "Destornillador"
+      },
+      {
+        "id": "objetos-023",
+        "text": "Taladro"
+      },
+      {
+        "id": "objetos-024",
+        "text": "Serrucho"
+      },
+      {
+        "id": "objetos-025",
+        "text": "Pinzas"
+      },
+      {
+        "id": "objetos-026",
+        "text": "Escalera"
+      },
+      {
+        "id": "objetos-027",
+        "text": "Cuerda"
+      },
+      {
+        "id": "objetos-028",
+        "text": "Cinta adhesiva"
+      },
+      {
+        "id": "objetos-029",
+        "text": "Pegamento"
+      },
+      {
+        "id": "objetos-030",
+        "text": "Tijeras"
+      },
+      {
+        "id": "objetos-031",
+        "text": "Papel"
+      },
+      {
+        "id": "objetos-032",
+        "text": "Cuaderno"
+      },
+      {
+        "id": "objetos-033",
+        "text": "Libro"
+      },
+      {
+        "id": "objetos-034",
+        "text": "Lápiz"
+      },
+      {
+        "id": "objetos-035",
+        "text": "Bolígrafo"
+      },
+      {
+        "id": "objetos-036",
+        "text": "Borrador"
+      },
+      {
+        "id": "objetos-037",
+        "text": "Sacapuntas"
+      },
+      {
+        "id": "objetos-038",
+        "text": "Regla"
+      },
+      {
+        "id": "objetos-039",
+        "text": "Compás"
+      },
+      {
+        "id": "objetos-040",
+        "text": "Mochila"
+      },
+      {
+        "id": "objetos-041",
+        "text": "Estuche"
+      },
+      {
+        "id": "objetos-042",
+        "text": "Pizarrón"
+      },
+      {
+        "id": "objetos-043",
+        "text": "Gis"
+      },
+      {
+        "id": "objetos-044",
+        "text": "Marcador"
+      },
+      {
+        "id": "objetos-045",
+        "text": "Calculadora"
+      },
+      {
+        "id": "objetos-046",
+        "text": "Computadora"
+      },
+      {
+        "id": "objetos-047",
+        "text": "Teclado"
+      },
+      {
+        "id": "objetos-048",
+        "text": "Ratón de computadora"
+      },
+      {
+        "id": "objetos-049",
+        "text": "Monitor"
+      },
+      {
+        "id": "objetos-050",
+        "text": "Impresora"
+      },
+      {
+        "id": "objetos-051",
+        "text": "Teléfono"
+      },
+      {
+        "id": "objetos-052",
+        "text": "Cargador"
+      },
+      {
+        "id": "objetos-053",
+        "text": "Audífonos"
+      },
+      {
+        "id": "objetos-054",
+        "text": "Bocina"
+      },
+      {
+        "id": "objetos-055",
+        "text": "Micrófono"
+      },
+      {
+        "id": "objetos-056",
+        "text": "Radio"
+      },
+      {
+        "id": "objetos-057",
+        "text": "Televisor"
+      },
+      {
+        "id": "objetos-058",
+        "text": "Control remoto"
+      },
+      {
+        "id": "objetos-059",
+        "text": "Cámara"
+      },
+      {
+        "id": "objetos-060",
+        "text": "Reloj"
+      },
+      {
+        "id": "objetos-061",
+        "text": "Calendario"
+      },
+      {
+        "id": "objetos-062",
+        "text": "Termómetro"
+      },
+      {
+        "id": "objetos-063",
+        "text": "Báscula"
+      },
+      {
+        "id": "objetos-064",
+        "text": "Paraguas"
+      },
+      {
+        "id": "objetos-065",
+        "text": "Sombrero"
+      },
+      {
+        "id": "objetos-066",
+        "text": "Gorra"
+      },
+      {
+        "id": "objetos-067",
+        "text": "Bufanda"
+      },
+      {
+        "id": "objetos-068",
+        "text": "Guantes"
+      },
+      {
+        "id": "objetos-069",
+        "text": "Zapato"
+      },
+      {
+        "id": "objetos-070",
+        "text": "Bota"
+      },
+      {
+        "id": "objetos-071",
+        "text": "Sandalia"
+      },
+      {
+        "id": "objetos-072",
+        "text": "Calcetín"
+      },
+      {
+        "id": "objetos-073",
+        "text": "Pantalón"
+      },
+      {
+        "id": "objetos-074",
+        "text": "Camisa"
+      },
+      {
+        "id": "objetos-075",
+        "text": "Falda"
+      },
+      {
+        "id": "objetos-076",
+        "text": "Vestido"
+      },
+      {
+        "id": "objetos-077",
+        "text": "Chamarra"
+      },
+      {
+        "id": "objetos-078",
+        "text": "Cinturón"
+      },
+      {
+        "id": "objetos-079",
+        "text": "Corbata"
+      },
+      {
+        "id": "objetos-080",
+        "text": "Bolsa"
+      },
+      {
+        "id": "objetos-081",
+        "text": "Cartera"
+      },
+      {
+        "id": "objetos-082",
+        "text": "Monedero"
+      },
+      {
+        "id": "objetos-083",
+        "text": "Maleta"
+      },
+      {
+        "id": "objetos-084",
+        "text": "Peine"
+      },
+      {
+        "id": "objetos-085",
+        "text": "Cepillo"
+      },
+      {
+        "id": "objetos-086",
+        "text": "Jabón"
+      },
+      {
+        "id": "objetos-087",
+        "text": "Champú"
+      },
+      {
+        "id": "objetos-088",
+        "text": "Toalla"
+      },
+      {
+        "id": "objetos-089",
+        "text": "Esponja"
+      },
+      {
+        "id": "objetos-090",
+        "text": "Cepillo dental"
+      },
+      {
+        "id": "objetos-091",
+        "text": "Pasta dental"
+      },
+      {
+        "id": "objetos-092",
+        "text": "Vaso"
+      },
+      {
+        "id": "objetos-093",
+        "text": "Taza"
+      },
+      {
+        "id": "objetos-094",
+        "text": "Plato"
+      },
+      {
+        "id": "objetos-095",
+        "text": "Cuchara"
+      },
+      {
+        "id": "objetos-096",
+        "text": "Tenedor"
+      },
+      {
+        "id": "objetos-097",
+        "text": "Cuchillo"
+      },
+      {
+        "id": "objetos-098",
+        "text": "Olla"
+      },
+      {
+        "id": "objetos-099",
+        "text": "Sartén"
+      },
+      {
+        "id": "objetos-100",
+        "text": "Colador"
+      },
+      {
+        "id": "objetos-101",
+        "text": "Reloj despertador"
+      },
+      {
+        "id": "objetos-102",
+        "text": "Timbre"
+      },
+      {
+        "id": "objetos-103",
+        "text": "Campana"
+      },
+      {
+        "id": "objetos-104",
+        "text": "Silbato"
+      },
+      {
+        "id": "objetos-105",
+        "text": "Tambor"
+      },
+      {
+        "id": "objetos-106",
+        "text": "Guitarra"
+      },
+      {
+        "id": "objetos-107",
+        "text": "Trompeta"
+      },
+      {
+        "id": "objetos-108",
+        "text": "Violín"
+      },
+      {
+        "id": "objetos-109",
+        "text": "Piano"
+      },
+      {
+        "id": "objetos-110",
+        "text": "Flauta"
+      },
+      {
+        "id": "objetos-111",
+        "text": "Maraca"
+      },
+      {
+        "id": "objetos-112",
+        "text": "Acordeón"
+      },
+      {
+        "id": "objetos-113",
+        "text": "Armónica"
+      },
+      {
+        "id": "objetos-114",
+        "text": "Platillos"
+      },
+      {
+        "id": "objetos-115",
+        "text": "Triángulo musical"
+      },
+      {
+        "id": "objetos-116",
+        "text": "Saxofón"
+      },
+      {
+        "id": "objetos-117",
+        "text": "Batería musical"
+      },
+      {
+        "id": "objetos-118",
+        "text": "Licuadora"
+      },
+      {
+        "id": "objetos-119",
+        "text": "Batidora"
+      },
+      {
+        "id": "objetos-120",
+        "text": "Cafetera"
+      },
+      {
+        "id": "objetos-121",
+        "text": "Microondas"
+      },
+      {
+        "id": "objetos-122",
+        "text": "Lavadora"
+      },
+      {
+        "id": "objetos-123",
+        "text": "Secadora"
+      },
+      {
+        "id": "objetos-124",
+        "text": "Aspiradora"
+      },
+      {
+        "id": "objetos-125",
+        "text": "Ventilador"
+      },
+      {
+        "id": "objetos-126",
+        "text": "Secador de pelo"
+      },
+      {
+        "id": "objetos-127",
+        "text": "Máquina de coser"
+      },
+      {
+        "id": "objetos-128",
+        "text": "Cámara fotográfica"
+      },
+      {
+        "id": "objetos-129",
+        "text": "Motocicleta"
+      },
+      {
+        "id": "objetos-130",
+        "text": "Automóvil"
+      },
+      {
+        "id": "objetos-131",
+        "text": "Camión"
+      },
+      {
+        "id": "objetos-132",
+        "text": "Tractor"
+      },
+      {
+        "id": "objetos-133",
+        "text": "Ambulancia"
+      },
+      {
+        "id": "objetos-134",
+        "text": "Patrulla"
+      },
+      {
+        "id": "objetos-135",
+        "text": "Camión de bomberos"
+      },
+      {
+        "id": "objetos-136",
+        "text": "Helicóptero"
+      },
+      {
+        "id": "objetos-137",
+        "text": "Bicicleta"
+      },
+      {
+        "id": "objetos-138",
+        "text": "Patineta"
+      },
+      {
+        "id": "objetos-139",
+        "text": "Tren"
+      },
+      {
+        "id": "objetos-140",
+        "text": "Lancha"
+      },
+      {
+        "id": "objetos-141",
+        "text": "Velero"
+      },
+      {
+        "id": "objetos-142",
+        "text": "Sierra"
+      },
+      {
+        "id": "objetos-143",
+        "text": "Engrapadora"
+      },
+      {
+        "id": "objetos-144",
+        "text": "Cierre de chamarra"
+      },
+      {
+        "id": "objetos-145",
+        "text": "Llaves"
+      },
+      {
+        "id": "objetos-146",
+        "text": "Monedas"
+      },
+      {
+        "id": "objetos-147",
+        "text": "Papel aluminio"
+      },
+      {
+        "id": "objetos-148",
+        "text": "Bolsa de plástico"
+      },
+      {
+        "id": "objetos-149",
+        "text": "Botella"
+      },
+      {
+        "id": "objetos-150",
+        "text": "Copa"
+      },
+      {
+        "id": "objetos-151",
+        "text": "Olla de presión"
+      },
+      {
+        "id": "objetos-152",
+        "text": "Tostador"
+      },
+      {
+        "id": "objetos-153",
+        "text": "Sacacorchos"
+      },
+      {
+        "id": "objetos-154",
+        "text": "Abrelatas"
+      },
+      {
+        "id": "objetos-155",
+        "text": "Matraca"
+      },
+      {
+        "id": "objetos-156",
+        "text": "Sonaja"
+      },
+      {
+        "id": "objetos-157",
+        "text": "Caja de música"
+      },
+      {
+        "id": "objetos-158",
+        "text": "Cascabel"
+      },
+      {
+        "id": "objetos-159",
+        "text": "Pandereta"
+      },
+      {
+        "id": "objetos-160",
+        "text": "Gong"
+      },
+      {
+        "id": "objetos-161",
+        "text": "Claxon"
+      },
+      {
+        "id": "objetos-162",
+        "text": "Sirena"
+      },
+      {
+        "id": "objetos-163",
+        "text": "Petardo"
+      },
+      {
+        "id": "objetos-164",
+        "text": "Cohete de fuegos artificiales"
+      },
+      {
+        "id": "objetos-165",
+        "text": "Arco y flecha"
+      },
+      {
+        "id": "objetos-166",
+        "text": "Espada"
+      },
+      {
+        "id": "objetos-167",
+        "text": "Escudo"
+      },
+      {
+        "id": "objetos-168",
+        "text": "Pelota"
+      },
+      {
+        "id": "objetos-169",
+        "text": "Balón de fútbol"
+      },
+      {
+        "id": "objetos-170",
+        "text": "Pelota de tenis"
+      },
+      {
+        "id": "objetos-171",
+        "text": "Canica"
+      },
+      {
+        "id": "objetos-172",
+        "text": "Dado"
+      },
+      {
+        "id": "objetos-173",
+        "text": "Dominó"
+      },
+      {
+        "id": "objetos-174",
+        "text": "Baraja"
+      },
+      {
+        "id": "objetos-175",
+        "text": "Resorte"
+      },
+      {
+        "id": "objetos-176",
+        "text": "Látigo"
+      },
+      {
+        "id": "objetos-177",
+        "text": "Cepillo de dientes eléctrico"
+      },
+      {
+        "id": "objetos-178",
+        "text": "Rasuradora"
+      },
+      {
+        "id": "objetos-179",
+        "text": "Manguera"
+      },
+      {
+        "id": "objetos-180",
+        "text": "Regadera"
+      },
+      {
+        "id": "objetos-181",
+        "text": "Grifo"
+      },
+      {
+        "id": "objetos-182",
+        "text": "Inodoro"
+      },
+      {
+        "id": "objetos-183",
+        "text": "Prismáticos"
+      },
+      {
+        "id": "objetos-184",
+        "text": "Telescopio"
+      },
+      {
+        "id": "objetos-185",
+        "text": "Periscopio"
+      },
+      {
+        "id": "objetos-186",
+        "text": "Brújula"
+      },
+      {
+        "id": "objetos-187",
+        "text": "Ancla"
+      },
+      {
+        "id": "objetos-188",
+        "text": "Remo"
+      },
+      {
+        "id": "objetos-189",
+        "text": "Timón"
+      },
+      {
+        "id": "objetos-190",
+        "text": "Semáforo"
+      },
+      {
+        "id": "objetos-191",
+        "text": "Extintor"
+      },
+      {
+        "id": "objetos-192",
+        "text": "Carretilla"
+      },
+      {
+        "id": "objetos-193",
+        "text": "Patines"
+      },
+      {
+        "id": "objetos-194",
+        "text": "Hamaca"
+      },
+      {
+        "id": "objetos-195",
+        "text": "Mecedora"
+      },
+      {
+        "id": "objetos-196",
+        "text": "Balancín"
+      },
+      {
+        "id": "objetos-197",
+        "text": "Subibaja"
+      },
+      {
+        "id": "objetos-198",
+        "text": "Tobogán"
+      },
+      {
+        "id": "objetos-199",
+        "text": "Trampolín"
+      },
+      {
+        "id": "objetos-200",
+        "text": "Balón"
+      },
+      {
+        "id": "objetos-201",
+        "text": "Raqueta"
+      },
+      {
+        "id": "objetos-202",
+        "text": "Bate"
+      },
+      {
+        "id": "objetos-203",
+        "text": "Guante de béisbol"
+      },
+      {
+        "id": "objetos-204",
+        "text": "Papalote"
+      },
+      {
+        "id": "objetos-205",
+        "text": "Yoyó"
+      },
+      {
+        "id": "objetos-206",
+        "text": "Trompo"
+      },
+      {
+        "id": "objetos-207",
+        "text": "Ajedrez"
+      }
+    ],
+    "actor": [
+      {
+        "id": "actor-001",
+        "text": "Un astronauta busca sus llaves en un supermercado",
+        "character": "Un astronauta",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-002",
+        "text": "Un astronauta intenta espantar una mosca en un restaurante",
+        "character": "Un astronauta",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-003",
+        "text": "Un astronauta se queda dormido en un autobús",
+        "character": "Un astronauta",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-004",
+        "text": "Un astronauta camina sobre hielo en una montaña",
+        "character": "Un astronauta",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-005",
+        "text": "Un astronauta lava una ventana en un castillo",
+        "character": "Un astronauta",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-006",
+        "text": "Un astronauta abre un regalo gigante en una fiesta",
+        "character": "Un astronauta",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-007",
+        "text": "Un astronauta pesca un pez enorme en un lago",
+        "character": "Un astronauta",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-008",
+        "text": "Un astronauta intenta arreglar una silla en un taller",
+        "character": "Un astronauta",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-009",
+        "text": "Un astronauta persigue un globo en un parque",
+        "character": "Un astronauta",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-010",
+        "text": "Un astronauta se esconde de la lluvia en una playa",
+        "character": "Un astronauta",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-011",
+        "text": "Una abuela busca sus llaves en un supermercado",
+        "character": "Una abuela",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-012",
+        "text": "Una abuela intenta espantar una mosca en un restaurante",
+        "character": "Una abuela",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-013",
+        "text": "Una abuela se queda dormido en un autobús",
+        "character": "Una abuela",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-014",
+        "text": "Una abuela camina sobre hielo en una montaña",
+        "character": "Una abuela",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-015",
+        "text": "Una abuela lava una ventana en un castillo",
+        "character": "Una abuela",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-016",
+        "text": "Una abuela abre un regalo gigante en una fiesta",
+        "character": "Una abuela",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-017",
+        "text": "Una abuela pesca un pez enorme en un lago",
+        "character": "Una abuela",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-018",
+        "text": "Una abuela intenta arreglar una silla en un taller",
+        "character": "Una abuela",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-019",
+        "text": "Una abuela persigue un globo en un parque",
+        "character": "Una abuela",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-020",
+        "text": "Una abuela se esconde de la lluvia en una playa",
+        "character": "Una abuela",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-021",
+        "text": "Un pirata busca sus llaves en un supermercado",
+        "character": "Un pirata",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-022",
+        "text": "Un pirata intenta espantar una mosca en un restaurante",
+        "character": "Un pirata",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-023",
+        "text": "Un pirata se queda dormido en un autobús",
+        "character": "Un pirata",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-024",
+        "text": "Un pirata camina sobre hielo en una montaña",
+        "character": "Un pirata",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-025",
+        "text": "Un pirata lava una ventana en un castillo",
+        "character": "Un pirata",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-026",
+        "text": "Un pirata abre un regalo gigante en una fiesta",
+        "character": "Un pirata",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-027",
+        "text": "Un pirata pesca un pez enorme en un lago",
+        "character": "Un pirata",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-028",
+        "text": "Un pirata intenta arreglar una silla en un taller",
+        "character": "Un pirata",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-029",
+        "text": "Un pirata persigue un globo en un parque",
+        "character": "Un pirata",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-030",
+        "text": "Un pirata se esconde de la lluvia en una playa",
+        "character": "Un pirata",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-031",
+        "text": "Una bailarina busca sus llaves en un supermercado",
+        "character": "Una bailarina",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-032",
+        "text": "Una bailarina intenta espantar una mosca en un restaurante",
+        "character": "Una bailarina",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-033",
+        "text": "Una bailarina se queda dormido en un autobús",
+        "character": "Una bailarina",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-034",
+        "text": "Una bailarina camina sobre hielo en una montaña",
+        "character": "Una bailarina",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-035",
+        "text": "Una bailarina lava una ventana en un castillo",
+        "character": "Una bailarina",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-036",
+        "text": "Una bailarina abre un regalo gigante en una fiesta",
+        "character": "Una bailarina",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-037",
+        "text": "Una bailarina pesca un pez enorme en un lago",
+        "character": "Una bailarina",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-038",
+        "text": "Una bailarina intenta arreglar una silla en un taller",
+        "character": "Una bailarina",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-039",
+        "text": "Una bailarina persigue un globo en un parque",
+        "character": "Una bailarina",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-040",
+        "text": "Una bailarina se esconde de la lluvia en una playa",
+        "character": "Una bailarina",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-041",
+        "text": "Un bombero busca sus llaves en un supermercado",
+        "character": "Un bombero",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-042",
+        "text": "Un bombero intenta espantar una mosca en un restaurante",
+        "character": "Un bombero",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-043",
+        "text": "Un bombero se queda dormido en un autobús",
+        "character": "Un bombero",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-044",
+        "text": "Un bombero camina sobre hielo en una montaña",
+        "character": "Un bombero",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-045",
+        "text": "Un bombero lava una ventana en un castillo",
+        "character": "Un bombero",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-046",
+        "text": "Un bombero abre un regalo gigante en una fiesta",
+        "character": "Un bombero",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-047",
+        "text": "Un bombero pesca un pez enorme en un lago",
+        "character": "Un bombero",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-048",
+        "text": "Un bombero intenta arreglar una silla en un taller",
+        "character": "Un bombero",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-049",
+        "text": "Un bombero persigue un globo en un parque",
+        "character": "Un bombero",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-050",
+        "text": "Un bombero se esconde de la lluvia en una playa",
+        "character": "Un bombero",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-051",
+        "text": "Una veterinaria busca sus llaves en un supermercado",
+        "character": "Una veterinaria",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-052",
+        "text": "Una veterinaria intenta espantar una mosca en un restaurante",
+        "character": "Una veterinaria",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-053",
+        "text": "Una veterinaria se queda dormido en un autobús",
+        "character": "Una veterinaria",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-054",
+        "text": "Una veterinaria camina sobre hielo en una montaña",
+        "character": "Una veterinaria",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-055",
+        "text": "Una veterinaria lava una ventana en un castillo",
+        "character": "Una veterinaria",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-056",
+        "text": "Una veterinaria abre un regalo gigante en una fiesta",
+        "character": "Una veterinaria",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-057",
+        "text": "Una veterinaria pesca un pez enorme en un lago",
+        "character": "Una veterinaria",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-058",
+        "text": "Una veterinaria intenta arreglar una silla en un taller",
+        "character": "Una veterinaria",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-059",
+        "text": "Una veterinaria persigue un globo en un parque",
+        "character": "Una veterinaria",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-060",
+        "text": "Una veterinaria se esconde de la lluvia en una playa",
+        "character": "Una veterinaria",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-061",
+        "text": "Un chef busca sus llaves en un supermercado",
+        "character": "Un chef",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-062",
+        "text": "Un chef intenta espantar una mosca en un restaurante",
+        "character": "Un chef",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-063",
+        "text": "Un chef se queda dormido en un autobús",
+        "character": "Un chef",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-064",
+        "text": "Un chef camina sobre hielo en una montaña",
+        "character": "Un chef",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-065",
+        "text": "Un chef lava una ventana en un castillo",
+        "character": "Un chef",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-066",
+        "text": "Un chef abre un regalo gigante en una fiesta",
+        "character": "Un chef",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-067",
+        "text": "Un chef pesca un pez enorme en un lago",
+        "character": "Un chef",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-068",
+        "text": "Un chef intenta arreglar una silla en un taller",
+        "character": "Un chef",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-069",
+        "text": "Un chef persigue un globo en un parque",
+        "character": "Un chef",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-070",
+        "text": "Un chef se esconde de la lluvia en una playa",
+        "character": "Un chef",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-071",
+        "text": "Una maestra busca sus llaves en un supermercado",
+        "character": "Una maestra",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-072",
+        "text": "Una maestra intenta espantar una mosca en un restaurante",
+        "character": "Una maestra",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-073",
+        "text": "Una maestra se queda dormido en un autobús",
+        "character": "Una maestra",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-074",
+        "text": "Una maestra camina sobre hielo en una montaña",
+        "character": "Una maestra",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-075",
+        "text": "Una maestra lava una ventana en un castillo",
+        "character": "Una maestra",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-076",
+        "text": "Una maestra abre un regalo gigante en una fiesta",
+        "character": "Una maestra",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-077",
+        "text": "Una maestra pesca un pez enorme en un lago",
+        "character": "Una maestra",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-078",
+        "text": "Una maestra intenta arreglar una silla en un taller",
+        "character": "Una maestra",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-079",
+        "text": "Una maestra persigue un globo en un parque",
+        "character": "Una maestra",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-080",
+        "text": "Una maestra se esconde de la lluvia en una playa",
+        "character": "Una maestra",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-081",
+        "text": "Un detective busca sus llaves en un supermercado",
+        "character": "Un detective",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-082",
+        "text": "Un detective intenta espantar una mosca en un restaurante",
+        "character": "Un detective",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-083",
+        "text": "Un detective se queda dormido en un autobús",
+        "character": "Un detective",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-084",
+        "text": "Un detective camina sobre hielo en una montaña",
+        "character": "Un detective",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-085",
+        "text": "Un detective lava una ventana en un castillo",
+        "character": "Un detective",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-086",
+        "text": "Un detective abre un regalo gigante en una fiesta",
+        "character": "Un detective",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-087",
+        "text": "Un detective pesca un pez enorme en un lago",
+        "character": "Un detective",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-088",
+        "text": "Un detective intenta arreglar una silla en un taller",
+        "character": "Un detective",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-089",
+        "text": "Un detective persigue un globo en un parque",
+        "character": "Un detective",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-090",
+        "text": "Un detective se esconde de la lluvia en una playa",
+        "character": "Un detective",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      },
+      {
+        "id": "actor-091",
+        "text": "Un robot busca sus llaves en un supermercado",
+        "character": "Un robot",
+        "action": "busca sus llaves",
+        "place": "en un supermercado"
+      },
+      {
+        "id": "actor-092",
+        "text": "Un robot intenta espantar una mosca en un restaurante",
+        "character": "Un robot",
+        "action": "intenta espantar una mosca",
+        "place": "en un restaurante"
+      },
+      {
+        "id": "actor-093",
+        "text": "Un robot se queda dormido en un autobús",
+        "character": "Un robot",
+        "action": "se queda dormido",
+        "place": "en un autobús"
+      },
+      {
+        "id": "actor-094",
+        "text": "Un robot camina sobre hielo en una montaña",
+        "character": "Un robot",
+        "action": "camina sobre hielo",
+        "place": "en una montaña"
+      },
+      {
+        "id": "actor-095",
+        "text": "Un robot lava una ventana en un castillo",
+        "character": "Un robot",
+        "action": "lava una ventana",
+        "place": "en un castillo"
+      },
+      {
+        "id": "actor-096",
+        "text": "Un robot abre un regalo gigante en una fiesta",
+        "character": "Un robot",
+        "action": "abre un regalo gigante",
+        "place": "en una fiesta"
+      },
+      {
+        "id": "actor-097",
+        "text": "Un robot pesca un pez enorme en un lago",
+        "character": "Un robot",
+        "action": "pesca un pez enorme",
+        "place": "en un lago"
+      },
+      {
+        "id": "actor-098",
+        "text": "Un robot intenta arreglar una silla en un taller",
+        "character": "Un robot",
+        "action": "intenta arreglar una silla",
+        "place": "en un taller"
+      },
+      {
+        "id": "actor-099",
+        "text": "Un robot persigue un globo en un parque",
+        "character": "Un robot",
+        "action": "persigue un globo",
+        "place": "en un parque"
+      },
+      {
+        "id": "actor-100",
+        "text": "Un robot se esconde de la lluvia en una playa",
+        "character": "Un robot",
+        "action": "se esconde de la lluvia",
+        "place": "en una playa"
+      }
+    ],
+    "canciones": [
+      {
+        "id": "canciones-001",
+        "text": "Cielito lindo — tradicional"
+      },
+      {
+        "id": "canciones-002",
+        "text": "La bamba — tradicional"
+      },
+      {
+        "id": "canciones-003",
+        "text": "Bésame mucho — Consuelo Velázquez"
+      },
+      {
+        "id": "canciones-004",
+        "text": "Sabor a mí — Álvaro Carrillo"
+      },
+      {
+        "id": "canciones-005",
+        "text": "Solamente una vez — Agustín Lara"
+      },
+      {
+        "id": "canciones-006",
+        "text": "El rey — José Alfredo Jiménez"
+      },
+      {
+        "id": "canciones-007",
+        "text": "Caminos de Guanajuato — José Alfredo Jiménez"
+      },
+      {
+        "id": "canciones-008",
+        "text": "México lindo y querido — Jorge Negrete"
+      },
+      {
+        "id": "canciones-009",
+        "text": "Si nos dejan — José Alfredo Jiménez"
+      },
+      {
+        "id": "canciones-010",
+        "text": "Amor eterno — Juan Gabriel"
+      },
+      {
+        "id": "canciones-011",
+        "text": "Querida — Juan Gabriel"
+      },
+      {
+        "id": "canciones-012",
+        "text": "Hasta que te conocí — Juan Gabriel"
+      },
+      {
+        "id": "canciones-013",
+        "text": "No tengo dinero — Juan Gabriel"
+      },
+      {
+        "id": "canciones-014",
+        "text": "Abrázame muy fuerte — Juan Gabriel"
+      },
+      {
+        "id": "canciones-015",
+        "text": "Así fue — Isabel Pantoja"
+      },
+      {
+        "id": "canciones-016",
+        "text": "La diferencia — Vicente Fernández"
+      },
+      {
+        "id": "canciones-017",
+        "text": "Volver volver — Vicente Fernández"
+      },
+      {
+        "id": "canciones-018",
+        "text": "Por tu maldito amor — Vicente Fernández"
+      },
+      {
+        "id": "canciones-019",
+        "text": "Estos celos — Vicente Fernández"
+      },
+      {
+        "id": "canciones-020",
+        "text": "Hermoso cariño — Vicente Fernández"
+      },
+      {
+        "id": "canciones-021",
+        "text": "Como quien pierde una estrella — Alejandro Fernández"
+      },
+      {
+        "id": "canciones-022",
+        "text": "Me dediqué a perderte — Alejandro Fernández"
+      },
+      {
+        "id": "canciones-023",
+        "text": "Si tú supieras — Alejandro Fernández"
+      },
+      {
+        "id": "canciones-024",
+        "text": "La media vuelta — Luis Miguel"
+      },
+      {
+        "id": "canciones-025",
+        "text": "La incondicional — Luis Miguel"
+      },
+      {
+        "id": "canciones-026",
+        "text": "Ahora te puedes marchar — Luis Miguel"
+      },
+      {
+        "id": "canciones-027",
+        "text": "Cuando calienta el sol — Luis Miguel"
+      },
+      {
+        "id": "canciones-028",
+        "text": "Suave — Luis Miguel"
+      },
+      {
+        "id": "canciones-029",
+        "text": "La chica del bikini azul — Luis Miguel"
+      },
+      {
+        "id": "canciones-030",
+        "text": "Será que no me amas — Luis Miguel"
+      },
+      {
+        "id": "canciones-031",
+        "text": "El triste — José José"
+      },
+      {
+        "id": "canciones-032",
+        "text": "Gavilán o paloma — José José"
+      },
+      {
+        "id": "canciones-033",
+        "text": "Almohada — José José"
+      },
+      {
+        "id": "canciones-034",
+        "text": "Amar y querer — José José"
+      },
+      {
+        "id": "canciones-035",
+        "text": "Lo pasado pasado — José José"
+      },
+      {
+        "id": "canciones-036",
+        "text": "Vivir así es morir de amor — Camilo Sesto"
+      },
+      {
+        "id": "canciones-037",
+        "text": "Algo de mí — Camilo Sesto"
+      },
+      {
+        "id": "canciones-038",
+        "text": "Eres tú — Mocedades"
+      },
+      {
+        "id": "canciones-039",
+        "text": "Un beso y una flor — Nino Bravo"
+      },
+      {
+        "id": "canciones-040",
+        "text": "Libre — Nino Bravo"
+      },
+      {
+        "id": "canciones-041",
+        "text": "Mediterráneo — Joan Manuel Serrat"
+      },
+      {
+        "id": "canciones-042",
+        "text": "La puerta de Alcalá — Ana Belén y Víctor Manuel"
+      },
+      {
+        "id": "canciones-043",
+        "text": "Hijo de la luna — Mecano"
+      },
+      {
+        "id": "canciones-044",
+        "text": "Me cuesta tanto olvidarte — Mecano"
+      },
+      {
+        "id": "canciones-045",
+        "text": "Cruz de navajas — Mecano"
+      },
+      {
+        "id": "canciones-046",
+        "text": "Devuélveme a mi chica — Hombres G"
+      },
+      {
+        "id": "canciones-047",
+        "text": "Te quiero — Hombres G"
+      },
+      {
+        "id": "canciones-048",
+        "text": "Persiana americana — Soda Stereo"
+      },
+      {
+        "id": "canciones-049",
+        "text": "De música ligera — Soda Stereo"
+      },
+      {
+        "id": "canciones-050",
+        "text": "Rayando el sol — Maná"
+      },
+      {
+        "id": "canciones-051",
+        "text": "Oye mi amor — Maná"
+      },
+      {
+        "id": "canciones-052",
+        "text": "Clavado en un bar — Maná"
+      },
+      {
+        "id": "canciones-053",
+        "text": "Vivir sin aire — Maná"
+      },
+      {
+        "id": "canciones-054",
+        "text": "Mariposa traicionera — Maná"
+      },
+      {
+        "id": "canciones-055",
+        "text": "La célula que explota — Caifanes"
+      },
+      {
+        "id": "canciones-056",
+        "text": "Afuera — Caifanes"
+      },
+      {
+        "id": "canciones-057",
+        "text": "Eres — Café Tacvba"
+      },
+      {
+        "id": "canciones-058",
+        "text": "Ingrata — Café Tacvba"
+      },
+      {
+        "id": "canciones-059",
+        "text": "Las flores — Café Tacvba"
+      },
+      {
+        "id": "canciones-060",
+        "text": "Tren al sur — Los Prisioneros"
+      },
+      {
+        "id": "canciones-061",
+        "text": "Lamento boliviano — Enanitos Verdes"
+      },
+      {
+        "id": "canciones-062",
+        "text": "La muralla verde — Enanitos Verdes"
+      },
+      {
+        "id": "canciones-063",
+        "text": "Flaca — Andrés Calamaro"
+      },
+      {
+        "id": "canciones-064",
+        "text": "Color esperanza — Diego Torres"
+      },
+      {
+        "id": "canciones-065",
+        "text": "La camisa negra — Juanes"
+      },
+      {
+        "id": "canciones-066",
+        "text": "A Dios le pido — Juanes"
+      },
+      {
+        "id": "canciones-067",
+        "text": "Limón y sal — Julieta Venegas"
+      },
+      {
+        "id": "canciones-068",
+        "text": "Me voy — Julieta Venegas"
+      },
+      {
+        "id": "canciones-069",
+        "text": "Andar conmigo — Julieta Venegas"
+      },
+      {
+        "id": "canciones-070",
+        "text": "Antología — Shakira"
+      },
+      {
+        "id": "canciones-071",
+        "text": "Estoy aquí — Shakira"
+      },
+      {
+        "id": "canciones-072",
+        "text": "Ciega sordomuda — Shakira"
+      },
+      {
+        "id": "canciones-073",
+        "text": "Ojos así — Shakira"
+      },
+      {
+        "id": "canciones-074",
+        "text": "La tortura — Shakira"
+      },
+      {
+        "id": "canciones-075",
+        "text": "Bailando — Enrique Iglesias"
+      },
+      {
+        "id": "canciones-076",
+        "text": "Experiencia religiosa — Enrique Iglesias"
+      },
+      {
+        "id": "canciones-077",
+        "text": "Corazón partío — Alejandro Sanz"
+      },
+      {
+        "id": "canciones-078",
+        "text": "Amiga mía — Alejandro Sanz"
+      },
+      {
+        "id": "canciones-079",
+        "text": "La vida es un carnaval — Celia Cruz"
+      },
+      {
+        "id": "canciones-080",
+        "text": "Vivir mi vida — Marc Anthony"
+      },
+      {
+        "id": "canciones-081",
+        "text": "La bilirrubina — Juan Luis Guerra"
+      },
+      {
+        "id": "canciones-082",
+        "text": "Burbujas de amor — Juan Luis Guerra"
+      },
+      {
+        "id": "canciones-083",
+        "text": "Ojalá que llueva café — Juan Luis Guerra"
+      },
+      {
+        "id": "canciones-084",
+        "text": "Suavemente — Elvis Crespo"
+      },
+      {
+        "id": "canciones-085",
+        "text": "La gota fría — Carlos Vives"
+      },
+      {
+        "id": "canciones-086",
+        "text": "La tierra del olvido — Carlos Vives"
+      },
+      {
+        "id": "canciones-087",
+        "text": "Como la flor — Selena"
+      },
+      {
+        "id": "canciones-088",
+        "text": "Amor prohibido — Selena"
+      },
+      {
+        "id": "canciones-089",
+        "text": "Bidi bidi bom bom — Selena"
+      },
+      {
+        "id": "canciones-090",
+        "text": "Nunca es suficiente — Natalia Lafourcade"
+      },
+      {
+        "id": "canciones-091",
+        "text": "Hasta la raíz — Natalia Lafourcade"
+      },
+      {
+        "id": "canciones-092",
+        "text": "Disfruto — Carla Morrison"
+      },
+      {
+        "id": "canciones-093",
+        "text": "Recuérdame — Carlos Rivera"
+      },
+      {
+        "id": "canciones-094",
+        "text": "Un año — Sebastián Yatra y Reik"
+      },
+      {
+        "id": "canciones-095",
+        "text": "Despacito — Luis Fonsi"
+      },
+      {
+        "id": "canciones-096",
+        "text": "Tacones rojos — Sebastián Yatra"
+      },
+      {
+        "id": "canciones-097",
+        "text": "La bachata — Manuel Turizo"
+      },
+      {
+        "id": "canciones-098",
+        "text": "Todo de ti — Rauw Alejandro"
+      },
+      {
+        "id": "canciones-099",
+        "text": "Rosas — La Oreja de Van Gogh"
+      },
+      {
+        "id": "canciones-100",
+        "text": "Puedes contar conmigo — La Oreja de Van Gogh"
+      },
+      {
+        "id": "canciones-101",
+        "text": "Día de enero — Shakira"
+      },
+      {
+        "id": "canciones-102",
+        "text": "Mi razón de ser — Banda MS"
+      },
+      {
+        "id": "canciones-103",
+        "text": "El color de tus ojos — Banda MS"
+      },
+      {
+        "id": "canciones-104",
+        "text": "Adiós amor — Christian Nodal"
+      },
+      {
+        "id": "canciones-105",
+        "text": "De los besos que te di — Christian Nodal"
+      },
+      {
+        "id": "canciones-106",
+        "text": "Botella tras botella — Gera MX y Christian Nodal"
+      },
+      {
+        "id": "canciones-107",
+        "text": "Te felicito — Shakira y Rauw Alejandro"
+      },
+      {
+        "id": "canciones-108",
+        "text": "Provenza — Karol G"
+      },
+      {
+        "id": "canciones-109",
+        "text": "La bicicleta — Carlos Vives y Shakira"
+      },
+      {
+        "id": "canciones-110",
+        "text": "El perdón — Nicky Jam y Enrique Iglesias"
+      }
+    ],
+    "dibujos": [
+      {
+        "id": "dibujos-001",
+        "text": "Un perro paseando con paraguas"
+      },
+      {
+        "id": "dibujos-002",
+        "text": "Un gato durmiendo en una maleta"
+      },
+      {
+        "id": "dibujos-003",
+        "text": "Un pez dentro de una pecera"
+      },
+      {
+        "id": "dibujos-004",
+        "text": "Un conejo comiendo zanahoria"
+      },
+      {
+        "id": "dibujos-005",
+        "text": "Una jirafa junto a un árbol"
+      },
+      {
+        "id": "dibujos-006",
+        "text": "Un elefante tomando agua"
+      },
+      {
+        "id": "dibujos-007",
+        "text": "Un pato nadando en un lago"
+      },
+      {
+        "id": "dibujos-008",
+        "text": "Una mariposa sobre una flor"
+      },
+      {
+        "id": "dibujos-009",
+        "text": "Un caballo saltando una cerca"
+      },
+      {
+        "id": "dibujos-010",
+        "text": "Un oso comiendo miel"
+      },
+      {
+        "id": "dibujos-011",
+        "text": "Una tortuga en la playa"
+      },
+      {
+        "id": "dibujos-012",
+        "text": "Un pingüino con bufanda"
+      },
+      {
+        "id": "dibujos-013",
+        "text": "Un pulpo con sombrero"
+      },
+      {
+        "id": "dibujos-014",
+        "text": "Una abeja junto a su panal"
+      },
+      {
+        "id": "dibujos-015",
+        "text": "Un león en un circo"
+      },
+      {
+        "id": "dibujos-016",
+        "text": "Un avión entre las nubes"
+      },
+      {
+        "id": "dibujos-017",
+        "text": "Un barco junto a un faro"
+      },
+      {
+        "id": "dibujos-018",
+        "text": "Una bicicleta junto a una banca"
+      },
+      {
+        "id": "dibujos-019",
+        "text": "Un tren saliendo de un túnel"
+      },
+      {
+        "id": "dibujos-020",
+        "text": "Un autobús en una parada"
+      },
+      {
+        "id": "dibujos-021",
+        "text": "Un cohete junto a la luna"
+      },
+      {
+        "id": "dibujos-022",
+        "text": "Un tractor en una granja"
+      },
+      {
+        "id": "dibujos-023",
+        "text": "Una ambulancia frente a un hospital"
+      },
+      {
+        "id": "dibujos-024",
+        "text": "Una moto junto a un semáforo"
+      },
+      {
+        "id": "dibujos-025",
+        "text": "Un velero entre olas"
+      },
+      {
+        "id": "dibujos-026",
+        "text": "Una casa con chimenea"
+      },
+      {
+        "id": "dibujos-027",
+        "text": "Un castillo con bandera"
+      },
+      {
+        "id": "dibujos-028",
+        "text": "Una escuela con campana"
+      },
+      {
+        "id": "dibujos-029",
+        "text": "Un puente sobre un río"
+      },
+      {
+        "id": "dibujos-030",
+        "text": "Un molino de viento"
+      },
+      {
+        "id": "dibujos-031",
+        "text": "Una tienda de campaña"
+      },
+      {
+        "id": "dibujos-032",
+        "text": "Un iglú con un pingüino"
+      },
+      {
+        "id": "dibujos-033",
+        "text": "Una cabaña entre árboles"
+      },
+      {
+        "id": "dibujos-034",
+        "text": "Una iglesia con campanario"
+      },
+      {
+        "id": "dibujos-035",
+        "text": "Un edificio con ascensor"
+      },
+      {
+        "id": "dibujos-036",
+        "text": "Un pastel con cinco velas"
+      },
+      {
+        "id": "dibujos-037",
+        "text": "Un helado de tres bolas"
+      },
+      {
+        "id": "dibujos-038",
+        "text": "Una pizza cortada en rebanadas"
+      },
+      {
+        "id": "dibujos-039",
+        "text": "Un plato de sopa con cuchara"
+      },
+      {
+        "id": "dibujos-040",
+        "text": "Una taza humeante"
+      },
+      {
+        "id": "dibujos-041",
+        "text": "Un taco con limón"
+      },
+      {
+        "id": "dibujos-042",
+        "text": "Un sándwich en un plato"
+      },
+      {
+        "id": "dibujos-043",
+        "text": "Una jarra con vasos"
+      },
+      {
+        "id": "dibujos-044",
+        "text": "Una canasta de frutas"
+      },
+      {
+        "id": "dibujos-045",
+        "text": "Una olla sobre una estufa"
+      },
+      {
+        "id": "dibujos-046",
+        "text": "Una persona pescando"
+      },
+      {
+        "id": "dibujos-047",
+        "text": "Una persona tocando guitarra"
+      },
+      {
+        "id": "dibujos-048",
+        "text": "Una persona leyendo en una hamaca"
+      },
+      {
+        "id": "dibujos-049",
+        "text": "Una persona lavando un coche"
+      },
+      {
+        "id": "dibujos-050",
+        "text": "Una persona jugando fútbol"
+      },
+      {
+        "id": "dibujos-051",
+        "text": "Una persona volando una cometa"
+      },
+      {
+        "id": "dibujos-052",
+        "text": "Una persona regando flores"
+      },
+      {
+        "id": "dibujos-053",
+        "text": "Una persona pintando una pared"
+      },
+      {
+        "id": "dibujos-054",
+        "text": "Una persona cocinando"
+      },
+      {
+        "id": "dibujos-055",
+        "text": "Una persona bailando"
+      },
+      {
+        "id": "dibujos-056",
+        "text": "Un árbol de Navidad con regalos"
+      },
+      {
+        "id": "dibujos-057",
+        "text": "Un muñeco de nieve con sombrero"
+      },
+      {
+        "id": "dibujos-058",
+        "text": "Una fogata bajo las estrellas"
+      },
+      {
+        "id": "dibujos-059",
+        "text": "Una sombrilla con silla de playa"
+      },
+      {
+        "id": "dibujos-060",
+        "text": "Un arcoíris sobre una montaña"
+      }
+    ]
+  }
+}

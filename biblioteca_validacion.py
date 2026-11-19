@@ -59,6 +59,9 @@ def game(g):
             require(type(g[k]) is bool, 'Metadatos de ficha inválidos.')
     if 'implementation' in g:
         require(g['implementation'] in ['turns', 'planned'], 'Disponibilidad inválida.')
+    if 'executionVersion' in g:
+        require(g['executionVersion'] == 1 and g.get('executionMode') in ['turns', 'simultaneous'] and isinstance(g.get('cards'), list), 'Contrato definitivo inválido.')
+        require(len(g['cards']) == len({c['id'] for c in g['cards']}) and all(text(c.get('id'), 120) and text(c.get('text') or c.get('target')) and ('forbidden' not in c or len(c['forbidden']) == len(set(c['forbidden'])) == 3) for c in g['cards']), 'Banco definitivo inválido.')
     if g['id'] == 'roba-y-gana' or g.get('permanent') is True:
         require(g.get('permanent') is True and g.get('repeatable') is True and g['status'] != 'archived', 'Juego permanente inválido.')
 

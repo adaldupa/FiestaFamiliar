@@ -25,6 +25,7 @@ export function validateGame(g){
  if(p.positions!==undefined)need(Array.isArray(p.positions)&&p.positions.length>=2&&p.positions.length<=4&&p.positions.every(x=>Number.isInteger(x)&&x>=p.min&&x<=p.max),'Puntos por posición inválidos.');
  if(p.pointsPerHit!==undefined)need(Number.isInteger(p.pointsPerHit)&&p.pointsPerHit>=0&&p.pointsPerHit<=p.max,'Puntos por acierto inválidos.');
  if(p.target!==undefined)need(Number.isFinite(p.target),'Objetivo de cercanía inválido.');
+ if(g.executionVersion!==undefined){need(g.executionVersion===1&&['turns','simultaneous'].includes(g.executionMode),'Contrato definitivo inválido.');need(Array.isArray(g.cards)&&new Set(g.cards.map(c=>c.id)).size===g.cards.length&&g.cards.every(c=>isText(c.id,120)&&isText(c.text||c.target)&&(!c.forbidden||c.forbidden.length===3&&new Set(c.forbidden).size===3&&c.forbidden.every(x=>isText(x)))),'Banco de tarjetas inválido.');}
  return g;
 }
 export function fromLegacy(g,now=new Date().toISOString()){

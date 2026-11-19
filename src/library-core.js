@@ -1,3 +1,4 @@
+import {engineFor} from './round-engine.js';
 // Administración privada. Las operaciones se validan sobre una copia antes de aplicarse.
 import {clone,validateGame,validateLibrary,isText} from './game-model.js';
 const need=(ok,message)=>{if(!ok)throw Error(message);};
@@ -113,4 +114,4 @@ export function parsePublicCatalogSeed(raw){
  return validateLibrary({schemaVersion:1,games,versions:clone(games),collections:[],audit:[]});
 }
 // Seleccionable para el ciclo 2C.1 no significa que su motor ya pueda puntuar.
-export function eventRevisions(lib){return (lib?.games||[]).filter(g=>g.status==='active'||g.id===PERMANENT_ID).map(current=>({id:current.id,ruleVersion:current.ruleVersion,name:current.name,previous:false,versions:lib.versions.filter(g=>g.id===current.id&&(g.status==='active'||g.id===PERMANENT_ID)).sort((a,b)=>b.ruleVersion-a.ruleVersion).map(g=>({ruleVersion:g.ruleVersion,name:g.name,pending:g.implementation==='planned'||!['fixed','manual'].includes(g.scoring.mode)}))}));}
+export function eventRevisions(lib){return (lib?.games||[]).filter(g=>g.status==='active'||g.id===PERMANENT_ID).map(current=>({id:current.id,ruleVersion:current.ruleVersion,name:current.name,previous:false,versions:lib.versions.filter(g=>g.id===current.id&&(g.status==='active'||g.id===PERMANENT_ID)).sort((a,b)=>b.ruleVersion-a.ruleVersion).map(g=>({ruleVersion:g.ruleVersion,name:g.name,pending:!engineFor(g).operational}))}));}

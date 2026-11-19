@@ -108,7 +108,7 @@ def contest_public_snapshot(c):
             pid = r['representatives'][t['id']]
             if pid not in t['members']:
                 raise ValueError('Representante ajeno a su equipo.')
-            representative = people[pid]
+            representative = ' y '.join(people[x] for x in r.get('full', {}).get('pairs', {}).get(t['id'], [pid]))
         score = points[t['id']]
         place = unique_scores.index(score)+1 if e['settings']['ranking'] == 'dense' else 1+sum(n > score for n in points.values())
         ranked.append({'id': t['id'], 'name': text(t['name'], 80), 'score': score, 'place': place, 'members': [people[pid] for pid in t['members']], 'representative': representative})
@@ -133,8 +133,13 @@ def contest_public_snapshot(c):
             raise ValueError('La animación no corresponde al juego seleccionado.')
         wheel = {'candidates': [{'id': text(gid, 120), 'title': text(choices[gid])} for gid in d['ids']], 'selectedId': text(d['selectedId'], 120), 'selectedIndex': index, 'rotation': rotation, 'startedAt': finite(d['startedAt']), 'duration': integer(d['duration'], 0, 2400)}
     dto = {'schemaVersion': 1, 'eventId': e['id'], 'eventName': text(e['name'], 120), 'status': e['status'], 'phase': e['phase'], 'roundNumber': r['number'] if r else len(rounds), 'availableCount': len(available), 'teams': ranked,
-            'activeTeamId': turn['teamId'] if turn else None, 'timer': public_timer(turn['timer']) if turn else None, 'wheel': wheel, 'game': public_game(game, modern) if game else None}
+            'activeTeamId': turn['teamId'] if turn else None, 'timer': public_timer(r['full']['clock']) if r and 'full' in r else public_timer(turn['timer']) if turn else None, 'wheel': wheel, 'game': public_game(game, modern) if game else None}
     if modern:
         engine = engine_for(r['game']) if r and not hidden else None
         dto.update({'lifecycle': lifecycle_at(e), 'screen': screen_at(e), 'roundId': r['id'] if r else None, 'engine': {'key': engine['key'], 'operational': engine['operational'], 'message': engine['message']} if engine else None, 'result': public_result(e, r)})
+    if r and 'full' in r and not hidden:
+        from full_engines import public_full
+        dto['execution'] = public_full(r)
+        if r['game'].get('unlimited'):
+            dto['timer'].update(unlimited=True, elapsedMs=r['full']['elapsedMs'], startedAt=r['full']['startedAt'])
     return dto

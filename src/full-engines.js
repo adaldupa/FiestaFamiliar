@@ -1,0 +1,98 @@
+// Dominio privado de los doce juegos. No importar en la TV.
+const copy=x=>JSON.parse(JSON.stringify(x));
+const need=(v,m)=>{if(!v)throw Error(m);};
+const id=()=>globalThis.crypto?.randomUUID?.()||`${Date.now()}-${Math.random()}`;
+const active=s=>{const e=s.contest.events.find(e=>e.id===s.contest.activeEventId);need(e&&e.status!=='finished','No hay evento abierto.');const r=e.rounds.find(r=>r.id===e.activeRoundId);need(r?.full,'Esta ronda no usa los motores definitivos.');return {e,r,f:r.full};};
+export const isFull=g=>g?.executionVersion===1;
+export const left=(clock,now)=>clock.status==='running'?Math.max(0,clock.deadline-now):clock.remainingMs;
+export const elapsed=(f,now)=>f.elapsedMs+(f.clock.status==='running'?Math.max(0,now-f.startedAt):0);
+const audit=(e,r,type,data,now)=>{e.publicScreen='auto';e.audit.push({id:id(),eventId:e.id,roundId:r.id,type,at:new Date(now).toISOString(),detail:copy(data)});};
+function shuffle(a,seed){let h=2166136261;for(const c of seed)h=Math.imul(h^c.charCodeAt(0),16777619);a=copy(a);for(let i=a.length-1;i>0;i--){h=(Math.imul(1664525,h)+1013904223)>>>0;const j=h%(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
+export function initFull(e,r){
+ const used=new Set(e.rounds.flatMap(x=>x.full?.usedCards||[]));
+ r.full={version:1,mode:r.game.scoring.mode,simultaneous:r.game.executionMode==='simultaneous',clock:{durationMs:r.game.seconds*1000,remainingMs:r.game.seconds*1000,deadline:null,status:'idle'},elapsedMs:0,startedAt:null,usedCards:[],deck:shuffle(r.game.cards||[],`${r.seed}:bank`).filter(c=>!used.has(`${r.game.id}:${c.id}`)),cards:{},logs:[],results:{},pairs:{},target:null,estimates:{},choices:{},revealed:false,rewardDecisions:{},rewardCards:shuffle([{kind:'gift',amount:100},{kind:'gift',amount:75},{kind:'steal',amount:50},{kind:'steal',amount:25},{kind:'challenge',amount:100},{kind:'challenge',amount:50}],`${r.seed}:rewards`),challenges:['Canta un fragmento de una canción que el grupo conozca.','Representa un animal sin hablar para que tu equipo lo adivine.']};
+}
+function take(e,r,teamId){const f=r.full,c=f.deck.shift();f.cards[teamId]=c||null;if(c)f.usedCards.push(`${r.game.id}:${c.id}`);return c;}
+export function prepareFull(s,now){const {e,r,f}=active(s);need(e.phase==='presenting_rules','Primero presenta las reglas.');
+ if(r.game.requiredRepresentatives===2)for(const t of e.teams){if(r.representatives[t.id]===null)continue;const pair=f.pairs[t.id];need(Array.isArray(pair)&&pair.length===2&&new Set(pair).size===2&&pair.every(p=>t.members.includes(p))&&pair[0]===r.representatives[t.id],'Rebote requiere dos representantes distintos por equipo.');}
+ if(r.game.cards?.length){need(f.deck.length>=Object.values(r.representatives).filter(Boolean).length,'No hay suficientes tarjetas sin repetir para los equipos participantes.');}
+ for(const t of r.turns){if(t.representativeId===null){f.results[t.teamId]={completed:false,ms:null,hits:0};t.outcome={success:false,participated:false,points:0,manual:true,reason:'Participación voluntaria'};t.timer.status='finished';}else if(f.simultaneous&&r.game.cards?.length)take(e,r,t.teamId);}
+ r.currentTeamId=f.simultaneous?null:r.turns.find(t=>t.representativeId)?.teamId;
+ if(!f.simultaneous){need(r.currentTeamId,'No hay participantes.');take(e,r,r.currentTeamId);}
+ e.phase='preparing_challenge';audit(e,r,'full_prepared',{},now);
+}
+export function fullAction(s,action,data={},now=Date.now()){
+ const {e,r,f}=active(s),phase=e.phase,team=e.teams.find(t=>t.id===data.teamId),clock=f.clock;
+ const stage=(...ps)=>need(ps.includes(phase),'Acción fuera de etapa.');
+ const playing=()=>{stage('timer_active');need(r.game.unlimited||left(clock,now)>0,'Se agotó el tiempo; finaliza la ejecución.');};
+ if(action==='pairs'){stage('selecting_representatives','presenting_rules');need(r.game.requiredRepresentatives===2,'Este juego usa un representante.');for(const t of e.teams){if(r.representatives[t.id]===null)continue;const pair=data.pairs[t.id];need(pair?.length===2&&new Set(pair).size===2&&pair.every(p=>t.members.includes(p))&&pair[0]===r.representatives[t.id],'Elige dos representantes distintos por equipo.');}f.pairs=copy(data.pairs);}
+ else if(action==='start'){stage('preparing_challenge','timer_paused');if(f.mode==='closeness')need(Number.isInteger(f.target)&&f.target>=0,'Registra primero el valor real privado.');if(f.mode==='special')need(f.challenges.every(x=>typeof x==='string'&&x.trim()),'Define ambos retos.');clock.status='running';clock.deadline=now+clock.remainingMs;f.startedAt=now;e.phase='timer_active';}
+ else if(action==='pause'){stage('timer_active');if(!r.game.unlimited&&left(clock,now)===0)return fullAction(s,'finish',{},now);f.elapsedMs=elapsed(f,now);clock.remainingMs=left(clock,now);clock.deadline=null;clock.status='paused';f.startedAt=null;e.phase='timer_paused';}
+ else if(action==='target'){stage('preparing_challenge');need(f.mode==='closeness'&&Number.isInteger(data.value)&&data.value>=0,'Cantidad real: entero no negativo.');f.target=data.value;}
+ else if(action==='challenges'){stage('preparing_challenge');need(f.mode==='special'&&Array.isArray(data.texts)&&data.texts.length===2&&data.texts.every(x=>typeof x==='string'&&x.trim().length&&x.length<=1000),'Define dos retos válidos.');f.challenges=copy(data.texts);}
+ else if(action==='change-song'){stage('preparing_challenge');need(r.game.id==='tararea'&&team&&!f.results[team.id],'Solo puedes cambiar canciones antes de iniciar.');need(f.deck.length,'Banco agotado.');take(e,r,team.id);}
+ else if(['correct','pass','infraction'].includes(action)){
+ playing();need(f.mode==='hits'&&r.currentTeamId===data.teamId,'No es el turno de ese equipo.');const c=f.cards[data.teamId];need(c&&c.id===data.cardId,'La tarjeta ya cambió; no se duplicó el acierto.');if(action==='infraction')need(r.game.id==='palabras-prohibidas'&&data.confirmed===true,'Confirma la infracción de esta tarjeta.');f.logs.push({id:id(),teamId:data.teamId,cardId:c.id,action,at:new Date(now).toISOString()});take(e,r,data.teamId);
+ }
+ else if(action==='invalidate-card'){stage('timer_active','timer_paused','capturing_results');need(r.game.id==='palabras-prohibidas'&&data.confirmed===true&&typeof data.reason==='string'&&data.reason.trim(),'La infracción requiere confirmación y motivo.');const log=f.logs.find(x=>x.id===data.logId);need(log?.action==='correct'&&!log.voided,'Selecciona un acierto vigente.');log.voided=true;log.reason=data.reason;if(f.results[log.teamId])f.results[log.teamId].hits=f.logs.filter(x=>x.teamId===log.teamId&&x.action==='correct'&&!x.voided).length;if(phase==='capturing_results')applyCalculated(e,r);}
+ else if(action==='estimate'){playing();need(f.mode==='closeness'&&team&&Number.isInteger(data.value)&&data.value>=0,'Estimación: entero no negativo.');need(r.representatives[team.id]!==null,'Equipo no participante.');f.estimates[team.id]=data.value;}
+ else if(action==='complete'||action==='bounce'){
+ playing();need(f.mode==='position'&&team&&r.representatives[team.id]!==null&&!f.results[team.id],'Resultado ya registrado o equipo no participante.');
+ const hitCount=r.turns.find(t=>t.teamId===team.id);if(action==='bounce'){need(r.game.id==='rebote-imposible','Este juego no usa rebotes.');hitCount.bounces=(hitCount.bounces||0)+1;if(hitCount.bounces<3){audit(e,r,'bounce',{teamId:team.id,count:hitCount.bounces},now);return;}}
+ else need(r.game.id!=='rebote-imposible','Registra tres rebotes válidos.');
+ const ms=elapsed(f,now);f.results[team.id]={completed:true,ms,hits:0};
+ }
+ else if(action==='choose'){playing();need(f.mode==='special'&&team&&!f.revealed&&r.representatives[team.id]!==null,'Elección no disponible.');need(Number.isInteger(data.index)&&data.index>=0&&data.index<6,'Tarjeta inválida.');need(!Object.values(f.choices).includes(data.index)&&!Object.hasOwn(f.choices,team.id),'Tarjeta o equipo ya tiene elección.');f.choices[team.id]=data.index;}
+ else if(action==='reveal'){playing();need(f.mode==='special'&&!f.revealed&&e.teams.every(t=>r.representatives[t.id]===null||Object.hasOwn(f.choices,t.id)),'Espera la elección de todos los equipos.');f.revealed=true;}
+ else if(action==='reward'){playing();need(f.mode==='special'&&f.revealed&&team&&Object.hasOwn(f.choices,team.id),'Primero revela las tarjetas.');const card=f.rewardCards[f.choices[team.id]];need(card.kind!=='gift','Este premio es automático.');if(card.kind==='steal')need(e.teams.some(t=>t.id===data.targetId&&t.id!==team.id),'Selecciona otro equipo como víctima.');else need(typeof data.success==='boolean','Confirma el resultado del reto.');f.rewardDecisions[team.id]=card.kind==='steal'?{targetId:data.targetId}:{success:data.success};}
+ else if(action==='correct-reward'){stage('capturing_results');need(f.mode==='special'&&team&&typeof data.reason==='string'&&data.reason.trim(),'La corrección necesita equipo y motivo.');const c=f.rewardCards[f.choices[team.id]];need(c&&c.kind!=='gift','Selecciona un robo o reto.');if(c.kind==='steal')need(e.teams.some(t=>t.id===data.targetId&&t.id!==team.id),'Víctima inválida.');else need(typeof data.success==='boolean','Resultado inválido.');f.rewardDecisions[team.id]=c.kind==='steal'?{targetId:data.targetId}:{success:data.success};applyCalculated(e,r);}
+ else if(action==='finish'){
+ stage('timer_active','timer_paused','preparing_challenge');
+ if(f.mode==='special')need(f.revealed&&e.teams.every(t=>!Object.hasOwn(f.choices,t.id)||f.rewardCards[f.choices[t.id]].kind==='gift'||f.rewardDecisions[t.id]),'Revela y resuelve todos los robos y retos.');
+ if(f.mode==='closeness')need(f.target!==null&&e.teams.every(t=>r.representatives[t.id]===null||Object.hasOwn(f.estimates,t.id)),'Faltan estimaciones o valor real.');
+ f.elapsedMs=elapsed(f,now);clock.remainingMs=left(clock,now);clock.deadline=null;clock.status='finished';f.startedAt=null;
+ if(!f.simultaneous){const tid=r.currentTeamId;need(tid,'No hay turno activo.');f.results[tid]={completed:true,ms:null,hits:f.logs.filter(x=>x.teamId===tid&&x.action==='correct'&&!x.voided).length};const next=r.turns.find(t=>t.representativeId!==null&&!f.results[t.teamId]);r.currentTeamId=next?.teamId||null;if(next){clock.remainingMs=clock.durationMs;clock.status='idle';f.elapsedMs=0;take(e,r,next.teamId);e.phase='preparing_challenge';audit(e,r,'full_turn_finished',{teamId:tid},now);return;}}
+ r.currentTeamId=null;applyCalculated(e,r);e.phase='capturing_results';
+ }
+ else if(action==='correct-result'){
+ stage('capturing_results');need(f.mode!=='special'&&team&&typeof data.reason==='string'&&data.reason.trim(),'Indica equipo y motivo; los premios se corrigen antes de finalizar.');
+ need(r.representatives[team.id]!==null,'Equipo no participante.');if(f.mode==='closeness'){need(Number.isInteger(data.value)&&data.value>=0,'Estimación inválida.');f.estimates[team.id]=data.value;}
+ else if(f.mode==='position'){need(data.ms===null||Number.isInteger(data.ms)&&data.ms>=0&&(r.game.unlimited||data.ms<=clock.durationMs),'Tiempo inválido.');f.results[team.id]={completed:data.ms!==null,ms:data.ms,hits:0};}
+ else {need(Number.isInteger(data.value)&&data.value>=0,'Aciertos inválidos.');f.results[team.id].hits=data.value;f.results[team.id].corrected=true;}
+ applyCalculated(e,r);
+ }
+ else throw Error('Control desconocido.');
+ audit(e,r,`full_${action}`,data,now);
+}
+export function calculateFull(e,r){
+ const f=r.full,rows={},eligible=e.teams.filter(t=>r.representatives[t.id]!==null);const values={};
+ if(f.mode==='special'){
+ const balances=Object.fromEntries(e.teams.map(t=>[t.id,e.ledger.filter(m=>m.status==='active'&&m.teamId===t.id&&m.roundId!==r.id).reduce((n,m)=>n+m.amount,0)]));const before=copy(balances);
+ // Premios primero; robos después, siguiendo el orden público de equipos.
+ for(const t of eligible){const c=f.rewardCards[f.choices[t.id]];need(c&&f.revealed,'Falta revelar elecciones.');if(c.kind==='gift')balances[t.id]+=c.amount;if(c.kind==='challenge'){need(typeof f.rewardDecisions[t.id]?.success==='boolean','Reto pendiente.');if(f.rewardDecisions[t.id].success)balances[t.id]+=c.amount;}}
+ for(const t of eligible){const c=f.rewardCards[f.choices[t.id]];if(c.kind==='steal'){const target=f.rewardDecisions[t.id]?.targetId;need(target&&target!==t.id&&Object.hasOwn(balances,target),'Robo pendiente.');const amount=Math.min(c.amount,Math.max(0,balances[target]));balances[target]-=amount;balances[t.id]+=amount;}}
+ for(const t of e.teams)rows[t.id]=balances[t.id]-before[t.id];return rows;
+ }
+ for(const t of eligible){if(f.mode==='closeness'){need(f.target!==null&&Object.hasOwn(f.estimates,t.id),'Faltan cantidades.');values[t.id]=Math.abs(f.estimates[t.id]-f.target);}else if(f.mode==='hits'){const n=f.results[t.id]?.hits;need(Number.isInteger(n)&&n>=0,'Falta el turno.');if(n>0)values[t.id]=-n;}else if(f.results[t.id]?.completed)values[t.id]=f.results[t.id].ms;}
+ for(const t of e.teams){const v=values[t.id],rank=v===undefined?null:1+Object.values(values).filter(x=>x<v).length;rows[t.id]=rank===null?0:[100,75,50,25][rank-1];}return rows;
+}
+function applyCalculated(e,r){const points=calculateFull(e,r);for(const t of r.turns){t.timer.status='finished';t.timer.deadline=null;t.outcome={success:points[t.teamId]>0,participated:t.representativeId!==null,points:points[t.teamId],manual:true,reason:'Resultado calculado con las reglas definitivas'};}}
+export function publicFull(r){const f=r.full;if(!f)return null;return {simultaneous:f.simultaneous,unlimited:r.game.unlimited===true,progress:r.turns.map(t=>({teamId:t.teamId,hits:r.game.id==='rebote-imposible'?t.bounces||0:null,completed:f.results[t.teamId]?.completed===true})),rewards:f.revealed?f.rewardCards.map((c,index)=>({index,kind:c.kind,amount:c.amount,teamId:Object.keys(f.choices).find(t=>f.choices[t]===index)||null,challenge:c.kind==='challenge'?f.challenges[c.amount===100?0:1]:null})):null};}
+export function validateFull(e,r){
+ const f=r.full;need(isFull(r.game)&&f?.version===1&&f.mode===r.game.scoring.mode&&typeof f.simultaneous==='boolean','Motor definitivo inválido.');
+ const tids=e.teams.map(t=>t.id),cardIds=new Set((r.game.cards||[]).map(c=>c.id));need(Array.isArray(f.deck)&&Array.isArray(f.usedCards)&&new Set(f.usedCards).size===f.usedCards.length&&f.usedCards.every(x=>x.startsWith(r.game.id+':')&&cardIds.has(x.slice(r.game.id.length+1))),'Registro de tarjetas inválido.');
+ need(new Set(f.deck.map(c=>c.id)).size===f.deck.length&&f.deck.every(c=>cardIds.has(c.id)&&!f.usedCards.includes(`${r.game.id}:${c.id}`)&&JSON.stringify(c)===JSON.stringify(r.game.cards.find(x=>x.id===c.id))),'Banco adulterado.');
+ for(const [tid,c] of Object.entries(f.cards))need(tids.includes(tid)&&(!c||cardIds.has(c.id)&&f.usedCards.includes(`${r.game.id}:${c.id}`)&&JSON.stringify(c)===JSON.stringify(r.game.cards.find(x=>x.id===c.id))),'Tarjeta activa inválida.');
+ const clock=f.clock;need(clock&&clock.durationMs===r.game.seconds*1000&&Number.isFinite(clock.remainingMs)&&clock.remainingMs>=0&&clock.remainingMs<=clock.durationMs&&['idle','running','paused','finished'].includes(clock.status)&&Number.isFinite(f.elapsedMs)&&f.elapsedMs>=0,'Reloj definitivo inválido.');need(clock.status==='running'?Number.isFinite(clock.deadline)&&Number.isFinite(f.startedAt):clock.deadline===null,'Plazo definitivo inválido.');
+ need(Array.isArray(f.logs)&&new Set(f.logs.map(x=>x.id)).size===f.logs.length&&f.logs.every(x=>tids.includes(x.teamId)&&cardIds.has(x.cardId)&&['correct','pass','infraction'].includes(x.action)),'Aciertos inválidos.');need(new Set(f.logs.map(x=>x.cardId)).size===f.logs.length,'Tarjeta resuelta dos veces.');
+ for(const [tid,v] of Object.entries(f.results))need(tids.includes(tid)&&(!v.completed||f.mode!=='position'||Number.isInteger(v.ms)&&v.ms>=0&&(r.game.unlimited||v.ms<=clock.durationMs))&&typeof v.completed==='boolean'&&(v.ms===null||Number.isInteger(v.ms)&&v.ms>=0)&&Number.isInteger(v.hits)&&v.hits>=0,'Resultado definitivo inválido.');
+ need(typeof f.revealed==='boolean'&&Array.isArray(f.challenges)&&f.challenges.length===2&&f.challenges.every(x=>typeof x==='string'&&x.trim()&&x.length<=1000),'Retos inválidos.');
+ need(f.target===null||Number.isInteger(f.target)&&f.target>=0,'Objetivo inválido.');for(const [tid,v] of Object.entries(f.estimates))need(tids.includes(tid)&&Number.isInteger(v)&&v>=0,'Estimación inválida.');
+ need(Array.isArray(f.rewardCards)&&f.rewardCards.length===6&&new Set(f.rewardCards.map(c=>c.kind+':'+c.amount)).size===6&&f.rewardCards.every(c=>({gift:[100,75],steal:[50,25],challenge:[100,50]})[c.kind]?.includes(c.amount)),'Baraja de premios inválida.');
+ need(new Set(Object.values(f.choices)).size===Object.keys(f.choices).length&&Object.entries(f.choices).every(([tid,n])=>tids.includes(tid)&&Number.isInteger(n)&&n>=0&&n<6),'Elecciones duplicadas.');if(f.revealed)need(e.teams.every(t=>r.representatives[t.id]===null||Object.hasOwn(f.choices,t.id)),'Revelación anticipada.');
+ if(r.game.requiredRepresentatives===2&&r.representativesConfirmed&&Object.keys(f.pairs).length)for(const t of e.teams)if(r.representatives[t.id]!==null)need(f.pairs[t.id]?.length===2&&new Set(f.pairs[t.id]).size===2&&f.pairs[t.id].every(p=>t.members.includes(p))&&f.pairs[t.id][0]===r.representatives[t.id],'Pareja inválida.');
+ if(['timer_active','timer_paused'].includes(e.phase)&&e.activeRoundId===r.id)need(clock.status===(e.phase==='timer_active'?'running':'paused'),'Fase y reloj diferentes.');
+ if(r.status==='completed'){const points=calculateFull(e,r),a=r.attempts.find(x=>x.status==='active');need(a&&tids.every(t=>a.outcomes[t]?.points===points[t]),'Asignación distinta al cálculo definitivo.');}
+ if(r.draft){const points=calculateFull(e,r);need(tids.every(t=>r.draft.outcomes[t]?.points===points[t]),'La revisión no coincide con los resultados calculados.');}
+ return true;
+}
