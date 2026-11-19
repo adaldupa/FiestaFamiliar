@@ -52,6 +52,8 @@ config={
 for g in base:
  mode,seconds,bank,play,rules=config[g['id']]
  g.update(executionVersion=1,executionMode=play,implementation='turns',pending=[],seconds=seconds,publicRules=rules,description=rules,ruleVersion=1,createdAt='2026-11-18T00:00:00Z',updatedAt='2026-11-18T00:00:00Z',representativesBefore=False,status='active',cards=banks.get(bank,[]),bank=bank,unlimited=g['id'] in ['rebote-imposible','roba-y-gana','cuantos-hay'],requiredRepresentatives=2 if g['id']=='rebote-imposible' else 1)
+ g['approvedCatalogRevision']=1
+ if g['unlimited']:g['seconds']=None
  g['mode']='Un representante describe o actúa; su equipo adivina' if bank else 'Equipos simultáneos'
  if g['id']=='rebote-imposible':g['mode']='Dos representantes distintos por equipo, ejecución simultánea'
  if g['id']=='roba-y-gana':g['mode']='Una elección oculta por equipo; seis tarjetas reveladas simultáneamente'

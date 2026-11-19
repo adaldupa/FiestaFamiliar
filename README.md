@@ -165,3 +165,7 @@ También puedes usar `npm test`. La entrega inicial de 2A tenía 85 pruebas; la 
 - `concurso_publico.py`, `src/clock-sync.js`: proyección independiente y compensación horaria.
 - `src/core.js`, `src/show.js`, `src/wheel.js`, `catalogo/`: dominio anterior conservado; geometría compartida y catálogo privado inicial de 2A.
 - `tests/`, `evidencia/`: pruebas y demostración reproducible.
+
+## Doce minijuegos definitivos
+
+La rama `doce-minijuegos-completos` incorpora motores por posición/rapidez, conteo, cercanía y premios directos; instala las fichas definitivas como revisiones nuevas, conservando las anteriores y los eventos históricos. Consulta [DOCE_MINIJUEGOS.md](DOCE_MINIJUEGOS.md) para reglas, controles, bancos, pruebas y el bloqueo de validación visual. `npm run test:full` ejecuta los motores; `npm run test:full-browser` verifica conductor y TV cuando Chromium está disponible.

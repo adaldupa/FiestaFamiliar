@@ -51,7 +51,7 @@ def validate_full(e, r):
     for tid, c in f['cards'].items():
         require(tid in tids and (c is None or cards.get(c['id']) == c and g['id']+':'+c['id'] in used), 'Tarjeta activa inválida.')
     clock = f['clock']
-    require(clock['durationMs'] == g['seconds']*1000 and finite(clock['remainingMs']) and 0 <= clock['remainingMs'] <= clock['durationMs'] and clock['status'] in ['idle', 'running', 'paused', 'finished'], 'Reloj inválido.')
+    require(clock['durationMs'] == (g['seconds'] if g['seconds'] is not None else 3600)*1000 and finite(clock['remainingMs']) and 0 <= clock['remainingMs'] <= clock['durationMs'] and clock['status'] in ['idle', 'running', 'paused', 'finished'], 'Reloj inválido.')
     require(finite(f['elapsedMs']) and f['elapsedMs'] >= 0 and (finite(clock['deadline']) and finite(f['startedAt']) if clock['status'] == 'running' else clock['deadline'] is None), 'Referencia temporal inválida.')
     require(len(f['logs']) == len({x['id'] for x in f['logs']}) == len({x['cardId'] for x in f['logs']}) and all(x['teamId'] in tids and x['cardId'] in cards and x['action'] in ['correct', 'pass', 'infraction'] for x in f['logs']), 'Registro de aciertos inválido.')
     for tid, v in f['results'].items():

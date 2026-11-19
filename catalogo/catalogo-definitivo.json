@@ -64,6 +64,7 @@
       "bank": null,
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla."
     },
@@ -376,6 +377,7 @@
       "bank": "dibujos",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Un perro paseando con paraguas",
         "Un gato durmiendo en una maleta",
@@ -462,7 +464,7 @@
           "unit": "por equipo / según participantes"
         }
       ],
-      "seconds": 90,
+      "seconds": null,
       "scoring": {
         "mode": "special",
         "nominal": 100,
@@ -497,6 +499,7 @@
       "bank": null,
       "unlimited": true,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Tarjetas: +100; +75; robar 50; robar 25; reto por 100; reto por 50. Los retos los define y valida el conductor antes de revelar. Los robos se procesan en el orden público de los equipos, tomando como máximo el saldo disponible."
     },
@@ -993,6 +996,7 @@
       "bank": "canciones",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Cielito lindo — tradicional",
         "La bamba — tradicional",
@@ -1170,6 +1174,7 @@
       "bank": null,
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla."
     },
@@ -2737,6 +2742,7 @@
       "bank": "sonidos",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Aeropuerto",
         "Estación de tren",
@@ -3068,7 +3074,7 @@
           "unit": "por equipo / según participantes"
         }
       ],
-      "seconds": 90,
+      "seconds": null,
       "scoring": {
         "mode": "position",
         "nominal": 100,
@@ -3109,6 +3115,7 @@
       "bank": null,
       "unlimited": true,
       "requiredRepresentatives": 2,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla."
     },
@@ -3185,6 +3192,7 @@
       "bank": null,
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla."
     },
@@ -3947,6 +3955,7 @@
       "bank": "actor",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Un astronauta busca sus llaves en un supermercado",
         "Un astronauta intenta espantar una mosca en un restaurante",
@@ -6820,6 +6829,7 @@
       "bank": "prohibidas",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Perro",
         "Gato",
@@ -8011,6 +8021,7 @@
       "bank": "objetos",
       "unlimited": false,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [
         "Mesa",
         "Silla",
@@ -8244,7 +8255,7 @@
           "unit": "por equipo / según participantes"
         }
       ],
-      "seconds": 90,
+      "seconds": null,
       "scoring": {
         "mode": "closeness",
         "nominal": 100,
@@ -8285,6 +8296,7 @@
       "bank": null,
       "unlimited": true,
       "requiredRepresentatives": 1,
+      "approvedCatalogRevision": 1,
       "secrets": [],
       "privateInstructions": "Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla."
     }

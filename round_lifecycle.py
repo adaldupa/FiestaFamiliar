@@ -60,8 +60,19 @@ def public_result(e, r):
     if r is None:
         return None
     attempt = next((a for a in r['attempts'] if a['status'] == 'active'), None)
-    return {'status': 'confirmed' if r['status'] == 'completed' else 'unscored' if r['status'] == 'skipped' else 'pending',
-            'rows': [{'teamId': t['id'], 'points': attempt['outcomes'][t['id']]['points'] if attempt else None} for t in e['teams']]}
+    rows = []
+    for t in e['teams']:
+        tid = t['id']
+        points = attempt['outcomes'][tid]['points'] if attempt else None
+        row = {'teamId': tid, 'points': points}
+        if attempt and 'full' in r:
+            f = r['full']
+            row.update(place=None if f['mode'] == 'special' or points == 0 else 5-points//25,
+                       elapsedMs=f['results'].get(tid, {}).get('ms') if f['mode'] == 'position' else None,
+                       hits=f['results'].get(tid, {}).get('hits', 0) if f['mode'] == 'hits' else None,
+                       difference=abs(f['estimates'][tid]-f['target']) if f['mode'] == 'closeness' and tid in f['estimates'] else None)
+        rows.append(row)
+    return {'status': 'confirmed' if r['status'] == 'completed' else 'unscored' if r['status'] == 'skipped' else 'pending', 'rows': rows}
 
 
 def validate_modern(e):

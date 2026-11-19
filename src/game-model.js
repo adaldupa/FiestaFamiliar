@@ -8,7 +8,7 @@ export function validateGame(g){
  for(const key of ['name','description','category','mode','publicRules','privateInstructions','victory','tie','noFinish','accessibility'])need(isText(g[key]),`Falta ${key} en el minijuego.`);
  need(['active','inactive','archived'].includes(g.status),'Estado del minijuego inválido.');
  need(Number.isInteger(g.minParticipants)&&Number.isInteger(g.maxParticipants)&&g.minParticipants>=1&&g.maxParticipants>=g.minParticipants&&g.maxParticipants<=10000,'Cantidad de participantes inválida.');
- need(Number.isInteger(g.seconds)&&g.seconds>=1&&g.seconds<=3600||g.seconds===null&&g.implementation==='planned'&&Array.isArray(g.pending)&&g.pending.length>0,'Duración: 1–3600 segundos, o pendiente explícito en una dinámica futura.');
+ need(Number.isInteger(g.seconds)&&g.seconds>=1&&g.seconds<=3600||g.seconds===null&&g.executionVersion===1&&g.unlimited===true||g.seconds===null&&g.implementation==='planned'&&Array.isArray(g.pending)&&g.pending.length>0,'Duración: 1–3600 segundos, o pendiente explícito en una dinámica futura.');
  need(typeof g.representativesBefore==='boolean','Falta modalidad de representantes.');
  need(Array.isArray(g.materials)&&g.materials.every(m=>m&&isText(m.name,200)&&Number.isFinite(m.quantity)&&m.quantity>=0&&isText(m.unit,80)),'Materiales inválidos.');
  need(Array.isArray(g.secrets)&&g.secrets.every(x=>isText(x)),'Pistas privadas inválidas.');

@@ -30,7 +30,7 @@ def game(g):
     require(type(g.get('minParticipants')) is int and type(g.get('maxParticipants')) is int and 1 <= g['minParticipants'] <= g['maxParticipants'] <= 10000, 'Participantes de ficha inválidos.')
     seconds = g.get('seconds')
     pending = g.get('pending', [])
-    require(type(seconds) is int and 1 <= seconds <= 3600 or seconds is None and g.get('implementation') == 'planned' and isinstance(pending, list) and len(pending) > 0, 'Duración de ficha inválida.')
+    require(type(seconds) is int and 1 <= seconds <= 3600 or seconds is None and g.get('executionVersion') == 1 and g.get('unlimited') is True or seconds is None and g.get('implementation') == 'planned' and isinstance(pending, list) and len(pending) > 0, 'Duración de ficha inválida.')
     require(type(g.get('representativesBefore')) is bool, 'Modalidad de representantes inválida.')
     require(isinstance(g.get('materials'), list), 'Materiales inválidos.')
     for m in g['materials']:
