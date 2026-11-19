@@ -11,7 +11,26 @@ def finite(n): return type(n) in (int, float) and math.isfinite(n)
 def calculate(e, r):
     f = r['full']
     eligible = [t for t in e['teams'] if r['representatives'][t['id']] is not None]
+    if f.get('scoreOverride'):
+        return dict(f['scoreOverride']['points'])
     if f['mode'] == 'special':
+        if f.get('rewardPolicy'):
+            before = f['rewardSnapshot']['balances']
+            balances, available = dict(before), dict(before)
+            for t in eligible:
+                c = f['rewardCards'][f['choices'][t['id']]]
+                if c['kind'] == 'gift' or c['kind'] == 'challenge' and f['rewardDecisions'][t['id']]['success']:
+                    balances[t['id']] += c['amount']
+            for t in eligible:
+                c = f['rewardCards'][f['choices'][t['id']]]
+                if c['kind'] == 'steal':
+                    target = f['rewardSnapshot']['targets'][t['id']]
+                    require(f['rewardDecisions'][t['id']]['targetId'] == target, 'Robo ajeno a la clasificación previa.')
+                    amount = min(c['amount'], max(0, available[target]))
+                    available[target] -= amount
+                    balances[target] -= amount
+                    balances[t['id']] += amount
+            return {tid: balances[tid]-before[tid] for tid in balances}
         balances = {t['id']: sum(m['amount'] for m in e['ledger'] if m['status'] == 'active' and m['teamId'] == t['id'] and m['roundId'] != r['id']) for t in e['teams']}
         before = dict(balances)
         for t in eligible:
@@ -69,10 +88,16 @@ def validate_full(e, r):
         require(all(r['representatives'][t['id']] is None or t['id'] in f['choices'] for t in e['teams']), 'Revelación anticipada.')
     if e['activeRoundId'] == r['id'] and e['phase'] in ['timer_active', 'timer_paused']:
         require(clock['status'] == ('running' if e['phase'] == 'timer_active' else 'paused'), 'Fase y reloj distintos.')
+    if f.get('rewardPolicy'):
+        snap = f['rewardSnapshot']
+        require(snap.get('version') == 1 and len(snap['basis']) == len({m['id'] for m in snap['basis']}) and all(any(old['id'] == m['id'] and old['teamId'] == m['teamId'] and old['amount'] == m['amount'] and old['roundId'] != r['id'] for old in e['ledger']) for m in snap['basis']), 'Base previa inválida.')
+        require(all(snap['balances'][tid] == sum(m['amount'] for m in snap['basis'] if m['teamId'] == tid) >= 0 for tid in tids), 'Saldo previo alterado.')
+        ordered = sorted([t['id'] for t in e['teams']], key=lambda tid: -snap['balances'][tid])
+        require(all(snap['targets'][tid] == next(other for other in ordered if other != tid) for tid in tids), 'Víctima ajena a la clasificación previa.')
     if r.get('status') == 'completed':
         active = next((a for a in r['attempts'] if a['status'] == 'active'), None)
         require(active is not None and {tid: row['points'] for tid, row in active['outcomes'].items()} == calculate(e, r), 'Asignación distinta al cálculo definitivo.')
-    if r.get('draft'):
+    if r.get('draft') and not r['draft'].get('manualOverride'):
         require({tid: row['points'] for tid, row in r['draft']['outcomes'].items()} == calculate(e, r), 'Cálculo adulterado.')
 
 

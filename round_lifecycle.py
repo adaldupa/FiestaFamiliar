@@ -37,6 +37,8 @@ def lifecycle_at(e):
 
 
 def screen_at(e):
+    if e['phase'] == 'awards' or (e.get('awards') or {}).get('status') == 'finished': return 'awards'
+    if e.get('duel', {}).get('current'): return 'duel'
     if e.get('publicScreen') == 'standings':
         return 'standings'
     return {'preparation': 'waiting', 'spinning': 'wheel', 'selected': 'selected', 'instructions': 'instructions',
@@ -67,7 +69,7 @@ def public_result(e, r):
         row = {'teamId': tid, 'points': points}
         if attempt and 'full' in r:
             f = r['full']
-            row.update(place=None if f['mode'] == 'special' or points == 0 else 5-points//25,
+            row.update(place=None if f['mode'] == 'special' or points == 0 else 1+sum(n > points for n in f['scoreOverride']['points'].values()) if f.get('scoreOverride') else 5-points//25,
                        elapsedMs=f['results'].get(tid, {}).get('ms') if f['mode'] == 'position' else None,
                        hits=f['results'].get(tid, {}).get('hits', 0) if f['mode'] == 'hits' else None,
                        difference=abs(f['estimates'][tid]-f['target']) if f['mode'] == 'closeness' and tid in f['estimates'] else None)

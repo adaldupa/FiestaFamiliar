@@ -1,3 +1,5 @@
+import {renderAwardsHost} from './closure-host.js';
+import {fullAction} from './full-engines.js';
 import {renderFullHost} from './full-host.js';
 import {engineFor,isOperational,lifecycleAt,LIFECYCLE,LIFECYCLE_LABELS,screenAt} from './round-engine.js';
 import {renderWheel} from './wheel.js';
@@ -8,7 +10,7 @@ export const labels={game_selected:'Minijuego seleccionado',engine_pending:'Moto
 const B=(a,t)=>`<button type="button" data-contest="${a}">${t}</button>`;
 const reason='<label>Motivo<input name="reason" required maxlength="1000"></label>';
 const check=(name,text,on=false)=>`<label class="check"><input type="checkbox" name="${name}" ${on?'checked':''}> ${text}</label>`;
-export function renderContest(s,now=Date.now()){if(C.activeRound(C.activeEvent(s))?.full)return renderFullHost(s,now);
+export function renderContest(s,now=Date.now()){if(C.activeEvent(s)?.phase==='awards')return renderAwardsHost(s);if(C.activeRound(C.activeEvent(s))?.full&&C.activeEvent(s)?.status!=='finished')return renderFullHost(s,now);
  const e=C.activeEvent(s),r=C.activeRound(e),t=C.currentTurn(r),P=C.PHASE,operational=isOperational(r),pool=C.eligibleGames(s);let body='';
  if(!e||e.status==='finished')body=`<p>${e?'Este evento ha terminado.':'Primero crea una reunión desde Inicio.'}</p><button type="button" data-section="inicio">Ir a Inicio</button>`;
  if(e&&e.status!=='finished'){
@@ -50,14 +52,14 @@ export function renderResults(s,eventId=null){
  return `<section class="panel"><h2>Marcador y clasificación</h2>${e?`<p>${esc(e.name)} · ${esc(labels[e.phase]||e.phase)}</p><div class="contest-scores">${C.standings(e).sort((a,b)=>a.place-b.place).map(x=>`<article><span>Lugar ${x.place}</span><b>${esc(x.name)}</b><strong>${x.score}</strong></article>`).join('')}</div><p>${e.rounds.length} rondas · ${e.status==='finished'?'Evento finalizado':'Evento en curso'}</p>`:'<p>Todavía no hay resultados. Crea una reunión desde Inicio.</p>'}<p class="caption">La ceremonia de premiación se incorporará en una entrega posterior.</p></section><section class="panel"><h2>Historial privado de eventos</h2>${history||'<p>Sin movimientos registrados.</p>'}</section>`;
 }
 
-export function contestSubmit(form,d,{commit,ask,actor,now,state}){
+export function contestSubmit(form,d,{commit,ask,actor,duelBank=[],now,state}){
  const id=form.id;if(!id.startsWith('contest-'))return false;
  const act=fn=>commit(s=>fn(s,now())),why=String(d.get('reason')||'');
- if(id==='contest-create')act((s,n)=>{if(!actor)throw Error('La ficha privada del actor no está disponible.');C.initializeContest(s,actor);const choices=d.getAll('games').map(x=>{const value=String(x),index=value.lastIndexOf(':');return {id:value.slice(0,index),ruleVersion:Number(value.slice(index+1))};});C.createEvent(s,{...(choices.length?{selectedIds:choices.map(x=>x.id),selectedRevisions:choices}:d.has('collectionSelection')?{selectedIds:[]}:{}),lifecycleVersion:1,name:String(d.get('name')),seconds:Number(d.get('seconds')),successPoints:Number(d.get('points')),representativesBefore:d.has('before'),approvedProposal:d.has('approved'),ranking:String(d.get('ranking'))},n);});
+ if(id==='contest-create')act((s,n)=>{if(!actor)throw Error('La ficha privada del actor no está disponible.');C.initializeContest(s,actor);const choices=d.getAll('games').map(x=>{const value=String(x),index=value.lastIndexOf(':');return {id:value.slice(0,index),ruleVersion:Number(value.slice(index+1))};});C.createEvent(s,{...(choices.length?{selectedIds:choices.map(x=>x.id),selectedRevisions:choices}:d.has('collectionSelection')?{selectedIds:[]}:{}),lifecycleVersion:1,closureVersion:1,questionBank:duelBank,name:String(d.get('name')),seconds:Number(d.get('seconds')),successPoints:Number(d.get('points')),representativesBefore:d.has('before'),approvedProposal:d.has('approved'),ranking:String(d.get('ranking'))},n);});
  if(id==='contest-draw')act((s,n)=>{C.enableRoundLifecycle(s,n);C.drawGame(s,String(d.get('seed')),n);});
  if(id==='contest-games')act((s,n)=>C.configureEventGames(s,d.getAll('pool').map(value=>{const text=String(value),i=text.lastIndexOf(':');return {id:text.slice(0,i),ruleVersion:Number(text.slice(i+1))};}),n));
  if(id==='contest-close-incomplete'){const roundId=C.activeRound(C.activeEvent(state))?.id;ask('Cerrar ronda incompleta','No se aplicarán puntos. Se conservará lo registrado y el motivo del cierre. ¿Confirmas cerrar sin resultados completos?',()=>act((s,n)=>C.closeRoundWithoutResults(s,{confirmed:true,roundId,reason:why},n)));}
- if(id==='contest-reps')act((s,n)=>C.setRepresentatives(s,Object.fromEntries(C.activeEvent(s).teams.map(t=>[t.id,d.get(t.id)||null])),why,n));
+ if(id==='contest-reps')act((s,n)=>{C.setRepresentatives(s,Object.fromEntries(C.activeEvent(s).teams.map(t=>[t.id,d.get(t.id)||null])),why,n);const r=C.activeRound(C.activeEvent(s));if(r.full&&r.game.requiredRepresentatives===2)fullAction(s,'pairs',{pairs:Object.fromEntries(C.activeEvent(s).teams.filter(t=>r.representatives[t.id]!==null).map(t=>[t.id,[r.representatives[t.id],String(d.get(t.id+'-second'))]]))},n);});
  if(id==='contest-phrase')act((s,n)=>C.setPrivatePhrase(s,String(d.get('phrase')),n));
  if(id==='contest-outcome')act((s,n)=>C.recordOutcome(s,{success:d.has('success'),participated:d.has('participated'),...(d.has('manualPoints')?{manualPoints:Number(d.get('manualPoints')),reason:why}:{})},n));
  if(id==='contest-edit')act((s,n)=>C.editTurnResult(s,String(d.get('team')),d.has('success'),d.has('participated'),why,n));
@@ -67,7 +69,7 @@ export function contestSubmit(form,d,{commit,ask,actor,now,state}){
  if(id==='contest-skip')ask('Omitir reto','Quedará fuera del sorteo hasta reintroducirlo expresamente.',()=>act((s,n)=>C.skipGame(s,why,n)));
  if(id==='contest-restore')act((s,n)=>C.restoreSkipped(s,form.dataset.round,why,n));
  if(id==='contest-replay')ask('Repetición excepcional','Se autorizará una repetición explícita; la regla habitual sigue siendo sin repetición.',()=>act((s,n)=>C.authorizeReplay(s,String(d.get('game')),why,n)));
- if(id==='contest-close')ask('Cerrar evento','Se conservarán resultados e historial. La ceremonia de premios pertenece a 2D.',()=>act((s,n)=>C.closeEvent(s,why,n)));
+ if(id==='contest-close')ask('Cerrar evento','Se conservarán resultados e historial. En eventos con cierre funcional se iniciará la ceremonia de premiación.',()=>act((s,n)=>C.closeEvent(s,why,n)));
  return true;
 }
 export function contestClick(button,{commit,ask,now,state}){

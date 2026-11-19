@@ -1,8 +1,9 @@
+from closure_public import validate_closure, validate_duel_movement, public_closure, scheduled
 """Proyección independiente de fase 2A. No importar código de cliente ni copiar secretos."""
 import math
 from round_lifecycle import engine_for, lifecycle_at, screen_at, eligible, public_result, validate_modern
 
-PHASES = {'game_selected', 'engine_pending', 'round_finished', 'preparation', 'teams_confirmed', 'selecting_game', 'selecting_representatives', 'presenting_rules', 'preparing_challenge', 'timer_active', 'timer_paused', 'capturing_results', 'confirming_score', 'scoreboard_updated', 'next_round', 'event_finished'}
+PHASES = {'awards', 'game_selected', 'engine_pending', 'round_finished', 'preparation', 'teams_confirmed', 'selecting_game', 'selecting_representatives', 'presenting_rules', 'preparing_challenge', 'timer_active', 'timer_paused', 'capturing_results', 'confirming_score', 'scoreboard_updated', 'next_round', 'event_finished'}
 
 
 def text(value, limit=5000):
@@ -52,6 +53,7 @@ def contest_public_snapshot(c):
         raise ValueError('Concurso inválido.')
     events = c['events']
     for event in events:
+        validate_closure(event)
         if event.get('settings', {}).get('lifecycleVersion') == 1:
             validate_modern(event)
         for game in event.get('selectedGames', []):
@@ -84,6 +86,13 @@ def contest_public_snapshot(c):
     points = dict.fromkeys(team_ids, 0)
     movement_ids, tuples = set(), set()
     for m in e['ledger']:
+        if m.get('kind') == 'duel':
+            validate_duel_movement(e, m)
+            require_unique = m['id'] not in movement_ids
+            if not require_unique: raise ValueError('Movimiento duplicado.')
+            movement_ids.add(m['id'])
+            points[m['teamId']] += m['amount']
+            continue
         mid = text(m['id'], 120)
         key = (m['batchId'], m['teamId'])
         if mid in movement_ids or key in tuples or m['eventId'] != e['id'] or m['roundId'] not in round_ids or m['teamId'] not in points or m['status'] not in ('active', 'voided'):
@@ -117,6 +126,7 @@ def contest_public_snapshot(c):
     available = [g for g in e['selectedGames'] if g['status'] == 'active' and g['id'] not in skipped and (g['id'] not in completed or any(a['gameId'] == g['id'] and not a['usedBy'] for a in e['replays']))]
     if modern:
         available = eligible(e, c['library'])
+        if scheduled(e): available = [g for g in available if g['id'] == 'roba-y-gana']
     turn = next((t for t in r['turns'] if t['teamId'] == r['currentTeamId']), None) if r else None
     hidden = r and r['game']['representativesBefore'] and not r['representativesConfirmed']
     game = r['game'] if r and not hidden else None
@@ -142,4 +152,5 @@ def contest_public_snapshot(c):
         dto['execution'] = public_full(r)
         if r['game'].get('unlimited'):
             dto['timer'].update(unlimited=True, elapsedMs=r['full']['elapsedMs'], startedAt=r['full']['startedAt'])
+    dto.update(public_closure(e))
     return dto

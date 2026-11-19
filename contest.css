@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){.wheel-assembly .labelled-wheel{transform:rotate(var(--rotation));transition:none;animation:none}}
 
 #full-clock{display:block;font:700 clamp(38px,7vw,80px) Text;color:#ffe4a9;padding:12px 0;font-variant-numeric:tabular-nums}.turn-console form{margin:10px 0}.turn-console button{margin:4px}.secret-card{border:2px solid #ba9252;padding:12px}.secret-card strong{font-size:1.4em}
+
+.award-winner{animation:award-arrival 900ms ease-out both;padding:20px;color:#ffe4a9}.award-winner h2{font:clamp(40px,6vw,110px) Show!important}.award-winner strong{font-size:clamp(24px,3vw,60px)}@keyframes award-arrival{from{opacity:0;transform:translateY(35px) scale(.9)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.award-winner{animation:none}}
+.awards-stage.reduced-motion .award-winner{animation:none}
