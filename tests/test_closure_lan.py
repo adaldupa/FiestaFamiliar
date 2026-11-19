@@ -62,3 +62,16 @@ class ClosureLANTests(unittest.TestCase):
     def test_definitive_duel_bank_is_private(self):
         self.assertEqual(self.request('GET', '/catalogo/duelo-generaciones.json')[0], 401)
         self.assertEqual(self.request('GET', '/catalogo/duelo-generaciones.json', auth=True)[0], 200)
+
+    def test_blind_selection_and_automatic_reward_policy_match_public_lan_contract(self):
+        js = """import {closure,selectGame,prepare} from './tests/closure-fixtures.js';import {play} from './tests/full-fixtures.js';import * as C from './src/contest-core.js';import * as T from './src/teams-core.js';import * as X from './src/closure-core.js';import * as F from './src/full-engines.js';const out=[],snap=s=>out.push({state:T.clone(s),public:T.publicSnapshot(s)});const s=closure();X.configureClosure(s,{representativesBefore:true});selectGame(s,'galleta-viajera');snap(s);const x=closure();play(x,'galleta-viajera');C.correctScores(x,{t1:100,t2:75,t3:50,t4:25},'Clasificación confirmada');C.confirmScores(x,C.activeRound(C.activeEvent(x)).draft.id);C.nextRound(x);X.configureClosure(x,{enabled:true,lead:25,cooldown:1});snap(x);const r=prepare(x,'roba-y-gana'),e=C.activeEvent(x);C.prepareChallenge(x);C.startTimer(x,10000);const desired=['steal:50','gift:100','challenge:100','steal:25'];e.teams.forEach((t,i)=>F.fullAction(x,'choose',{teamId:t.id,index:r.full.rewardCards.findIndex(c=>c.kind+':'+c.amount===desired[i])},11000));F.fullAction(x,'reveal',{},12000);F.fullAction(x,'reward',{teamId:'t1'},13000);F.fullAction(x,'reward',{teamId:'t3',success:true},13000);F.fullAction(x,'reward',{teamId:'t4'},13000);C.finishTimer(x,14000);C.reviewScores(x);C.confirmScores(x,r.draft.id);snap(x);console.log(JSON.stringify(out));"""
+        frames = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', js], cwd=ROOT))
+        for i, case in enumerate(frames):
+            self.assertEqual(lan.public_snapshot(case['state']), case['public'])
+            self.assertEqual(self.request('POST', '/api/session', {'state': case['state'], 'revision': i}, True)[0], 200)
+        self.assertIsNone(frames[0]['public']['contest']['game'])
+        self.assertIsNone(frames[0]['public']['contest']['timer'])
+        self.assertEqual(frames[1]['public']['contest']['availableCount'], 1)
+        self.assertTrue(frames[1]['public']['contest']['automaticReward'])
+        r = frames[-1]['state']['contest']['events'][0]['rounds'][-1]
+        self.assertEqual(r['full']['rewardSnapshot']['targets']['t1'], 't2')

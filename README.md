@@ -1,3 +1,5 @@
+> Estado actual de la rama `cierre-funcional-concurso`: [cierre, pruebas y limitaciones](CIERRE_CONCURSO.md) · [ensayo desde celular y TV](PRUEBA_MANUAL_CIERRE.md). Las secciones de fases anteriores conservan el contexto histórico. No se ha hecho merge a main.
+
 # La Gran Noche de Retos — Fase 2C.1
 
 Versión `2.4.0-fase2c1`, rama `fase2-motor-concurso`. Ruleta conectada con la Biblioteca existente, siete etapas de ronda, pantallas independientes de TV y recuperación local/LAN. No requiere volver a importar fichas. No fusionado a main.
@@ -169,3 +171,7 @@ También puedes usar `npm test`. La entrega inicial de 2A tenía 85 pruebas; la 
 ## Doce minijuegos definitivos
 
 La rama `doce-minijuegos-completos` incorpora motores por posición/rapidez, conteo, cercanía y premios directos; instala las fichas definitivas como revisiones nuevas, conservando las anteriores y los eventos históricos. Consulta [DOCE_MINIJUEGOS.md](DOCE_MINIJUEGOS.md) para reglas, controles, bancos, pruebas y el bloqueo de validación visual. `npm run test:full` ejecuta los motores; `npm run test:full-browser` verifica conductor y TV cuando Chromium está disponible.
+
+## Cierre del concurso
+
+La rama `cierre-funcional-concurso` añade Roba y Gana con clasificación previa a la revelación, repetición configurable anunciada, representantes antes de revelar, Duelo de Generaciones y ceremonia final auditable. Consulta [CIERRE_CONCURSO.md](CIERRE_CONCURSO.md) para el estado verificable y [PRUEBA_MANUAL_CIERRE.md](PRUEBA_MANUAL_CIERRE.md) para ensayar con datos separados desde celular y TV. Las validaciones visuales siguen pendientes por el bloqueo de Chromium del entorno.

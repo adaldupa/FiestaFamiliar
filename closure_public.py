@@ -14,7 +14,7 @@ def rankings(e):
 
 
 def summary(e):
-    return [dict(number=r['number'], name=r['game']['name'], status=r['status'], points={t['id']: sum(m['amount'] for m in e['ledger'] if m['status'] == 'active' and m['roundId'] == r['id'] and m['teamId'] == t['id']) for t in e['teams']}) for r in e['rounds']]
+    return [dict(number=r['number'], name=r['game']['name'], status=r['status'], points={t['id']: sum(m['amount'] for m in e['ledger'] if m['status'] == 'active' and m['roundId'] == r['id'] and m['teamId'] == t['id']) for t in e['teams']}, cumulative={t['id']: sum(m['amount'] for m in e['ledger'] if m['status'] == 'active' and m['teamId'] == t['id'] and (m['roundId'] in {x['id'] for x in e['rounds'][:r['number']]} or m.get('kind') == 'duel' and any(a['id'] == m['batchId'] and a['cycle'] <= r['number'] for a in e.get('duel', {}).get('attempts', [])))) for t in e['teams']}) for r in e['rounds']]
 
 
 def signature(e):
