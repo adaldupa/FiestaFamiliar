@@ -1,3 +1,4 @@
+import {challengeIndex} from './reward-config.js';
 import {displayedGame,teamCardAllowed} from './presentation-copy.js';
 import {parseDuration} from './time-input.js';
 import * as C from './contest-core.js';
@@ -22,7 +23,7 @@ export function renderFullHost(s,now){
  if(['preparing_challenge','timer_active','timer_paused'].includes(p)){
  html+=`${f.simultaneous&&f.mode==='position'?'<div class="host-live-toolbar">':''}<h3>${f.simultaneous?'Todos los equipos juegan simultáneamente':`Turno de ${esc(e.teams.find(t=>t.id===r.currentTeamId)?.name)}`}</h3><output id="full-clock">${clock(r,now)}</output>`;
  if(p==='preparing_challenge'&&f.mode==='closeness')html+=form('target',`<label>Valor real · privado<input name="value" type="number" min="0" step="1" value="${f.target??''}" required></label>`);
- if(p==='preparing_challenge'&&f.mode==='special')html+=form('challenges',f.challenges.map((x,i)=>`<label>Reto por ${i===0?100:50}<textarea name="challenge${i}" required maxlength="1000">${esc(x)}</textarea></label>`).join(''));
+ if(p==='preparing_challenge'&&f.mode==='special')html+=form('challenges',f.challenges.map((x,i)=>`<label>Reto ${i===0?'A':'B'} por ${f.rewardCards.find(c=>c.kind==='challenge'&&challengeIndex(c)===i)?.amount??(i===0?100:50)}<textarea name="challenge${i}" required maxlength="1000">${esc(x)}</textarea></label>`).join(''));
  if(['preparing_challenge','timer_paused'].includes(p))html+=b('start',p==='timer_paused'?'Reanudar':'Iniciar');
  if(p==='timer_active')html+=b('pause','Pausar');
  if(['timer_active','timer_paused'].includes(p))html+=b('finish',f.simultaneous?'Finalizar ejecución':'Finalizar turno');
@@ -40,7 +41,7 @@ export function renderFullHost(s,now){
  if(f.simultaneous&&f.mode==='position')html+='</div>';
  if(f.mode==='special'&&p==='timer_active'){
  if(!f.revealed)html+=b('reveal','Revelar las seis simultáneamente');
- else html+=`<ol>${f.rewardCards.map((c,i)=>{const tid=Object.keys(f.choices).find(t=>f.choices[t]===i),t=e.teams.find(t=>t.id===tid);let h=`<li>${i+1}. ${esc(rewardName(c))} · ${esc(t?.name||'Sin elegir')}`;if(c.kind==='challenge')h+=`<p>${esc(f.challenges[c.amount===100?0:1])}</p>`;if(t&&c.kind==='steal'&&f.rewardPolicy)h+=`<p>Robo según clasificación previa: ${esc(e.teams.find(x=>x.id===f.rewardSnapshot.targets[tid])?.name)}</p>`;if(t&&c.kind==='steal')h+=form('reward',`<label>Robar a<select name="targetId">${e.teams.filter(x=>f.rewardPolicy?x.id===f.rewardSnapshot.targets[tid]:x.id!==tid).map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join('')}</select></label>`,tid);if(t&&c.kind==='challenge')h+=form('reward','<label>Resultado del reto<select name="success"><option value="true">Cumplido</option><option value="false">No cumplido</option></select></label>',tid);if(t&&f.rewardDecisions[tid])h+='<p>Decisión registrada; puede corregirse antes de finalizar.</p>';return h+'</li>';}).join('')}</ol>`;
+ else html+=`<ol>${f.rewardCards.map((c,i)=>{const tid=Object.keys(f.choices).find(t=>f.choices[t]===i),t=e.teams.find(t=>t.id===tid);let h=`<li>${i+1}. ${esc(rewardName(c))} · ${esc(t?.name||'Sin elegir')}`;if(c.kind==='challenge')h+=`<p>${esc(f.challenges[challengeIndex(c)])}</p>`;if(t&&c.kind==='steal'&&f.rewardPolicy)h+=`<p>Robo según clasificación previa: ${esc(e.teams.find(x=>x.id===f.rewardSnapshot.targets[tid])?.name)}</p>`;if(t&&c.kind==='steal')h+=form('reward',`<label>Robar a<select name="targetId">${e.teams.filter(x=>f.rewardPolicy?x.id===f.rewardSnapshot.targets[tid]:x.id!==tid).map(x=>`<option value="${x.id}">${esc(x.name)}</option>`).join('')}</select></label>`,tid);if(t&&c.kind==='challenge')h+=form('reward','<label>Resultado del reto<select name="success"><option value="true">Cumplido</option><option value="false">No cumplido</option></select></label>',tid);if(t&&f.rewardDecisions[tid])h+='<p>Decisión registrada; puede corregirse antes de finalizar.</p>';return h+'</li>';}).join('')}</ol>`;
  }
  }
  if(g.id==='palabras-prohibidas'&&['timer_active','timer_paused','capturing_results'].includes(p))html+=`<details><summary>Anular un acierto por infracción confirmada</summary>${form('invalidate-card',`<select name="logId">${f.logs.filter(x=>x.action==='correct'&&!x.voided).map(x=>`<option value="${x.id}">${esc(e.teams.find(t=>t.id===x.teamId)?.name)} · ${esc(g.cards.find(c=>c.id===x.cardId)?.target)}</option>`).join('')}</select><label>Motivo<input name="reason" required></label>`)}</details>`;

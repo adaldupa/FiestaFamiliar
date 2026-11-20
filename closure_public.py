@@ -1,3 +1,4 @@
+from reward_config import validate_amounts
 """Contrato LAN de Duelo, repetición y premiación. Las respuestas nunca se proyectan."""
 import json
 from biblioteca_validacion import require
@@ -27,7 +28,13 @@ def scheduled(e):
         return False
     values = sorted(scores(e).values(), reverse=True)
     last = next((i for i in reversed(range(len(e['rounds']))) if e['rounds'][i]['game']['id'] == 'roba-y-gana'), -1)
-    return values[0]-values[1] >= rule['lead'] and len(e['rounds'])-last-1 >= rule['cooldown']
+    if values[0]-values[1] < rule['lead']: return False
+    if len(e['rounds'])-last-1 >= rule['cooldown']: return True
+    consecutive = 0
+    for r in reversed(e['rounds']):
+        if r['game']['id'] != 'roba-y-gana': break
+        consecutive += 1
+    return bool(rule.get('advantageException') and last >= 0 and consecutive < rule.get('maxConsecutive', 2))
 
 
 def validate_duel_movement(e, m):
@@ -56,6 +63,12 @@ def validate_closure(e):
     require(len(attempted) == len(set(attempted)) == len(d['used']), 'Pregunta premiada dos veces.')
     rule = e['settings']['repeat']
     require(type(rule['enabled']) is bool and type(rule['lead']) is int and 25 <= rule['lead'] <= 10000 and type(rule['cooldown']) is int and 1 <= rule['cooldown'] <= 20, 'Parámetros de repetición inválidos.')
+    require('advantageException' not in rule or type(rule['advantageException']) is bool, 'Excepción de ventaja inválida.')
+    require('maxConsecutive' not in rule or type(rule['maxConsecutive']) is int and 1 <= rule['maxConsecutive'] <= 5, 'Máximo consecutivo inválido.')
+    if 'rewardAmounts' in e['settings']:
+        g = next((g for g in e['selectedGames'] if g['id'] == 'roba-y-gana'), None)
+        require(g is not None, 'Falta Roba y Gana.')
+        validate_amounts(e['settings']['rewardAmounts'], g['scoring'])
     a = e.get('awards')
     if a and a['status'] == 'presenting': require(e['phase'] == 'awards', 'Ceremonia activa fuera de etapa.')
     if e['phase'] == 'awards' or a and a['status'] == 'finished':

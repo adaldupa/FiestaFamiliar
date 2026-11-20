@@ -1,3 +1,4 @@
+from reward_config import validate_deck, challenge_index
 """Validación y proyección LAN de motores definitivos; no expone bancos ni objetivos."""
 import math
 from biblioteca_validacion import require
@@ -78,7 +79,10 @@ def validate_full(e, r):
     require(f['target'] is None or integer(f['target']), 'Objetivo inválido.')
     require(all(tid in tids and integer(v) for tid, v in f['estimates'].items()), 'Estimaciones inválidas.')
     expected = {('gift', 100), ('gift', 75), ('steal', 50), ('steal', 25), ('challenge', 100), ('challenge', 50)}
-    require(len(f['rewardCards']) == 6 and {(c['kind'], c['amount']) for c in f['rewardCards']} == expected, 'Premios inválidos.')
+    if 'rewardSchema' in f:
+        validate_deck(f, g)
+    else:
+        require(len(f['rewardCards']) == 6 and {(c['kind'], c['amount']) for c in f['rewardCards']} == expected, 'Premios inválidos.')
     require(len(f['choices']) == len(set(f['choices'].values())) and all(tid in tids and integer(n) and n < 6 for tid, n in f['choices'].items()), 'Elecciones inválidas.')
     for tid, d in f['rewardDecisions'].items():
         require(tid in tids and tid in f['choices'], 'Decisión de premio inválida.')
@@ -106,7 +110,7 @@ def public_full(r, phase=None):
     card = f['cards'].get(r['currentTeamId']) if phase == 'timer_active' and f['clock']['status'] == 'running' and r['game']['id'] in ['palabras-prohibidas', 'hazme-sonido'] and r['game']['scoring']['mode'] == 'hits' else None
     public = {'simultaneous': f['simultaneous'], 'unlimited': r['game'].get('unlimited') is True,
             'progress': [{'teamId': t['teamId'], 'hits': t.get('bounces', 0) if r['game']['id'] == 'rebote-imposible' else None, 'completed': f['results'].get(t['teamId'], {}).get('completed') is True} for t in r['turns']],
-            'rewards': [dict(index=i, kind=c['kind'], amount=c['amount'], teamId=next((tid for tid, index in f['choices'].items() if index == i), None), challenge=f['challenges'][0 if c['amount'] == 100 else 1] if c['kind'] == 'challenge' else None) for i, c in enumerate(f['rewardCards'])] if f['revealed'] else None}
+            'rewards': [dict(index=i, kind=c['kind'], amount=c['amount'], teamId=next((tid for tid, index in f['choices'].items() if index == i), None), challenge=f['challenges'][challenge_index(c)] if c['kind'] == 'challenge' else None) for i, c in enumerate(f['rewardCards'])] if f['revealed'] else None}
 
     if card:
         public['publicCard'] = dict(teamId=r['currentTeamId'], id=card['id'], text=card.get('target') or card['text'])
