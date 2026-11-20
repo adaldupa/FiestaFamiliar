@@ -1182,12 +1182,12 @@
       "id": "hazme-sonido",
       "ruleVersion": 1,
       "name": "¡Hazme el sonido!",
-      "description": "Haz únicamente sonidos para que tu equipo adivine. No se permiten palabras ni gestos.",
+      "description": "El representante está de espaldas a la TV y adivina la tarjeta. Sus compañeros hacen sonidos, sin palabras ni gestos.",
       "category": "Sonidos",
-      "mode": "Un representante describe o actúa; su equipo adivina",
+      "mode": "Representante de espaldas a la TV; sus compañeros dan pistas",
       "minParticipants": 1,
       "maxParticipants": 10000,
-      "publicRules": "Haz únicamente sonidos para que tu equipo adivine. No se permiten palabras ni gestos.",
+      "publicRules": "El representante está de espaldas a la TV y adivina la tarjeta. Sus compañeros hacen sonidos, sin palabras ni gestos.",
       "materials": [
         {
           "name": "TV",
@@ -1226,7 +1226,7 @@
       "representativesBefore": false,
       "preparation": "Prepara los materiales indicados y confirma representantes. El conductor valida las condiciones del reto antes de empezar.",
       "steps": [
-        "Haz únicamente sonidos para que tu equipo adivine. No se permiten palabras ni gestos.",
+        "El representante está de espaldas a la TV y adivina la tarjeta. Sus compañeros hacen sonidos, sin palabras ni gestos.",
         "Confirma representantes y prepara los materiales.",
         "Inicia el reloj cuando todos estén preparados.",
         "Registra resultados reales; revisa la puntuación antes de confirmarla."
@@ -2742,7 +2742,7 @@
       "bank": "sonidos",
       "unlimited": false,
       "requiredRepresentatives": 1,
-      "approvedCatalogRevision": 1,
+      "approvedCatalogRevision": 2,
       "secrets": [
         "Aeropuerto",
         "Estación de tren",
@@ -4064,12 +4064,12 @@
       "id": "palabras-prohibidas",
       "ruleVersion": 1,
       "name": "Palabras prohibidas",
-      "description": "Describe la palabra objetivo sin mencionar ninguna de las tres prohibidas. Una infracción confirmada anula solo esa tarjeta.",
+      "description": "El representante está de espaldas a la TV y adivina. Sus compañeros describen la palabra sin decir la palabra objetivo ni ninguna de las tres prohibidas.",
       "category": "Palabras",
-      "mode": "Un representante describe o actúa; su equipo adivina",
+      "mode": "Representante de espaldas a la TV; sus compañeros dan pistas",
       "minParticipants": 1,
       "maxParticipants": 10000,
-      "publicRules": "Describe la palabra objetivo sin mencionar ninguna de las tres prohibidas. Una infracción confirmada anula solo esa tarjeta.",
+      "publicRules": "El representante está de espaldas a la TV y adivina. Sus compañeros describen la palabra sin decir la palabra objetivo ni ninguna de las tres prohibidas.",
       "materials": [
         {
           "name": "TV",
@@ -4113,7 +4113,7 @@
       "representativesBefore": false,
       "preparation": "Prepara los materiales indicados y confirma representantes. El conductor valida las condiciones del reto antes de empezar.",
       "steps": [
-        "Describe la palabra objetivo sin mencionar ninguna de las tres prohibidas. Una infracción confirmada anula solo esa tarjeta.",
+        "El representante está de espaldas a la TV y adivina. Sus compañeros describen la palabra sin decir la palabra objetivo ni ninguna de las tres prohibidas.",
         "Confirma representantes y prepara los materiales.",
         "Inicia el reloj cuando todos estén preparados.",
         "Registra resultados reales; revisa la puntuación antes de confirmarla."
@@ -6829,7 +6829,7 @@
       "bank": "prohibidas",
       "unlimited": false,
       "requiredRepresentatives": 1,
-      "approvedCatalogRevision": 1,
+      "approvedCatalogRevision": 2,
       "secrets": [
         "Perro",
         "Gato",

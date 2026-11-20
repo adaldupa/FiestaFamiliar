@@ -1,3 +1,4 @@
+import {teamCardAllowed} from './presentation-copy.js';
 import {rewardSnapshot} from './closure-core.js';
 // Dominio privado de los doce juegos. No importar en la TV.
 const copy=x=>JSON.parse(JSON.stringify(x));
@@ -80,7 +81,7 @@ export function calculateFull(e,r){
  for(const t of e.teams){const v=values[t.id],rank=v===undefined?null:1+Object.values(values).filter(x=>x<v).length;rows[t.id]=rank===null?0:[100,75,50,25][rank-1];}return rows;
 }
 function applyCalculated(e,r){const points=calculateFull(e,r);for(const t of r.turns){t.timer.status='finished';t.timer.deadline=null;t.outcome={success:points[t.teamId]>0,participated:t.representativeId!==null,points:points[t.teamId],manual:true,reason:'Resultado calculado con las reglas definitivas'};}}
-export function publicFull(r){const f=r.full;if(!f)return null;return {simultaneous:f.simultaneous,unlimited:r.game.unlimited===true,progress:r.turns.map(t=>({teamId:t.teamId,hits:r.game.id==='rebote-imposible'?t.bounces||0:null,completed:f.results[t.teamId]?.completed===true})),rewards:f.revealed?f.rewardCards.map((c,index)=>({index,kind:c.kind,amount:c.amount,teamId:Object.keys(f.choices).find(t=>f.choices[t]===index)||null,challenge:c.kind==='challenge'?f.challenges[c.amount===100?0:1]:null})):null};}
+export function publicFull(r,phase=null){const f=r.full;if(!f)return null;const card=phase==='timer_active'&&f.clock.status==='running'&&teamCardAllowed(r.game)&&r.currentTeamId?f.cards[r.currentTeamId]:null;return {...(card?{publicCard:{teamId:r.currentTeamId,id:card.id,text:card.target||card.text,...(r.game.id==='palabras-prohibidas'?{forbidden:[...card.forbidden]}:{})}}:{}),simultaneous:f.simultaneous,unlimited:r.game.unlimited===true,progress:r.turns.map(t=>({teamId:t.teamId,hits:r.game.id==='rebote-imposible'?t.bounces||0:null,completed:f.results[t.teamId]?.completed===true})),rewards:f.revealed?f.rewardCards.map((c,index)=>({index,kind:c.kind,amount:c.amount,teamId:Object.keys(f.choices).find(t=>f.choices[t]===index)||null,challenge:c.kind==='challenge'?f.challenges[c.amount===100?0:1]:null})):null};}
 export function validateFull(e,r){
  const f=r.full;need(isFull(r.game)&&f?.version===1&&f.mode===r.game.scoring.mode&&typeof f.simultaneous==='boolean','Motor definitivo inválido.');
  const tids=e.teams.map(t=>t.id),cardIds=new Set((r.game.cards||[]).map(c=>c.id));need(Array.isArray(f.deck)&&Array.isArray(f.usedCards)&&new Set(f.usedCards).size===f.usedCards.length&&f.usedCards.every(x=>x.startsWith(r.game.id+':')&&cardIds.has(x.slice(r.game.id.length+1))),'Registro de tarjetas inválido.');

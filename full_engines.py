@@ -101,8 +101,14 @@ def validate_full(e, r):
         require({tid: row['points'] for tid, row in r['draft']['outcomes'].items()} == calculate(e, r), 'Cálculo adulterado.')
 
 
-def public_full(r):
+def public_full(r, phase=None):
     f = r['full']
-    return {'simultaneous': f['simultaneous'], 'unlimited': r['game'].get('unlimited') is True,
+    card = f['cards'].get(r['currentTeamId']) if phase == 'timer_active' and f['clock']['status'] == 'running' and r['game']['id'] in ['palabras-prohibidas', 'hazme-sonido'] and r['game']['scoring']['mode'] == 'hits' else None
+    public = {'simultaneous': f['simultaneous'], 'unlimited': r['game'].get('unlimited') is True,
             'progress': [{'teamId': t['teamId'], 'hits': t.get('bounces', 0) if r['game']['id'] == 'rebote-imposible' else None, 'completed': f['results'].get(t['teamId'], {}).get('completed') is True} for t in r['turns']],
             'rewards': [dict(index=i, kind=c['kind'], amount=c['amount'], teamId=next((tid for tid, index in f['choices'].items() if index == i), None), challenge=f['challenges'][0 if c['amount'] == 100 else 1] if c['kind'] == 'challenge' else None) for i, c in enumerate(f['rewardCards'])] if f['revealed'] else None}
+
+    if card:
+        public['publicCard'] = dict(teamId=r['currentTeamId'], id=card['id'], text=card.get('target') or card['text'])
+        if r['game']['id'] == 'palabras-prohibidas': public['publicCard']['forbidden'] = list(card['forbidden'])
+    return public

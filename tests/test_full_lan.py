@@ -23,8 +23,11 @@ class FullLANTests(unittest.TestCase):
             self.assertEqual(lan.public_snapshot(case['state']), case['public'])
             dto = case['public']['contest']
             games.add(dto['game']['id'])
+            card = dto.get('execution', {}).get('publicCard')
+            if card and dto['game']['id'] == 'palabras-prohibidas': self.assertEqual(len(card['forbidden']), 3)
+            elif card: self.assertNotIn('forbidden', card)
             raw = json.dumps(dto)
-            for field in ['privateInstructions', 'forbidden', 'rewardDecisions', '"target"', 'estimates', 'usedCards', 'deck']:
+            for field in ['privateInstructions', 'rewardDecisions', '"target"', 'estimates', 'usedCards', 'deck']:
                 self.assertNotIn(field, raw)
         self.assertEqual(len(games), 12)
 

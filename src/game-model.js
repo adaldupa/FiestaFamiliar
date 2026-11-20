@@ -27,6 +27,7 @@ export function validateGame(g){
  if(p.target!==undefined)need(Number.isFinite(p.target),'Objetivo de cercanía inválido.');
  if(g.representativePolicy!==undefined)need(['global','before','after'].includes(g.representativePolicy),'Excepción de representantes inválida.');
  if(g.executionVersion!==undefined){need(g.executionVersion===1&&['turns','simultaneous'].includes(g.executionMode),'Contrato definitivo inválido.');need(Array.isArray(g.cards)&&new Set(g.cards.map(c=>c.id)).size===g.cards.length&&g.cards.every(c=>isText(c.id,120)&&isText(c.text||c.target)&&(!c.forbidden||c.forbidden.length===3&&new Set(c.forbidden).size===3&&c.forbidden.every(x=>isText(x)))),'Banco de tarjetas inválido.');}
+ if(g.executionVersion===1&&g.id==='palabras-prohibidas')need(g.cards.every(c=>isText(c.target)&&Array.isArray(c.forbidden)&&c.forbidden.length===3&&c.forbidden.every(w=>isText(w))),'Cada tarjeta de Palabras prohibidas necesita objetivo y tres prohibidas.');
  return g;
 }
 export function fromLegacy(g,now=new Date().toISOString()){

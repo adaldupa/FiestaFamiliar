@@ -25,6 +25,8 @@ def finite(value):
 
 
 def public_game(g, modern=False):
+    from presentation_copy import COPY
+    g = dict(g, **COPY.get(g['id'], {}))
     scoring = g['scoring']
     dto = {'id': text(g['id'], 120), 'name': text(g['name']), 'mode': text(g['mode']), 'publicRules': text(g['publicRules']),
             'materials': [{'name': text(m['name'], 200), 'quantity': finite(m['quantity']), 'unit': text(m['unit'], 80)} for m in g['materials']],
@@ -149,7 +151,7 @@ def contest_public_snapshot(c):
         dto.update({'lifecycle': lifecycle_at(e), 'screen': screen_at(e), 'roundId': r['id'] if r else None, 'engine': {'key': engine['key'], 'operational': engine['operational'], 'message': engine['message']} if engine else None, 'result': public_result(e, r)})
     if r and 'full' in r and not hidden:
         from full_engines import public_full
-        dto['execution'] = public_full(r)
+        dto['execution'] = public_full(r, e['phase'])
         if r['game'].get('unlimited'):
             dto['timer'].update(unlimited=True, elapsedMs=r['full']['elapsedMs'], startedAt=r['full']['startedAt'])
     dto.update(public_closure(e))

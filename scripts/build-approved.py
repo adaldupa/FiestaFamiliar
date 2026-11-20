@@ -42,23 +42,24 @@ config={
 'roba-y-gana':('special',90,None,'simultaneous','Cada equipo elige una tarjeta oculta distinta. Las seis se revelan juntas al terminar las elecciones; el conductor valida los retos.'),
 'tararea':('position',60,'canciones','simultaneous','Tararea la canción privada sin palabras. Tu equipo debe adivinarla; se clasifica por rapidez. Puedes cambiar una canción desconocida antes de iniciar.'),
 'torre-traicionera':('position',90,None,'simultaneous','Construye una pirámide estable de seis vasos: tres en la base, dos en medio y uno arriba.'),
-'hazme-sonido':('hits',60,'sonidos','turns','Haz únicamente sonidos para que tu equipo adivine. No se permiten palabras ni gestos.'),
+'hazme-sonido':('hits',60,'sonidos','turns','El representante está de espaldas a la TV y adivina la tarjeta. Sus compañeros hacen sonidos, sin palabras ni gestos.'),
 'rebote-imposible':('position',90,None,'simultaneous','Dos representantes por equipo. La pelota debe rebotar en el piso y entrar en el vaso. Gana quien consiga tres aciertos primero; sin límite de tiempo obligatorio.'),
 'manos-mantequilla':('position',120,None,'simultaneous','Envuelve una caja usando guantes grandes. El conductor valida que el paquete esté envuelto.'),
 'actor':('position',90,'actor','simultaneous','Representa personaje, acción y lugar sin hablar. Tu equipo adivina la combinación completa; gana quien termine primero.'),
-'palabras-prohibidas':('hits',60,'prohibidas','turns','Describe la palabra objetivo sin mencionar ninguna de las tres prohibidas. Una infracción confirmada anula solo esa tarjeta.'),
+'palabras-prohibidas':('hits',60,'prohibidas','turns','El representante está de espaldas a la TV y adivina. Sus compañeros describen la palabra sin decir la palabra objetivo ni ninguna de las tres prohibidas.'),
 'yo-soy-objeto':('hits',90,'objetos','turns','Representa objetos corporalmente sin hablar para que tu equipo adivine tantos como pueda.'),
 'cuantos-hay':('closeness',90,None,'simultaneous','Cada equipo registra una estimación de los objetos del recipiente. Gana la menor diferencia absoluta respecto al valor real privado.')}
 for g in base:
  mode,seconds,bank,play,rules=config[g['id']]
  g.update(executionVersion=1,executionMode=play,implementation='turns',pending=[],seconds=seconds,publicRules=rules,description=rules,ruleVersion=1,createdAt='2026-11-18T00:00:00Z',updatedAt='2026-11-18T00:00:00Z',representativesBefore=False,status='active',cards=banks.get(bank,[]),bank=bank,unlimited=g['id'] in ['rebote-imposible','roba-y-gana','cuantos-hay'],requiredRepresentatives=2 if g['id']=='rebote-imposible' else 1)
- g['approvedCatalogRevision']=1
+ g['approvedCatalogRevision']=2 if g['id'] in ['hazme-sonido','palabras-prohibidas'] else 1
  if g['unlimited']:g['seconds']=None
  g['mode']='Un representante describe o actúa; su equipo adivina' if bank else 'Equipos simultáneos'
  if g['id']=='rebote-imposible':g['mode']='Dos representantes distintos por equipo, ejecución simultánea'
  if g['id']=='roba-y-gana':g['mode']='Una elección oculta por equipo; seis tarjetas reveladas simultáneamente'
  g['scoring']={'mode':mode,'nominal':100,'min':-1000 if mode=='special' else 0,'max':1000 if mode=='special' else 100,'pointsPerSuccess':100,'approvedException':mode=='special','decision':'proposal',**({'positions':[100,75,50,25]} if mode!='special' else {})}
  g['secrets']=[c.get('text',c.get('target')) for c in g['cards']]
+ if g['id'] in ['hazme-sonido','palabras-prohibidas']:g['mode']='Representante de espaldas a la TV; sus compañeros dan pistas'
  g['privateInstructions']='Mostrar esta tarjeta únicamente al representante correspondiente. En juegos simultáneos el conductor la comunica a cada representante sin proyectarla.'
  g['victory']='Clasificación por aciertos, con 100/75/50/25 puntos por posición.' if mode=='hits' else 'Clasificación por menor diferencia absoluta, con 100/75/50/25 puntos por posición.' if mode=='closeness' else 'Premios y transferencias según las tarjetas reveladas; retos pendientes hasta validación.' if mode=='special' else 'Clasificación por tiempo de finalización, con 100/75/50/25 puntos por posición.'
  g['tie']='Empates comparten posición y puntos; se saltan los puestos ocupados (1, 1, 3).'

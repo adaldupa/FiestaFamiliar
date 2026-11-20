@@ -62,6 +62,8 @@ def game(g):
     if 'executionVersion' in g:
         require(g['executionVersion'] == 1 and g.get('executionMode') in ['turns', 'simultaneous'] and isinstance(g.get('cards'), list), 'Contrato definitivo inválido.')
         require(len(g['cards']) == len({c['id'] for c in g['cards']}) and all(text(c.get('id'), 120) and text(c.get('text') or c.get('target')) and ('forbidden' not in c or len(c['forbidden']) == len(set(c['forbidden'])) == 3) for c in g['cards']), 'Banco definitivo inválido.')
+    if g.get('executionVersion') == 1 and g['id'] == 'palabras-prohibidas':
+        require(all(text(c.get('target')) and isinstance(c.get('forbidden'), list) and len(c['forbidden']) == 3 and all(text(w) for w in c['forbidden']) for c in g['cards']), 'Tarjeta de Palabras prohibidas incompleta.')
     if g['id'] == 'roba-y-gana' or g.get('permanent') is True:
         require(g.get('permanent') is True and g.get('repeatable') is True and g['status'] != 'archived', 'Juego permanente inválido.')
 
