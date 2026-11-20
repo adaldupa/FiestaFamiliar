@@ -1,0 +1,19 @@
+✔ corrección humana: segundos y mm:ss conservan milisegundos exactos y validaciones (2.005947ms)
+✔ Palabras prohibidas: tarjeta en TV, tres prohibidas, aciertos/pases/infracción y recarga (252.674657ms)
+✔ Hazme el sonido: solo tarjeta activa pública, con representante de espaldas (176.037639ms)
+✔ actor: sus tarjetas siguen privadas incluso si llega un campo público adulterado (51.240661ms)
+✔ tararea: sus tarjetas siguen privadas incluso si llega un campo público adulterado (67.27207ms)
+✔ picasso-oscuras: sus tarjetas siguen privadas incluso si llega un campo público adulterado (264.850987ms)
+✔ yo-soy-objeto: sus tarjetas siguen privadas incluso si llega un campo público adulterado (342.198592ms)
+✔ Actor: cuatro finalizaciones juntas, reloj común y corrección de tiempos en segundos (47.839549ms)
+✔ TV: lista desaparece al detenerse; instrucciones breves; nombres no relevantes ocultos (39.482918ms)
+✔ animación compara valores confirmados sin mutar puntos o posiciones (81.897315ms)
+✔ actualizar las dos fichas públicas conserva revisiones y eventos anteriores (48.689101ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1387.018261
