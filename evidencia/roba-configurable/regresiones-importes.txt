@@ -1,0 +1,20 @@
+✔ predeterminados conservados y seis identidades estables por aparición (113.815279ms)
+✔ configuración auditable solo para futuras apariciones, sin reescribir rondas (188.42856ms)
+✔ importes configurados, libro, recarga y premiación con 2 equipos (93.358107ms)
+✔ importes configurados, libro, recarga y premiación con 3 equipos (126.257119ms)
+✔ importes configurados, libro, recarga y premiación con 4 equipos (181.167948ms)
+✔ retos con importes iguales conservan su consigna independiente (130.940199ms)
+✔ importes inválidos, robo fuera de límite y modificación en ejecución se rechazan (141.454581ms)
+✔ excepción inmediata requiere autorización y se detiene en el máximo consecutivo (150.183288ms)
+✔ excepción no se activa sin ventaja, ni modifica un giro ya iniciado (92.911969ms)
+✔ baraja antigua sin esquema configurable continúa intacta (103.175492ms)
+✔ formulario guarda seis importes y expone valores predeterminados sin mutar el evento (29.670575ms)
+✔ corrección histórica no publica saldo negativo después de robos (146.076016ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1506.567159

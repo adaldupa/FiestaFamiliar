@@ -1,3 +1,5 @@
+> Revisión vigente: `roba-configurable-ensayo` · [estado, 219 pruebas y bloqueos](ROBA_CONFIGURABLE_ENSAYO.md) · [ensayo físico en celular y TV](ENSAYO_FISICO_DISPOSITIVOS.md). Las notas siguientes conservan el historial de fases anteriores. Sin merge a main.
+
 > Revisión manual actual en `ajustes-pruebas-manuales`: [estado por juego y evidencias](AJUSTES_PRUEBAS_MANUALES.md) · [ensayo pendiente en celular y TV](PRUEBA_MANUAL_AJUSTES.md). Las tarjetas de Palabras prohibidas y Hazme el sonido son públicas para el equipo; los demás estímulos privados se conservan.
 
 > Estado actual de la rama `cierre-funcional-concurso`: [cierre, pruebas y limitaciones](CIERRE_CONCURSO.md) · [ensayo desde celular y TV](PRUEBA_MANUAL_CIERRE.md). Las secciones de fases anteriores conservan el contexto histórico. No se ha hecho merge a main.

@@ -1,0 +1,3 @@
+Navegador de escritorio: Chromium abrió chrome://newtab.
+Bloqueo al introducir la URL de ensayo: AT-SPI provider with process ID 17 is unavailable for X11 window 10485763; registry reported 0 provider connections with process IDs [].
+No se abrió la aplicación ni se verificaron sus pantallas. No se contabiliza como validación visual.
