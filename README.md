@@ -1,3 +1,5 @@
+> Preparación Work + Codex: **bloqueada por fuentes faltantes, no lista para aceptación**. [Inventario, diferencias y pruebas](INTEGRACION_WORK_CODEX_20261121.md) · [ensayo HDMI y celular](ENSAYO_HDMI_CELULAR.md). Rama `integracion/work-codex-20261121`; sin merge a main.
+
 > Correcciones vigentes del ensayo: rama `correcciones-turnos-postensayo` · [turnos, tarjetas, Roba y cierre](CORRECCIONES_POSTENSAYO.md). Actor y Tararea usan turnos independientes en nuevas revisiones. Eventos abiertos: aplicar correcciones a futuras rondas, entre rondas. Las notas siguientes son históricas.
 
 > Revisión vigente: `roba-configurable-ensayo` · [estado, 219 pruebas y bloqueos](ROBA_CONFIGURABLE_ENSAYO.md) · [ensayo físico en celular y TV](ENSAYO_FISICO_DISPOSITIVOS.md). Las notas siguientes conservan el historial de fases anteriores. Sin merge a main.
