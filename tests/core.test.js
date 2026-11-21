@@ -23,7 +23,7 @@ test('todas las frases y respuestas del catálogo se excluyen aun con el reto re
 test('la entrada pública y sus dependencias solo contienen presentación, nunca dominio privado',async()=>{
  const seen=new Set();
  async function visit(path){if(seen.has(path))return;seen.add(path);assert.ok(!/core|conductor|catalogo/.test(path));const js=await readFile(new URL('../src/'+path,import.meta.url),'utf8');assert.ok(!/retos\.session|loadSession|juegos\.json/.test(js));for(const m of js.matchAll(/from ['"]\.\/(.*?)['"]/g))await visit(m[1]);}
- await visit('publico.js');assert.deepEqual([...seen].sort(),['effects.js','lan-public.js','publico.js','teams-show.js']);
+ await visit('publico.js');assert.deepEqual([...seen].sort(),['clock-sync.js','contest-show.js','effects.js','lan-public.js','presentation-changes.js','presentation-copy.js','publico.js','reward-show.js','teams-show.js','wheel.js']);
 });
 test('fichas completas y materiales sumados conservadoramente',()=>{assert.equal(validateCatalog(catalog).length,12);const list=materialsList(catalog);assert.equal(list.find(m=>m.name==='Vasos').quantity,34);for(const g of catalog){assert.ok(g.tie&&g.noFinish&&g.seated&&g.preparation);assert.equal(g.maxPoints,100);}});
 test('importación rechaza datos rotos, equipos duplicados, relojes inválidos e historial corrupto',()=>{const s=session();for(const corrupt of [x=>x.version=8,x=>x.teams[0].members[0]=x.teams[1].members[0],x=>x.timer.remaining=-1,x=>x.catalog[0].secrets='texto',x=>x.completed=['inexistente'],x=>x.history=[{before:{active:'no'},title:'x',note:'x',points:{}}]]){const c=copy(s);corrupt(c);assert.throws(()=>validateSession(c));}assert.throws(()=>loadSession({getItem:()=>'{roto'}));});

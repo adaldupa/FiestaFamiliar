@@ -1,2 +1,5 @@
+import {createServerClock} from './clock-sync.js';
+const clock=createServerClock();
+export const publicNow=()=>clock.now();
 // Transporte público: solo descarga el resumen seguro, nunca la sesión privada.
-export function followPublic(accept){let stopped=false;async function poll(){if(stopped)return;try{const r=await fetch('./api/public',{cache:'no-store'});if(r.status===404){stopped=true;return;}if(r.ok){const data=await r.json();accept(data.snapshot||{version:2,count:0,teamCount:null,confirmed:false,presentation:{view:'welcome',page:0,sound:false,reducedMotion:false},draw:null,teams:[]});}}catch{}if(!stopped)setTimeout(poll,800);}poll();return ()=>{stopped=true;};}
+export function followPublic(accept){let stopped=false;async function poll(){if(stopped)return;try{const sentAt=Date.now();const r=await fetch('./api/public',{cache:'no-store'});if(r.status===404){stopped=true;return;}if(r.ok){clock.sample(sentAt,Date.now(),r.headers.get('X-Server-Time'));const data=await r.json();accept(data.snapshot||{version:2,count:0,teamCount:null,confirmed:false,presentation:{view:'welcome',page:0,sound:false,reducedMotion:false},draw:null,teams:[]});}}catch{}if(!stopped)setTimeout(poll,800);}poll();return ()=>{stopped=true;};}

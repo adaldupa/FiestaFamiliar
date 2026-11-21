@@ -1,0 +1,290 @@
+[
+  {
+    "id": "duelo-001",
+    "generation": "Clásicos",
+    "question": "¿Cómo se llama el personaje que vive en una vecindad y suele esconderse en un barril?",
+    "answer": "El Chavo del Ocho"
+  },
+  {
+    "id": "duelo-002",
+    "generation": "Clásicos",
+    "question": "¿De qué color es el traje del Chapulín Colorado?",
+    "answer": "Rojo"
+  },
+  {
+    "id": "duelo-003",
+    "generation": "Clásicos",
+    "question": "¿Qué instrumento se asocia con Pedro Infante en sus serenatas de cine?",
+    "answer": "La guitarra"
+  },
+  {
+    "id": "duelo-004",
+    "generation": "Clásicos",
+    "question": "Completa el título: Cielito…",
+    "answer": "Lindo"
+  },
+  {
+    "id": "duelo-005",
+    "generation": "Clásicos",
+    "question": "Completa el título: Bésame…",
+    "answer": "Mucho"
+  },
+  {
+    "id": "duelo-006",
+    "generation": "Clásicos",
+    "question": "¿Qué grupo mexicano es conocido como Los Tigres del…?",
+    "answer": "Norte"
+  },
+  {
+    "id": "duelo-007",
+    "generation": "Clásicos",
+    "question": "¿Qué animal es Bugs Bunny?",
+    "answer": "Un conejo"
+  },
+  {
+    "id": "duelo-008",
+    "generation": "Clásicos",
+    "question": "¿Qué animal es el Pato Donald?",
+    "answer": "Un pato"
+  },
+  {
+    "id": "duelo-009",
+    "generation": "Años 80",
+    "question": "¿Qué objeto se utiliza para escuchar música grabada en una cinta magnética?",
+    "answer": "Un reproductor de casetes"
+  },
+  {
+    "id": "duelo-010",
+    "generation": "Años 80",
+    "question": "¿Qué grupo español cantó Hijo de la luna?",
+    "answer": "Mecano"
+  },
+  {
+    "id": "duelo-011",
+    "generation": "Años 80",
+    "question": "¿Qué grupo cantó Devuélveme a mi chica?",
+    "answer": "Hombres G"
+  },
+  {
+    "id": "duelo-012",
+    "generation": "Años 80",
+    "question": "¿Cómo se llama el auto inteligente de El auto increíble?",
+    "answer": "KITT"
+  },
+  {
+    "id": "duelo-013",
+    "generation": "Años 80",
+    "question": "¿Qué extraterrestre de una comedia familiar quería comerse al gato?",
+    "answer": "ALF"
+  },
+  {
+    "id": "duelo-014",
+    "generation": "Años 80",
+    "question": "Completa el nombre del grupo: Timbir…",
+    "answer": "Timbiriche"
+  },
+  {
+    "id": "duelo-015",
+    "generation": "Años 80",
+    "question": "¿Qué personaje de caricatura obtiene fuerza al comer espinacas?",
+    "answer": "Popeye"
+  },
+  {
+    "id": "duelo-016",
+    "generation": "Años 80",
+    "question": "¿Qué héroe lleva una espada y grita que tiene el poder en Eternia?",
+    "answer": "He-Man"
+  },
+  {
+    "id": "duelo-017",
+    "generation": "Años 90",
+    "question": "¿De qué color es Pikachu?",
+    "answer": "Amarillo"
+  },
+  {
+    "id": "duelo-018",
+    "generation": "Años 90",
+    "question": "¿Cómo se llama el protagonista de Dragon Ball que es padre de Gohan?",
+    "answer": "Goku"
+  },
+  {
+    "id": "duelo-019",
+    "generation": "Años 90",
+    "question": "¿Cómo se llama el vaquero de Toy Story?",
+    "answer": "Woody"
+  },
+  {
+    "id": "duelo-020",
+    "generation": "Años 90",
+    "question": "¿Qué cantante mexicana interpretó Como la flor?",
+    "answer": "Selena"
+  },
+  {
+    "id": "duelo-021",
+    "generation": "Años 90",
+    "question": "¿Qué banda mexicana canta Rayando el sol?",
+    "answer": "Maná"
+  },
+  {
+    "id": "duelo-022",
+    "generation": "Años 90",
+    "question": "Completa el título de la serie: El príncipe del…",
+    "answer": "Rap"
+  },
+  {
+    "id": "duelo-023",
+    "generation": "Años 90",
+    "question": "¿Qué actor mexicano interpreta a Ludovico en La familia P. Luche?",
+    "answer": "Eugenio Derbez"
+  },
+  {
+    "id": "duelo-024",
+    "generation": "Años 90",
+    "question": "¿Qué cantante es conocido como El Sol de México?",
+    "answer": "Luis Miguel"
+  },
+  {
+    "id": "duelo-025",
+    "generation": "Años 2000",
+    "question": "¿Cómo se llama la esponja amarilla que vive en una piña bajo el mar?",
+    "answer": "Bob Esponja"
+  },
+  {
+    "id": "duelo-026",
+    "generation": "Años 2000",
+    "question": "¿Cómo se llama el ogro verde amigo de Burro?",
+    "answer": "Shrek"
+  },
+  {
+    "id": "duelo-027",
+    "generation": "Años 2000",
+    "question": "¿Qué grupo surgió de la telenovela Rebelde?",
+    "answer": "RBD"
+  },
+  {
+    "id": "duelo-028",
+    "generation": "Años 2000",
+    "question": "¿Qué cantante colombiana interpreta Antología?",
+    "answer": "Shakira"
+  },
+  {
+    "id": "duelo-029",
+    "generation": "Años 2000",
+    "question": "¿Quién canta La camisa negra?",
+    "answer": "Juanes"
+  },
+  {
+    "id": "duelo-030",
+    "generation": "Años 2000",
+    "question": "¿Qué cantante mexicana interpreta Me voy?",
+    "answer": "Julieta Venegas"
+  },
+  {
+    "id": "duelo-031",
+    "generation": "Años 2000",
+    "question": "Completa el nombre de la serie: Yo soy Betty, la…",
+    "answer": "Fea"
+  },
+  {
+    "id": "duelo-032",
+    "generation": "Años 2000",
+    "question": "¿Cómo se llama el hada madrina de Timmy que está casada con Cosmo?",
+    "answer": "Wanda"
+  },
+  {
+    "id": "duelo-033",
+    "generation": "Años 2010",
+    "question": "¿Cómo se llama la reina con poderes de hielo de Frozen?",
+    "answer": "Elsa"
+  },
+  {
+    "id": "duelo-034",
+    "generation": "Años 2010",
+    "question": "¿Cómo se llama el niño músico protagonista de Coco?",
+    "answer": "Miguel"
+  },
+  {
+    "id": "duelo-035",
+    "generation": "Años 2010",
+    "question": "¿Qué cantante puertorriqueño interpreta Despacito junto a Daddy Yankee?",
+    "answer": "Luis Fonsi"
+  },
+  {
+    "id": "duelo-036",
+    "generation": "Años 2010",
+    "question": "¿Qué cantante mexicana interpreta Hasta la raíz?",
+    "answer": "Natalia Lafourcade"
+  },
+  {
+    "id": "duelo-037",
+    "generation": "Años 2010",
+    "question": "¿Qué cantante interpreta Vivir mi vida?",
+    "answer": "Marc Anthony"
+  },
+  {
+    "id": "duelo-038",
+    "generation": "Años 2010",
+    "question": "¿Qué caricatura tiene una cerdita llamada Peppa como protagonista?",
+    "answer": "Peppa Pig"
+  },
+  {
+    "id": "duelo-039",
+    "generation": "Años 2010",
+    "question": "¿Cómo se llama el muñeco de nieve de Frozen?",
+    "answer": "Olaf"
+  },
+  {
+    "id": "duelo-040",
+    "generation": "Años 2010",
+    "question": "¿Cómo se llama el superhéroe que usa un martillo llamado Mjolnir?",
+    "answer": "Thor"
+  },
+  {
+    "id": "duelo-041",
+    "generation": "Varias generaciones",
+    "question": "¿Qué instrumento musical tiene teclas blancas y negras?",
+    "answer": "Piano"
+  },
+  {
+    "id": "duelo-042",
+    "generation": "Varias generaciones",
+    "question": "¿Qué personaje de Disney tiene orejas redondas y es amigo de Minnie?",
+    "answer": "Mickey Mouse"
+  },
+  {
+    "id": "duelo-043",
+    "generation": "Varias generaciones",
+    "question": "¿Qué personaje es conocido como el ratón más veloz de México?",
+    "answer": "Speedy Gonzales"
+  },
+  {
+    "id": "duelo-044",
+    "generation": "Varias generaciones",
+    "question": "¿Qué familia amarilla de televisión vive en Springfield?",
+    "answer": "Los Simpson"
+  },
+  {
+    "id": "duelo-045",
+    "generation": "Varias generaciones",
+    "question": "¿Qué cantante mexicano es conocido como El Divo de Juárez?",
+    "answer": "Juan Gabriel"
+  },
+  {
+    "id": "duelo-046",
+    "generation": "Varias generaciones",
+    "question": "¿Qué cantante mexicano es conocido como El Charro de Huentitán?",
+    "answer": "Vicente Fernández"
+  },
+  {
+    "id": "duelo-047",
+    "generation": "Varias generaciones",
+    "question": "¿Qué instrumento suele tocar un mariachi junto con guitarra y violín, usando una boquilla metálica?",
+    "answer": "Trompeta"
+  },
+  {
+    "id": "duelo-048",
+    "generation": "Varias generaciones",
+    "question": "¿Qué instrumento de cuerda se toca con un arco y suele apoyarse entre el hombro y la barbilla?",
+    "answer": "El violín"
+  }
+]

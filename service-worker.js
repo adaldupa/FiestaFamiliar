@@ -1,6 +1,14 @@
-const CACHE='noche-retos-v14-wifi';
-// Caché de recursos locales, nunca de la sesión. No se elimina localStorage.
-const FILES=['./','./index.html','./publico.html','./estilos.css','./navidad.css','./escenario.css','./equipos.css','./icon.svg','./src/core.js','./src/teams-core.js','./src/teams-show.js','./src/lan-host.js','./src/lan-public.js','./src/conductor.js','./src/publico.js','./src/show.js','./src/wheel.js','./src/effects.js','./catalogo/juegos.json','./assets/escenario.webp','./assets/titulares.otf','./assets/texto.otf','./assets/texto-negrita.otf'];
-self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));});
-self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('noche-retos-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
-self.addEventListener('fetch',event=>{const url=new URL(event.request.url);if(event.request.method!=='GET'||url.origin!==self.location.origin||url.pathname.startsWith('/api/'))return;event.respondWith(caches.match(event.request,{ignoreSearch:true}).then(cached=>cached||fetch(event.request)));});
+const PUBLIC_CACHE='noche-retos-mecanicas-public-v22',PRIVATE_CACHE='noche-retos-mecanicas-host-v22';
+// La instalación pública nunca descarga catálogo, conductor ni reglas privadas.
+const FILES=['./src/reward-show.js','./src/presentation-changes.js','./src/presentation-copy.js','./publico.html','./estilos.css','./navidad.css','./escenario.css','./equipos.css','./contest.css','./icon.svg','./src/teams-show.js','./src/contest-show.js','./src/wheel.js','./src/clock-sync.js','./src/lan-public.js','./src/publico.js','./src/effects.js','./assets/escenario.webp','./assets/titulares.otf','./assets/texto.otf','./assets/texto-negrita.otf'];
+self.addEventListener('install',event=>event.waitUntil(caches.open(PUBLIC_CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('noche-retos-')&&![PUBLIC_CACHE,PRIVATE_CACHE].includes(k)).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener('fetch',event=>{
+ const u=new URL(event.request.url);if(event.request.method!=='GET'||u.origin!==self.location.origin||u.pathname.startsWith('/api/'))return;
+ event.respondWith((async()=>{const client=event.clientId?await self.clients.get(event.clientId):null,publicClient=client&&new URL(client.url).pathname.endsWith('/publico.html'),privatePath=u.pathname.startsWith('/catalogo/')||/\/src\/(manual-rules|reward-config|time-input|closure-core|closure-host|full-engines|full-host|approved-catalog|round-engine|library-core|library-host|navigation|conductor|contest-host|contest-core|teams-core|core|game-model|offline-host|lan-host|show)\.js$/.test(u.pathname);
+ if(publicClient&&privatePath)return new Response('Recurso privado',{status:403});
+ if(['reload','no-store'].includes(event.request.cache))return fetch(event.request);
+ const name=privatePath||u.pathname.endsWith('/conductor-nav.css')||u.pathname.endsWith('/library.css')||u.pathname.endsWith('/index.html')||u.pathname==='/'?PRIVATE_CACHE:PUBLIC_CACHE;
+ return (await (await caches.open(name)).match(event.request,{ignoreSearch:true}))||fetch(event.request);
+ })());
+});

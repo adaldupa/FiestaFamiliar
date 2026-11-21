@@ -1,0 +1,17 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> noche-de-retos@2.4.0-fase2c1 test:rounds
+> node --test tests/rounds.browser.cjs
+
+✔ doce fichas existentes, giro real, selección, instrucciones y ejecución bloqueada recuperables (7810.60454ms)
+✔ motor operativo conserva reloj, valida cuatro turnos y confirma puntos una sola vez (8829.049299ms)
+✔ celular: configuración de la ruleta, Roba siempre disponible y navegación conservada (4873.039161ms)
+✔ conductor móvil y TV por LAN, sin biblioteca duplicada ni rondas duplicadas al reconectar (6608.707786ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28450.826994

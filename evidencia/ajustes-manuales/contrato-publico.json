@@ -1,0 +1,57 @@
+[
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "palabras-prohibidas",
+    "phase": "timer_active",
+    "publicCard": {
+      "teamId": "t1",
+      "id": "prohibidas-166",
+      "text": "Sandía",
+      "forbidden": [
+        "semillas",
+        "roja",
+        "verde"
+      ]
+    },
+    "publicRule": "El representante está de espaldas a la TV y adivina. Sus compañeros describen la palabra sin decir la palabra objetivo ni ninguna de las tres prohibidas."
+  },
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "hazme-sonido",
+    "phase": "timer_active",
+    "publicCard": {
+      "teamId": "t1",
+      "id": "sonidos-002",
+      "text": "Estación de tren"
+    },
+    "publicRule": "El representante está de espaldas a la TV y adivina la tarjeta. Sus compañeros hacen sonidos, sin palabras ni gestos."
+  },
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "actor",
+    "phase": "timer_active",
+    "publicCard": null,
+    "publicRule": "Representa personaje, acción y lugar sin hablar. Tu equipo adivina la combinación completa; gana quien termine primero."
+  },
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "tararea",
+    "phase": "timer_active",
+    "publicCard": null,
+    "publicRule": "Tararea la canción privada sin palabras. Tu equipo debe adivinarla; se clasifica por rapidez. Puedes cambiar una canción desconocida antes de iniciar."
+  },
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "picasso-oscuras",
+    "phase": "timer_active",
+    "publicCard": null,
+    "publicRule": "Dibuja sin mirar. Tu equipo debe adivinar la consigna; gana quien termine primero."
+  },
+  {
+    "source": "Fixture sintética de prueba, no una fiesta real",
+    "game": "yo-soy-objeto",
+    "phase": "timer_active",
+    "publicCard": null,
+    "publicRule": "Representa objetos corporalmente sin hablar para que tu equipo adivine tantos como pueda."
+  }
+]

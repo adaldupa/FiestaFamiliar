@@ -1,0 +1,18 @@
+✔ actor: cuatro turnos, tiempos independientes, pausa, privacidad, empate y no completar (356.13066ms)
+✔ tararea: cuatro turnos, tiempos independientes, pausa, privacidad, empate y no completar (203.748033ms)
+✔ palabras-prohibidas: TV pública y avance de tarjeta sin repetir tras recarga (437.157292ms)
+✔ hazme-sonido: TV pública y avance de tarjeta sin repetir tras recarga (144.240441ms)
+✔ Roba: seis ocultas, orden por clasificación, dueños públicos, retos explícitos y robos automáticos (621.392357ms)
+✔ Roba: renderiza seis grandes con dueños, resultados agrupados y no elegidas (110.455124ms)
+✔ revisiones nuevas no reescriben eventos ni biblioteca histórica; instalación idempotente (97.983343ms)
+✔ concurso corregido 2 equipos: 14 rondas, doce juegos, repetición autorizada y premiación (3899.958092ms)
+✔ concurso corregido 3 equipos: 14 rondas, doce juegos, repetición autorizada y premiación (4299.749368ms)
+✔ concurso corregido 4 equipos: 14 rondas, doce juegos, repetición autorizada y premiación (4736.730564ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14921.483292

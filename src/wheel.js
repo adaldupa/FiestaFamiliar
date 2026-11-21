@@ -20,3 +20,11 @@ export function presentationMode(s,now=Date.now()) {
   if(s.teams?.length)return s.phase==='results'?'results':'teams';
   return 'welcome';
 }
+// Renderer de datos públicos: la animación representa una selección ya calculada.
+export function wheelVisual(w,now=Date.now(),reduced=false){const progress=reduced||!w.duration?1:Math.max(0,Math.min(1,(now-w.startedAt)/w.duration));return {rotation:(w.rotation||0)*(1-Math.pow(1-progress,4)),complete:progress===1};}
+export function renderWheel(w,now=Date.now(),reduced=false){
+ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const candidates=w?.candidates||[];if(!candidates.length)return '<p>No hay minijuegos elegibles.</p>';
+ const {rotation}=wheelVisual(w,now,reduced);
+ return `<div class="wheel-assembly" aria-label="Ruleta de ${candidates.length} minijuegos"><span class="wheel-pointer" aria-hidden="true">▼</span><div class="contest-wheel labelled-wheel" style="--rotation:${rotation}deg;background:conic-gradient(${candidates.map((_,i)=>`${['#801d2c','#164c39','#876526','#352f59'][i%4]} ${i*360/candidates.length}deg ${(i+1)*360/candidates.length}deg`).join(',')})">${candidates.map((x,i)=>`<span class="wheel-label" style="--angle:${(i+.5)*360/candidates.length}deg">${esc(x.title)}</span>`).join('')}<b class="wheel-center" aria-hidden="true">✦</b></div></div>`;
+}

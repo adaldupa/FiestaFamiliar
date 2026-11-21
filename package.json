@@ -1,10 +1,22 @@
 {
   "name": "noche-de-retos",
-  "version": "2.1.0",
+  "version": "3.4.0-turnos-postensayo",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "test": "node tests/core.test.js && node tests/teams.test.js && python3 -m unittest discover -s tests -p 'test_lan.py'"
+    "test": "node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && node tests/navigation.test.js && node tests/library.test.js && node tests/rounds.test.js && node tests/integration.test.js && node tests/full.test.js && node tests/closure.test.js && node tests/manual-adjustments.test.js && node tests/reward-config.test.js && node tests/postensayo.test.js && node tests/mechanics-audit.test.js && node tests/offline-recovery.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:navigation": "node --test tests/navigation.browser.cjs",
+    "test:library": "node --test tests/library.browser.cjs",
+    "test:rounds": "node --test tests/rounds.browser.cjs",
+    "test:full": "node tests/full.test.js",
+    "test:full-browser": "node --test tests/full.browser.cjs",
+    "test:closure": "node tests/closure.test.js",
+    "test:closure-browser": "node --test tests/closure.browser.cjs",
+    "test:manual": "node tests/manual-adjustments.test.js",
+    "test:manual-browser": "node --test tests/manual-adjustments.browser.cjs",
+    "test:rewards": "node tests/reward-config.test.js",
+    "test:postensayo": "node tests/postensayo.test.js",
+    "test:postensayo-browser": "node --test tests/postensayo.browser.cjs"
   }
 }

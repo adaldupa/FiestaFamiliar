@@ -1,0 +1,706 @@
+{
+  "kind": "noche-retos-public-templates",
+  "schemaVersion": 1,
+  "games": [
+    {
+      "id": "galleta-viajera",
+      "ruleVersion": 1,
+      "name": "La galleta viajera",
+      "description": "llevar una galleta desde la frente hasta la boca usando únicamente movimientos faciales.",
+      "category": "Destreza",
+      "mode": "un representante por equipo; puede jugar sentado.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "colocar la galleta en la frente; al iniciar, intentar llevarla a la boca sin manos. Duración propuesta/registrada: 90 segundos. prohibido sujetar o recolocar la galleta con las manos. Si cae, el conductor aplica la regla de reinicio anunciada antes de empezar (pendiente de confirmar).",
+      "materials": [
+        {
+          "name": "Galletas",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Servilletas",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 90,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "clasificación por orden de éxito. Quien no lo logra en el tiempo recibe 0 si así se configura; los empates se resuelven según regla general.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "colocar la galleta en la frente; al iniciar, intentar llevarla a la boca sin manos. Duración propuesta/registrada: 90 segundos.",
+        "prohibido sujetar o recolocar la galleta con las manos. Si cae, el conductor aplica la regla de reinicio anunciada antes de empezar (pendiente de confirmar).",
+        "clasificación por orden de éxito. Quien no lo logra en el tiempo recibe 0 si así se configura; los empates se resuelven según regla general."
+      ],
+      "pending": [
+        "Confirmar la regla de reinicio si cae la galleta y el tratamiento configurable de no completar."
+      ],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "picasso-oscuras",
+      "ruleVersion": 1,
+      "name": "Picasso a oscuras",
+      "description": "que el equipo adivine lo que dibuja su representante sin que este mire el papel.",
+      "category": "Creatividad",
+      "mode": "un dibujante por equipo; el resto adivina.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "el conductor entrega la palabra secreta al dibujante sin proyectarla; cada equipo tiene 90 segundos. dibujar sin mirar el papel; prohibidas palabras, números o letras que revelen la respuesta.",
+      "materials": [
+        {
+          "name": "Papel",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Plumón",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Superficie de apoyo",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 90,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "gana quien acierta en menor tiempo; sin acierto, 0.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "el conductor entrega la palabra secreta al dibujante sin proyectarla; cada equipo tiene 90 segundos.",
+        "dibujar sin mirar el papel; prohibidas palabras, números o letras que revelen la respuesta.",
+        "gana quien acierta en menor tiempo; sin acierto, 0."
+      ],
+      "pending": [],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "roba-y-gana",
+      "ruleVersion": 1,
+      "name": "Roba y Gana",
+      "description": "alterar el marcador con cartas sorpresa.",
+      "category": "Suerte",
+      "mode": "un turno de selección por equipo.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "seis cartas digitales barajadas: +100, +75, robar 50, robar 25, ganar 100 si cumple reto, ganar 50 si cumple reto. Cada equipo escoge una carta no elegida; al terminar las selecciones, las seis cartas se revelan simultáneamente, incluidas las no seleccionadas. premios directos se aplican automáticamente. Robos toman como referencia la clasificación previa a la revelación: se roba al equipo inmediatamente superior; si quien roba va primero, al segundo. Ningún saldo queda negativo. Las cartas de reto quedan pendientes hasta validación del conductor.",
+      "materials": [
+        {
+          "name": "TV",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Control del conductor",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": null,
+      "scoring": {
+        "mode": "special",
+        "nominal": 100,
+        "min": -100,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": true,
+        "decision": "proposal"
+      },
+      "victory": "es excepción al sistema por posiciones: suma o transfiere puntos reales, sin puntuación adicional de 100/75/50/25.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "seis cartas digitales barajadas: +100, +75, robar 50, robar 25, ganar 100 si cumple reto, ganar 50 si cumple reto. Cada equipo escoge una carta no elegida; al terminar las selecciones, las seis cartas se revelan simultáneamente, incluidas las no seleccionadas.",
+        "premios directos se aplican automáticamente. Robos toman como referencia la clasificación previa a la revelación: se roba al equipo inmediatamente superior; si quien roba va primero, al segundo. Ningún saldo queda negativo. Las cartas de reto quedan pendientes hasta validación del conductor.",
+        "es excepción al sistema por posiciones: suma o transfiere puntos reales, sin puntuación adicional de 100/75/50/25."
+      ],
+      "pending": [
+        "resolver selección de objetivo de robo cuando hay empate en clasificación y orden de ejecución de varios robos simultáneos.",
+        "Selección sin cronómetro; el tiempo de los retos se configura por reto."
+      ],
+      "repeatable": true,
+      "permanent": true,
+      "implementation": "planned"
+    },
+    {
+      "id": "tararea",
+      "ruleVersion": 1,
+      "name": "Tararea si puedes",
+      "description": "identificar una canción tarareada por un compañero.",
+      "category": "Música",
+      "mode": "un representante tararea y su equipo adivina.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "título de canción en español conocido por varias generaciones, mostrado solo al conductor y discretamente al representante; 60 segundos. tararear sin pronunciar letra; el conductor puede cambiar una canción desconocida antes de iniciar. No repetir canciones durante el evento.",
+      "materials": [],
+      "seconds": 60,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "gana el equipo que acierta más rápido; sin acierto, 0.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "título de canción en español conocido por varias generaciones, mostrado solo al conductor y discretamente al representante; 60 segundos.",
+        "tararear sin pronunciar letra; el conductor puede cambiar una canción desconocida antes de iniciar. No repetir canciones durante el evento.",
+        "gana el equipo que acierta más rápido; sin acierto, 0."
+      ],
+      "pending": [],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "torre-traicionera",
+      "ruleVersion": 1,
+      "name": "La torre traicionera",
+      "description": "construir una pirámide de seis vasos en tres niveles (3–2–1).",
+      "category": "Habilidad",
+      "mode": "un representante por equipo.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "construir la pirámide al iniciar; 90 segundos. la torre debe mantenerse en pie para validar; no se exige desmontarla.",
+      "materials": [
+        {
+          "name": "Vasos",
+          "quantity": 6,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Superficie estable",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 90,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "orden de finalización; sin completar, 0.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "construir la pirámide al iniciar; 90 segundos.",
+        "la torre debe mantenerse en pie para validar; no se exige desmontarla.",
+        "orden de finalización; sin completar, 0."
+      ],
+      "pending": [],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "hazme-sonido",
+      "ruleVersion": 1,
+      "name": "¡Hazme el sonido!",
+      "description": "adivinar conceptos mediante sonidos hechos por compañeros.",
+      "category": "Sonidos",
+      "mode": "un adivinador de espaldas a la TV; compañeros generan sonidos.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "TV presenta una tarjeta; el equipo emite solo sonidos para que su representante adivine. 60 segundos por equipo; tantas tarjetas como sea posible. sin palabras, gestos, señas ni pistas escritas; conductor marca Correcto o Pasar.",
+      "materials": [
+        {
+          "name": "TV",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Celular del conductor",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 60,
+      "scoring": {
+        "mode": "hits",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ],
+        "pointsPerHit": 1
+      },
+      "victory": "mayor número de aciertos válidos; empate comparte puesto.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "TV presenta una tarjeta; el equipo emite solo sonidos para que su representante adivine. 60 segundos por equipo; tantas tarjetas como sea posible.",
+        "sin palabras, gestos, señas ni pistas escritas; conductor marca Correcto o Pasar.",
+        "mayor número de aciertos válidos; empate comparte puesto."
+      ],
+      "pending": [
+        "Crear el banco completo de 300 tarjetas después de validar el importador."
+      ],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "rebote-imposible",
+      "ruleVersion": 1,
+      "name": "Rebote imposible",
+      "description": "encestar tres veces una pelota suave después de que rebote en el piso.",
+      "category": "Precisión",
+      "mode": "dos por equipo: lanzador sentado y recuperador.",
+      "minParticipants": 2,
+      "maxParticipants": 10000,
+      "publicRules": "todos los equipos juegan simultáneamente. El lanzador hace rebotar la pelota en el piso antes de entrar al vaso; el recuperador la devuelve. no vale rebote en mesa; sin empujar, invadir zonas ni lanzar hacia otras personas.",
+      "materials": [
+        {
+          "name": "Pelota suave",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Vaso",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Marcas de distancia",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": null,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "clasificación según orden en que cada equipo consigue tres encestes.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "todos los equipos juegan simultáneamente. El lanzador hace rebotar la pelota en el piso antes de entrar al vaso; el recuperador la devuelve.",
+        "no vale rebote en mesa; sin empujar, invadir zonas ni lanzar hacia otras personas.",
+        "clasificación según orden en que cada equipo consigue tres encestes."
+      ],
+      "pending": [
+        "límite de tiempo máximo si nadie consigue tres."
+      ],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "manos-mantequilla",
+      "ruleVersion": 1,
+      "name": "Manos de mantequilla",
+      "description": "envolver correctamente una caja con guantes grandes de cocina.",
+      "category": "Destreza",
+      "mode": "un representante por equipo; todos juegan simultáneamente.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "2 minutos para envolver el paquete. guantes puestos todo el tiempo; mismos materiales y condiciones.",
+      "materials": [
+        {
+          "name": "Caja",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Papel",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Cinta",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Guantes de cocina",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 120,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "primero se distingue paquete terminado y cerrado; entre terminados, menor tiempo. Si ninguno termina, aplicar rúbrica visible: cobertura del papel, cierre con cinta y estabilidad del envoltorio (conductor registra cada criterio, sin juicio estético).",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "2 minutos para envolver el paquete.",
+        "guantes puestos todo el tiempo; mismos materiales y condiciones.",
+        "primero se distingue paquete terminado y cerrado; entre terminados, menor tiempo. Si ninguno termina, aplicar rúbrica visible: cobertura del papel, cierre con cinta y estabilidad del envoltorio (conductor registra cada criterio, sin juicio estético)."
+      ],
+      "pending": [],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "actor",
+      "ruleVersion": 1,
+      "name": "El actor dramático",
+      "description": "adivinar una escena absurda compuesta por personaje + acción + lugar.",
+      "category": "Actuación",
+      "mode": "un actor por equipo; los demás adivinan.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "el conductor muestra en privado una escena al actor; este la representa sin hablar. Ejemplo: «Un marciano sentado en el ala de un avión». 90 segundos. los tres elementos deben identificarse; se aceptan sinónimos evidentes. Sin hablar ni deletrear.",
+      "materials": [
+        {
+          "name": "Tarjetas privadas",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 90,
+      "scoring": {
+        "mode": "position",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "clasificación por menor tiempo de acierto; sin acierto, 0.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "el conductor muestra en privado una escena al actor; este la representa sin hablar. Ejemplo: «Un marciano sentado en el ala de un avión». 90 segundos.",
+        "los tres elementos deben identificarse; se aceptan sinónimos evidentes. Sin hablar ni deletrear.",
+        "clasificación por menor tiempo de acierto; sin acierto, 0."
+      ],
+      "pending": [
+        "Crear el banco completo de 100 escenas después de validar el importador."
+      ],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "palabras-prohibidas",
+      "ruleVersion": 1,
+      "name": "Palabras prohibidas",
+      "description": "adivinar la mayor cantidad de palabras sin que los compañeros pronuncien las tres palabras prohibidas.",
+      "category": "Palabras",
+      "mode": "un adivinador de espaldas a la TV; compañeros ven las tarjetas y dan pistas habladas.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "TV muestra palabra principal y tres prohibidas. Los compañeros dan pistas; conductor marca Correcto, Pasar o Infracción. 60 segundos por equipo. no decir la palabra objetivo, las tres prohibidas ni derivados evidentes. Los contrarios pueden hacer sonar la chicharra; el conductor verifica y anula esa tarjeta si corresponde.",
+      "materials": [
+        {
+          "name": "TV",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Celular del conductor",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Chicharra",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 60,
+      "scoring": {
+        "mode": "hits",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ],
+        "pointsPerHit": 1
+      },
+      "victory": "mayor cantidad de aciertos válidos; tarjeta anulada no puntúa.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "TV muestra palabra principal y tres prohibidas. Los compañeros dan pistas; conductor marca Correcto, Pasar o Infracción. 60 segundos por equipo.",
+        "no decir la palabra objetivo, las tres prohibidas ni derivados evidentes. Los contrarios pueden hacer sonar la chicharra; el conductor verifica y anula esa tarjeta si corresponde.",
+        "mayor cantidad de aciertos válidos; tarjeta anulada no puntúa."
+      ],
+      "pending": [
+        "Crear el banco completo de 300 tarjetas después de validar el importador."
+      ],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "yo-soy-objeto",
+      "ruleVersion": 1,
+      "name": "¡Yo soy el objeto!",
+      "description": "adivinar objetos representados corporalmente por una persona.",
+      "category": "Actuación",
+      "mode": "una sola persona elegida por equipo actúa durante todo el turno; el resto adivina.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "el actor recibe un objeto secreto, usa su cuerpo para convertirse en ese objeto y pasa al siguiente tras Correcto o Pasar. 90 segundos por equipo. no hablar, hacer sonidos ni señas convencionales para dar pistas; sí puede moverse para representar forma y funcionamiento del objeto.",
+      "materials": [
+        {
+          "name": "Tarjetas privadas",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": 90,
+      "scoring": {
+        "mode": "hits",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ],
+        "pointsPerHit": 1
+      },
+      "victory": "mayor cantidad de objetos acertados; empates comparten puesto.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "el actor recibe un objeto secreto, usa su cuerpo para convertirse en ese objeto y pasa al siguiente tras Correcto o Pasar. 90 segundos por equipo.",
+        "no hablar, hacer sonidos ni señas convencionales para dar pistas; sí puede moverse para representar forma y funcionamiento del objeto.",
+        "mayor cantidad de objetos acertados; empates comparten puesto."
+      ],
+      "pending": [],
+      "repeatable": false,
+      "permanent": false,
+      "implementation": "planned"
+    },
+    {
+      "id": "cuantos-hay",
+      "ruleVersion": 1,
+      "name": "¿Cuántos hay?",
+      "description": "estimar la cantidad de elementos dentro de un recipiente transparente.",
+      "category": "Estimación",
+      "mode": "un estimado por equipo, acordado entre sus integrantes.",
+      "minParticipants": 1,
+      "maxParticipants": 10000,
+      "publicRules": "todos observan el mismo recipiente; cada equipo registra una estimación antes de revelar la cantidad real. no abrir ni contar manualmente el recipiente; las estimaciones se cierran antes de revelar el dato real.",
+      "materials": [
+        {
+          "name": "Recipiente transparente",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        },
+        {
+          "name": "Elementos contables",
+          "quantity": 1,
+          "unit": "por equipo / según participantes"
+        }
+      ],
+      "seconds": null,
+      "scoring": {
+        "mode": "closeness",
+        "nominal": 100,
+        "min": 0,
+        "max": 100,
+        "pointsPerSuccess": 100,
+        "approvedException": false,
+        "decision": "proposal",
+        "positions": [
+          100,
+          75,
+          50,
+          25
+        ]
+      },
+      "victory": "se ordena por error absoluto entre estimación y cantidad real; gana la estimación más cercana. Igual error implica empate.",
+      "tie": "Los empates comparten posición y se saltan los puestos posteriores; aplicar los pendientes específicos antes de jugar.",
+      "noFinish": "0 si la prueba exige éxito; prevalecen los criterios particulares descritos en condiciones de victoria.",
+      "accessibility": "Participación voluntaria, opción sentada cuando sea posible y adaptación acordada sin penalización. No obligar a comer, vendarse ni realizar movimientos incómodos.",
+      "status": "active",
+      "createdAt": "2026-11-17T19:00:00Z",
+      "updatedAt": "2026-11-17T19:00:00Z",
+      "representativesBefore": false,
+      "preparation": "Preparar materiales equivalentes, espacio seguro y explicar los criterios antes de iniciar.",
+      "steps": [
+        "todos observan el mismo recipiente; cada equipo registra una estimación antes de revelar la cantidad real.",
+        "no abrir ni contar manualmente el recipiente; las estimaciones se cierran antes de revelar el dato real.",
+        "se ordena por error absoluto entre estimación y cantidad real; gana la estimación más cercana. Igual error implica empate."
+      ],
+      "pending": [
+        "duración exacta de observación y captura."
+      ],
+      "repeatable": true,
+      "permanent": false,
+      "implementation": "planned"
+    }
+  ]
+}

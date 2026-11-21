@@ -1,0 +1,17 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> noche-de-retos@2.4.0-fase2c1 test:navigation
+> node --test tests/navigation.browser.cjs
+
+✔ escritorio: secciones independientes, borradores, pasos, teclado y ronda completa (8006.2801ms)
+✔ celular 390 y 320 px: navegación compacta, borradores y reloj conservado (5837.241444ms)
+✔ Wi-Fi: navegar no escribe revisiones; otro conductor y TV reciben el mismo estado (6749.729158ms)
+✔ offline: navegación, estilos y sección seleccionada sobreviven recarga sin servidor (553.119262ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21526.837253

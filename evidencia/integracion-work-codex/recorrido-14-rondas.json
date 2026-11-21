@@ -1,0 +1,280 @@
+{
+  "event": "ENSAYO INTEGRADO WORK + CODEX",
+  "status": "finished",
+  "rounds": 14,
+  "ordinaryDistinctGames": 12,
+  "ledgerEntries": 56,
+  "awards": [
+    {
+      "id": "t1",
+      "name": "Estrella",
+      "score": 925,
+      "place": 1
+    },
+    {
+      "id": "t2",
+      "name": "Cascabel",
+      "score": 900,
+      "place": 2
+    },
+    {
+      "id": "t3",
+      "name": "Aurora",
+      "score": 850,
+      "place": 3
+    },
+    {
+      "id": "t4",
+      "name": "Abeto",
+      "score": 425,
+      "place": 4
+    }
+  ],
+  "ceremonyOrder": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "roundSummary": [
+    {
+      "number": 1,
+      "name": "El actor dramático",
+      "status": "completed",
+      "points": {
+        "t1": 25,
+        "t2": 50,
+        "t3": 100,
+        "t4": 75
+      },
+      "cumulative": {
+        "t1": 25,
+        "t2": 50,
+        "t3": 100,
+        "t4": 75
+      }
+    },
+    {
+      "number": 2,
+      "name": "Tararea si puedes",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 125,
+        "t2": 125,
+        "t3": 150,
+        "t4": 100
+      }
+    },
+    {
+      "number": 3,
+      "name": "¡Hazme el sonido!",
+      "status": "completed",
+      "points": {
+        "t1": 50,
+        "t2": 75,
+        "t3": 100,
+        "t4": 0
+      },
+      "cumulative": {
+        "t1": 175,
+        "t2": 200,
+        "t3": 250,
+        "t4": 100
+      }
+    },
+    {
+      "number": 4,
+      "name": "Palabras prohibidas",
+      "status": "completed",
+      "points": {
+        "t1": 75,
+        "t2": 100,
+        "t3": 0,
+        "t4": 75
+      },
+      "cumulative": {
+        "t1": 250,
+        "t2": 300,
+        "t3": 250,
+        "t4": 175
+      }
+    },
+    {
+      "number": 5,
+      "name": "Roba y Gana",
+      "status": "completed",
+      "points": {
+        "t1": 25,
+        "t2": 25,
+        "t3": 50,
+        "t4": 50
+      },
+      "cumulative": {
+        "t1": 275,
+        "t2": 325,
+        "t3": 300,
+        "t4": 225
+      }
+    },
+    {
+      "number": 6,
+      "name": "La galleta viajera",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 375,
+        "t2": 400,
+        "t3": 350,
+        "t4": 250
+      }
+    },
+    {
+      "number": 7,
+      "name": "Picasso a oscuras",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 475,
+        "t2": 475,
+        "t3": 400,
+        "t4": 275
+      }
+    },
+    {
+      "number": 8,
+      "name": "La torre traicionera",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 575,
+        "t2": 550,
+        "t3": 450,
+        "t4": 300
+      }
+    },
+    {
+      "number": 9,
+      "name": "Rebote imposible",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 675,
+        "t2": 625,
+        "t3": 500,
+        "t4": 325
+      }
+    },
+    {
+      "number": 10,
+      "name": "Manos de mantequilla",
+      "status": "completed",
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 775,
+        "t2": 700,
+        "t3": 550,
+        "t4": 350
+      }
+    },
+    {
+      "number": 11,
+      "name": "¡Yo soy el objeto!",
+      "status": "completed",
+      "points": {
+        "t1": 50,
+        "t2": 75,
+        "t3": 100,
+        "t4": 0
+      },
+      "cumulative": {
+        "t1": 825,
+        "t2": 775,
+        "t3": 650,
+        "t4": 350
+      }
+    },
+    {
+      "number": 12,
+      "name": "¿Cuántos hay?",
+      "status": "completed",
+      "points": {
+        "t1": 50,
+        "t2": 75,
+        "t3": 100,
+        "t4": 25
+      },
+      "cumulative": {
+        "t1": 875,
+        "t2": 850,
+        "t3": 750,
+        "t4": 375
+      }
+    },
+    {
+      "number": 13,
+      "name": "Roba y Gana",
+      "status": "completed",
+      "points": {
+        "t1": 25,
+        "t2": 25,
+        "t3": 50,
+        "t4": 50
+      },
+      "cumulative": {
+        "t1": 900,
+        "t2": 875,
+        "t3": 800,
+        "t4": 425
+      }
+    },
+    {
+      "number": 14,
+      "name": "Roba y Gana",
+      "status": "completed",
+      "points": {
+        "t1": 25,
+        "t2": 25,
+        "t3": 50,
+        "t4": 0
+      },
+      "cumulative": {
+        "t1": 925,
+        "t2": 900,
+        "t3": 850,
+        "t4": 425
+      }
+    }
+  ],
+  "data": "Participantes ficticios; sin claves ni tarjetas privadas"
+}

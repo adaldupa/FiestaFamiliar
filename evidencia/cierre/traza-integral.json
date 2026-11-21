@@ -1,0 +1,3187 @@
+[
+  {
+    "teams": 2,
+    "source": "Prueba automatizada con datos sintéticos aislados. No son resultados de una fiesta real ni evidencia visual.",
+    "steps": [
+      {
+        "step": 1,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 2,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 3,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 4,
+        "phase": "preparing_challenge",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 5,
+        "phase": "timer_active",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 6,
+        "phase": "capturing_results",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 7,
+        "phase": "confirming_score",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 8,
+        "phase": "scoreboard_updated",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 9,
+        "phase": "preparing_challenge",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 10,
+        "phase": "timer_active",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 11,
+        "phase": "capturing_results",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 12,
+        "phase": "confirming_score",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 13,
+        "phase": "scoreboard_updated",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 14,
+        "phase": "preparing_challenge",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 15,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 16,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 17,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 18,
+        "phase": "capturing_results",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 19,
+        "phase": "confirming_score",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 20,
+        "phase": "scoreboard_updated",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 21,
+        "phase": "preparing_challenge",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 22,
+        "phase": "timer_active",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 23,
+        "phase": "capturing_results",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 24,
+        "phase": "confirming_score",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 25,
+        "phase": "scoreboard_updated",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 26,
+        "phase": "preparing_challenge",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 27,
+        "phase": "timer_active",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 28,
+        "phase": "capturing_results",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 29,
+        "phase": "confirming_score",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 30,
+        "phase": "scoreboard_updated",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 31,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 32,
+        "phase": "timer_active",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 33,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 34,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 35,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 36,
+        "phase": "confirming_score",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 37,
+        "phase": "scoreboard_updated",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 535,
+          "t2": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 38,
+        "phase": "preparing_challenge",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 535,
+          "t2": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 39,
+        "phase": "timer_active",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 535,
+          "t2": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 40,
+        "phase": "capturing_results",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 535,
+          "t2": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 41,
+        "phase": "confirming_score",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 535,
+          "t2": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 42,
+        "phase": "scoreboard_updated",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 635,
+          "t2": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 43,
+        "phase": "preparing_challenge",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 635,
+          "t2": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 44,
+        "phase": "timer_active",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 635,
+          "t2": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 45,
+        "phase": "capturing_results",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 635,
+          "t2": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 46,
+        "phase": "confirming_score",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 635,
+          "t2": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 47,
+        "phase": "scoreboard_updated",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 735,
+          "t2": 600
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 48,
+        "phase": "preparing_challenge",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 735,
+          "t2": 600
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 49,
+        "phase": "timer_active",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 735,
+          "t2": 600
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 50,
+        "phase": "capturing_results",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 735,
+          "t2": 600
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 51,
+        "phase": "confirming_score",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 735,
+          "t2": 600
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 52,
+        "phase": "scoreboard_updated",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 53,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 54,
+        "phase": "timer_active",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 55,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 56,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 57,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 58,
+        "phase": "confirming_score",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 835,
+          "t2": 675
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 59,
+        "phase": "scoreboard_updated",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 60,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 61,
+        "phase": "timer_active",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 62,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 63,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 64,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 65,
+        "phase": "confirming_score",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 775
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 66,
+        "phase": "scoreboard_updated",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 875
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 67,
+        "phase": "preparing_challenge",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 875
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 68,
+        "phase": "timer_active",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 875
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 69,
+        "phase": "capturing_results",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 875
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 70,
+        "phase": "confirming_score",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 875
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 71,
+        "phase": "scoreboard_updated",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 1060,
+          "t2": 975
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 72,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 1060,
+          "t2": 975
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 73,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 1060,
+          "t2": 975
+        },
+        "awardsPlace": 2
+      },
+      {
+        "step": 74,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 1060,
+          "t2": 975
+        },
+        "awardsPlace": 1
+      },
+      {
+        "step": 75,
+        "phase": "event_finished",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 1060,
+          "t2": 975
+        },
+        "awardsPlace": 1
+      }
+    ],
+    "rounds": [
+      {
+        "number": 1,
+        "id": "galleta-viajera",
+        "name": "La galleta viajera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 2,
+        "id": "picasso-oscuras",
+        "name": "Picasso a oscuras",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 3,
+        "id": "roba-y-gana",
+        "name": "Roba y Gana",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 4,
+        "id": "tararea",
+        "name": "Tararea si puedes",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 5,
+        "id": "torre-traicionera",
+        "name": "La torre traicionera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 6,
+        "id": "hazme-sonido",
+        "name": "¡Hazme el sonido!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 7,
+        "id": "rebote-imposible",
+        "name": "Rebote imposible",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 8,
+        "id": "manos-mantequilla",
+        "name": "Manos de mantequilla",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 9,
+        "id": "actor",
+        "name": "El actor dramático",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 10,
+        "id": "palabras-prohibidas",
+        "name": "Palabras prohibidas",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 11,
+        "id": "yo-soy-objeto",
+        "name": "¡Yo soy el objeto!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 12,
+        "id": "cuantos-hay",
+        "name": "¿Cuántos hay?",
+        "status": "completed",
+        "activeAwards": 1
+      }
+    ],
+    "duelAwards": 1,
+    "finalStandings": [
+      {
+        "team": "Estrella",
+        "score": 1060,
+        "place": 1
+      },
+      {
+        "team": "Cascabel",
+        "score": 975,
+        "place": 2
+      }
+    ],
+    "closed": true
+  },
+  {
+    "teams": 3,
+    "source": "Prueba automatizada con datos sintéticos aislados. No son resultados de una fiesta real ni evidencia visual.",
+    "steps": [
+      {
+        "step": 1,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 2,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 3,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 4,
+        "phase": "preparing_challenge",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 5,
+        "phase": "timer_active",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 6,
+        "phase": "capturing_results",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 7,
+        "phase": "confirming_score",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 8,
+        "phase": "scoreboard_updated",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 9,
+        "phase": "preparing_challenge",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 10,
+        "phase": "timer_active",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 11,
+        "phase": "capturing_results",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 12,
+        "phase": "confirming_score",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 13,
+        "phase": "scoreboard_updated",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 14,
+        "phase": "preparing_challenge",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 15,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 16,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 17,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 18,
+        "phase": "capturing_results",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 19,
+        "phase": "confirming_score",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 20,
+        "phase": "scoreboard_updated",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200,
+          "t3": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 21,
+        "phase": "preparing_challenge",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200,
+          "t3": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 22,
+        "phase": "timer_active",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200,
+          "t3": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 23,
+        "phase": "capturing_results",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200,
+          "t3": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 24,
+        "phase": "confirming_score",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 260,
+          "t2": 200,
+          "t3": 200
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 25,
+        "phase": "scoreboard_updated",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275,
+          "t3": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 26,
+        "phase": "preparing_challenge",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275,
+          "t3": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 27,
+        "phase": "timer_active",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275,
+          "t3": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 28,
+        "phase": "capturing_results",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275,
+          "t3": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 29,
+        "phase": "confirming_score",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 360,
+          "t2": 275,
+          "t3": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 30,
+        "phase": "scoreboard_updated",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 31,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 32,
+        "phase": "timer_active",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 33,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 34,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 35,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 36,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 37,
+        "phase": "confirming_score",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 350,
+          "t3": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 38,
+        "phase": "scoreboard_updated",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 510,
+          "t2": 425,
+          "t3": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 39,
+        "phase": "preparing_challenge",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 510,
+          "t2": 425,
+          "t3": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 40,
+        "phase": "timer_active",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 510,
+          "t2": 425,
+          "t3": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 41,
+        "phase": "capturing_results",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 510,
+          "t2": 425,
+          "t3": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 42,
+        "phase": "confirming_score",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 510,
+          "t2": 425,
+          "t3": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 43,
+        "phase": "scoreboard_updated",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 610,
+          "t2": 500,
+          "t3": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 44,
+        "phase": "preparing_challenge",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 610,
+          "t2": 500,
+          "t3": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 45,
+        "phase": "timer_active",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 610,
+          "t2": 500,
+          "t3": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 46,
+        "phase": "capturing_results",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 610,
+          "t2": 500,
+          "t3": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 47,
+        "phase": "confirming_score",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 610,
+          "t2": 500,
+          "t3": 450
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 48,
+        "phase": "scoreboard_updated",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 710,
+          "t2": 575,
+          "t3": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 49,
+        "phase": "preparing_challenge",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 710,
+          "t2": 575,
+          "t3": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 50,
+        "phase": "timer_active",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 710,
+          "t2": 575,
+          "t3": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 51,
+        "phase": "capturing_results",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 710,
+          "t2": 575,
+          "t3": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 52,
+        "phase": "confirming_score",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 710,
+          "t2": 575,
+          "t3": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 53,
+        "phase": "scoreboard_updated",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 54,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 55,
+        "phase": "timer_active",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 56,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 57,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 58,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 59,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 60,
+        "phase": "confirming_score",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 650,
+          "t3": 550
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 61,
+        "phase": "scoreboard_updated",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 62,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 63,
+        "phase": "timer_active",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 64,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 65,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 66,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 67,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 68,
+        "phase": "confirming_score",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 860,
+          "t2": 725,
+          "t3": 650
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 69,
+        "phase": "scoreboard_updated",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 800,
+          "t3": 750
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 70,
+        "phase": "preparing_challenge",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 800,
+          "t3": 750
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 71,
+        "phase": "timer_active",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 800,
+          "t3": 750
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 72,
+        "phase": "capturing_results",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 800,
+          "t3": 750
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 73,
+        "phase": "confirming_score",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 910,
+          "t2": 800,
+          "t3": 750
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 74,
+        "phase": "scoreboard_updated",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 75,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 76,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": 3
+      },
+      {
+        "step": 77,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": 2
+      },
+      {
+        "step": 78,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": 1
+      },
+      {
+        "step": 79,
+        "phase": "event_finished",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 985,
+          "t2": 900,
+          "t3": 825
+        },
+        "awardsPlace": 1
+      }
+    ],
+    "rounds": [
+      {
+        "number": 1,
+        "id": "galleta-viajera",
+        "name": "La galleta viajera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 2,
+        "id": "picasso-oscuras",
+        "name": "Picasso a oscuras",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 3,
+        "id": "roba-y-gana",
+        "name": "Roba y Gana",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 4,
+        "id": "tararea",
+        "name": "Tararea si puedes",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 5,
+        "id": "torre-traicionera",
+        "name": "La torre traicionera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 6,
+        "id": "hazme-sonido",
+        "name": "¡Hazme el sonido!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 7,
+        "id": "rebote-imposible",
+        "name": "Rebote imposible",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 8,
+        "id": "manos-mantequilla",
+        "name": "Manos de mantequilla",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 9,
+        "id": "actor",
+        "name": "El actor dramático",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 10,
+        "id": "palabras-prohibidas",
+        "name": "Palabras prohibidas",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 11,
+        "id": "yo-soy-objeto",
+        "name": "¡Yo soy el objeto!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 12,
+        "id": "cuantos-hay",
+        "name": "¿Cuántos hay?",
+        "status": "completed",
+        "activeAwards": 1
+      }
+    ],
+    "duelAwards": 1,
+    "finalStandings": [
+      {
+        "team": "Estrella",
+        "score": 985,
+        "place": 1
+      },
+      {
+        "team": "Cascabel",
+        "score": 900,
+        "place": 2
+      },
+      {
+        "team": "Aurora",
+        "score": 825,
+        "place": 3
+      }
+    ],
+    "closed": true
+  },
+  {
+    "teams": 4,
+    "source": "Prueba automatizada con datos sintéticos aislados. No son resultados de una fiesta real ni evidencia visual.",
+    "steps": [
+      {
+        "step": 1,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 2,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 0,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 3,
+        "phase": "teams_confirmed",
+        "round": 0,
+        "game": null,
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 4,
+        "phase": "preparing_challenge",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 5,
+        "phase": "timer_active",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 6,
+        "phase": "capturing_results",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 7,
+        "phase": "confirming_score",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 10,
+          "t2": 0,
+          "t3": 0,
+          "t4": 0
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 8,
+        "phase": "scoreboard_updated",
+        "round": 1,
+        "game": "galleta-viajera",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50,
+          "t4": 25
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 9,
+        "phase": "preparing_challenge",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50,
+          "t4": 25
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 10,
+        "phase": "timer_active",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50,
+          "t4": 25
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 11,
+        "phase": "capturing_results",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50,
+          "t4": 25
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 12,
+        "phase": "confirming_score",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 110,
+          "t2": 75,
+          "t3": 50,
+          "t4": 25
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 13,
+        "phase": "scoreboard_updated",
+        "round": 2,
+        "game": "picasso-oscuras",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 14,
+        "phase": "preparing_challenge",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 15,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 16,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 17,
+        "phase": "timer_active",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 18,
+        "phase": "capturing_results",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 19,
+        "phase": "confirming_score",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 210,
+          "t2": 150,
+          "t3": 100,
+          "t4": 50
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 20,
+        "phase": "scoreboard_updated",
+        "round": 3,
+        "game": "roba-y-gana",
+        "confirmedScores": {
+          "t1": 235,
+          "t2": 200,
+          "t3": 200,
+          "t4": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 21,
+        "phase": "preparing_challenge",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 235,
+          "t2": 200,
+          "t3": 200,
+          "t4": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 22,
+        "phase": "timer_active",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 235,
+          "t2": 200,
+          "t3": 200,
+          "t4": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 23,
+        "phase": "capturing_results",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 235,
+          "t2": 200,
+          "t3": 200,
+          "t4": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 24,
+        "phase": "confirming_score",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 235,
+          "t2": 200,
+          "t3": 200,
+          "t4": 75
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 25,
+        "phase": "scoreboard_updated",
+        "round": 4,
+        "game": "tararea",
+        "confirmedScores": {
+          "t1": 335,
+          "t2": 275,
+          "t3": 250,
+          "t4": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 26,
+        "phase": "preparing_challenge",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 335,
+          "t2": 275,
+          "t3": 250,
+          "t4": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 27,
+        "phase": "timer_active",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 335,
+          "t2": 275,
+          "t3": 250,
+          "t4": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 28,
+        "phase": "capturing_results",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 335,
+          "t2": 275,
+          "t3": 250,
+          "t4": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 29,
+        "phase": "confirming_score",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 335,
+          "t2": 275,
+          "t3": 250,
+          "t4": 100
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 30,
+        "phase": "scoreboard_updated",
+        "round": 5,
+        "game": "torre-traicionera",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 31,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 32,
+        "phase": "timer_active",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 33,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 34,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 35,
+        "phase": "preparing_challenge",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 36,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 37,
+        "phase": "capturing_results",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 38,
+        "phase": "confirming_score",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 435,
+          "t2": 350,
+          "t3": 300,
+          "t4": 125
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 39,
+        "phase": "scoreboard_updated",
+        "round": 6,
+        "game": "hazme-sonido",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 400,
+          "t3": 375,
+          "t4": 225
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 40,
+        "phase": "preparing_challenge",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 400,
+          "t3": 375,
+          "t4": 225
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 41,
+        "phase": "timer_active",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 400,
+          "t3": 375,
+          "t4": 225
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 42,
+        "phase": "capturing_results",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 400,
+          "t3": 375,
+          "t4": 225
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 43,
+        "phase": "confirming_score",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 460,
+          "t2": 400,
+          "t3": 375,
+          "t4": 225
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 44,
+        "phase": "scoreboard_updated",
+        "round": 7,
+        "game": "rebote-imposible",
+        "confirmedScores": {
+          "t1": 560,
+          "t2": 475,
+          "t3": 425,
+          "t4": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 45,
+        "phase": "preparing_challenge",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 560,
+          "t2": 475,
+          "t3": 425,
+          "t4": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 46,
+        "phase": "timer_active",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 560,
+          "t2": 475,
+          "t3": 425,
+          "t4": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 47,
+        "phase": "capturing_results",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 560,
+          "t2": 475,
+          "t3": 425,
+          "t4": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 48,
+        "phase": "confirming_score",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 560,
+          "t2": 475,
+          "t3": 425,
+          "t4": 250
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 49,
+        "phase": "scoreboard_updated",
+        "round": 8,
+        "game": "manos-mantequilla",
+        "confirmedScores": {
+          "t1": 660,
+          "t2": 550,
+          "t3": 475,
+          "t4": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 50,
+        "phase": "preparing_challenge",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 660,
+          "t2": 550,
+          "t3": 475,
+          "t4": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 51,
+        "phase": "timer_active",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 660,
+          "t2": 550,
+          "t3": 475,
+          "t4": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 52,
+        "phase": "capturing_results",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 660,
+          "t2": 550,
+          "t3": 475,
+          "t4": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 53,
+        "phase": "confirming_score",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 660,
+          "t2": 550,
+          "t3": 475,
+          "t4": 275
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 54,
+        "phase": "scoreboard_updated",
+        "round": 9,
+        "game": "actor",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 55,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 56,
+        "phase": "timer_active",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 57,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 58,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 59,
+        "phase": "preparing_challenge",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 60,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 61,
+        "phase": "capturing_results",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 62,
+        "phase": "confirming_score",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 760,
+          "t2": 625,
+          "t3": 525,
+          "t4": 300
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 63,
+        "phase": "scoreboard_updated",
+        "round": 10,
+        "game": "palabras-prohibidas",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 64,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 65,
+        "phase": "timer_active",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 66,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 67,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 68,
+        "phase": "preparing_challenge",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 69,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 70,
+        "phase": "capturing_results",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 71,
+        "phase": "confirming_score",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 785,
+          "t2": 675,
+          "t3": 600,
+          "t4": 400
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 72,
+        "phase": "scoreboard_updated",
+        "round": 11,
+        "game": "yo-soy-objeto",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 725,
+          "t3": 675,
+          "t4": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 73,
+        "phase": "preparing_challenge",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 725,
+          "t3": 675,
+          "t4": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 74,
+        "phase": "timer_active",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 725,
+          "t3": 675,
+          "t4": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 75,
+        "phase": "capturing_results",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 725,
+          "t3": 675,
+          "t4": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 76,
+        "phase": "confirming_score",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 810,
+          "t2": 725,
+          "t3": 675,
+          "t4": 500
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 77,
+        "phase": "scoreboard_updated",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 78,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": null
+      },
+      {
+        "step": 79,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": 4
+      },
+      {
+        "step": 80,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": 3
+      },
+      {
+        "step": 81,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": 2
+      },
+      {
+        "step": 82,
+        "phase": "awards",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": 1
+      },
+      {
+        "step": 83,
+        "phase": "event_finished",
+        "round": 12,
+        "game": "cuantos-hay",
+        "confirmedScores": {
+          "t1": 885,
+          "t2": 825,
+          "t3": 750,
+          "t4": 525
+        },
+        "awardsPlace": 1
+      }
+    ],
+    "rounds": [
+      {
+        "number": 1,
+        "id": "galleta-viajera",
+        "name": "La galleta viajera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 2,
+        "id": "picasso-oscuras",
+        "name": "Picasso a oscuras",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 3,
+        "id": "roba-y-gana",
+        "name": "Roba y Gana",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 4,
+        "id": "tararea",
+        "name": "Tararea si puedes",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 5,
+        "id": "torre-traicionera",
+        "name": "La torre traicionera",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 6,
+        "id": "hazme-sonido",
+        "name": "¡Hazme el sonido!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 7,
+        "id": "rebote-imposible",
+        "name": "Rebote imposible",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 8,
+        "id": "manos-mantequilla",
+        "name": "Manos de mantequilla",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 9,
+        "id": "actor",
+        "name": "El actor dramático",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 10,
+        "id": "palabras-prohibidas",
+        "name": "Palabras prohibidas",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 11,
+        "id": "yo-soy-objeto",
+        "name": "¡Yo soy el objeto!",
+        "status": "completed",
+        "activeAwards": 1
+      },
+      {
+        "number": 12,
+        "id": "cuantos-hay",
+        "name": "¿Cuántos hay?",
+        "status": "completed",
+        "activeAwards": 1
+      }
+    ],
+    "duelAwards": 1,
+    "finalStandings": [
+      {
+        "team": "Estrella",
+        "score": 885,
+        "place": 1
+      },
+      {
+        "team": "Cascabel",
+        "score": 825,
+        "place": 2
+      },
+      {
+        "team": "Aurora",
+        "score": 750,
+        "place": 3
+      },
+      {
+        "team": "Abeto",
+        "score": 525,
+        "place": 4
+      }
+    ],
+    "closed": true
+  }
+]

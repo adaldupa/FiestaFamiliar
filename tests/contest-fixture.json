@@ -1,0 +1,1251 @@
+{
+  "state": {
+    "version": 2,
+    "people": [
+      {
+        "id": "32147b89-10d1-418f-b06b-3391996c88bb",
+        "name": "Prueba 01",
+        "age": 11,
+        "createdAt": "2026-11-16T21:53:58.444Z"
+      },
+      {
+        "id": "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+        "name": "Prueba 02",
+        "age": 12,
+        "createdAt": "2026-11-16T21:53:58.783Z"
+      },
+      {
+        "id": "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+        "name": "Prueba 03",
+        "age": 14,
+        "createdAt": "2026-11-16T21:53:59.123Z"
+      },
+      {
+        "id": "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+        "name": "Prueba 04",
+        "age": 18,
+        "createdAt": "2026-11-16T21:53:59.454Z"
+      },
+      {
+        "id": "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+        "name": "Prueba 05",
+        "age": 22,
+        "createdAt": "2026-11-16T21:53:59.782Z"
+      },
+      {
+        "id": "7470d36e-098f-4583-8e86-49862a06fd50",
+        "name": "Prueba 06",
+        "age": 27,
+        "createdAt": "2026-11-16T21:54:00.110Z"
+      },
+      {
+        "id": "70181223-95ab-43ed-9847-231847c626ec",
+        "name": "Prueba 07",
+        "age": 31,
+        "createdAt": "2026-11-16T21:54:00.444Z"
+      },
+      {
+        "id": "20df0538-69de-4047-aece-ecb0133eb3d6",
+        "name": "Prueba 08",
+        "age": 36,
+        "createdAt": "2026-11-16T21:54:00.850Z"
+      },
+      {
+        "id": "c16e93c9-a325-4eb0-ada8-f6a333527992",
+        "name": "Prueba 09",
+        "age": 40,
+        "createdAt": "2026-11-16T21:54:01.162Z"
+      },
+      {
+        "id": "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7",
+        "name": "Prueba 10",
+        "age": 45,
+        "createdAt": "2026-11-16T21:54:01.495Z"
+      },
+      {
+        "id": "3722c7eb-5e06-4a03-a30f-50ddc7979756",
+        "name": "Prueba 11",
+        "age": 49,
+        "createdAt": "2026-11-16T21:54:01.825Z"
+      },
+      {
+        "id": "285121e7-f7a7-47c2-9fa5-c33be02ddf1a",
+        "name": "Prueba 12",
+        "age": 55,
+        "createdAt": "2026-11-16T21:54:02.140Z"
+      },
+      {
+        "id": "8404ffe9-bf5b-46e0-99a8-5d137bb84687",
+        "name": "Prueba 13",
+        "age": 60,
+        "createdAt": "2026-11-16T21:54:02.470Z"
+      },
+      {
+        "id": "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+        "name": "Prueba 14",
+        "age": 65,
+        "createdAt": "2026-11-16T21:54:02.811Z"
+      },
+      {
+        "id": "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+        "name": "Prueba 15",
+        "age": 70,
+        "createdAt": "2026-11-16T21:54:03.143Z"
+      },
+      {
+        "id": "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+        "name": "Prueba 16",
+        "age": 75,
+        "createdAt": "2026-11-16T21:54:03.477Z"
+      },
+      {
+        "id": "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+        "name": "Prueba 17",
+        "age": 82,
+        "createdAt": "2026-11-16T21:54:03.807Z"
+      }
+    ],
+    "teamCount": 4,
+    "teamNames": [
+      "Estrella",
+      "Cascabel",
+      "Aurora",
+      "Abeto"
+    ],
+    "seed": "demo-navidad-4",
+    "result": {
+      "seed": "demo-navidad-4",
+      "candidateSeed": "demo-navidad-4:candidata:117",
+      "candidateIndex": 117,
+      "candidates": 200,
+      "teams": [
+        {
+          "id": "t1",
+          "capacity": 4,
+          "members": [
+            "32147b89-10d1-418f-b06b-3391996c88bb",
+            "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+            "70181223-95ab-43ed-9847-231847c626ec",
+            "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7"
+          ]
+        },
+        {
+          "id": "t2",
+          "capacity": 4,
+          "members": [
+            "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+            "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+            "7470d36e-098f-4583-8e86-49862a06fd50",
+            "285121e7-f7a7-47c2-9fa5-c33be02ddf1a"
+          ]
+        },
+        {
+          "id": "t3",
+          "capacity": 5,
+          "members": [
+            "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+            "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+            "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+            "c16e93c9-a325-4eb0-ada8-f6a333527992",
+            "8404ffe9-bf5b-46e0-99a8-5d137bb84687"
+          ]
+        },
+        {
+          "id": "t4",
+          "capacity": 4,
+          "members": [
+            "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+            "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+            "20df0538-69de-4047-aece-ecb0133eb3d6",
+            "3722c7eb-5e06-4a03-a30f-50ddc7979756"
+          ]
+        }
+      ],
+      "metrics": {
+        "rows": [
+          {
+            "id": "t1",
+            "count": 4,
+            "mean": 42.25,
+            "min": 11,
+            "max": 82,
+            "potCounts": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "t2",
+            "count": 4,
+            "mean": 42.5,
+            "min": 18,
+            "max": 70,
+            "potCounts": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "t3",
+            "count": 5,
+            "mean": 42.2,
+            "min": 14,
+            "max": 75,
+            "potCounts": [
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "t4",
+            "count": 4,
+            "mean": 40.5,
+            "min": 12,
+            "max": 65,
+            "potCounts": [
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "capacityErrors": 0,
+        "potSpread": 1,
+        "meanSpread": 2,
+        "score": [
+          0,
+          1,
+          2
+        ]
+      },
+      "drawnAt": "2026-11-16T21:55:14.805Z",
+      "startedAt": 1794866114805,
+      "duration": 0,
+      "adjustments": []
+    },
+    "confirmed": true,
+    "confirmedAt": "2026-11-16T21:55:19.153Z",
+    "audit": [
+      {
+        "at": "2026-11-16T21:54:13.791Z",
+        "type": "draw",
+        "seed": "demo-navidad-2",
+        "candidateSeed": "demo-navidad-2:candidata:195",
+        "score": [
+          0,
+          1,
+          0.22222222222222143
+        ]
+      },
+      {
+        "at": "2026-11-16T21:54:52.050Z",
+        "type": "invalidate",
+        "reason": "Cambio del número de equipos",
+        "seed": "demo-navidad-2"
+      },
+      {
+        "at": "2026-11-16T21:54:52.381Z",
+        "type": "draw",
+        "seed": "demo-navidad-3",
+        "candidateSeed": "demo-navidad-3:candidata:68",
+        "score": [
+          0,
+          1,
+          0.1666666666666643
+        ]
+      },
+      {
+        "at": "2026-11-16T21:55:14.460Z",
+        "type": "invalidate",
+        "reason": "Cambio del número de equipos",
+        "seed": "demo-navidad-3"
+      },
+      {
+        "at": "2026-11-16T21:55:14.805Z",
+        "type": "draw",
+        "seed": "demo-navidad-4",
+        "candidateSeed": "demo-navidad-4:candidata:117",
+        "score": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "at": "2026-11-16T21:55:19.153Z",
+        "type": "confirm",
+        "seed": "demo-navidad-4"
+      }
+    ],
+    "presentation": {
+      "view": "contest",
+      "page": 0,
+      "sound": false,
+      "reducedMotion": false
+    },
+    "legacyAvailable": false,
+    "contest": {
+      "schemaVersion": 1,
+      "library": {
+        "schemaVersion": 1,
+        "games": [
+          {
+            "id": "actor",
+            "name": "El actor dramático",
+            "description": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+            "category": "Actuación",
+            "mode": "Representante + equipo",
+            "minParticipants": 1,
+            "maxParticipants": 10000,
+            "publicRules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+            "privateInstructions": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+            "materials": [
+              {
+                "name": "Tarjetas",
+                "quantity": 4,
+                "unit": "unidades"
+              }
+            ],
+            "seconds": 90,
+            "scoring": {
+              "mode": "fixed",
+              "nominal": 100,
+              "min": 0,
+              "max": 100,
+              "pointsPerSuccess": 100,
+              "approvedException": false,
+              "decision": "proposal"
+            },
+            "victory": "Adivinar la frase dentro del turno.",
+            "tie": "Misma puntuación para todos los aciertos.",
+            "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+            "accessibility": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+            "secrets": [
+              "Busco mis lentes y los tengo puestos",
+              "Intento envolver un regalo que no cabe",
+              "Una planta me pide agua",
+              "Preparo una sopa demasiado caliente"
+            ],
+            "status": "active",
+            "ruleVersion": 1,
+            "createdAt": "2026-11-16T12:00:00Z",
+            "updatedAt": "2026-11-16T12:00:00Z",
+            "representativesBefore": false
+          }
+        ],
+        "versions": [
+          {
+            "id": "actor",
+            "name": "El actor dramático",
+            "description": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+            "category": "Actuación",
+            "mode": "Representante + equipo",
+            "minParticipants": 1,
+            "maxParticipants": 10000,
+            "publicRules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+            "privateInstructions": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+            "materials": [
+              {
+                "name": "Tarjetas",
+                "quantity": 4,
+                "unit": "unidades"
+              }
+            ],
+            "seconds": 90,
+            "scoring": {
+              "mode": "fixed",
+              "nominal": 100,
+              "min": 0,
+              "max": 100,
+              "pointsPerSuccess": 100,
+              "approvedException": false,
+              "decision": "proposal"
+            },
+            "victory": "Adivinar la frase dentro del turno.",
+            "tie": "Misma puntuación para todos los aciertos.",
+            "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+            "accessibility": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+            "secrets": [
+              "Busco mis lentes y los tengo puestos",
+              "Intento envolver un regalo que no cabe",
+              "Una planta me pide agua",
+              "Preparo una sopa demasiado caliente"
+            ],
+            "status": "active",
+            "ruleVersion": 1,
+            "createdAt": "2026-11-16T12:00:00Z",
+            "updatedAt": "2026-11-16T12:00:00Z",
+            "representativesBefore": false
+          }
+        ]
+      },
+      "events": [
+        {
+          "id": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+          "name": "Noche familiar",
+          "date": null,
+          "status": "in_progress",
+          "phase": "scoreboard_updated",
+          "createdAt": "2027-01-15T08:00:00.000Z",
+          "closedAt": null,
+          "people": [
+            {
+              "id": "32147b89-10d1-418f-b06b-3391996c88bb",
+              "name": "Prueba 01",
+              "age": 11,
+              "createdAt": "2026-11-16T21:53:58.444Z"
+            },
+            {
+              "id": "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+              "name": "Prueba 02",
+              "age": 12,
+              "createdAt": "2026-11-16T21:53:58.783Z"
+            },
+            {
+              "id": "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+              "name": "Prueba 03",
+              "age": 14,
+              "createdAt": "2026-11-16T21:53:59.123Z"
+            },
+            {
+              "id": "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+              "name": "Prueba 04",
+              "age": 18,
+              "createdAt": "2026-11-16T21:53:59.454Z"
+            },
+            {
+              "id": "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+              "name": "Prueba 05",
+              "age": 22,
+              "createdAt": "2026-11-16T21:53:59.782Z"
+            },
+            {
+              "id": "7470d36e-098f-4583-8e86-49862a06fd50",
+              "name": "Prueba 06",
+              "age": 27,
+              "createdAt": "2026-11-16T21:54:00.110Z"
+            },
+            {
+              "id": "70181223-95ab-43ed-9847-231847c626ec",
+              "name": "Prueba 07",
+              "age": 31,
+              "createdAt": "2026-11-16T21:54:00.444Z"
+            },
+            {
+              "id": "20df0538-69de-4047-aece-ecb0133eb3d6",
+              "name": "Prueba 08",
+              "age": 36,
+              "createdAt": "2026-11-16T21:54:00.850Z"
+            },
+            {
+              "id": "c16e93c9-a325-4eb0-ada8-f6a333527992",
+              "name": "Prueba 09",
+              "age": 40,
+              "createdAt": "2026-11-16T21:54:01.162Z"
+            },
+            {
+              "id": "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7",
+              "name": "Prueba 10",
+              "age": 45,
+              "createdAt": "2026-11-16T21:54:01.495Z"
+            },
+            {
+              "id": "3722c7eb-5e06-4a03-a30f-50ddc7979756",
+              "name": "Prueba 11",
+              "age": 49,
+              "createdAt": "2026-11-16T21:54:01.825Z"
+            },
+            {
+              "id": "285121e7-f7a7-47c2-9fa5-c33be02ddf1a",
+              "name": "Prueba 12",
+              "age": 55,
+              "createdAt": "2026-11-16T21:54:02.140Z"
+            },
+            {
+              "id": "8404ffe9-bf5b-46e0-99a8-5d137bb84687",
+              "name": "Prueba 13",
+              "age": 60,
+              "createdAt": "2026-11-16T21:54:02.470Z"
+            },
+            {
+              "id": "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+              "name": "Prueba 14",
+              "age": 65,
+              "createdAt": "2026-11-16T21:54:02.811Z"
+            },
+            {
+              "id": "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+              "name": "Prueba 15",
+              "age": 70,
+              "createdAt": "2026-11-16T21:54:03.143Z"
+            },
+            {
+              "id": "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+              "name": "Prueba 16",
+              "age": 75,
+              "createdAt": "2026-11-16T21:54:03.477Z"
+            },
+            {
+              "id": "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+              "name": "Prueba 17",
+              "age": 82,
+              "createdAt": "2026-11-16T21:54:03.807Z"
+            }
+          ],
+          "teams": [
+            {
+              "id": "t1",
+              "name": "Estrella",
+              "members": [
+                "32147b89-10d1-418f-b06b-3391996c88bb",
+                "c79b1990-067d-4a33-891c-e7ef45bf3fc3",
+                "70181223-95ab-43ed-9847-231847c626ec",
+                "b1147769-9fcc-4e4b-9ee2-e8ed7adfc6f7"
+              ]
+            },
+            {
+              "id": "t2",
+              "name": "Cascabel",
+              "members": [
+                "0a9c08d5-0124-4f10-a74f-38b1681c7afc",
+                "1a929aa7-5aec-439d-acbe-c383cd1c6b5b",
+                "7470d36e-098f-4583-8e86-49862a06fd50",
+                "285121e7-f7a7-47c2-9fa5-c33be02ddf1a"
+              ]
+            },
+            {
+              "id": "t3",
+              "name": "Aurora",
+              "members": [
+                "0c5fe744-8dca-42a0-b36d-acc7367d4407",
+                "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+                "1f082b70-60eb-4d00-b13b-f4df3a80a5a6",
+                "c16e93c9-a325-4eb0-ada8-f6a333527992",
+                "8404ffe9-bf5b-46e0-99a8-5d137bb84687"
+              ]
+            },
+            {
+              "id": "t4",
+              "name": "Abeto",
+              "members": [
+                "1b7ad49b-911e-4ca5-84b6-2a3c3860b913",
+                "4b85d784-6d86-43ec-a984-4fdf8fb2473b",
+                "20df0538-69de-4047-aece-ecb0133eb3d6",
+                "3722c7eb-5e06-4a03-a30f-50ddc7979756"
+              ]
+            }
+          ],
+          "selectedGames": [
+            {
+              "id": "actor",
+              "name": "El actor dramático",
+              "description": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+              "category": "Actuación",
+              "mode": "Representante + equipo",
+              "minParticipants": 1,
+              "maxParticipants": 10000,
+              "publicRules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+              "privateInstructions": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+              "materials": [
+                {
+                  "name": "Tarjetas",
+                  "quantity": 4,
+                  "unit": "unidades"
+                }
+              ],
+              "seconds": 90,
+              "scoring": {
+                "mode": "fixed",
+                "nominal": 100,
+                "min": 0,
+                "max": 100,
+                "pointsPerSuccess": 100,
+                "approvedException": false,
+                "decision": "proposal"
+              },
+              "victory": "Adivinar la frase dentro del turno.",
+              "tie": "Misma puntuación para todos los aciertos.",
+              "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+              "accessibility": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+              "secrets": [
+                "Busco mis lentes y los tengo puestos",
+                "Intento envolver un regalo que no cabe",
+                "Una planta me pide agua",
+                "Preparo una sopa demasiado caliente"
+              ],
+              "status": "active",
+              "ruleVersion": 1,
+              "createdAt": "2026-11-16T12:00:00Z",
+              "updatedAt": "2026-11-16T12:00:00Z",
+              "representativesBefore": false
+            }
+          ],
+          "settings": {
+            "ranking": "competition",
+            "proposalApprovedAt": "2027-01-15T08:00:00.000Z"
+          },
+          "rounds": [
+            {
+              "id": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "number": 1,
+              "status": "completed",
+              "game": {
+                "id": "actor",
+                "name": "El actor dramático",
+                "description": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+                "category": "Actuación",
+                "mode": "Representante + equipo",
+                "minParticipants": 1,
+                "maxParticipants": 10000,
+                "publicRules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+                "privateInstructions": "Preparar tarjetas de dificultad similar. La TV nunca debe mostrar las frases.",
+                "materials": [
+                  {
+                    "name": "Tarjetas",
+                    "quantity": 4,
+                    "unit": "unidades"
+                  }
+                ],
+                "seconds": 90,
+                "scoring": {
+                  "mode": "fixed",
+                  "nominal": 100,
+                  "min": 0,
+                  "max": 100,
+                  "pointsPerSuccess": 100,
+                  "approvedException": false,
+                  "decision": "proposal"
+                },
+                "victory": "Adivinar la frase dentro del turno.",
+                "tie": "Misma puntuación para todos los aciertos.",
+                "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+                "accessibility": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+                "secrets": [
+                  "Busco mis lentes y los tengo puestos",
+                  "Intento envolver un regalo que no cabe",
+                  "Una planta me pide agua",
+                  "Preparo una sopa demasiado caliente"
+                ],
+                "status": "active",
+                "ruleVersion": 1,
+                "createdAt": "2026-11-16T12:00:00Z",
+                "updatedAt": "2026-11-16T12:00:00Z",
+                "representativesBefore": false
+              },
+              "seed": "prueba",
+              "createdAt": "2027-01-15T08:00:00.000Z",
+              "draw": {
+                "ids": [
+                  "actor"
+                ],
+                "selectedIndex": 0,
+                "selectedId": "actor",
+                "rotation": 2340,
+                "startedAt": 1800000000000,
+                "duration": 2400
+              },
+              "representatives": {
+                "t1": "70181223-95ab-43ed-9847-231847c626ec",
+                "t2": "7470d36e-098f-4583-8e86-49862a06fd50",
+                "t3": "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+                "t4": "3722c7eb-5e06-4a03-a30f-50ddc7979756"
+              },
+              "representativesConfirmed": true,
+              "representativeChanges": [],
+              "turns": [
+                {
+                  "teamId": "t1",
+                  "representativeId": "70181223-95ab-43ed-9847-231847c626ec",
+                  "secretIndex": 1,
+                  "timer": {
+                    "durationMs": 90000,
+                    "remainingMs": 89000,
+                    "deadline": null,
+                    "status": "finished"
+                  },
+                  "outcome": {
+                    "success": true,
+                    "participated": true,
+                    "points": 100,
+                    "manual": false,
+                    "reason": ""
+                  }
+                },
+                {
+                  "teamId": "t2",
+                  "representativeId": "7470d36e-098f-4583-8e86-49862a06fd50",
+                  "secretIndex": 3,
+                  "timer": {
+                    "durationMs": 90000,
+                    "remainingMs": 89000,
+                    "deadline": null,
+                    "status": "finished"
+                  },
+                  "outcome": {
+                    "success": true,
+                    "participated": true,
+                    "points": 100,
+                    "manual": false,
+                    "reason": ""
+                  }
+                },
+                {
+                  "teamId": "t3",
+                  "representativeId": "dd183a96-e4e4-402c-8b3a-06bc69cb0126",
+                  "secretIndex": 0,
+                  "timer": {
+                    "durationMs": 90000,
+                    "remainingMs": 89000,
+                    "deadline": null,
+                    "status": "finished"
+                  },
+                  "outcome": {
+                    "success": true,
+                    "participated": true,
+                    "points": 100,
+                    "manual": false,
+                    "reason": ""
+                  }
+                },
+                {
+                  "teamId": "t4",
+                  "representativeId": "3722c7eb-5e06-4a03-a30f-50ddc7979756",
+                  "secretIndex": 2,
+                  "timer": {
+                    "durationMs": 90000,
+                    "remainingMs": 89000,
+                    "deadline": null,
+                    "status": "finished"
+                  },
+                  "outcome": {
+                    "success": true,
+                    "participated": true,
+                    "points": 100,
+                    "manual": false,
+                    "reason": ""
+                  }
+                }
+              ],
+              "currentTeamId": null,
+              "draft": null,
+              "attempts": [
+                {
+                  "id": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+                  "status": "active",
+                  "at": "2027-01-15T08:00:10.000Z",
+                  "outcomes": {
+                    "t1": {
+                      "success": true,
+                      "participated": true,
+                      "points": 100,
+                      "manual": false,
+                      "reason": ""
+                    },
+                    "t2": {
+                      "success": true,
+                      "participated": true,
+                      "points": 100,
+                      "manual": false,
+                      "reason": ""
+                    },
+                    "t3": {
+                      "success": true,
+                      "participated": true,
+                      "points": 100,
+                      "manual": false,
+                      "reason": ""
+                    },
+                    "t4": {
+                      "success": true,
+                      "participated": true,
+                      "points": 100,
+                      "manual": false,
+                      "reason": ""
+                    }
+                  },
+                  "movementIds": [
+                    "4c66ccac-f1dd-4f9c-9b8c-8c7bc1555abe",
+                    "83af958a-f749-41a1-94ec-ce73c90bdf77",
+                    "38d87627-cb80-4eb9-9820-d831c3c5639b",
+                    "06828e62-9082-475d-9c42-cd4f641cbf23"
+                  ]
+                }
+              ],
+              "restoredAt": null,
+              "correctionReason": null
+            }
+          ],
+          "activeRoundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+          "ledger": [
+            {
+              "id": "4c66ccac-f1dd-4f9c-9b8c-8c7bc1555abe",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "batchId": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+              "teamId": "t1",
+              "amount": 100,
+              "reason": "Resultados confirmados por el conductor",
+              "at": "2027-01-15T08:00:10.000Z",
+              "status": "active",
+              "correctionOf": null
+            },
+            {
+              "id": "83af958a-f749-41a1-94ec-ce73c90bdf77",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "batchId": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+              "teamId": "t2",
+              "amount": 100,
+              "reason": "Resultados confirmados por el conductor",
+              "at": "2027-01-15T08:00:10.000Z",
+              "status": "active",
+              "correctionOf": null
+            },
+            {
+              "id": "38d87627-cb80-4eb9-9820-d831c3c5639b",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "batchId": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+              "teamId": "t3",
+              "amount": 100,
+              "reason": "Resultados confirmados por el conductor",
+              "at": "2027-01-15T08:00:10.000Z",
+              "status": "active",
+              "correctionOf": null
+            },
+            {
+              "id": "06828e62-9082-475d-9c42-cd4f641cbf23",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "batchId": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+              "teamId": "t4",
+              "amount": 100,
+              "reason": "Resultados confirmados por el conductor",
+              "at": "2027-01-15T08:00:10.000Z",
+              "status": "active",
+              "correctionOf": null
+            }
+          ],
+          "audit": [
+            {
+              "id": "dfb5f12c-ccff-47c1-97cd-bb27bbfcd744",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": null,
+              "type": "event_created",
+              "at": "2027-01-15T08:00:00.000Z",
+              "detail": {
+                "gameVersions": [
+                  {
+                    "id": "actor",
+                    "version": 1
+                  }
+                ],
+                "teams": [
+                  "t1",
+                  "t2",
+                  "t3",
+                  "t4"
+                ]
+              }
+            },
+            {
+              "id": "39b2a8ec-5b68-4541-8ddf-6edf2b2a3c95",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "game_drawn",
+              "at": "2027-01-15T08:00:00.000Z",
+              "detail": {
+                "seed": "prueba",
+                "gameId": "actor",
+                "ruleVersion": 1,
+                "eligible": [
+                  "actor"
+                ]
+              }
+            },
+            {
+              "id": "1384ec88-a469-4015-bb97-91bec081e264",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "draw_revealed",
+              "at": "2027-01-15T08:00:03.000Z",
+              "detail": {
+                "gameId": "actor"
+              }
+            },
+            {
+              "id": "7f5cb809-a3aa-422a-8343-9328d1d44887",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "representatives_confirmed",
+              "at": "2027-01-15T08:00:03.001Z",
+              "detail": {
+                "changes": [],
+                "reason": ""
+              }
+            },
+            {
+              "id": "c8088cf0-ce9b-49da-9d8d-6b8c7a30712f",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "challenge_prepared",
+              "at": "2027-01-15T08:00:06.001Z",
+              "detail": {
+                "teamId": "t1"
+              }
+            },
+            {
+              "id": "57309648-d10c-4d6e-84f7-17f69ad9e8ae",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_started",
+              "at": "2027-01-15T08:00:07.000Z",
+              "detail": {
+                "teamId": "t1",
+                "deadline": 1800000097000
+              }
+            },
+            {
+              "id": "580a4353-4614-40a9-8fce-6de9dae62713",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_finished",
+              "at": "2027-01-15T08:00:08.000Z",
+              "detail": {
+                "teamId": "t1",
+                "reason": "Finalización anticipada del conductor",
+                "remainingMs": 89000
+              }
+            },
+            {
+              "id": "932857c0-1c64-49e0-890a-1c85063389e7",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "turn_outcome_recorded",
+              "at": "2027-01-15T08:00:08.001Z",
+              "detail": {
+                "teamId": "t1",
+                "outcome": {
+                  "success": true,
+                  "participated": true,
+                  "points": 100,
+                  "manual": false,
+                  "reason": ""
+                }
+              }
+            },
+            {
+              "id": "4391ba2c-a0ec-4583-be8b-4e9b8f01d273",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_started",
+              "at": "2027-01-15T08:00:07.000Z",
+              "detail": {
+                "teamId": "t2",
+                "deadline": 1800000097000
+              }
+            },
+            {
+              "id": "50c6cfe9-793e-4d81-b4b2-905d3ecb6915",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_finished",
+              "at": "2027-01-15T08:00:08.000Z",
+              "detail": {
+                "teamId": "t2",
+                "reason": "Finalización anticipada del conductor",
+                "remainingMs": 89000
+              }
+            },
+            {
+              "id": "7d447f6d-55bf-4585-8180-9d0eddda2511",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "turn_outcome_recorded",
+              "at": "2027-01-15T08:00:08.001Z",
+              "detail": {
+                "teamId": "t2",
+                "outcome": {
+                  "success": true,
+                  "participated": true,
+                  "points": 100,
+                  "manual": false,
+                  "reason": ""
+                }
+              }
+            },
+            {
+              "id": "a0db77d9-daaa-4515-90be-79d9c99bbb79",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_started",
+              "at": "2027-01-15T08:00:07.000Z",
+              "detail": {
+                "teamId": "t3",
+                "deadline": 1800000097000
+              }
+            },
+            {
+              "id": "f15b32a9-3bbb-4abf-9de3-fd9b034a1d27",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_finished",
+              "at": "2027-01-15T08:00:08.000Z",
+              "detail": {
+                "teamId": "t3",
+                "reason": "Finalización anticipada del conductor",
+                "remainingMs": 89000
+              }
+            },
+            {
+              "id": "7fdddd33-86e5-47c0-928c-6f945a4e0c62",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "turn_outcome_recorded",
+              "at": "2027-01-15T08:00:08.001Z",
+              "detail": {
+                "teamId": "t3",
+                "outcome": {
+                  "success": true,
+                  "participated": true,
+                  "points": 100,
+                  "manual": false,
+                  "reason": ""
+                }
+              }
+            },
+            {
+              "id": "0593aeca-e111-4566-ac50-f07b19cfb8c4",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_started",
+              "at": "2027-01-15T08:00:07.000Z",
+              "detail": {
+                "teamId": "t4",
+                "deadline": 1800000097000
+              }
+            },
+            {
+              "id": "4980f47d-b310-49f3-8776-10e94342beca",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "timer_finished",
+              "at": "2027-01-15T08:00:08.000Z",
+              "detail": {
+                "teamId": "t4",
+                "reason": "Finalización anticipada del conductor",
+                "remainingMs": 89000
+              }
+            },
+            {
+              "id": "f5beecc8-61e7-45c1-9dac-84a85f04980a",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "turn_outcome_recorded",
+              "at": "2027-01-15T08:00:08.001Z",
+              "detail": {
+                "teamId": "t4",
+                "outcome": {
+                  "success": true,
+                  "participated": true,
+                  "points": 100,
+                  "manual": false,
+                  "reason": ""
+                }
+              }
+            },
+            {
+              "id": "ffc866be-104c-48b9-94fc-a6e9f4673363",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "score_previewed",
+              "at": "2027-01-15T08:00:09.000Z",
+              "detail": {
+                "draftId": "7713cf53-b566-4ee3-bc15-e93f10a69056"
+              }
+            },
+            {
+              "id": "918b545a-aafa-455f-8f98-98ced0638dd2",
+              "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+              "roundId": "70d586ab-be66-4265-ba76-1f49c31558ae",
+              "type": "score_confirmed",
+              "at": "2027-01-15T08:00:10.000Z",
+              "detail": {
+                "batchId": "6fb76415-02c3-4bb8-9126-7161eade3f94",
+                "movementIds": [
+                  "4c66ccac-f1dd-4f9c-9b8c-8c7bc1555abe",
+                  "83af958a-f749-41a1-94ec-ce73c90bdf77",
+                  "38d87627-cb80-4eb9-9820-d831c3c5639b",
+                  "06828e62-9082-475d-9c42-cd4f641cbf23"
+                ]
+              }
+            }
+          ],
+          "replays": []
+        }
+      ],
+      "activeEventId": "28b834d4-2ddb-4598-8437-d6c65806b54f"
+    }
+  },
+  "public": {
+    "version": 2,
+    "count": 17,
+    "teamCount": 4,
+    "confirmed": true,
+    "presentation": {
+      "view": "contest",
+      "page": 0,
+      "sound": false,
+      "reducedMotion": false
+    },
+    "draw": {
+      "token": "1794866114805",
+      "startedAt": 1794866114805,
+      "duration": 0
+    },
+    "teams": [
+      {
+        "id": "t1",
+        "name": "Estrella",
+        "members": [
+          "Prueba 01",
+          "Prueba 17",
+          "Prueba 07",
+          "Prueba 10"
+        ]
+      },
+      {
+        "id": "t2",
+        "name": "Cascabel",
+        "members": [
+          "Prueba 04",
+          "Prueba 15",
+          "Prueba 06",
+          "Prueba 12"
+        ]
+      },
+      {
+        "id": "t3",
+        "name": "Aurora",
+        "members": [
+          "Prueba 05",
+          "Prueba 03",
+          "Prueba 16",
+          "Prueba 09",
+          "Prueba 13"
+        ]
+      },
+      {
+        "id": "t4",
+        "name": "Abeto",
+        "members": [
+          "Prueba 02",
+          "Prueba 14",
+          "Prueba 08",
+          "Prueba 11"
+        ]
+      }
+    ],
+    "contest": {
+      "schemaVersion": 1,
+      "eventId": "28b834d4-2ddb-4598-8437-d6c65806b54f",
+      "eventName": "Noche familiar",
+      "status": "in_progress",
+      "phase": "scoreboard_updated",
+      "roundNumber": 1,
+      "availableCount": 0,
+      "teams": [
+        {
+          "id": "t1",
+          "name": "Estrella",
+          "score": 100,
+          "place": 1,
+          "members": [
+            "Prueba 01",
+            "Prueba 17",
+            "Prueba 07",
+            "Prueba 10"
+          ],
+          "representative": "Prueba 07"
+        },
+        {
+          "id": "t2",
+          "name": "Cascabel",
+          "score": 100,
+          "place": 1,
+          "members": [
+            "Prueba 04",
+            "Prueba 15",
+            "Prueba 06",
+            "Prueba 12"
+          ],
+          "representative": "Prueba 06"
+        },
+        {
+          "id": "t3",
+          "name": "Aurora",
+          "score": 100,
+          "place": 1,
+          "members": [
+            "Prueba 05",
+            "Prueba 03",
+            "Prueba 16",
+            "Prueba 09",
+            "Prueba 13"
+          ],
+          "representative": "Prueba 03"
+        },
+        {
+          "id": "t4",
+          "name": "Abeto",
+          "score": 100,
+          "place": 1,
+          "members": [
+            "Prueba 02",
+            "Prueba 14",
+            "Prueba 08",
+            "Prueba 11"
+          ],
+          "representative": "Prueba 11"
+        }
+      ],
+      "activeTeamId": null,
+      "timer": null,
+      "wheel": null,
+      "game": {
+        "id": "actor",
+        "name": "El actor dramático",
+        "mode": "Representante + equipo",
+        "publicRules": "Representar una frase sin hablar. El equipo intenta adivinar. El conductor entrega la tarjeta en privado.",
+        "materials": [
+          {
+            "name": "Tarjetas",
+            "quantity": 4,
+            "unit": "unidades"
+          }
+        ],
+        "seconds": 90,
+        "scoring": {
+          "mode": "fixed",
+          "pointsPerSuccess": 100,
+          "min": 0,
+          "max": 100,
+          "decision": "proposal"
+        },
+        "victory": "Adivinar la frase dentro del turno.",
+        "tie": "Misma puntuación para todos los aciertos.",
+        "noFinish": "0 propuesto si no se adivina; permitir cambiar una frase incómoda por acuerdo previo.",
+        "accessibility": "Actuar sentado con manos y expresión facial; sin obligar a levantarse.",
+        "ruleVersion": 1
+      }
+    }
+  }
+}

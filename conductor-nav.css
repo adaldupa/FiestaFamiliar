@@ -1,0 +1,94 @@
+/* Panel del conductor. La TV conserva sus estilos y su documento independiente. */
+#app{grid-template-columns:190px minmax(0,1fr);gap:28px;align-items:start}
+#app [hidden]{display:none!important}
+.section-nav{position:sticky;top:20px;display:grid;gap:8px;padding:26px 0;align-self:start}
+.section-nav button{justify-content:flex-start;background:transparent;color:#e8dfc6;border:1px solid transparent;text-align:left;padding:13px 14px;font-size:16px}
+.section-nav button span{font-size:11px;letter-spacing:.1em;color:#c1a467}
+.section-nav button[aria-current]{background:linear-gradient(110deg,#664421,#303e28);border-color:#c29b55;color:#fff0c8;box-shadow:inset 3px 0 #edc67b}
+.conductor-workspace{padding-bottom:28px;min-width:0}
+.event-strip{position:sticky;top:0;z-index:10;background:#07291ff5;backdrop-filter:blur(12px);border:1px solid #b38c4b66;border-top:0;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-radius:0 0 8px 8px}
+.event-strip small{display:block;color:#d7b578;letter-spacing:.15em;font-size:10px}
+.event-strip strong{display:block;overflow-wrap:anywhere;font-size:19px;color:#fff0ce}
+.event-phase{font-size:14px;color:#f0d299;text-align:right}
+[data-section-panel]{scroll-margin-top:90px;min-width:0}
+[data-section-title]{font:clamp(30px,3vw,42px) Show,sans-serif;letter-spacing:.03em;margin:24px 0 20px;color:#ffebbf}
+[data-section-title]:focus{outline:none}
+[data-section-title]:focus-visible{outline:2px solid #ffdf95;outline-offset:5px}
+.conductor-workspace .panel{padding:24px;margin-bottom:20px}
+.home-welcome{border-top:3px solid #d8b16a}
+.home-welcome h2{font:clamp(30px,3vw,46px) Show;letter-spacing:.02em;margin:10px 0 16px}
+.home-welcome .actions{margin:22px 0}
+.new-meeting{border-top:1px solid #a88a4c77;margin-top:24px;padding-top:20px}
+.new-meeting summary,.conductor-workspace summary{cursor:pointer;min-height:44px;align-content:center;color:#ffdfa1;font-weight:700}
+#contest-create{display:grid;gap:16px;padding-top:16px;grid-template-columns:1fr 1fr}
+#contest-create>label:first-child,#contest-create>.check,#contest-create>button{grid-column:1/-1}
+#event-selection{display:flex;gap:16px;align-items:end;border-top:1px solid #a88a4c77;padding-top:20px}
+#event-selection label{flex:1}
+.team-steps{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.team-steps button{background:#0d3026;color:#e9d6b0;border-color:#8f784d}
+.team-steps button[aria-current]{background:#d4ad67;color:#10291e}
+.section-next{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:12px;margin:20px 0}
+.library-reserved{border:1px dashed #a58a51;background:linear-gradient(130deg,#15392d,#10291f)}
+.contest-host>h2{font:30px Show;margin:8px 0 18px;letter-spacing:.02em}
+.round-console{display:flow-root}
+.round-console>.eyebrow{margin:0;color:#d1ceb4;font-size:13px}
+.round-console>.contest-scores{margin:12px 0;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px}
+.round-console>.contest-scores article{padding:8px 12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.round-console>.contest-scores article span{display:none}
+.round-console>.contest-scores strong{font-size:26px;color:#ffe3a8}
+.round-console>.contest-scores b{font-size:15px}
+.round-console>button{margin:8px 10px 8px 0}
+.turn-console{padding:18px 20px;background:linear-gradient(125deg,#254b36,#08271e);border:1px solid #b38c4b99;border-radius:8px;margin:16px 0}
+.turn-console h3{margin:0 0 8px;font-size:23px;color:#ffe7b7}
+.host-clock{font-size:64px;line-height:1.2;color:#ffe3a3;font-variant-numeric:tabular-nums}
+.round-console .secret-card{margin:14px 0 0;padding:10px 16px;background:#2e3020;color:#ffedc6;border:1px solid #a58b55}
+.round-console .secret-card summary{color:#f8da9d}
+.round-console .secret-card strong{font-size:24px}
+.round-rules,.round-options{border-top:1px solid #ab8d4e66;padding:6px 0;margin:8px 0}
+.round-rules p{font-size:16px}
+.round-console form{padding:12px 0;border-bottom:0;gap:12px}
+.round-console #contest-draw{display:flex;align-items:end;gap:18px}
+#contest-draw label{flex:1}
+#contest-reps{grid-template-columns:1fr 1fr}
+#contest-reps>label:nth-last-of-type(1),#contest-reps>button{grid-column:1/-1}
+#contest-outcome{border:1px solid #b5a38355;padding:16px;border-radius:8px}
+.topbar .brand{cursor:default}
+@media(max-width:950px){
+ #app{grid-template-columns:1fr;gap:0}
+ .section-nav{position:sticky;top:0;z-index:20;background:#061f19;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:8px 0;border-bottom:1px solid #a48649}
+ .section-nav button{justify-content:center;padding:10px 4px;font-size:14px;min-height:44px}
+ .section-nav button span{display:none}
+ .event-strip{top:112px;padding:10px 12px;gap:10px}
+ .event-strip strong{font-size:16px}
+ .event-phase{font-size:12px}
+ [data-section-panel]{scroll-margin-top:192px}
+ .topbar{min-height:84px;gap:12px}
+ .topbar .brand{font-size:20px}
+ .topbar .top-actions{gap:8px}
+ .topbar .top-actions .button{display:none}
+ .conductor-workspace .panel{padding:18px}
+}
+@media(max-width:600px){
+ .app-shell{padding:0 12px}
+ #contest-create,#contest-reps{grid-template-columns:1fr}
+ #event-selection,.round-console #contest-draw{display:grid;gap:12px}
+ .team-steps{display:grid;grid-template-columns:1fr;gap:6px}
+ .team-steps button{min-height:44px;justify-content:flex-start}
+ .event-strip{align-items:flex-start}
+ .event-strip>div{max-width:58%}
+ .event-phase{max-width:42%}
+ .round-console>.contest-scores{grid-template-columns:1fr 1fr}
+ .turn-console{padding:16px}
+ .round-console>button{width:100%;margin:6px 0}
+ .backup-bar{display:block}
+ .backup-bar .actions{display:grid;width:100%}
+ .person-add{grid-template-columns:minmax(0,1fr) 80px}
+ .person-edit{grid-template-columns:25px minmax(0,1fr) 70px}
+ .person-edit button{padding:10px 6px;font-size:13px}
+ .team-name-fields,.manual-fields{grid-template-columns:minmax(0,1fr)}
+ .topbar .brand small:last-child{font-size:8px}
+ .status{font-size:11px;max-width:100px}
+ .section-next>button{flex:1}
+}
+
+.conductor-workspace .contest-host .secret-card summary{color:#241a10}

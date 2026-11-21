@@ -14,6 +14,8 @@ import threading
 import time
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import unquote, urlsplit
+from concurso_publico import contest_public_snapshot
+from biblioteca_validacion import validate_library
 
 ROOT = Path(__file__).resolve().parent
 MAX_BODY = 10_000_000
@@ -43,7 +45,7 @@ def public_snapshot(state):
     if not isinstance(names, list) or len(names) != (k or 0) or any(not isinstance(n, str) or not n.strip() for n in names):
         raise ValueError('Nombres de equipo inválidos.')
     p = state.get('presentation')
-    if not isinstance(p, dict) or p.get('view') not in ('welcome', 'teams') or type(p.get('page')) is not int or p['page'] < 0:
+    if not isinstance(p, dict) or p.get('view') not in ('welcome', 'teams', 'contest') or type(p.get('page')) is not int or p['page'] < 0:
         raise ValueError('Presentación inválida.')
     result = state.get('result')
     teams, draw = [], None
@@ -70,9 +72,13 @@ def public_snapshot(state):
         draw = {'token': str(started), 'startedAt': started, 'duration': duration}
     elif state.get('confirmed'):
         raise ValueError('No se puede confirmar sin distribución.')
-    return {'version': 2, 'count': len(people), 'teamCount': k, 'confirmed': state.get('confirmed') is True,
+    snapshot = {'version': 2, 'count': len(people), 'teamCount': k, 'confirmed': state.get('confirmed') is True,
             'presentation': {'view': p['view'], 'page': p['page'], 'sound': p.get('sound') is True, 'reducedMotion': p.get('reducedMotion') is True},
             'draw': draw, 'teams': teams}
+    if 'contest' in state:
+        validate_library(state['contest'].get('library'))
+        snapshot['contest'] = contest_public_snapshot(state['contest'])
+    return snapshot
 
 
 class Store:
@@ -128,6 +134,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_response(status)
         self.send_header('Content-Type', 'application/json; charset=utf-8')
         self.send_header('Cache-Control', 'no-store')
+        self.send_header('X-Server-Time', str(round(time.time()*1000)))
         self.send_header('X-Content-Type-Options', 'nosniff')
         self.send_header('Content-Length', str(len(body)))
         self.end_headers()
@@ -144,10 +151,10 @@ class Handler(SimpleHTTPRequestHandler):
         if any(p.startswith('.') for p in parts) or '..' in parts:
             return False
         name = route.lstrip('/') or 'index.html'
-        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
+        return name in ('index.html', 'publico.html', 'estilos.css', 'navidad.css', 'equipos.css', 'escenario.css', 'service-worker.js', 'icon.svg', 'contest.css', 'conductor-nav.css', 'library.css') or (name.startswith(('src/', 'assets/', 'catalogo/')) and not (ROOT/name).is_dir() and (ROOT/name).resolve().is_relative_to(ROOT))
 
     def do_GET(self):
-        route = urlsplit(self.path).path.rstrip('/')
+        route = unquote(urlsplit(self.path).path).rstrip('/')
         if route == '/api/status':
             return self.reply({'mode': 'lan', 'publicUrl': self.server.base_url+'/publico.html', 'controlUrl': self.server.base_url+'/index.html'})
         if route == '/api/pairing':
@@ -161,11 +168,15 @@ class Handler(SimpleHTTPRequestHandler):
             if not self.authorized():
                 return self.reply({'error': 'Introduce el código del conductor mostrado en la computadora.'}, 401)
             return self.reply(self.server.store.read())
+        if route.lstrip('/').startswith('catalogo/') and not self.authorized():
+            return self.reply({'error': 'El catálogo es privado del conductor.'}, 401)
         if route.startswith('/api') or not self.allowed_file():
             return self.reply({'error': 'Recurso no disponible.'}, 404)
         return super().do_GET()
 
     def do_HEAD(self):
+        if unquote(urlsplit(self.path).path).lstrip('/').startswith('catalogo/') and not self.authorized():
+            return self.reply({'error': 'Catálogo privado.'}, 401)
         if not self.allowed_file():
             return self.reply({'error': 'Recurso no disponible.'}, 404)
         return super().do_HEAD()

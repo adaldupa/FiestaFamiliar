@@ -1,0 +1,23 @@
+✔ recuperación: tiempos fraccionarios del reloj LAN se guardan como milisegundos enteros (97.626103ms)
+✔ recuperación: puntos editados requieren revisión, se aplican y sobreviven recarga (294.044402ms)
+✔ representantes antes de revelar, selección de Duelo y parejas distintas de Rebote (91.713989ms)
+✔ Duelo: 10 puntos independientes, pregunta usada, sin duplicar ni sustituir al clasificado (124.831831ms)
+✔ repetición automática configurable y anunciada antes del giro, sin reemplazar un resultado (111.332101ms)
+✔ Roba: clasificación anterior a revelación, líder roba al segundo y premios no alteran víctimas (204.61398ms)
+✔ Roba se repite, admite retos fallados y robos sin fondos, sin saldos negativos (255.883041ms)
+✔ premiación con empate, avance único, corrección retirada y cierre formal (125.02636ms)
+✔ fiesta integral: 2 equipos, Duelo, doce minijuegos y premiación (3781.76616ms)
+✔ fiesta integral: 3 equipos, Duelo, doce minijuegos y premiación (3686.758057ms)
+✔ fiesta integral: 4 equipos, Duelo, doce minijuegos y premiación (3927.694323ms)
+✔ las excepciones de ficha prevalecen sobre la opción global de representantes (54.72282ms)
+✔ Duelo agotado conserva todas las preguntas y parámetros inválidos no cambian reglas (52.337131ms)
+✔ un robo no puede financiarse con el premio que aún no existía al revelar (104.731211ms)
+✔ clasificación por Duelo prevalece sobre la sugerencia de menor participación (207.263997ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13137.903752

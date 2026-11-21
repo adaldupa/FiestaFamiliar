@@ -1,0 +1,110 @@
+VALIDACIÓN DE MECÁNICAS — LA GRAN NOCHE DE RETOS
+21 de noviembre de 2026 · Revisión de los ajustes de Work
+
+RESULTADO
+Se completaron por controles reales del navegador 14 rondas con cuatro equipos y los doce minijuegos distintos. La aplicación calculó los puntos, mantuvo el marcador, recuperó sesiones y presentó los cuatro lugares. El ensayo utiliza exclusivamente participantes y acciones sintéticos; no representa una prueba física de los retos ni una fiesta real.
+
+Base de Work: origin/correcciones-turnos-postensayo, ce31f23.
+Rama local de revisión: revision/mecanicas-20261121.
+Directorio: work/prueba-mecanicas-20261121.
+No se fusionó main ni se publicó esta rama a GitHub. Se conservaron los servidores/sesiones anteriores. El nuevo ensayo usa la carpeta privada work/prueba-mecanicas-datos-20261121, fuera del parche y de Git.
+
+INSTRUCCIONES VIGENTES
+El usuario confirmó expresamente en este chat aplicar la excepción del documento para Sonidos y Palabras prohibidas. Solo esos dos juegos muestran la tarjeta activa en TV; se oculta en preparación, pausa y entre turnos. Actor, Tararea, Picasso, Yo soy el objeto y el valor/estimaciones de Cuántos hay siguen privados.
+Se conserva la excepción aprobada de repetición de Roba y Gana. Después de agotar los juegos ordinarios, cada ronda extra requiere autorización explícita. Esto sustituye la observación de falta de autorización de la revisión anterior: el nuevo documento reconoce la excepción.
+
+AUDITORÍA DE LOS 12 JUEGOS
+Todos los estados siguientes indican prueba de software por navegador y regresión automática; el ensayo físico permanece pendiente para cada juego.
+
+Juego                  | Modalidad / duración        | Información / victoria                    | Resultado
+Galleta viajera        | Simultáneo, 90 s             | Sin tarjeta; menor tiempo válido           | Aprobado
+Picasso a oscuras      | Simultáneo, 90 s             | Consigna privada al dibujante; menor tiempo| Aprobado
+Roba y Gana            | Elección ordenada, sin corte | Seis ocultas; revelación conjunta; premios  | Aprobado
+Tararea si puedes     | Turnos, 60 s por equipo      | Canción privada; cambio previo; menor tiempo| Aprobado
+Torre traicionera      | Simultáneo, 90 s             | Pirámide de seis vasos; finalización        | Aprobado
+Hazme el sonido        | Turnos, 60 s por equipo      | Objetivo en TV; representante adivina sonidos| Aprobado
+Rebote imposible       | Simultáneo, sin corte        | Dos representantes; tres rebotes válidos  | Aprobado
+Manos de mantequilla  | Simultáneo, 120 s            | Caja y guantes; finalización válida       | Aprobado
+Actor dramático        | Turnos, 90 s por equipo      | Personaje/acción/lugar privados; menor tiempo| Aprobado
+Palabras prohibidas    | Turnos, 60 s por equipo      | Objetivo y tres prohibidas en TV; aciertos | Aprobado
+Yo soy el objeto       | Turnos, 90 s por equipo      | Objeto privado; representación; aciertos  | Aprobado
+Cuántos hay            | Estimaciones, sin corte      | Valor y estimaciones privados; menor diferencia| Aprobado
+
+La tabla de puntos por posición de la ficha se respeta: por defecto 100/75/50/25, con empates que comparten puesto y saltan los puestos ocupados. Cero aciertos/no completar da cero cuando corresponde. Los valores se mantienen como parámetros propuestos/configurables, no reglas inventadas definitivas. Para Roba se verificaron exactamente los seis importes predeterminados 100,75,50,25,100,50. Los importes configurados en sesiones anteriores no se borran ni se cambian silenciosamente.
+
+COMPROBACIONES DE MECÁNICAS EN NAVEGADOR
+- Actor: cuatro turnos independientes. Pausa y recarga conservadas; el siguiente reloj quedó en 01:30 sin arrancar. Se registró un equipo sin completar y se validó un empate mediante corrección de ensayo de 12,5 / 00:12.500 segundos: 100/100/0/50. La tarjeta real permaneció fuera de TV.
+- Tararea: canción cambiada antes de iniciar; nueva tarjeta distinta. El siguiente equipo tuvo 01:00 propio, sin inicio automático. Las canciones permanecieron privadas. Tiempos y clasificación se calcularon al registrar las cuatro finalizaciones. Las pruebas de dominio rechazan cambio de canción durante ejecución y acciones de otro equipo.
+- Sonidos: objetivo visible en TV durante el turno activo, reloj de 60 s y cambios sincronizados de tarjeta con Correcto/Pasar. Se confirmaron resultados de 1/2/3/0 aciertos: 50/75/100/0 puntos.
+- Palabras: tres prohibidas visibles. Correcto, Pasar e Infracción confirmada consumieron tres IDs diferentes. La infracción anuló únicamente su tarjeta; el acierto previo permaneció. Recargar en pausa conservó la tarjeta y el reloj; la TV no mostró tarjeta pausada. Resultados 1/2/0/1 aciertos: 75/100/0/75 puntos.
+- Roba (ronda 5): seis cartas boca abajo; botón Revelar desactivado hasta completar elecciones; cada equipo eligió en orden de clasificación. El DTO HTTP no contenía importes antes de revelar y sí mostraba propietarios. Tras revelar hubo seis cartas, incluidas las dos no elegidas. El líder robó 50 al segundo automáticamente, sin formulario de víctima; dos retos exigieron confirmación independiente. Puntos 50/50/100/0, marcador 375/350/275/175. Ningún premio se sumó antes de revisar y confirmar.
+- Galleta, Picasso, Torre y Manos: se registraron cuatro finalizaciones simultáneas por juego, se revisaron tiempos y se confirmaron sus puntos. En Picasso las cuatro consignas privadas se compararon con el texto real de TV y ninguna apareció.
+- Rebote: se guardaron dos representantes distintos por equipo. Un rebote no completó el reto. Se pausó con 1/3 y se reinició el servidor con su misma carpeta; se recuperaron parejas, reloj y progreso. Cada equipo necesitó tres rebotes para tener finalización.
+- Objeto: reloj de 90 s y tarjeta privada; cuatro turnos con 1/0/2/1 aciertos. Sin tarjeta pública.
+- Cuántos hay: valor sintético 987654 y cuatro estimaciones privadas. La TV no mostró el valor real. Al confirmar mostró diferencias 2/2/8/0 y puntos 75/75/25/100, respetando el empate.
+- Agotamiento: después de los doce juegos apareció el aviso de ordinarios concluidos y el botón Finalizar concurso. Se intentó iniciar sin autorizar: el formulario exigió marcar la casilla y no creó ronda. Las rondas 13 y 14 se autorizaron por separado, cada una con nueva elección y sin arranque automático.
+- Se presentaron los lugares 4, 3, 2 y 1 y se cerró formalmente. Recargar ambas vistas conservó el evento finalizado, catorce rondas, doce juegos diferentes y 56 movimientos activos, sin duplicados. Auditoría comprobada para las dos autorizaciones extra.
+
+MARCADOR FINAL VERIFICADO CONTRA EL LIBRO
+Estrella: 975 · Cascabel: 875 · Aurora: 750 · Abeto: 550.
+17 participantes ficticios, cupos 4/4/5/4 (distribución solicitada 4/4/4/5).
+Conductor localhost:8107 y TV 192.168.1.67:8107: orígenes distintos, sincronización mediante servidor LAN.
+Consolas de ambos navegadores sin errores JavaScript capturados al cierre.
+El JSON de evidencia excluye claves, pistas, bancos y datos de conexión privados.
+
+CORRECCIONES ADICIONALES LOCALES
+1. Puntos configurables: Work seguía calculando siempre 100/75/50/25 aun si se editaba la ficha. JavaScript y Python ahora usan scoring.positions de la revisión guardada, manteniendo el valor antiguo como respaldo compatible. Nuevas pruebas cubren 80/60/40/20, empate y no completar.
+2. TV de Roba: la nueva agrupación desbordaba el escenario y dejaba fuera las tarjetas no elegidas y el marcador. Se corrigió usando dimensiones del escenario, cuatro columnas para los equipos y una sección separada para las no elegidas. Verificación real en 1280x720: marcador termina en y=702 dentro de 720. En ventana 1034x900 con barras negras: marcador y=726,28 dentro del escenario que termina en y=740,81. No basta comparar con la ventana; se comprobó contra el escenario real.
+3. Operación durante guardado LAN: los controles ahora se desactivan y anuncian aria-busy mientras se guarda, preservando controles que ya estaban desactivados. Evita ofrecer acciones mientras la anterior aún se procesa. Durante el ensayo se encontraron carreras al actuar antes del nuevo estado; se volvió a comprobar cada transición esperando el estado persistido.
+4. Caché: las peticiones de actualización no reutilizan recursos obsoletos; al cambiar Service Worker se vuelve a verificar la caché privada. Se incluyen manual-rules y reward-config y se mantiene separación de recursos públicos/privados. Versión de caché v22.
+5. Se reprodujo un falso aviso offline: la aplicación recargaba y funcionaba desde caché, pero la comprobación intentaba renovar desde un servidor detenido y anunciaba fallo. Ahora verifica exclusivamente la caché actual tras un fallo de red en modo local; si falta un archivo no declara Listo. Un fallo de autenticación LAN no usa esa alternativa. Se añadieron tres pruebas específicas y se repitió el caso real con el servidor detenido: Listo sin conexión y datos conservados.
+6. Se conservaron los ajustes previos compatibles de contraste de tarjetas del conductor y ceremonia compacta. Dos preguntas del banco de Duelo dejaron de usar personajes de Mario. No se importó la antigua política de todas las tarjetas privadas, porque el usuario aprobó la excepción actual.
+
+COMPATIBILIDAD Y OFFLINE COMPROBADOS
+Se abrió el ensayo local anterior de dos equipos, con Palabras ya puntuada y 100/100 puntos. La biblioteca se actualizó sin migrar el evento silenciosamente. Entre rondas apareció Aplicar correcciones a futuras rondas. Con el servidor estático detenido se aplicó esa acción, se seleccionaron representantes antes del sorteo y se completó Actor con dos relojes de 90 s. Sus nuevos 75/100 puntos se sumaron a los anteriores, obteniendo 175/200. Recargar conductor y TV sin servidor conservó ambos resultados. Tras corregir el aviso, se volvió a preparar la caché, se apagó realmente el servidor y se comprobó Listo sin conexión.
+Las pruebas comparan además toda la ronda histórica simultánea y el libro antes/después de actualizar futuras rondas: permanecen idénticos. Instalar la revisión es idempotente.
+Offline local y sincronización LAN son distintos: el teléfono/TV necesitan la computadora con servidor encendido y la misma Wi-Fi; no requieren salida a Internet. No se certificó comunicación entre dispositivos con el servidor apagado.
+
+PRUEBAS AUTOMATIZADAS
+Suite completa final: 251 pruebas aprobadas, 0 fallos (205 Node + 46 Python). Registro: outputs/pruebas-mecanicas-verificadas-20261121.txt.
+Se ejecutaron las catorce suites Node y unittest discover, los mismos pasos del script test (npm no está instalado aquí). No se eliminaron pruebas anteriores. Los 232 casos de la base se conservaron; se añadieron 15 contratos/auditoría Node, 3 casos offline Node y 1 caso Python de puntos configurables.
+Las regresiones de Work incluyen concursos de catorce rondas con 2, 3 y 4 equipos; el recorrido real de navegador de esta revisión fue de cuatro equipos, más un ensayo offline de dos equipos. No se cuentan fixtures como pruebas físicas.
+La primera ejecución de una nueva prueba de configuración falló por omitir expectedVersion al editar la ficha. Se corrigió el armado del test; no era un fallo de la aplicación. Se conservaron los casos existentes.
+No se ejecutaron los scripts browser.cjs con un Chromium externo: la navegación real se hizo mediante el navegador integrado y sus controles. Sus resultados se describen arriba, separados de los tests Node/Python.
+
+ARCHIVOS LOCALES MODIFICADOS RESPECTO A WORK
+src/conductor.js, src/full-engines.js, full_engines.py: guardado y cálculo configurable.
+src/offline-host.js, service-worker.js: actualización/recuperación de caché.
+src/reward-show.js, contest.css: composición de premios y ceremonia.
+conductor-nav.css: contraste de tarjetas del conductor.
+catalogo/duelo-generaciones.json: dos preguntas sin personajes de Mario.
+tests/mechanics-audit.test.js, tests/offline-recovery.test.js, tests/test_mechanics_audit_lan.py: regresiones añadidas.
+package.json, README.md, VALIDACION_MECANICAS_20261121.txt: ejecución y documentación.
+
+EVIDENCIAS
+outputs/resultado-mecanicas-20261121.json: puntos por ronda, tiempos y auditoría agregada sin tarjetas.
+outputs/plan-mecanicas-20261121.json: semillas reproducibles del recorrido.
+outputs/mecanicas-20261121-tararea-conductor.png: control individual y tarjeta privada.
+outputs/mecanicas-20261121-sonidos-tv-antes.png: objetivo público autorizado.
+outputs/mecanicas-20261121-palabras-tv.png: objetivo y tres prohibidas.
+outputs/mecanicas-20261121-roba-ocultas-16x9.png: seis elecciones ocultas con propietarios.
+outputs/mecanicas-20261121-roba-revelada-antes.png: desbordamiento detectado.
+outputs/mecanicas-20261121-roba-revelada-corregida.png y roba-letterbox-corregida.png: composición verificada.
+outputs/mecanicas-20261121-roba-conductor.png: acciones para desafíos.
+outputs/mecanicas-20261121-cierre-ordinarios-conductor.png: aviso y autorización obligatoria.
+outputs/mecanicas-20261121-final-tv.png y final-conductor.png: cierre de catorce rondas.
+outputs/mecanicas-20261121-offline-conductor.png: recuperación sin servidor.
+outputs/correcciones-mecanicas-20261121.patch: cambios de fuente, sin sesiones ni claves.
+
+CÓMO PROBAR
+Conductor de este ensayo: http://127.0.0.1:8107/index.html
+TV de este ensayo: http://192.168.1.67:8107/publico.html
+El ensayo quedó finalizado y guardado; puede consultarse desde Resultados. Para reiniciarlo sin borrar la sesión, ejecutar en work/prueba-mecanicas-20261121:
+python3 servidor_local.py --host 0.0.0.0 --port 8107 --data-dir ../prueba-mecanicas-datos-20261121
+Para un nuevo ensayo independiente, usar otra carpeta y puerto. Para la fiesta real, exportar respaldo y aplicar las correcciones a futuras rondas entre turnos; no reemplazar archivos de sesión manualmente. Usar la IP de la computadora en celular/TV y el código solo en el conductor. Proyectar publico.html en escritorio extendido, nunca duplicar el panel privado.
+
+PENDIENTES REALES
+- Ensayo con celular y TV físicos, red Wi-Fi real bajo carga, sonido físico, lectura a distancia y accesibilidad con participantes de distintas edades/opción sentada. No se declararon realizados.
+- Se intentó comprobar 420x900 mediante el control disponible, pero la ventana efectiva del conductor fue de 1034 px de ancho. No se certifica por ello una prueba móvil de 420 px. Sí se comprobaron 1280x720 y escenario 16:9 dentro de ventana 1034x900.
+- Al recargar mientras se cerraba una respuesta se vio BrokenPipeError en el servidor. Las sesiones se recuperaron; queda como mejora menor de diagnóstico, sin pérdida observada.
+- La validación de completar físicamente un dibujo, una mímica, una torre o una envoltura corresponde al conductor. La aplicación registra y clasifica esa decisión; esta prueba de software no la sustituye.
