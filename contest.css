@@ -25,3 +25,22 @@
 /* Las tarjetas cambian al instante; solo una nueva etapa inicia una transición. */
 .modern-screen{animation:none}.modern-screen.stage-enter{animation:stage-enter .45s ease-out both}.modern-screen.reduced-motion.stage-enter{animation:none}@media(prefers-reduced-motion:reduce){.modern-screen.stage-enter{animation:none}}
 .host-live-toolbar{scroll-margin-top:12px}@media(max-width:750px){.host-live-toolbar{scroll-margin-top:124px}}
+
+/* Turnos independientes: cronómetro y acciones siempre a mano. */
+.host-sequential .host-live-toolbar{position:sticky;top:0;z-index:4;background:#201b27;padding:.7rem;border:1px solid #e3bd74;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+.host-sequential .host-live-toolbar h3{margin:0;flex:1}
+.turn-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem;margin:.6rem 0}
+.turn-overview article{display:flex;flex-direction:column;padding:.4rem;border:1px solid #746449;border-radius:.5rem;font-size:.9rem}
+.turn-overview .active{border:2px solid #e3bd74;background:#443124}
+.reward-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.reward-tile{padding:1rem;border:2px solid #e3bd74;border-radius:1rem;background:#34253b;color:#fff;text-align:center;overflow-wrap:anywhere}
+.reward-tile strong,.reward-tile span{display:block}
+.reward-tile.facedown strong{font-size:clamp(2rem,5vh,4rem)}
+.reward-board h2{font-size:clamp(1.2rem,2.5vh,2.3rem)}
+.reward-execution{max-width:1550px;margin:auto;padding:1vh 2vw}
+.reward-execution>h1{font-size:clamp(2rem,4vh,4rem);margin:.3rem}
+.reward-execution .reward-tile{padding:1vh 1vw;font-size:clamp(1rem,2vh,1.8rem)}
+.reward-execution .reward-tile h3{margin:.4rem}
+.reward-execution .unclaimed-rewards{font-size:.85em;margin-top:.5rem}
+.reward-execution .unclaimed-rewards .reward-tile{font-size:1rem;padding:.4rem}
+@media(max-width:600px){.turn-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.reward-grid{gap:.35rem}.reward-tile{padding:.5rem;font-size:.85rem}}

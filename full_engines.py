@@ -64,6 +64,8 @@ def validate_full(e, r):
     f, g = r['full'], r['game']
     tids = {t['id'] for t in e['teams']}
     require(g.get('executionVersion') == 1 and f['version'] == 1 and f['mode'] == g['scoring']['mode'], 'Motor definitivo inválido.')
+    if 'manualRevision' in f:
+        require(f['manualRevision'] == 1 and g.get('manualRevision') == 1 and f['simultaneous'] == (g['executionMode'] == 'simultaneous'), 'Modalidad de ejecución alterada.')
     cards = {c['id']: c for c in g['cards']}
     used = f['usedCards']
     require(len(used) == len(set(used)) and all(x.startswith(g['id']+':') and x[len(g['id'])+1:] in cards for x in used), 'Tarjetas usadas inválidas.')
@@ -75,6 +77,8 @@ def validate_full(e, r):
     require(finite(f['elapsedMs']) and f['elapsedMs'] >= 0 and (finite(clock['deadline']) and finite(f['startedAt']) if clock['status'] == 'running' else clock['deadline'] is None), 'Referencia temporal inválida.')
     require(len(f['logs']) == len({x['id'] for x in f['logs']}) == len({x['cardId'] for x in f['logs']}) and all(x['teamId'] in tids and x['cardId'] in cards and x['action'] in ['correct', 'pass', 'infraction'] for x in f['logs']), 'Registro de aciertos inválido.')
     for tid, v in f['results'].items():
+        if f.get('manualRevision') and f['mode'] == 'position' and v['completed']:
+            require(integer(v['ms']) and (g.get('unlimited') or v['ms'] <= clock['durationMs']), 'Tiempo inválido.')
         require(tid in tids and type(v['completed']) is bool and (v['ms'] is None or integer(v['ms'])) and integer(v['hits']), 'Resultado inválido.')
     require(f['target'] is None or integer(f['target']), 'Objetivo inválido.')
     require(all(tid in tids and integer(v) for tid, v in f['estimates'].items()), 'Estimaciones inválidas.')
@@ -88,6 +92,10 @@ def validate_full(e, r):
         require(tid in tids and tid in f['choices'], 'Decisión de premio inválida.')
         card = f['rewardCards'][f['choices'][tid]]
         require(d.get('targetId') in tids and d['targetId'] != tid if card['kind'] == 'steal' else card['kind'] == 'challenge' and type(d.get('success')) is bool, 'Resolución inválida.')
+    if 'choiceOrder' in f:
+        order = f['choiceOrder']
+        require(f.get('manualRevision') == 1 and f['mode'] == 'special' and len(order) == len(set(order)) and set(order) == {t for t in tids if r['representatives'][t] is not None}, 'Orden de elección inválido.')
+        require(set(order[:len(f['choices'])]) == set(f['choices']), 'Elección fuera de turno.')
     if f['revealed']:
         require(all(r['representatives'][t['id']] is None or t['id'] in f['choices'] for t in e['teams']), 'Revelación anticipada.')
     if e['activeRoundId'] == r['id'] and e['phase'] in ['timer_active', 'timer_paused']:
@@ -112,6 +120,8 @@ def public_full(r, phase=None):
             'progress': [{'teamId': t['teamId'], 'hits': t.get('bounces', 0) if r['game']['id'] == 'rebote-imposible' else None, 'completed': f['results'].get(t['teamId'], {}).get('completed') is True} for t in r['turns']],
             'rewards': [dict(index=i, kind=c['kind'], amount=c['amount'], teamId=next((tid for tid, index in f['choices'].items() if index == i), None), challenge=f['challenges'][challenge_index(c)] if c['kind'] == 'challenge' else None) for i, c in enumerate(f['rewardCards'])] if f['revealed'] else None}
 
+    if 'choiceOrder' in f:
+        public['selection'] = {'order': list(f['choiceOrder']), 'activeTeamId': None if f['revealed'] else next((tid for tid in f['choiceOrder'] if tid not in f['choices']), None), 'cards': [{'index': i, 'teamId': next((tid for tid, index in f['choices'].items() if index == i), None)} for i in range(6)]}
     if card:
         public['publicCard'] = dict(teamId=r['currentTeamId'], id=card['id'], text=card.get('target') or card['text'])
         if r['game']['id'] == 'palabras-prohibidas': public['publicCard']['forbidden'] = list(card['forbidden'])

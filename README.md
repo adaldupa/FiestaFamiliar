@@ -1,3 +1,5 @@
+> Correcciones vigentes del ensayo: rama `correcciones-turnos-postensayo` · [turnos, tarjetas, Roba y cierre](CORRECCIONES_POSTENSAYO.md). Actor y Tararea usan turnos independientes en nuevas revisiones. Eventos abiertos: aplicar correcciones a futuras rondas, entre rondas. Las notas siguientes son históricas.
+
 > Revisión vigente: `roba-configurable-ensayo` · [estado, 219 pruebas y bloqueos](ROBA_CONFIGURABLE_ENSAYO.md) · [ensayo físico en celular y TV](ENSAYO_FISICO_DISPOSITIVOS.md). Las notas siguientes conservan el historial de fases anteriores. Sin merge a main.
 
 > Revisión manual actual en `ajustes-pruebas-manuales`: [estado por juego y evidencias](AJUSTES_PRUEBAS_MANUALES.md) · [ensayo pendiente en celular y TV](PRUEBA_MANUAL_AJUSTES.md). Las tarjetas de Palabras prohibidas y Hazme el sonido son públicas para el equipo; los demás estímulos privados se conservan.

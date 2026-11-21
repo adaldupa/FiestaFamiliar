@@ -128,7 +128,9 @@ def contest_public_snapshot(c):
     available = [g for g in e['selectedGames'] if g['status'] == 'active' and g['id'] not in skipped and (g['id'] not in completed or any(a['gameId'] == g['id'] and not a['usedBy'] for a in e['replays']))]
     if modern:
         available = eligible(e, c['library'])
-        if scheduled(e): available = [g for g in available if g['id'] == 'roba-y-gana']
+        completed = {r['game']['id'] for r in e['rounds'] if r['status'] == 'completed' or r['attempts']}
+        exhausted = any(g['id'] != 'roba-y-gana' for g in e['selectedGames']) and not any(g['id'] != 'roba-y-gana' and (g['id'] not in completed or any(x['gameId'] == g['id'] and not x['usedBy'] for x in e['replays'])) for g in available)
+        if scheduled(e) or any(g.get('manualRevision') == 1 for g in e['selectedGames']) and exhausted: available = [g for g in available if g['id'] == 'roba-y-gana']
     turn = next((t for t in r['turns'] if t['teamId'] == r['currentTeamId']), None) if r else None
     hidden = r and r['game']['representativesBefore'] and not r['representativesConfirmed']
     game = r['game'] if r and not hidden else None

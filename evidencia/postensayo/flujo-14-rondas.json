@@ -1,0 +1,863 @@
+{
+  "kind": "Automatizado: resultados de fixture, no partida física",
+  "rounds": [
+    {
+      "round": 1,
+      "id": "galleta-viajera",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 4000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 100,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 75,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 50,
+          "place": 3
+        },
+        {
+          "id": "t4",
+          "score": 25,
+          "place": 4
+        }
+      ],
+      "ledgerIds": [
+        "9e57bd78-da71-40ec-ac5e-78845d0f6fa7",
+        "e58eb80d-fe90-4a15-9cd3-ca1fdfa094cc",
+        "23f75dc1-16a8-4cd6-bb6d-22e8237b1e7b",
+        "ff17ebcf-681c-4f5e-87fe-238202b74564"
+      ]
+    },
+    {
+      "round": 2,
+      "id": "picasso-oscuras",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 4000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 200,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 150,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 100,
+          "place": 3
+        },
+        {
+          "id": "t4",
+          "score": 50,
+          "place": 4
+        }
+      ],
+      "ledgerIds": [
+        "fecb8e3b-71c0-48aa-9d1d-f2c3ed5f9bb5",
+        "b6c42495-c213-4c86-8528-2473a91cffdb",
+        "5896ac5d-3bef-4973-ac0b-ab2712ac28ad",
+        "c75d51b7-5e1b-4b7a-84c5-3a1de62a2da5"
+      ]
+    },
+    {
+      "round": 3,
+      "id": "roba-y-gana",
+      "revision": 2,
+      "simultaneous": true,
+      "results": {},
+      "choiceOrder": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "choices": {
+        "t1": 0,
+        "t2": 1,
+        "t3": 2,
+        "t4": 3
+      },
+      "points": {
+        "t1": 50,
+        "t2": 25,
+        "t3": 50,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 250,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 175,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 150,
+          "place": 3
+        },
+        {
+          "id": "t4",
+          "score": 150,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "be295a57-fb9e-411e-ad61-57408f3cad58",
+        "9ef2f202-e038-41fe-9354-c37f2df8cff3",
+        "7891c39f-c85e-491b-85c9-c5569f8a98b7",
+        "43e8c2bb-4e0e-4b4c-bfdb-d7479af32ba8"
+      ]
+    },
+    {
+      "round": 4,
+      "id": "tararea",
+      "revision": 2,
+      "simultaneous": false,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 50,
+        "t3": 25,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 350,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 225,
+          "place": 3
+        },
+        {
+          "id": "t3",
+          "score": 175,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 250,
+          "place": 2
+        }
+      ],
+      "ledgerIds": [
+        "b6f86d74-756c-4f11-9dc0-299bcc8ce8bd",
+        "46bce81a-84f0-4e1f-b114-2ebf6f2ecd16",
+        "27c5e082-0018-4ee7-8d49-753887408cc0",
+        "4abb5db6-0baf-4e2b-b0b0-f82be8b86cba"
+      ]
+    },
+    {
+      "round": 5,
+      "id": "torre-traicionera",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 4000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 450,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 300,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 225,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 275,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "18b58743-f31e-4769-960c-0177a9836744",
+        "50b09078-cb05-4f82-b06e-c8e47a3345c3",
+        "efa21406-48d1-4211-9879-a3f6bd6be65a",
+        "f77bc302-2dc8-4a69-bcb0-dcec41694195"
+      ]
+    },
+    {
+      "round": 6,
+      "id": "hazme-sonido",
+      "revision": 2,
+      "simultaneous": false,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t2": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t3": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t4": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 100,
+        "t3": 100,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 550,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 400,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 325,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 375,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "387c5566-ede5-4e7a-a73f-5da6168e2ee1",
+        "156703bf-7fad-48b2-bff0-c17aea4f2075",
+        "61ce487e-9d51-4554-b4ad-91971250cf86",
+        "4a44d942-47e0-4e6e-8540-2efdf60a6ab8"
+      ]
+    },
+    {
+      "round": 7,
+      "id": "rebote-imposible",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 4000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 650,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 475,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 375,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 400,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "134dbf65-d48c-4502-987a-e25a655d3e03",
+        "2625c398-8958-4ec0-ae86-75e98415beeb",
+        "ca2f4abf-9537-43eb-9538-e085376e043a",
+        "661e6084-c240-47b9-a2d9-596d02cf0273"
+      ]
+    },
+    {
+      "round": 8,
+      "id": "manos-mantequilla",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 4000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 75,
+        "t3": 50,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 750,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 550,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 425,
+          "place": 3
+        },
+        {
+          "id": "t4",
+          "score": 425,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "bdf13c60-9f2c-4e5f-804c-9057f99ead3a",
+        "ad591e21-cb1e-464b-95fa-7e7bd78a3fae",
+        "355d7f62-e0f8-44af-a35a-c71ec6ed97ef",
+        "676173f3-1087-4f19-b352-a1d6981a7f5b"
+      ]
+    },
+    {
+      "round": 9,
+      "id": "actor",
+      "revision": 3,
+      "simultaneous": false,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        },
+        "t2": {
+          "completed": true,
+          "ms": 2000,
+          "hits": 0
+        },
+        "t3": {
+          "completed": true,
+          "ms": 3000,
+          "hits": 0
+        },
+        "t4": {
+          "completed": true,
+          "ms": 1000,
+          "hits": 0
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 50,
+        "t3": 25,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 850,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 600,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 450,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 525,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "e120b93e-a1ec-4299-aa11-5929f9a14367",
+        "5ac78663-5c62-4473-bf96-0dfb5dae0715",
+        "c7a8f1bc-7c5e-41bc-a21c-1c2be5dcc0f6",
+        "75a2c448-35c8-4893-8140-d4a85262bf0f"
+      ]
+    },
+    {
+      "round": 10,
+      "id": "palabras-prohibidas",
+      "revision": 2,
+      "simultaneous": false,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t2": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t3": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t4": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 100,
+        "t3": 100,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 950,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 700,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 550,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 625,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "8706e38d-ea82-48ba-a698-87faa1cf8d9c",
+        "07230466-637b-4d17-8f52-963f3e4712ae",
+        "394dd4ea-2f1f-4f01-9103-09a387b31234",
+        "9fd0c7a0-4f13-418a-a90c-1aebe07f8258"
+      ]
+    },
+    {
+      "round": 11,
+      "id": "yo-soy-objeto",
+      "revision": 1,
+      "simultaneous": false,
+      "results": {
+        "t1": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t2": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t3": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        },
+        "t4": {
+          "completed": true,
+          "ms": null,
+          "hits": 1
+        }
+      },
+      "choices": {},
+      "points": {
+        "t1": 100,
+        "t2": 100,
+        "t3": 100,
+        "t4": 100
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 1050,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 800,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 650,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 725,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "d0c902cb-4350-4442-8bec-23f0b4f4388f",
+        "5516a053-feb0-4ee4-9b8e-39b1135940fa",
+        "81e86355-0364-4470-a3e9-aab3a59833ae",
+        "f743d561-a1d0-4b3f-8621-2327906b0039"
+      ]
+    },
+    {
+      "round": 12,
+      "id": "cuantos-hay",
+      "revision": 1,
+      "simultaneous": true,
+      "results": {},
+      "choices": {},
+      "points": {
+        "t1": 75,
+        "t2": 100,
+        "t3": 75,
+        "t4": 25
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 1125,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 900,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 725,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 750,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "5f498b0c-d888-4729-939c-506ce14b4c7b",
+        "96094b7e-68b1-48e8-a692-9a9a33a3dd39",
+        "bc80b7ce-1077-42fd-9221-4c5c4813e6d9",
+        "584da651-a91b-4da0-9cfb-cd59383afc4a"
+      ]
+    },
+    {
+      "round": 13,
+      "id": "roba-y-gana",
+      "revision": 2,
+      "simultaneous": true,
+      "results": {},
+      "choiceOrder": [
+        "t1",
+        "t2",
+        "t4",
+        "t3"
+      ],
+      "choices": {
+        "t1": 0,
+        "t2": 1,
+        "t4": 2,
+        "t3": 3
+      },
+      "points": {
+        "t1": 25,
+        "t2": 25,
+        "t3": 50,
+        "t4": 50
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 1150,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 925,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 775,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 800,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "eab46d8a-940b-4610-a778-d8b56c8cd9b6",
+        "aeb23bdd-d28d-4f49-874e-7fb4fed3e746",
+        "ffaa446f-2d20-4094-b860-4f93355a13bd",
+        "04eaa7c6-08d2-4cde-ae51-fcffc91eb683"
+      ]
+    },
+    {
+      "round": 14,
+      "id": "roba-y-gana",
+      "revision": 2,
+      "simultaneous": true,
+      "results": {},
+      "choiceOrder": [
+        "t1",
+        "t2",
+        "t4",
+        "t3"
+      ],
+      "choices": {
+        "t1": 0,
+        "t2": 1,
+        "t4": 2,
+        "t3": 3
+      },
+      "points": {
+        "t1": 25,
+        "t2": 25,
+        "t3": 50,
+        "t4": 50
+      },
+      "standings": [
+        {
+          "id": "t1",
+          "score": 1175,
+          "place": 1
+        },
+        {
+          "id": "t2",
+          "score": 950,
+          "place": 2
+        },
+        {
+          "id": "t3",
+          "score": 825,
+          "place": 4
+        },
+        {
+          "id": "t4",
+          "score": 850,
+          "place": 3
+        }
+      ],
+      "ledgerIds": [
+        "141c9f25-2aef-4513-bfab-1eab78ea7850",
+        "8c208a87-aea4-4aea-b5fe-c03d511df1dc",
+        "3a405a76-aa89-4664-91fb-72b4b342897b",
+        "8802c2de-b995-416e-ac69-cd7b2beebd2d"
+      ]
+    }
+  ],
+  "finalStatus": "finished",
+  "awards": [
+    {
+      "id": "t1",
+      "name": "Estrella",
+      "score": 1175,
+      "place": 1
+    },
+    {
+      "id": "t2",
+      "name": "Cascabel",
+      "score": 950,
+      "place": 2
+    },
+    {
+      "id": "t3",
+      "name": "Aurora",
+      "score": 825,
+      "place": 4
+    },
+    {
+      "id": "t4",
+      "name": "Abeto",
+      "score": 850,
+      "place": 3
+    }
+  ]
+}

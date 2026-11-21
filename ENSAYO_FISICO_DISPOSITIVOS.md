@@ -1,3 +1,5 @@
+> Guía vigente: [correcciones posteriores al ensayo](CORRECCIONES_POSTENSAYO.md). Usar `correcciones-turnos-postensayo`; Actor y Tararea son por turnos individuales, con una finalización activa y resumen de cuatro equipos. La prueba simultánea de Actor descrita abajo corresponde a la versión anterior y se conserva como historial.
+
 # Ensayo físico: computadora, celular y televisión
 
 Usar la rama `roba-configurable-ensayo`. Conservar la carpeta de datos real y exportar un respaldo desde la aplicación antes de ensayar. No borrar almacenamiento ni importar sobre una sesión histórica.
