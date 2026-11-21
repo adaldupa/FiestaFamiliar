@@ -1,3 +1,5 @@
+> Validación del 21/11/2026: ver `VALIDACION_MECANICAS_20261121.txt`. Actor y Tararea usan turnos independientes en las nuevas revisiones. Sonidos y Palabras prohibidas muestran únicamente su tarjeta activa en TV por autorización expresa; las demás pistas siguen privadas. En eventos existentes, usa **Siguiente ronda → Aplicar correcciones a futuras rondas**. Los puntos por posición son configurables en la ficha y se respetan en JavaScript y LAN; 100/75/50/25 es la tabla predeterminada, no una decisión irrevocable.
+
 > Correcciones vigentes del ensayo: rama `correcciones-turnos-postensayo` · [turnos, tarjetas, Roba y cierre](CORRECCIONES_POSTENSAYO.md). Actor y Tararea usan turnos independientes en nuevas revisiones. Eventos abiertos: aplicar correcciones a futuras rondas, entre rondas. Las notas siguientes son históricas.
 
 > Revisión vigente: `roba-configurable-ensayo` · [estado, 219 pruebas y bloqueos](ROBA_CONFIGURABLE_ENSAYO.md) · [ensayo físico en celular y TV](ENSAYO_FISICO_DISPOSITIVOS.md). Las notas siguientes conservan el historial de fases anteriores. Sin merge a main.

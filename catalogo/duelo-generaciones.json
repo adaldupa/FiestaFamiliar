@@ -50,8 +50,8 @@
   {
     "id": "duelo-009",
     "generation": "Años 80",
-    "question": "¿Cómo se llama el plomero de videojuegos que suele vestir de rojo?",
-    "answer": "Mario"
+    "question": "¿Qué objeto se utiliza para escuchar música grabada en una cinta magnética?",
+    "answer": "Un reproductor de casetes"
   },
   {
     "id": "duelo-010",
@@ -284,7 +284,7 @@
   {
     "id": "duelo-048",
     "generation": "Varias generaciones",
-    "question": "¿Qué personaje de videojuegos es hermano de Mario y viste de verde?",
-    "answer": "Luigi"
+    "question": "¿Qué instrumento de cuerda se toca con un arco y suele apoyarse entre el hombro y la barbilla?",
+    "answer": "El violín"
   }
 ]

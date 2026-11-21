@@ -44,3 +44,41 @@
 .reward-execution .unclaimed-rewards{font-size:.85em;margin-top:.5rem}
 .reward-execution .unclaimed-rewards .reward-tile{font-size:1rem;padding:.4rem}
 @media(max-width:600px){.turn-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.reward-grid{gap:.35rem}.reward-tile{padding:.5rem;font-size:.85rem}}
+
+/* La tarjeta privada tiene fondo crema: mantener contraste también en el tema oscuro. */
+.contest-host .secret-card summary{color:#241a10}
+
+/* Ceremonia legible en TV 16:9 de 720 px, conservando visible el marcador completo. */
+.awards-stage{width:min(100%,1000px)}
+.awards-stage h1{font-size:clamp(30px,4vw,64px);margin:0 0 8px}
+.awards-stage .award-winner{padding:8px;margin:0}
+.awards-stage .award-winner h2{font-size:clamp(32px,4vw,64px)!important;margin:8px 0;line-height:1.1}
+.awards-stage .award-winner strong{display:block;font-size:clamp(24px,2.7vw,44px);line-height:1.2}
+.awards-stage>ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;list-style:none;padding:0;margin:12px auto 0;max-width:850px;font-size:clamp(16px,1.4vw,24px);line-height:1.3;color:#fff0cd}
+
+
+/* Roba: medir contra el escenario 16:9, incluso con barras negras en la ventana. */
+.screen-execution:has(.reward-execution){display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:2.5cqh 3cqw;gap:1cqh}
+.screen-execution:has(.reward-execution) .broadcast-header{position:static;min-height:4cqh}
+.reward-execution{display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:.6cqh;min-height:0;max-width:none;width:100%;margin:0;padding:0}
+.reward-execution>.eyebrow{font-size:clamp(10px,.9cqw,20px)}
+.reward-execution>h1{font-size:clamp(24px,2.6cqw,50px);line-height:1.1;margin:0}
+.reward-execution>.reward-board{display:grid;grid-template-rows:auto minmax(0,1fr);gap:1cqh;min-height:0}
+.reward-execution>.reward-board:has(.unclaimed-rewards){grid-template-rows:auto minmax(0,1fr) auto}
+.reward-execution .reward-board h2{font-size:clamp(16px,1.5cqw,30px);line-height:1.2;margin:0}
+.reward-execution .reward-grid{gap:.8cqw;min-height:0}
+.reward-execution .reward-board:has(.unclaimed-rewards)>.reward-grid{grid-template-columns:repeat(var(--reward-teams,4),minmax(0,1fr))}
+.reward-execution .reward-tile{padding:1cqh .8cqw;border-radius:8px;min-width:0;font-size:clamp(14px,1.3cqw,26px);line-height:1.2}
+.reward-execution .reward-tile h3{font-size:clamp(16px,1.6cqw,30px);line-height:1.2;margin:.6cqh 0}
+.reward-execution .reward-tile p{font-size:clamp(14px,1.35cqw,26px);line-height:1.25;margin:.8cqh 0 0}
+.reward-execution .reward-tile.facedown{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1cqh}
+.reward-execution .reward-tile.facedown strong{font-size:clamp(28px,5cqh,64px)}
+.reward-execution .unclaimed-rewards{margin:0;font-size:clamp(14px,1.2cqw,24px)}
+.reward-execution .unclaimed-rewards summary{margin:0 0 .6cqh}
+.reward-execution .unclaimed-rewards .reward-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.reward-execution .unclaimed-rewards .reward-tile{padding:.5cqh .8cqw;font-size:clamp(14px,1.2cqw,24px)}
+.reward-execution .unclaimed-rewards h3{display:none}
+.screen-execution:has(.reward-execution) .contest-public-scores{margin:0}
+.screen-execution:has(.reward-execution) .contest-public-scores article{padding:.8cqh 1cqw}
+.screen-execution:has(.reward-execution) .contest-public-scores h2{font-size:clamp(16px,1.6cqw,30px);margin:.5cqh 0}
+.screen-execution:has(.reward-execution) .contest-public-scores strong{font-size:clamp(24px,2.5cqw,48px)}

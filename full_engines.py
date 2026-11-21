@@ -57,7 +57,7 @@ def calculate(e, r):
             if n > 0: values[tid] = -n
         elif f['results'].get(tid, {}).get('completed'):
             values[tid] = f['results'][tid]['ms']
-    return {t['id']: [100, 75, 50, 25][sum(v < values[t['id']] for v in values.values())] if t['id'] in values else 0 for t in e['teams']}
+    return {t['id']: r['game']['scoring'].get('positions', [100, 75, 50, 25])[sum(v < values[t['id']] for v in values.values())] if t['id'] in values else 0 for t in e['teams']}
 
 
 def validate_full(e, r):
