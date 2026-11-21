@@ -1,65 +1,58 @@
 # Integración Work + Codex · 21 de noviembre de 2026
 
-**Estado: BLOQUEADA / borrador. No lista para aceptación. Sin merge a main.**
+**Estado: integrada y validada en computadora; lista para ensayo físico. Sin merge a main.**
 
-Rama de preparación: `integracion/work-codex-20261121`. Parte del commit remoto `ce31f23e7606bd72e0c71cd0924380e098e90d73`. No se modificaron motores, reglas ni presentación en esta preparación: se conserva íntegra la última base recuperable mientras se localizan las otras fuentes.
+Rama: `integracion/work-codex-20261121`. PR: https://github.com/adaldupa/FiestaFamiliar/pull/1. Las fuentes faltantes para Work sí existían en los worktrees de esta computadora. No había un bloqueo funcional impuesto al proyecto: faltaba publicar el trabajo local y la terminal no tenía credenciales para push. La conexión GitHub permite publicar el mismo contenido mediante objetos Git.
 
-## Inventario verificado antes de editar
+## Inventario y procedencia
 
-- Árbol de trabajo inicialmente limpio, sin stash y con un solo worktree. No hay cambios locales sin confirmar que recuperar.
-- `git fetch origin` y `git ls-remote --heads origin` muestran ocho ramas remotas: main, integracion-fase1-concurso, fase2-motor-concurso, doce-minijuegos-completos, cierre-funcional-concurso, ajustes-pruebas-manuales, roba-configurable-ensayo y correcciones-turnos-postensayo.
-- **No está disponible `revision/mecanicas-20261121`.** Tampoco figura entre las ramas locales ni en el worktree. La búsqueda independiente de ramas del conector GitHub devuelve una lista vacía.
-- **No está disponible `561d3fd`.** `git cat-file` no lo reconoce y GitHub responde 422: `No commit found for SHA: 561d3fd`. Esto no demuestra que no exista en otra computadora; significa que no se puede recuperar desde las fuentes accesibles aquí.
-- Las referencias locales de ejecuciones anteriores conservan sus commits; no se borraron ni se reescribieron. Los pares local/remoto siguientes tienen exactamente el mismo árbol:
-
-| Commit local atribuido a Codex | Commit publicado equivalente | Contenido comprobado |
+| Fuente | Referencia encontrada | Resolución |
 |---|---|---|
-| `80628ab` | `ce31f23` | Turnos corregidos, Roba por clasificación y cierre voluntario; árbol `4a85c34e36530b235058aaf50b4b4502b6a9feba` |
-| `8eaae33` | `2df2683` | Informe de 219 pruebas y ensayo pendiente; árbol `ff554ff3537547172b1fb23763c85b7c569ca437` |
-| `a5f2045` | `19bc8e6` | Importes configurables y excepción por ventaja; árbol `e40f357211cb2457d38d429b22ccd62eab1971d8` |
+| main | `1fd201ef1b13d0054d2f6978e60a17abe99ee40f` | Sin cambios, sin merge ni auto-merge |
+| Work: preparación y documentación | `5a7e71f3fcc1d31542fc9a471118249e3af12836` | Primer padre de la integración; informe original conservado como histórico |
+| Work: mecánicas postensayo | `correcciones-turnos-postensayo` / `ce31f23` | Base común, turnos y revisiones conservados |
+| Codex: validación y mejoras locales | `revision/mecanicas-20261121` / `561d3fd19903f34663fa03140bc45ac6402ea7f5` | Recuperado íntegro desde `work/prueba-mecanicas-20261121` |
+| Publicación equivalente de Codex | `2b952415b1c0a94504d9ff2f055d4fca669ed481` | Mismo padre y árbol que 561d3fd; SHA diferente por metadatos del conector |
+| Merge local original | `342f0b2` | Une 5a7e71f y 561d3fd sin reemplazar una fuente por otra |
+| Pendientes locales de cierre | Siete archivos en `work/prueba-cierre-20261118` | Copia original intacta. Cambios compatibles ya incluidos; tres pruebas adicionales recuperadas |
+| Otras revisiones locales | `8f70433`, `68443da`, `10b81c6` | Comparadas; correcciones compatibles presentes. No recuperar la antigua política de todas las pistas privadas |
+| Ramas históricas remotas | fase2-motor-concurso, integracion-fase1-concurso, doce-minijuegos-completos, cierre-funcional-concurso, ajustes-pruebas-manuales, roba-configurable-ensayo | Conservadas; no se reescribieron |
 
-La identidad de autor y los pares de árboles no permiten atribuir a una herramienta una versión visual adicional no publicada. No se confunden estos commits equivalentes con el Work `561d3fd` solicitado.
+El árbol original de Codex y su publicación equivalente es exactamente `6ee8c1c5481d6d163403517e2f0ed6f6222c3846`. Se adjunta `evidencia/integracion-work-codex/codex-561d3fd.patch` para conservar autoría y parche originales. La publicación de integración conserva como padres la preparación Work y la versión equivalente Codex; no se afirma que el conector publique los mismos metadatos o SHA locales.
 
-## Matriz de diferencias funcionales y visuales
+## Matriz de integración
 
-Esta matriz se preparó antes de cualquier cambio de código. La rama nueva solo añade informe, guía y resultados de pruebas: **no se intentó resolver una comparación inexistente sustituyendo archivos por versiones antiguas**.
+| Área | Work conservado | Codex conservado | Verificación |
+|---|---|---|---|
+| Doce juegos y catálogo editable | Motores y revisiones postensayo; no migrar rondas pasadas | Bancos locales y validación | Doce juegos diferentes en primeras doce rondas |
+| Actor y Tararea | Turnos independientes de 90/60 s; cambio de canción antes de iniciar | Pruebas de reloj y recuperación | Cuatro turnos secuenciales; pausa y recarga |
+| Sonidos / Palabras | Tarjeta activa pública, representante de espaldas | Saneador con excepción limitada | Aciertos, pasar e infracción cambian tarjeta; tres prohibidas visibles |
+| Otras pistas | Privadas | Verificaciones JS/Python/TV | Actor, Tararea, dibujo, objeto y valor real no se publican |
+| Roba y Gana | Seis cartas; clasificación previa; robos limitados al saldo; reto explícito; importes configurables | Tablero adaptado al escenario real y pruebas | Elección oculta, revelación conjunta, robo, reto cumplido/no cumplido y repetición autorizada |
+| Puntuación | Revisión y confirmación auditada | Tabla configurable aplicada igual en JS y Python | 56 movimientos en 14 rondas; recargar no duplica puntos |
+| Guardado LAN | Autenticación del conductor y DTO público | Controles bloqueados durante escritura | Conductor localhost y público por IP sincronizados; reinicio del servidor recupera ronda 5 |
+| Sin conexión | Recursos, bancos y fuentes locales | Caché actual verificada, no reciclar recursos antiguos; rechazo de acceso no se convierte en sesión local | Regresión automatizada; ensayo previo real con servidor estático detenido documentado en VALIDACION_MECANICAS_20261121.txt |
+| Diseño navideño | Identidad aprobada y recursos originales del proyecto | Ruleta, consola, contraste, premios compactos y tablero Roba | Archivos de aplicación idénticos a 561d3fd; capturas nuevas de escritorio, TV y viewport móvil |
+| Premiación | Cuatro lugares y cierre voluntario | Presentación compacta | Orden 4,3,2,1; evento finalizado recuperado tras recargar |
 
-| Componente | Base recuperable `ce31f23` | Work `561d3fd` solicitado | Codex reciente adicional | Resolución |
-|---|---|---|---|---|
-| Doce juegos y sus bancos | Motores existentes y pruebas por juego | No recuperable | Sin fuente distinta disponible | Conservar base; comparación pendiente |
-| Actor y Tararea | Nuevas revisiones por turnos; 90/60 s; tiempos independientes | No recuperable | Local `80628ab` idéntico | Sin conflicto entre copias disponibles |
-| Sonido y Palabras | Tarjetas públicas en JS/Python y saneador de TV; representante de espaldas | No recuperable | Local idéntico | Conservar y repetir regresión |
-| Roba y Gana | Seis cartas, orden por clasificación, dueños visibles, robos automáticos, retos explícitos | No recuperable | Local idéntico | Conservar importes configurables, política previa y repetición autorizada |
-| Escenario navideño | `estilos.css`, `navidad.css`, `equipos.css`, `escenario.css` y `assets/` sin diferencias respecto a main | No recuperable | Mejoras históricas ya presentes | Preservados byte por byte |
-| Ruleta y animaciones | `src/wheel.js`, reglas de giro y presentación ampliada existentes | No recuperable | Sin parche visual adicional disponible | No reemplazados; comparación visual pendiente |
-| Marcador, instrucciones y tarjetas | Renderizadores y estilos actuales intactos | No recuperable | Sin fuente adicional | No hay rediseño ni reversión |
-| Cronómetros y consola | Barra de acciones y resumen de turnos existentes | No recuperable | Local idéntico | Conservar lógica y estilo |
-| Premiación y cierre | Ceremonia, clasificación y corrección auditada existentes | No recuperable | Local idéntico | Regresión automatizada; navegador pendiente |
-| Resoluciones y capturas | Tests de navegador y capturas históricas disponibles | Faltan las 14 rondas reportadas | Faltan capturas de la nueva presentación solicitada | No se certifica igualdad visual |
+## Conflictos resueltos
 
-## Conflictos y decisiones
+El merge solo produjo un conflicto textual en la cabecera de README: Work indicaba fuentes faltantes, Codex indicaba validación local. Se sustituyó por el estado integrado actual y se conservó el informe previo como `informe-work-inicial-historico.md`. No hubo conflictos en motores, estilos o bancos. Tres pruebas de cierre pendientes se añadieron sin eliminar pruebas existentes.
 
-| Hallazgo | Decisión | Pendiente |
-|---|---|---|
-| Work indicado ausente | No inventar ni recrear su código desde el resumen | Publicar `revision/mecanicas-20261121` con `561d3fd`, o proporcionar git bundle/patch con su origen |
-| Codex local y remoto con SHAs distintos | Comparar árboles: el contenido es idéntico; partir del remoto para conservar su ascendencia | Ninguno en esos tres pares |
-| Nuevos cambios visuales de Codex no localizados | Mantener íntegros los estilos y renderizadores disponibles | Identificar rama/commit o proporcionar el diff local de Codex |
-| Posible conflicto de reglas entre fuentes | No se cambió ninguna regla ni se resolvió a ciegas | Revisar cuando existan ambas fuentes |
-| Pruebas de 251 casos y 14 rondas de navegador sin archivos fuente/evidencia accesibles | No adoptarlas como ejecución verificada | Recuperar fuente y volver a ejecutar |
+Se mantiene la última decisión expresa: Sonidos y Palabras muestran la tarjeta activa en TV; las demás pistas permanecen privadas. No se importó la política anterior de todas las pistas privadas. Los valores 100/75/50/25 son predeterminados configurables, no una decisión definitiva. Roba adicional requiere autorización de cada ronda.
 
-No hubo conflictos textuales de merge resueltos: no se ha realizado un merge de las dos fuentes solicitadas. La rama es una preparación trazable, no una integración concluida.
+## Validación repetida en la integración
 
-## Pruebas repetidas en esta rama
+- `npm test`: **254 aprobadas, 0 fallos: 207 Node + 47 Python**. Registro completo: `evidencia/integracion-work-codex/regresion-integrada.txt`. Incluye puntuación configurable, secretos, LAN, recuperación, concurrencia, cierres y los doce motores.
+- Navegador real, interfaz de usuario: **14 rondas consecutivas**, 17 participantes ficticios distribuidos en equipos de 4,4,5,4 (capacidades 4,4,4,5). Semillas controladas para cubrir los doce juegos, no para medir la distribución estadística del azar. Los doce primeros IDs son distintos; rondas 13 y 14 de Roba autorizadas por separado. La animación y el nombre revelado coinciden con el juego de la ronda.
+- Actor: pausa, recarga de conductor/TV y recuperación; Tararea: canción cambiada antes de empezar y reloj independiente; Sonidos/Palabras: avance de tarjetas y puntuación por aciertos; simultáneos: finalización individual; Rebote: tres aciertos por equipo y parejas; Objeto: aciertos por turno; Cuántos: valor privado 137 y estimaciones 130/140/137/160, sin valor real en TV.
+- Roba: pausa con elecciones ya realizadas, parada/reinicio real del servidor, recarga y recuperación; resultado de reto explícito, premios/robos aplicados tras revisión. La ronda adicional no arranca sin marcar su autorización.
+- Marcador final: Estrella **925**, Cascabel **900**, Aurora **850**, Abeto **425**. **56 movimientos**, todos de una única confirmación por equipo/ronda. Ceremonia 4→3→2→1 y cierre formal; mismos resultados tras recargar. Resumen sin claves ni tarjetas privadas: `recorrido-14-rondas.json`.
+- TV: 1280×720 y marco interior 1034×900 con escenario 16:9, sin desbordamiento horizontal. Escritorio: vista de conductor. Móvil: iframe con viewport real interior **420×900**, sin desbordamiento; inicio, pausa, reanudación y registro de un turno; siguiente turno preparado a 90 segundos sin arrancar solo. Son pruebas de navegador, no un teléfono o TV físicos.
+- Los logs `regresion.txt` (232 pruebas) y `navegadores.txt` (37 intentos bloqueados al iniciar Chromium) son evidencia histórica de Work. No son los resultados actuales ni fallos de esta ejecución CUA.
 
-- `npm test`: **232 aprobadas, 0 fallos** (187 Node + 45 Python), repetidas en esta rama. Consultar `evidencia/integracion-work-codex/regresion.txt`. Incluye todos los tests existentes de dominio y servidor LAN, doce juegos y concursos automatizados de 14 rondas con 2/3/4 equipos. Son fixtures sintéticos, no una fiesta física ni 14 rondas realizadas en navegador.
-- `node --test tests/*.browser.cjs`: **37 casos intentados, 0 aprobados, 37 fallidos por bloqueo al iniciar Chromium** (`socket() failed: Operation not permitted`). No alcanzaron la interfaz. Registro: `evidencia/integracion-work-codex/navegadores.txt`.
-- Se comprobó igualdad de los árboles local/remoto anteriores y ausencia de diferencias en los recursos navideños enumerados.
-- No se ejecutaron pruebas con HDMI, celular ni TV físicos. No se generaron capturas nuevas de la aplicación. Las capturas históricas del repositorio y los HTML de fixtures de `evidencia/postensayo/` conservan su carácter histórico/reproducible; no certifican la integración solicitada.
+## Evidencia y aceptación pendiente
 
-## Publicación y siguiente paso
+Capturas: `final-tv.png`, `final-conductor.png`, `final-tv-letterbox.png`, `roba-ocultas.png`, `roba-revelada.png`, `ruleta-integrada.png`, `movil-420-pausa.png` y `movil-420-siguiente-turno.png`, en `evidencia/integracion-work-codex/`. Los HTML de viewport son marcos reproducibles de prueba, no una segunda aplicación.
 
-La rama de preparación se publica con un PR **en borrador**, marcado bloqueado y sin solicitar aprobación de aceptación. `main` conserva `1fd201ef1b13d0054d2f6978e60a17abe99ee40f`.
-
-Para continuar hace falta publicar o suministrar: (1) `revision/mecanicas-20261121` / `561d3fd`, y (2) la rama, commits o cambios locales de las mejoras visuales recientes de Codex, si son distintos de los pares inventariados. Después se comparan archivos y capturas, se integra respetando la lógica y se repiten las pruebas. No se sustituirá esta carencia por una reconstrucción.
-
-El ensayo físico de la base recuperable se explica en [ENSAYO_HDMI_CELULAR.md](ENSAYO_HDMI_CELULAR.md). No equivale a aceptar una integración que sigue incompleta.
+No se ha realizado una fiesta real ni una conexión física HDMI/celular. Quedan pendientes legibilidad a distancia, sonido en el equipo real, interacción táctil y conectividad Wi-Fi del lugar. Seguir [ENSAYO_HDMI_CELULAR.md](ENSAYO_HDMI_CELULAR.md), exportar el evento real antes y usar datos de ensayo separados. No se modificaron las sesiones históricas ni se incluyeron claves de control en Git.

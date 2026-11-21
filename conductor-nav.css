@@ -90,3 +90,5 @@
  .status{font-size:11px;max-width:100px}
  .section-next>button{flex:1}
 }
+
+.conductor-workspace .contest-host .secret-card summary{color:#241a10}

@@ -1,0 +1,482 @@
+From 561d3fd19903f34663fa03140bc45ac6402ea7f5 Mon Sep 17 00:00:00 2001
+From: Codex <codex@localhost>
+Date: Sat, 21 Nov 2026 12:00:12 -0600
+Subject: [PATCH] =?UTF-8?q?Valida=20doce=20mec=C3=A1nicas=20y=20catorce=20?=
+ =?UTF-8?q?rondas;=20corrige=20TV,=20puntos=20configurables=20y=20cach?=
+ =?UTF-8?q?=C3=A9=20offline?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ README.md                         |   2 +
+ VALIDACION_MECANICAS_20261121.txt | 110 ++++++++++++++++++++++++++++++
+ catalogo/duelo-generaciones.json  |   8 +--
+ conductor-nav.css                 |   2 +
+ contest.css                       |  38 +++++++++++
+ full_engines.py                   |   2 +-
+ package.json                      |   2 +-
+ service-worker.js                 |   3 +-
+ src/conductor.js                  |   4 +-
+ src/full-engines.js               |   2 +-
+ src/offline-host.js               |  11 ++-
+ src/reward-show.js                |   4 +-
+ tests/mechanics-audit.test.js     |  65 ++++++++++++++++++
+ tests/offline-recovery.test.js    |  26 +++++++
+ tests/test_mechanics_audit_lan.py |  17 +++++
+ 15 files changed, 282 insertions(+), 14 deletions(-)
+ create mode 100644 VALIDACION_MECANICAS_20261121.txt
+ create mode 100644 tests/mechanics-audit.test.js
+ create mode 100644 tests/offline-recovery.test.js
+ create mode 100644 tests/test_mechanics_audit_lan.py
+
+diff --git a/README.md b/README.md
+index 030dc68..d277d36 100644
+--- a/README.md
++++ b/README.md
+@@ -1,3 +1,5 @@
++> Validación del 21/11/2026: ver `VALIDACION_MECANICAS_20261121.txt`. Actor y Tararea usan turnos independientes en las nuevas revisiones. Sonidos y Palabras prohibidas muestran únicamente su tarjeta activa en TV por autorización expresa; las demás pistas siguen privadas. En eventos existentes, usa **Siguiente ronda → Aplicar correcciones a futuras rondas**. Los puntos por posición son configurables en la ficha y se respetan en JavaScript y LAN; 100/75/50/25 es la tabla predeterminada, no una decisión irrevocable.
++
+ > Correcciones vigentes del ensayo: rama `correcciones-turnos-postensayo` · [turnos, tarjetas, Roba y cierre](CORRECCIONES_POSTENSAYO.md). Actor y Tararea usan turnos independientes en nuevas revisiones. Eventos abiertos: aplicar correcciones a futuras rondas, entre rondas. Las notas siguientes son históricas.
+ 
+ > Revisión vigente: `roba-configurable-ensayo` · [estado, 219 pruebas y bloqueos](ROBA_CONFIGURABLE_ENSAYO.md) · [ensayo físico en celular y TV](ENSAYO_FISICO_DISPOSITIVOS.md). Las notas siguientes conservan el historial de fases anteriores. Sin merge a main.
+diff --git a/VALIDACION_MECANICAS_20261121.txt b/VALIDACION_MECANICAS_20261121.txt
+new file mode 100644
+index 0000000..b3b7e41
+--- /dev/null
++++ b/VALIDACION_MECANICAS_20261121.txt
+@@ -0,0 +1,110 @@
++VALIDACIÓN DE MECÁNICAS — LA GRAN NOCHE DE RETOS
++21 de noviembre de 2026 · Revisión de los ajustes de Work
++
++RESULTADO
++Se completaron por controles reales del navegador 14 rondas con cuatro equipos y los doce minijuegos distintos. La aplicación calculó los puntos, mantuvo el marcador, recuperó sesiones y presentó los cuatro lugares. El ensayo utiliza exclusivamente participantes y acciones sintéticos; no representa una prueba física de los retos ni una fiesta real.
++
++Base de Work: origin/correcciones-turnos-postensayo, ce31f23.
++Rama local de revisión: revision/mecanicas-20261121.
++Directorio: work/prueba-mecanicas-20261121.
++No se fusionó main ni se publicó esta rama a GitHub. Se conservaron los servidores/sesiones anteriores. El nuevo ensayo usa la carpeta privada work/prueba-mecanicas-datos-20261121, fuera del parche y de Git.
++
++INSTRUCCIONES VIGENTES
++El usuario confirmó expresamente en este chat aplicar la excepción del documento para Sonidos y Palabras prohibidas. Solo esos dos juegos muestran la tarjeta activa en TV; se oculta en preparación, pausa y entre turnos. Actor, Tararea, Picasso, Yo soy el objeto y el valor/estimaciones de Cuántos hay siguen privados.
++Se conserva la excepción aprobada de repetición de Roba y Gana. Después de agotar los juegos ordinarios, cada ronda extra requiere autorización explícita. Esto sustituye la observación de falta de autorización de la revisión anterior: el nuevo documento reconoce la excepción.
++
++AUDITORÍA DE LOS 12 JUEGOS
++Todos los estados siguientes indican prueba de software por navegador y regresión automática; el ensayo físico permanece pendiente para cada juego.
++
++Juego                  | Modalidad / duración        | Información / victoria                    | Resultado
++Galleta viajera        | Simultáneo, 90 s             | Sin tarjeta; menor tiempo válido           | Aprobado
++Picasso a oscuras      | Simultáneo, 90 s             | Consigna privada al dibujante; menor tiempo| Aprobado
++Roba y Gana            | Elección ordenada, sin corte | Seis ocultas; revelación conjunta; premios  | Aprobado
++Tararea si puedes     | Turnos, 60 s por equipo      | Canción privada; cambio previo; menor tiempo| Aprobado
++Torre traicionera      | Simultáneo, 90 s             | Pirámide de seis vasos; finalización        | Aprobado
++Hazme el sonido        | Turnos, 60 s por equipo      | Objetivo en TV; representante adivina sonidos| Aprobado
++Rebote imposible       | Simultáneo, sin corte        | Dos representantes; tres rebotes válidos  | Aprobado
++Manos de mantequilla  | Simultáneo, 120 s            | Caja y guantes; finalización válida       | Aprobado
++Actor dramático        | Turnos, 90 s por equipo      | Personaje/acción/lugar privados; menor tiempo| Aprobado
++Palabras prohibidas    | Turnos, 60 s por equipo      | Objetivo y tres prohibidas en TV; aciertos | Aprobado
++Yo soy el objeto       | Turnos, 90 s por equipo      | Objeto privado; representación; aciertos  | Aprobado
++Cuántos hay            | Estimaciones, sin corte      | Valor y estimaciones privados; menor diferencia| Aprobado
++
++La tabla de puntos por posición de la ficha se respeta: por defecto 100/75/50/25, con empates que comparten puesto y saltan los puestos ocupados. Cero aciertos/no completar da cero cuando corresponde. Los valores se mantienen como parámetros propuestos/configurables, no reglas inventadas definitivas. Para Roba se verificaron exactamente los seis importes predeterminados 100,75,50,25,100,50. Los importes configurados en sesiones anteriores no se borran ni se cambian silenciosamente.
++
++COMPROBACIONES DE MECÁNICAS EN NAVEGADOR
++- Actor: cuatro turnos independientes. Pausa y recarga conservadas; el siguiente reloj quedó en 01:30 sin arrancar. Se registró un equipo sin completar y se validó un empate mediante corrección de ensayo de 12,5 / 00:12.500 segundos: 100/100/0/50. La tarjeta real permaneció fuera de TV.
++- Tararea: canción cambiada antes de iniciar; nueva tarjeta distinta. El siguiente equipo tuvo 01:00 propio, sin inicio automático. Las canciones permanecieron privadas. Tiempos y clasificación se calcularon al registrar las cuatro finalizaciones. Las pruebas de dominio rechazan cambio de canción durante ejecución y acciones de otro equipo.
++- Sonidos: objetivo visible en TV durante el turno activo, reloj de 60 s y cambios sincronizados de tarjeta con Correcto/Pasar. Se confirmaron resultados de 1/2/3/0 aciertos: 50/75/100/0 puntos.
++- Palabras: tres prohibidas visibles. Correcto, Pasar e Infracción confirmada consumieron tres IDs diferentes. La infracción anuló únicamente su tarjeta; el acierto previo permaneció. Recargar en pausa conservó la tarjeta y el reloj; la TV no mostró tarjeta pausada. Resultados 1/2/0/1 aciertos: 75/100/0/75 puntos.
++- Roba (ronda 5): seis cartas boca abajo; botón Revelar desactivado hasta completar elecciones; cada equipo eligió en orden de clasificación. El DTO HTTP no contenía importes antes de revelar y sí mostraba propietarios. Tras revelar hubo seis cartas, incluidas las dos no elegidas. El líder robó 50 al segundo automáticamente, sin formulario de víctima; dos retos exigieron confirmación independiente. Puntos 50/50/100/0, marcador 375/350/275/175. Ningún premio se sumó antes de revisar y confirmar.
++- Galleta, Picasso, Torre y Manos: se registraron cuatro finalizaciones simultáneas por juego, se revisaron tiempos y se confirmaron sus puntos. En Picasso las cuatro consignas privadas se compararon con el texto real de TV y ninguna apareció.
++- Rebote: se guardaron dos representantes distintos por equipo. Un rebote no completó el reto. Se pausó con 1/3 y se reinició el servidor con su misma carpeta; se recuperaron parejas, reloj y progreso. Cada equipo necesitó tres rebotes para tener finalización.
++- Objeto: reloj de 90 s y tarjeta privada; cuatro turnos con 1/0/2/1 aciertos. Sin tarjeta pública.
++- Cuántos hay: valor sintético 987654 y cuatro estimaciones privadas. La TV no mostró el valor real. Al confirmar mostró diferencias 2/2/8/0 y puntos 75/75/25/100, respetando el empate.
++- Agotamiento: después de los doce juegos apareció el aviso de ordinarios concluidos y el botón Finalizar concurso. Se intentó iniciar sin autorizar: el formulario exigió marcar la casilla y no creó ronda. Las rondas 13 y 14 se autorizaron por separado, cada una con nueva elección y sin arranque automático.
++- Se presentaron los lugares 4, 3, 2 y 1 y se cerró formalmente. Recargar ambas vistas conservó el evento finalizado, catorce rondas, doce juegos diferentes y 56 movimientos activos, sin duplicados. Auditoría comprobada para las dos autorizaciones extra.
++
++MARCADOR FINAL VERIFICADO CONTRA EL LIBRO
++Estrella: 975 · Cascabel: 875 · Aurora: 750 · Abeto: 550.
++17 participantes ficticios, cupos 4/4/5/4 (distribución solicitada 4/4/4/5).
++Conductor localhost:8107 y TV 192.168.1.67:8107: orígenes distintos, sincronización mediante servidor LAN.
++Consolas de ambos navegadores sin errores JavaScript capturados al cierre.
++El JSON de evidencia excluye claves, pistas, bancos y datos de conexión privados.
++
++CORRECCIONES ADICIONALES LOCALES
++1. Puntos configurables: Work seguía calculando siempre 100/75/50/25 aun si se editaba la ficha. JavaScript y Python ahora usan scoring.positions de la revisión guardada, manteniendo el valor antiguo como respaldo compatible. Nuevas pruebas cubren 80/60/40/20, empate y no completar.
++2. TV de Roba: la nueva agrupación desbordaba el escenario y dejaba fuera las tarjetas no elegidas y el marcador. Se corrigió usando dimensiones del escenario, cuatro columnas para los equipos y una sección separada para las no elegidas. Verificación real en 1280x720: marcador termina en y=702 dentro de 720. En ventana 1034x900 con barras negras: marcador y=726,28 dentro del escenario que termina en y=740,81. No basta comparar con la ventana; se comprobó contra el escenario real.
++3. Operación durante guardado LAN: los controles ahora se desactivan y anuncian aria-busy mientras se guarda, preservando controles que ya estaban desactivados. Evita ofrecer acciones mientras la anterior aún se procesa. Durante el ensayo se encontraron carreras al actuar antes del nuevo estado; se volvió a comprobar cada transición esperando el estado persistido.
++4. Caché: las peticiones de actualización no reutilizan recursos obsoletos; al cambiar Service Worker se vuelve a verificar la caché privada. Se incluyen manual-rules y reward-config y se mantiene separación de recursos públicos/privados. Versión de caché v22.
++5. Se reprodujo un falso aviso offline: la aplicación recargaba y funcionaba desde caché, pero la comprobación intentaba renovar desde un servidor detenido y anunciaba fallo. Ahora verifica exclusivamente la caché actual tras un fallo de red en modo local; si falta un archivo no declara Listo. Un fallo de autenticación LAN no usa esa alternativa. Se añadieron tres pruebas específicas y se repitió el caso real con el servidor detenido: Listo sin conexión y datos conservados.
++6. Se conservaron los ajustes previos compatibles de contraste de tarjetas del conductor y ceremonia compacta. Dos preguntas del banco de Duelo dejaron de usar personajes de Mario. No se importó la antigua política de todas las tarjetas privadas, porque el usuario aprobó la excepción actual.
++
++COMPATIBILIDAD Y OFFLINE COMPROBADOS
++Se abrió el ensayo local anterior de dos equipos, con Palabras ya puntuada y 100/100 puntos. La biblioteca se actualizó sin migrar el evento silenciosamente. Entre rondas apareció Aplicar correcciones a futuras rondas. Con el servidor estático detenido se aplicó esa acción, se seleccionaron representantes antes del sorteo y se completó Actor con dos relojes de 90 s. Sus nuevos 75/100 puntos se sumaron a los anteriores, obteniendo 175/200. Recargar conductor y TV sin servidor conservó ambos resultados. Tras corregir el aviso, se volvió a preparar la caché, se apagó realmente el servidor y se comprobó Listo sin conexión.
++Las pruebas comparan además toda la ronda histórica simultánea y el libro antes/después de actualizar futuras rondas: permanecen idénticos. Instalar la revisión es idempotente.
++Offline local y sincronización LAN son distintos: el teléfono/TV necesitan la computadora con servidor encendido y la misma Wi-Fi; no requieren salida a Internet. No se certificó comunicación entre dispositivos con el servidor apagado.
++
++PRUEBAS AUTOMATIZADAS
++Suite completa final: 251 pruebas aprobadas, 0 fallos (205 Node + 46 Python). Registro: outputs/pruebas-mecanicas-verificadas-20261121.txt.
++Se ejecutaron las catorce suites Node y unittest discover, los mismos pasos del script test (npm no está instalado aquí). No se eliminaron pruebas anteriores. Los 232 casos de la base se conservaron; se añadieron 15 contratos/auditoría Node, 3 casos offline Node y 1 caso Python de puntos configurables.
++Las regresiones de Work incluyen concursos de catorce rondas con 2, 3 y 4 equipos; el recorrido real de navegador de esta revisión fue de cuatro equipos, más un ensayo offline de dos equipos. No se cuentan fixtures como pruebas físicas.
++La primera ejecución de una nueva prueba de configuración falló por omitir expectedVersion al editar la ficha. Se corrigió el armado del test; no era un fallo de la aplicación. Se conservaron los casos existentes.
++No se ejecutaron los scripts browser.cjs con un Chromium externo: la navegación real se hizo mediante el navegador integrado y sus controles. Sus resultados se describen arriba, separados de los tests Node/Python.
++
++ARCHIVOS LOCALES MODIFICADOS RESPECTO A WORK
++src/conductor.js, src/full-engines.js, full_engines.py: guardado y cálculo configurable.
++src/offline-host.js, service-worker.js: actualización/recuperación de caché.
++src/reward-show.js, contest.css: composición de premios y ceremonia.
++conductor-nav.css: contraste de tarjetas del conductor.
++catalogo/duelo-generaciones.json: dos preguntas sin personajes de Mario.
++tests/mechanics-audit.test.js, tests/offline-recovery.test.js, tests/test_mechanics_audit_lan.py: regresiones añadidas.
++package.json, README.md, VALIDACION_MECANICAS_20261121.txt: ejecución y documentación.
++
++EVIDENCIAS
++outputs/resultado-mecanicas-20261121.json: puntos por ronda, tiempos y auditoría agregada sin tarjetas.
++outputs/plan-mecanicas-20261121.json: semillas reproducibles del recorrido.
++outputs/mecanicas-20261121-tararea-conductor.png: control individual y tarjeta privada.
++outputs/mecanicas-20261121-sonidos-tv-antes.png: objetivo público autorizado.
++outputs/mecanicas-20261121-palabras-tv.png: objetivo y tres prohibidas.
++outputs/mecanicas-20261121-roba-ocultas-16x9.png: seis elecciones ocultas con propietarios.
++outputs/mecanicas-20261121-roba-revelada-antes.png: desbordamiento detectado.
++outputs/mecanicas-20261121-roba-revelada-corregida.png y roba-letterbox-corregida.png: composición verificada.
++outputs/mecanicas-20261121-roba-conductor.png: acciones para desafíos.
++outputs/mecanicas-20261121-cierre-ordinarios-conductor.png: aviso y autorización obligatoria.
++outputs/mecanicas-20261121-final-tv.png y final-conductor.png: cierre de catorce rondas.
++outputs/mecanicas-20261121-offline-conductor.png: recuperación sin servidor.
++outputs/correcciones-mecanicas-20261121.patch: cambios de fuente, sin sesiones ni claves.
++
++CÓMO PROBAR
++Conductor de este ensayo: http://127.0.0.1:8107/index.html
++TV de este ensayo: http://192.168.1.67:8107/publico.html
++El ensayo quedó finalizado y guardado; puede consultarse desde Resultados. Para reiniciarlo sin borrar la sesión, ejecutar en work/prueba-mecanicas-20261121:
++python3 servidor_local.py --host 0.0.0.0 --port 8107 --data-dir ../prueba-mecanicas-datos-20261121
++Para un nuevo ensayo independiente, usar otra carpeta y puerto. Para la fiesta real, exportar respaldo y aplicar las correcciones a futuras rondas entre turnos; no reemplazar archivos de sesión manualmente. Usar la IP de la computadora en celular/TV y el código solo en el conductor. Proyectar publico.html en escritorio extendido, nunca duplicar el panel privado.
++
++PENDIENTES REALES
++- Ensayo con celular y TV físicos, red Wi-Fi real bajo carga, sonido físico, lectura a distancia y accesibilidad con participantes de distintas edades/opción sentada. No se declararon realizados.
++- Se intentó comprobar 420x900 mediante el control disponible, pero la ventana efectiva del conductor fue de 1034 px de ancho. No se certifica por ello una prueba móvil de 420 px. Sí se comprobaron 1280x720 y escenario 16:9 dentro de ventana 1034x900.
++- Al recargar mientras se cerraba una respuesta se vio BrokenPipeError en el servidor. Las sesiones se recuperaron; queda como mejora menor de diagnóstico, sin pérdida observada.
++- La validación de completar físicamente un dibujo, una mímica, una torre o una envoltura corresponde al conductor. La aplicación registra y clasifica esa decisión; esta prueba de software no la sustituye.
+diff --git a/catalogo/duelo-generaciones.json b/catalogo/duelo-generaciones.json
+index 5865007..f485980 100644
+--- a/catalogo/duelo-generaciones.json
++++ b/catalogo/duelo-generaciones.json
+@@ -50,8 +50,8 @@
+   {
+     "id": "duelo-009",
+     "generation": "Años 80",
+-    "question": "¿Cómo se llama el plomero de videojuegos que suele vestir de rojo?",
+-    "answer": "Mario"
++    "question": "¿Qué objeto se utiliza para escuchar música grabada en una cinta magnética?",
++    "answer": "Un reproductor de casetes"
+   },
+   {
+     "id": "duelo-010",
+@@ -284,7 +284,7 @@
+   {
+     "id": "duelo-048",
+     "generation": "Varias generaciones",
+-    "question": "¿Qué personaje de videojuegos es hermano de Mario y viste de verde?",
+-    "answer": "Luigi"
++    "question": "¿Qué instrumento de cuerda se toca con un arco y suele apoyarse entre el hombro y la barbilla?",
++    "answer": "El violín"
+   }
+ ]
+diff --git a/conductor-nav.css b/conductor-nav.css
+index e3af95e..8b10ee7 100644
+--- a/conductor-nav.css
++++ b/conductor-nav.css
+@@ -90,3 +90,5 @@
+  .status{font-size:11px;max-width:100px}
+  .section-next>button{flex:1}
+ }
++
++.conductor-workspace .contest-host .secret-card summary{color:#241a10}
+diff --git a/contest.css b/contest.css
+index cb3b6c5..35afc1d 100644
+--- a/contest.css
++++ b/contest.css
+@@ -44,3 +44,41 @@
+ .reward-execution .unclaimed-rewards{font-size:.85em;margin-top:.5rem}
+ .reward-execution .unclaimed-rewards .reward-tile{font-size:1rem;padding:.4rem}
+ @media(max-width:600px){.turn-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.reward-grid{gap:.35rem}.reward-tile{padding:.5rem;font-size:.85rem}}
++
++/* La tarjeta privada tiene fondo crema: mantener contraste también en el tema oscuro. */
++.contest-host .secret-card summary{color:#241a10}
++
++/* Ceremonia legible en TV 16:9 de 720 px, conservando visible el marcador completo. */
++.awards-stage{width:min(100%,1000px)}
++.awards-stage h1{font-size:clamp(30px,4vw,64px);margin:0 0 8px}
++.awards-stage .award-winner{padding:8px;margin:0}
++.awards-stage .award-winner h2{font-size:clamp(32px,4vw,64px)!important;margin:8px 0;line-height:1.1}
++.awards-stage .award-winner strong{display:block;font-size:clamp(24px,2.7vw,44px);line-height:1.2}
++.awards-stage>ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;list-style:none;padding:0;margin:12px auto 0;max-width:850px;font-size:clamp(16px,1.4vw,24px);line-height:1.3;color:#fff0cd}
++
++
++/* Roba: medir contra el escenario 16:9, incluso con barras negras en la ventana. */
++.screen-execution:has(.reward-execution){display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:2.5cqh 3cqw;gap:1cqh}
++.screen-execution:has(.reward-execution) .broadcast-header{position:static;min-height:4cqh}
++.reward-execution{display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:.6cqh;min-height:0;max-width:none;width:100%;margin:0;padding:0}
++.reward-execution>.eyebrow{font-size:clamp(10px,.9cqw,20px)}
++.reward-execution>h1{font-size:clamp(24px,2.6cqw,50px);line-height:1.1;margin:0}
++.reward-execution>.reward-board{display:grid;grid-template-rows:auto minmax(0,1fr);gap:1cqh;min-height:0}
++.reward-execution>.reward-board:has(.unclaimed-rewards){grid-template-rows:auto minmax(0,1fr) auto}
++.reward-execution .reward-board h2{font-size:clamp(16px,1.5cqw,30px);line-height:1.2;margin:0}
++.reward-execution .reward-grid{gap:.8cqw;min-height:0}
++.reward-execution .reward-board:has(.unclaimed-rewards)>.reward-grid{grid-template-columns:repeat(var(--reward-teams,4),minmax(0,1fr))}
++.reward-execution .reward-tile{padding:1cqh .8cqw;border-radius:8px;min-width:0;font-size:clamp(14px,1.3cqw,26px);line-height:1.2}
++.reward-execution .reward-tile h3{font-size:clamp(16px,1.6cqw,30px);line-height:1.2;margin:.6cqh 0}
++.reward-execution .reward-tile p{font-size:clamp(14px,1.35cqw,26px);line-height:1.25;margin:.8cqh 0 0}
++.reward-execution .reward-tile.facedown{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1cqh}
++.reward-execution .reward-tile.facedown strong{font-size:clamp(28px,5cqh,64px)}
++.reward-execution .unclaimed-rewards{margin:0;font-size:clamp(14px,1.2cqw,24px)}
++.reward-execution .unclaimed-rewards summary{margin:0 0 .6cqh}
++.reward-execution .unclaimed-rewards .reward-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
++.reward-execution .unclaimed-rewards .reward-tile{padding:.5cqh .8cqw;font-size:clamp(14px,1.2cqw,24px)}
++.reward-execution .unclaimed-rewards h3{display:none}
++.screen-execution:has(.reward-execution) .contest-public-scores{margin:0}
++.screen-execution:has(.reward-execution) .contest-public-scores article{padding:.8cqh 1cqw}
++.screen-execution:has(.reward-execution) .contest-public-scores h2{font-size:clamp(16px,1.6cqw,30px);margin:.5cqh 0}
++.screen-execution:has(.reward-execution) .contest-public-scores strong{font-size:clamp(24px,2.5cqw,48px)}
+diff --git a/full_engines.py b/full_engines.py
+index 52aa4fb..b1d4020 100644
+--- a/full_engines.py
++++ b/full_engines.py
+@@ -57,7 +57,7 @@ def calculate(e, r):
+             if n > 0: values[tid] = -n
+         elif f['results'].get(tid, {}).get('completed'):
+             values[tid] = f['results'][tid]['ms']
+-    return {t['id']: [100, 75, 50, 25][sum(v < values[t['id']] for v in values.values())] if t['id'] in values else 0 for t in e['teams']}
++    return {t['id']: r['game']['scoring'].get('positions', [100, 75, 50, 25])[sum(v < values[t['id']] for v in values.values())] if t['id'] in values else 0 for t in e['teams']}
+ 
+ 
+ def validate_full(e, r):
+diff --git a/package.json b/package.json
+index 4574552..9493687 100644
+--- a/package.json
++++ b/package.json
+@@ -5,7 +5,7 @@
+   "type": "module",
+   "scripts": {
+     "start": "python3 -m http.server 8080 --bind 127.0.0.1",
+-    "test": "node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && node tests/navigation.test.js && node tests/library.test.js && node tests/rounds.test.js && node tests/integration.test.js && node tests/full.test.js && node tests/closure.test.js && node tests/manual-adjustments.test.js && node tests/reward-config.test.js && node tests/postensayo.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
++    "test": "node tests/core.test.js && node tests/teams.test.js && node tests/contest.test.js && node tests/navigation.test.js && node tests/library.test.js && node tests/rounds.test.js && node tests/integration.test.js && node tests/full.test.js && node tests/closure.test.js && node tests/manual-adjustments.test.js && node tests/reward-config.test.js && node tests/postensayo.test.js && node tests/mechanics-audit.test.js && node tests/offline-recovery.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
+     "test:navigation": "node --test tests/navigation.browser.cjs",
+     "test:library": "node --test tests/library.browser.cjs",
+     "test:rounds": "node --test tests/rounds.browser.cjs",
+diff --git a/service-worker.js b/service-worker.js
+index adc1d91..692f0c3 100644
+--- a/service-worker.js
++++ b/service-worker.js
+@@ -1,4 +1,4 @@
+-const PUBLIC_CACHE='noche-retos-turnos-public-v13',PRIVATE_CACHE='noche-retos-turnos-host-v13';
++const PUBLIC_CACHE='noche-retos-mecanicas-public-v22',PRIVATE_CACHE='noche-retos-mecanicas-host-v22';
+ // La instalación pública nunca descarga catálogo, conductor ni reglas privadas.
+ const FILES=['./src/reward-show.js','./src/presentation-changes.js','./src/presentation-copy.js','./publico.html','./estilos.css','./navidad.css','./escenario.css','./equipos.css','./contest.css','./icon.svg','./src/teams-show.js','./src/contest-show.js','./src/wheel.js','./src/clock-sync.js','./src/lan-public.js','./src/publico.js','./src/effects.js','./assets/escenario.webp','./assets/titulares.otf','./assets/texto.otf','./assets/texto-negrita.otf'];
+ self.addEventListener('install',event=>event.waitUntil(caches.open(PUBLIC_CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
+@@ -7,6 +7,7 @@ self.addEventListener('fetch',event=>{
+  const u=new URL(event.request.url);if(event.request.method!=='GET'||u.origin!==self.location.origin||u.pathname.startsWith('/api/'))return;
+  event.respondWith((async()=>{const client=event.clientId?await self.clients.get(event.clientId):null,publicClient=client&&new URL(client.url).pathname.endsWith('/publico.html'),privatePath=u.pathname.startsWith('/catalogo/')||/\/src\/(manual-rules|reward-config|time-input|closure-core|closure-host|full-engines|full-host|approved-catalog|round-engine|library-core|library-host|navigation|conductor|contest-host|contest-core|teams-core|core|game-model|offline-host|lan-host|show)\.js$/.test(u.pathname);
+  if(publicClient&&privatePath)return new Response('Recurso privado',{status:403});
++ if(['reload','no-store'].includes(event.request.cache))return fetch(event.request);
+  const name=privatePath||u.pathname.endsWith('/conductor-nav.css')||u.pathname.endsWith('/library.css')||u.pathname.endsWith('/index.html')||u.pathname==='/'?PRIVATE_CACHE:PUBLIC_CACHE;
+  return (await (await caches.open(name)).match(event.request,{ignoreSearch:true}))||fetch(event.request);
+  })());
+diff --git a/src/conductor.js b/src/conductor.js
+index 3418f81..6fb3166 100644
+--- a/src/conductor.js
++++ b/src/conductor.js
+@@ -30,7 +30,7 @@ let state,writer=false,startError='',channel,offlineReady=false;const disabled=(
+ try{state=loadState(localStorage);}catch(e){startError=e.message;}
+ function notice(message,error=false){const el=document.querySelector('#message');el.textContent=message;el.className=`visible ${error?'error':''}`;clearTimeout(notice.timeout);notice.timeout=setTimeout(()=>el.className='',7000);}
+ function publish(){channel?.postMessage({type:'snapshot',payload:publicSnapshot(state)});}
+-async function commit(op,message){if(!writer)return notice(offlineLAN?'Servidor Wi-Fi no disponible. Reabre el servidor y recarga para editar.':'Otra pestaña de conductor está editando esta sesión. Ciérrala y recarga.',true);if(remoteBusy)return notice('Espera a que termine de guardarse el cambio anterior.',true);const before=clone(state),previousEvent=activeEvent(state)?.id;let sharedSaved=false;try{op(state);if(lan){remoteBusy=true;const data=await lan.write(state);state=validateState(data.state);sharedSaved=true;}try{state=saveState(localStorage,state);}catch(e){if(!sharedSaved)throw e;notice('Guardado en la computadora anfitriona. El almacenamiento de este navegador no está disponible.',true);}publish();if(activeEvent(state)?.id!==previousEvent&&activeEvent(state))changeNavigation(view,{section:'concurso'},sessionStorage);render();if(message)notice(message);return true;}catch(e){state=before;if(lan&&e.status===409)try{const latest=await lan.read();if(latest.state)state=validateState(latest.state);render();}catch{}notice(e.message,true);return false;}finally{remoteBusy=false;}}
++async function commit(op,message){if(!writer)return notice(offlineLAN?'Servidor Wi-Fi no disponible. Reabre el servidor y recarga para editar.':'Otra pestaña de conductor está editando esta sesión. Ciérrala y recarga.',true);if(remoteBusy)return notice('Espera a que termine de guardarse el cambio anterior.',true);const before=clone(state),previousEvent=activeEvent(state)?.id;let sharedSaved=false;const busyControls=[];try{op(state);if(lan){remoteBusy=true;busyControls.push(...root.querySelectorAll('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled)'));busyControls.forEach(el=>el.disabled=true);root.inert=true;root.setAttribute('aria-busy','true');const data=await lan.write(state);state=validateState(data.state);sharedSaved=true;}try{state=saveState(localStorage,state);}catch(e){if(!sharedSaved)throw e;notice('Guardado en la computadora anfitriona. El almacenamiento de este navegador no está disponible.',true);}publish();if(activeEvent(state)?.id!==previousEvent&&activeEvent(state))changeNavigation(view,{section:'concurso'},sessionStorage);render();if(message)notice(message);return true;}catch(e){state=before;if(lan&&e.status===409)try{const latest=await lan.read();if(latest.state)state=validateState(latest.state);render();}catch{}notice(e.message,true);return false;}finally{remoteBusy=false;busyControls.forEach(el=>el.disabled=false);root.inert=false;root.removeAttribute('aria-busy');}}
+ function ask(title,message,action){const dialog=document.querySelector('#confirmation');document.querySelector('#confirm-title').textContent=title;document.querySelector('#confirm-text').textContent=message;dialog.returnValue='';dialog.onclose=()=>{if(dialog.returnValue==='ok')action();};dialog.showModal();}
+ function peopleHTML(){const duplicates=duplicateNames(state.people);return `<section class="panel" id="paso1"><span class="eyebrow">PASO 1 · CONCURSANTES</span><div class="panel-heading"><h2>Todos tienen un lugar</h2><span class="pill">${state.people.length} personas</span></div><p>Nombre y edad (1–110). Las edades se utilizan solo para equilibrar los equipos y permanecen en este panel.</p>${duplicates.length?`<p class="warning" role="status">Nombres repetidos: ${duplicates.map(esc).join(', ')}. Se permiten homónimos; usa el número de fila para distinguirlos.</p>`:''}${state.people.some(p=>p.age===null)?'<p class="warning">Completa las edades recuperadas de la sesión anterior antes de sortear.</p>':''}<form id="add-person" class="person-add"><label>Nombre<input name="name" required maxlength="120" ${disabled()} autocomplete="off"></label><label>Edad<input name="age" required type="number" min="1" max="110" step="1" ${disabled()}></label><button ${disabled()}>Añadir concursante</button></form><details ${state.people.length<6?'open':''}><summary>Ver y editar lista · ${state.people.length} concursantes</summary><div class="people-list">${state.people.map((p,i)=>`<form class="person-edit" data-id="${esc(p.id)}"><span class="person-number">${i+1}</span><label><span class="sr-only">Nombre del concursante ${i+1}</span><input name="name" aria-label="Nombre del concursante ${i+1}" value="${esc(p.name)}" maxlength="120" required ${disabled()}></label><label><span class="sr-only">Edad del concursante ${i+1}</span><input name="age" aria-label="Edad del concursante ${i+1}" value="${p.age??''}" type="number" min="1" max="110" step="1" required ${disabled()}></label><button ${disabled()}>Guardar</button><button type="button" class="danger-text" data-action="delete" data-id="${esc(p.id)}" ${disabled()} aria-label="Eliminar concursante ${i+1}">Eliminar</button></form>`).join('')}</div></details><p class="caption">Los cambios se aplican al pulsar Guardar. Editar la lista invalida el sorteo anterior.</p><div class="actions"><button class="secondary" data-action="export-people">Exportar concursantes</button><label class="file-button">Importar concursantes JSON<input type="file" id="import-people" accept="application/json,.json" ${disabled()}></label></div></section>`;}
+ function teamsHTML(){return `<section class="panel" id="paso2"><span class="eyebrow">PASO 2 · EQUIPOS</span><h2>Elige cuántos equipos</h2><fieldset class="count-options" ${disabled()}><legend>Sin selección por defecto · elige una opción</legend>${[2,3,4].map(k=>`<label><input type="radio" name="team-count" value="${k}" ${state.teamCount===k?'checked':''}> ${k} equipos</label>`).join('')}</fieldset>${state.teamCount?`<form id="team-names" class="team-name-fields">${state.teamNames.map((n,i)=>`<label>Nombre equipo ${i+1}<input name="t${i+1}" value="${esc(n)}" maxlength="80" required ${disabled()}></label>`).join('')}<button ${disabled()}>Guardar nombres de equipos</button></form>`:'<p class="caption">Los nombres de equipo se generarán cuando elijas la cantidad.</p>'}</section>`;}
+@@ -63,7 +63,7 @@ function download(data,name){const url=URL.createObjectURL(new Blob([JSON.string
+ root.addEventListener('submit',async e=>{e.preventDefault();const form=e.target,d=new FormData(form);if(form.id==='lan-login'){try{await lan.authenticate(String(d.get('code')));await start();}catch(err){loginLAN(err.message);}return;}if(await handleLibrarySubmit(form,d))return;if(form.id==='event-selection'){const id=String(d.get('event'));if(id===activeEvent(state)?.id&&activeEvent(state)?.status!=='finished')navigate('concurso');else{resultEventId=id;document.querySelector('#event-results').innerHTML=renderResults(state,id);navigate('resultados');}return;}if(closureSubmit(form,d,{commit,ask,now:appNow,state}))return;if(fullSubmit(form,d,{commit,ask,now:appNow,state}))return;if(contestSubmit(form,d,{commit,ask,actor:actorTemplate,duelBank,now:appNow,state}))return;if(form.id==='add-person'){commit(s=>{const p=participant({name:d.get('name'),age:d.get('age')});invalidate(s,'Alta de concursante');s.people.push(p);},'Concursante añadido.');root.querySelector('#add-person input')?.focus();}else if(form.matches('.person-edit'))commit(s=>{const old=s.people.find(p=>p.id===form.dataset.id),p=participant({name:d.get('name'),age:d.get('age')},old.id,old.createdAt);invalidate(s,'Edición de concursante o edad');s.people[s.people.indexOf(old)]=p;},'Concursante guardado; bombos recalculados.');else if(form.id==='team-names')commit(s=>{const names=Array.from({length:s.teamCount},(_,i)=>String(d.get(`t${i+1}`)).trim());if(names.some(n=>!n))throw Error('Los equipos necesitan un nombre.');if(s.confirmed)throw Error('Desbloquea los equipos primero.');s.teamNames=names;},'Nombres guardados.');else if(form.id==='draw-form')commit(s=>runDraw(s,String(d.get('seed')).trim()),'Sorteo calculado y enviado a la TV.');else if(form.id==='swap-form')commit(s=>swapMembers(s,d.get('a'),d.get('b')),'Intercambio registrado; métricas actualizadas.');});
+ root.addEventListener('click',e=>{const lb=e.target.closest('[data-library]');if(lb){handleLibraryClick(lb).catch(err=>notice(err.message,true));return;}const nav=e.target.closest('[data-section],[data-team-step]');if(nav){navigate(nav.dataset.section||view.section,nav.dataset.teamStep||view.step);return;}if(closureClick(e.target.closest('[data-closure]'),{commit,ask,now:appNow,state,duelBank}))return;if(fullClick(e.target.closest('[data-full]'),{commit,ask,now:appNow,state}))return;if(contestClick(e.target.closest('[data-contest]'),{commit,ask,now:appNow,state}))return;const b=e.target.closest('[data-action]');if(!b)return;const a=b.dataset.action;if(a==='export-raw')return download({phase1:localStorage.getItem(PRIVATE_KEY),legacy:localStorage.getItem(LEGACY_KEY)},'respaldo-sin-modificar.json');if(a==='export-preimport')return download(JSON.parse(localStorage.getItem(localStorage.getItem(PREIMPORT_KEY))),'sesion-previa-importacion.json');if(a==='export-people')return download({version:1,participants:state.people},'concursantes.json');if(a==='export-session')return download(state,'noche-equipos-sesion.json');if(a==='export-legacy')return download(JSON.parse(localStorage.getItem(LEGACY_KEY)),'noche-sesion-anterior.json');if(a==='delete')return ask('Eliminar concursante','Esta acción invalida el sorteo actual. Puedes cancelar o restaurar una copia JSON.',()=>commit(s=>{invalidate(s,'Baja de concursante');s.people=s.people.filter(p=>p.id!==b.dataset.id);},'Concursante eliminado.'));if(a==='unlock')return ask('Volver a editar','Se quitará el bloqueo de confirmación. Cambiar participantes o cantidad de equipos exigirá sortear otra vez. La distribución se conserva hasta aplicar cambios.',()=>commit(unlock,'Distribución desbloqueada.'));if(a==='confirm')return ask('Confirmar equipos','Se bloquearán los cambios y nuevos sorteos para evitar modificaciones accidentales. Podrás desbloquearlos con una advertencia.',async()=>{if(await commit(confirmTeams,'Equipos confirmados y guardados.'))navigate('inicio');});if(a==='reroll')return commit(s=>runDraw(s,newSeed()),'Nueva semilla y nueva distribución.');if(a==='welcome'||a==='show-teams')return commit(s=>s.presentation.view=a==='welcome'?'welcome':'teams');if(a==='next-page')return commit(s=>s.presentation.page++);});
+ root.addEventListener('change',async e=>{const el=e.target;if(el.matches('[data-permanent]')){el.checked=true;notice('Roba y Gana permanece disponible en esta reunión.');return;}if(el.id==='event-collection'){const collection=state.contest?.library.collections?.find(c=>c.id===el.value);if(collection)for(const group of root.querySelectorAll('[data-event-game]')){const ref=collection.games.find(ref=>ref.id===group.dataset.eventGame),check=group.querySelector('[name="games"]'),version=group.querySelector('[data-event-version]');check.checked=Boolean(ref)||check.dataset.permanent==='true';if(ref){version.value=String(ref.ruleVersion);check.value=`${ref.id}:${ref.ruleVersion}`;}}return;}if(el.matches('[data-event-version]')){el.closest('[data-event-game]').querySelector('[name="games"]').value=`${el.dataset.gameId}:${el.value}`;return;}if(el.id==='library-import'){const file=el.files?.[0];if(!file)return;try{if(file.size>10_000_000)throw Error('El archivo supera 10 MB.');const incoming=Library.parseLibraryImport(JSON.parse(await file.text()));libraryView.imported=incoming;libraryView.importBase=JSON.stringify(state.contest?.library||null);libraryView.importSummary=Library.previewLibraryImport(previewBaseLibrary(),incoming);refreshLibrary();}catch(err){notice(err.message,true);el.value='';}return;}if(el.name==='team-count')return commit(s=>selectCount(s,Number(el.value)));if(el.id==='sound'||el.id==='reduced-motion')return commit(s=>{s.presentation[el.id==='sound'?'sound':'reducedMotion']=el.checked;if(s.result&&el.id==='reduced-motion'&&el.checked)s.result.duration=0;});if(el.id==='import-people'||el.id==='import-session'){const file=el.files?.[0];if(!file)return;try{if(file.size>10_000_000)throw Error('Archivo demasiado grande (máximo 10 MB).');const raw=JSON.parse(await file.text()),isPeople=el.id==='import-people',next=isPeople?parsePeopleFile(raw):validateState(raw);if(isPeople&&state.confirmed)throw Error('Desbloquea la distribución antes de importar participantes.');ask('Importar archivo',isPeople?'Se reemplazará la lista de concursantes y se invalidará el sorteo. Exporta una copia antes si la necesitas.':'Se abrirá la sesión importada. La sesión actual se conservará en una copia privada exportable desde Inicio; la sesión v1 también se conserva.',()=>commit(s=>{if(isPeople){invalidate(s,'Importación de concursantes');s.people=next;}else {preserveBeforeImport(localStorage,s);state=next;}},'Importación completada.'));}catch(err){notice(err.message,true);}el.value='';}});
+-async function start(){clearInterval(pollTimer);try{lan=await connectLAN();}catch(err){offlineLAN=true;writer=false;render();notice(err.message,true);return;}offlineLAN=false;if(lan){try{const data=await lan.read();if(data.state)state=validateState(data.state);else{state??=initialState();const saved=await lan.write(state);state=validateState(saved.state);}}catch(err){if(err.status===401){loginLAN();return;}root.innerHTML=`<section class="panel"><h1>No se conectó la sesión</h1><p>${esc(err.message)}</p><p>Revisa la conexión Wi-Fi y vuelve a cargar. Los datos de la computadora se conservan.</p></section>`;return;}}if(!state){render();return;}try{const response=await (lan?lan.privateFetch('catalogo/actor-fase2.json'):fetch('catalogo/actor-fase2.json'));if(!response.ok)throw Error('Ficha no disponible');actorTemplate=fromLegacy(await response.json());}catch{notice('No se pudo cargar la ficha privada del actor.',true);}try{const response=await(lan?lan.privateFetch('catalogo/fichas-publicas-fase2b.json'):fetch('catalogo/fichas-publicas-fase2b.json'));if(response.ok)librarySeed=Library.parsePublicCatalogSeed(await response.json());}catch{notice('El catálogo de doce fichas no está disponible; puedes crear o importar tu biblioteca.',true);}try{const response=await(lan?lan.privateFetch('catalogo/catalogo-definitivo.json'):fetch('catalogo/catalogo-definitivo.json'));if(!response.ok)throw Error('Catálogo no disponible');approvedCatalog=manualCatalog(await response.json());}catch{notice('No se pudo cargar el catálogo definitivo. Recarga antes de crear eventos nuevos.',true);}try{const response=await(lan?lan.privateFetch('catalogo/duelo-generaciones.json'):fetch('catalogo/duelo-generaciones.json'));if(response.ok)duelBank=await response.json();else throw Error('Banco no disponible');}catch{notice('No se cargó el banco de Duelo. Recarga para usar esa modalidad.',true);}try{channel=new BroadcastChannel('retos-equipos-v2');channel.onmessage=e=>{if(e.data?.type==='request')publish();};}catch{}const acquire=()=>{writer=true;try{state=saveState(localStorage,state);}catch(e){writer=false;notice(e.message,true);}render();publish();};if(navigator.locks){let ready;const acquired=new Promise(r=>ready=r);navigator.locks.request('retos-equipos-conductor',{ifAvailable:true},async lock=>{if(lock)acquire();ready();if(lock)await new Promise(()=>{});});await acquired;}else{acquire();if(!lan)notice('Este navegador no bloquea otros conductores: usa una sola pestaña de control.');}if(writer&&approvedCatalog&&actorTemplate)await commit(s=>{initializeContest(s,actorTemplate);installApproved(s,approvedCatalog);});render();if(lan){pollTimer=setInterval(async()=>{if(remoteBusy)return;const revision=lan.revision;try{const data=await lan.read();if(remoteBusy)return;if(data.revision!==revision&&data.state){state=validateState(data.state);try{saveState(localStorage,state);}catch{}publish();render();notice('Sesión actualizada desde otro dispositivo.');}}catch{}},1000);}if(lan&&!isSecureContext)return;if('serviceWorker'in navigator){try{await navigator.serviceWorker.register('./service-worker.js');await navigator.serviceWorker.ready;offlineReady=await ensurePrivateOffline(lan);if(!lan)document.querySelector('#save-status').textContent='Guardado local · Listo sin conexión';navigator.serviceWorker.addEventListener('controllerchange',()=>{offlineReady=true;});}catch{notice('No se pudo preparar la caché offline. Mantén abierto el servidor local.',true);}}}
++async function start(){clearInterval(pollTimer);try{lan=await connectLAN();}catch(err){offlineLAN=true;writer=false;render();notice(err.message,true);return;}offlineLAN=false;if(lan){try{const data=await lan.read();if(data.state)state=validateState(data.state);else{state??=initialState();const saved=await lan.write(state);state=validateState(saved.state);}}catch(err){if(err.status===401){loginLAN();return;}root.innerHTML=`<section class="panel"><h1>No se conectó la sesión</h1><p>${esc(err.message)}</p><p>Revisa la conexión Wi-Fi y vuelve a cargar. Los datos de la computadora se conservan.</p></section>`;return;}}if(!state){render();return;}try{const response=await (lan?lan.privateFetch('catalogo/actor-fase2.json'):fetch('catalogo/actor-fase2.json'));if(!response.ok)throw Error('Ficha no disponible');actorTemplate=fromLegacy(await response.json());}catch{notice('No se pudo cargar la ficha privada del actor.',true);}try{const response=await(lan?lan.privateFetch('catalogo/fichas-publicas-fase2b.json'):fetch('catalogo/fichas-publicas-fase2b.json'));if(response.ok)librarySeed=Library.parsePublicCatalogSeed(await response.json());}catch{notice('El catálogo de doce fichas no está disponible; puedes crear o importar tu biblioteca.',true);}try{const response=await(lan?lan.privateFetch('catalogo/catalogo-definitivo.json'):fetch('catalogo/catalogo-definitivo.json'));if(!response.ok)throw Error('Catálogo no disponible');approvedCatalog=manualCatalog(await response.json());}catch{notice('No se pudo cargar el catálogo definitivo. Recarga antes de crear eventos nuevos.',true);}try{const response=await(lan?lan.privateFetch('catalogo/duelo-generaciones.json'):fetch('catalogo/duelo-generaciones.json'));if(response.ok)duelBank=await response.json();else throw Error('Banco no disponible');}catch{notice('No se cargó el banco de Duelo. Recarga para usar esa modalidad.',true);}try{channel=new BroadcastChannel('retos-equipos-v2');channel.onmessage=e=>{if(e.data?.type==='request')publish();};}catch{}const acquire=()=>{writer=true;try{state=saveState(localStorage,state);}catch(e){writer=false;notice(e.message,true);}render();publish();};if(navigator.locks){let ready;const acquired=new Promise(r=>ready=r);navigator.locks.request('retos-equipos-conductor',{ifAvailable:true},async lock=>{if(lock)acquire();ready();if(lock)await new Promise(()=>{});});await acquired;}else{acquire();if(!lan)notice('Este navegador no bloquea otros conductores: usa una sola pestaña de control.');}if(writer&&approvedCatalog&&actorTemplate)await commit(s=>{initializeContest(s,actorTemplate);installApproved(s,approvedCatalog);});render();if(lan){pollTimer=setInterval(async()=>{if(remoteBusy)return;const revision=lan.revision;try{const data=await lan.read();if(remoteBusy)return;if(data.revision!==revision&&data.state){state=validateState(data.state);try{saveState(localStorage,state);}catch{}publish();render();notice('Sesión actualizada desde otro dispositivo.');}}catch{}},1000);}if(lan&&!isSecureContext)return;if('serviceWorker'in navigator){try{await navigator.serviceWorker.register('./service-worker.js');await navigator.serviceWorker.ready;offlineReady=await ensurePrivateOffline(lan);if(!lan)document.querySelector('#save-status').textContent='Guardado local · Listo sin conexión';navigator.serviceWorker.addEventListener('controllerchange',async()=>{offlineReady=false;try{offlineReady=await ensurePrivateOffline(lan);if(!lan)document.querySelector('#save-status').textContent='Guardado local · Listo sin conexión';}catch{notice('No se pudo actualizar la caché offline. Mantén abierto el servidor local y recarga.',true);}});}catch{notice('No se pudo preparar la caché offline. Mantén abierto el servidor local.',true);}}}
+ window.addEventListener('storage',e=>{if(e.key===PRIVATE_KEY&&!writer)try{state=loadState(localStorage);render();}catch(err){notice(err.message,true);}});
+ setInterval(()=>{if(state&&writer)publish();},4000);start();
+ 
+diff --git a/src/full-engines.js b/src/full-engines.js
+index e376929..5bdad4b 100644
+--- a/src/full-engines.js
++++ b/src/full-engines.js
+@@ -81,7 +81,7 @@ export function calculateFull(e,r){
+  for(const t of e.teams)rows[t.id]=balances[t.id]-before[t.id];return rows;
+  }
+  for(const t of eligible){if(f.mode==='closeness'){need(f.target!==null&&Object.hasOwn(f.estimates,t.id),'Faltan cantidades.');values[t.id]=Math.abs(f.estimates[t.id]-f.target);}else if(f.mode==='hits'){const n=f.results[t.id]?.hits;need(Number.isInteger(n)&&n>=0,'Falta el turno.');if(n>0)values[t.id]=-n;}else if(f.results[t.id]?.completed)values[t.id]=f.results[t.id].ms;}
+- for(const t of e.teams){const v=values[t.id],rank=v===undefined?null:1+Object.values(values).filter(x=>x<v).length;rows[t.id]=rank===null?0:[100,75,50,25][rank-1];}return rows;
++ for(const t of e.teams){const v=values[t.id],rank=v===undefined?null:1+Object.values(values).filter(x=>x<v).length;rows[t.id]=rank===null?0:(r.game.scoring.positions||[100,75,50,25])[rank-1];}return rows;
+ }
+ function applyCalculated(e,r){const points=calculateFull(e,r);for(const t of r.turns){t.timer.status='finished';t.timer.deadline=null;t.outcome={success:points[t.teamId]>0,participated:t.representativeId!==null,points:points[t.teamId],manual:true,reason:'Resultado calculado con las reglas definitivas'};}}
+ export function publicFull(r,phase=null){const f=r.full;if(!f)return null;const card=phase==='timer_active'&&f.clock.status==='running'&&teamCardAllowed(r.game)&&r.currentTeamId?f.cards[r.currentTeamId]:null;return {...(f.choiceOrder?{selection:{order:[...f.choiceOrder],activeTeamId:f.revealed?null:f.choiceOrder.find(tid=>!Object.hasOwn(f.choices,tid))||null,cards:Array.from({length:6},(_,index)=>({index,teamId:Object.keys(f.choices).find(tid=>f.choices[tid]===index)||null}))}}:{}),...(card?{publicCard:{teamId:r.currentTeamId,id:card.id,text:card.target||card.text,...(r.game.id==='palabras-prohibidas'?{forbidden:[...card.forbidden]}:{})}}:{}),simultaneous:f.simultaneous,unlimited:r.game.unlimited===true,progress:r.turns.map(t=>({teamId:t.teamId,hits:r.game.id==='rebote-imposible'?t.bounces||0:null,completed:f.results[t.teamId]?.completed===true})),rewards:f.revealed?f.rewardCards.map((c,index)=>({index,kind:c.kind,amount:c.amount,teamId:Object.keys(f.choices).find(t=>f.choices[t]===index)||null,challenge:c.kind==='challenge'?f.challenges[challengeIndex(c)]:null})):null};}
+diff --git a/src/offline-host.js b/src/offline-host.js
+index 34b3354..c10ab65 100644
+--- a/src/offline-host.js
++++ b/src/offline-host.js
+@@ -1,7 +1,14 @@
+-const CACHE='noche-retos-turnos-host-v13';
++const CACHE='noche-retos-mecanicas-host-v22';
+ const FILES=['./src/manual-rules.js','./src/reward-show.js','./src/reward-config.js','./src/presentation-changes.js','./src/time-input.js','./src/presentation-copy.js','./src/closure-core.js','./src/closure-host.js','./catalogo/duelo-generaciones.json','./src/full-engines.js','./src/full-host.js','./src/approved-catalog.js','./catalogo/catalogo-definitivo.json','./','./index.html','./library.css','./src/library-core.js','./src/library-host.js','./catalogo/fichas-publicas-fase2b.json','./conductor-nav.css','./src/navigation.js','./src/conductor.js','./src/teams-core.js','./src/contest-core.js','./src/round-engine.js','./src/contest-host.js','./src/game-model.js','./src/wheel.js','./src/lan-host.js','./src/offline-host.js','./catalogo/actor-fase2.json'];
+ export async function ensurePrivateOffline(lan){
+  const cache=await caches.open(CACHE);
+- for(const path of FILES){const response=await(lan?lan.privateFetch(path):fetch(path,{cache:'reload'}));if(!response.ok)throw Error('No se pudo preparar '+path);await cache.put(path,response);}
++ let cachedOnly=false;
++ for(const path of FILES){
++  let response;
++  if(!cachedOnly)try{response=await(lan?lan.privateFetch(path):fetch(path,{cache:'reload'}));}catch(error){if(lan)throw error;cachedOnly=true;}
++  response??=await cache.match(path);
++  if(!response?.ok)throw Error('No se pudo preparar '+path);
++  await cache.put(path,response);
++ }
+  return true;
+ }
+diff --git a/src/reward-show.js b/src/reward-show.js
+index baf9d08..ed005ba 100644
+--- a/src/reward-show.js
++++ b/src/reward-show.js
+@@ -4,7 +4,7 @@ export const rewardTitle=c=>c.kind==='gift'?`Ganar ${c.amount} puntos`:c.kind===
+ export function renderRewardBoard(x,teams){
+  if(!x?.selection)return '';
+  const team=id=>teams.find(t=>t.id===id)?.name||'Sin elegir',sel=x.selection;
+- if(!x.rewards)return `<section class="reward-board"><h2>${sel.activeTeamId?`Elige ${esc(team(sel.activeTeamId))}`:'Elecciones completas · esperando revelación'}</h2><div class="reward-grid">${sel.cards.map(c=>`<article class="reward-tile facedown"><strong>${c.index+1}</strong><span>${c.teamId?esc(team(c.teamId)):'Disponible'}</span></article>`).join('')}</div></section>`;
++ if(!x.rewards)return `<section class="reward-board" style="--reward-teams:${teams.length}"><h2>${sel.activeTeamId?`Elige ${esc(team(sel.activeTeamId))}`:'Elecciones completas · esperando revelación'}</h2><div class="reward-grid">${sel.cards.map(c=>`<article class="reward-tile facedown"><strong>${c.index+1}</strong><span>${c.teamId?esc(team(c.teamId)):'Disponible'}</span></article>`).join('')}</div></section>`;
+  const tile=c=>`<article class="reward-tile revealed"><span>Tarjeta ${c.index+1}</span><h3>${esc(c.teamId?team(c.teamId):'Sin elegir')}</h3><strong>${esc(rewardTitle(c))}</strong>${c.challenge?`<p>${esc(c.challenge)}</p>`:''}</article>`;
+- return `<section class="reward-board"><h2>Resultados por equipo · pendientes de confirmar al marcador</h2><div class="reward-grid">${sel.order.map(tid=>x.rewards.find(c=>c.teamId===tid)).filter(Boolean).map(tile).join('')}</div><details class="unclaimed-rewards" open><summary>Tarjetas que nadie eligió</summary><div class="reward-grid">${x.rewards.filter(c=>!c.teamId).map(tile).join('')}</div></details></section>`;
++ return `<section class="reward-board" style="--reward-teams:${teams.length}"><h2>Resultados por equipo · pendientes de confirmar al marcador</h2><div class="reward-grid">${sel.order.map(tid=>x.rewards.find(c=>c.teamId===tid)).filter(Boolean).map(tile).join('')}</div><details class="unclaimed-rewards" open><summary>Tarjetas que nadie eligió</summary><div class="reward-grid">${x.rewards.filter(c=>!c.teamId).map(tile).join('')}</div></details></section>`;
+ }
+diff --git a/tests/mechanics-audit.test.js b/tests/mechanics-audit.test.js
+new file mode 100644
+index 0000000..8ef4180
+--- /dev/null
++++ b/tests/mechanics-audit.test.js
+@@ -0,0 +1,65 @@
++import {test} from 'node:test';
++import assert from 'node:assert/strict';
++import * as C from '../src/contest-core.js';
++import * as T from '../src/teams-core.js';
++import * as F from '../src/full-engines.js';
++import * as L from '../src/library-core.js';
++import {revised,openRevised,playRevised,corrected} from './postensayo-fixtures.js';
++import {fresh,play} from './full-fixtures.js';
++import {installApproved} from '../src/approved-catalog.js';
++
++const mechanics=[
++ ['galleta-viajera',true,90,'position'],['picasso-oscuras',true,90,'position'],
++ ['roba-y-gana',true,null,'special'],['tararea',false,60,'position'],
++ ['torre-traicionera',true,90,'position'],['hazme-sonido',false,60,'hits'],
++ ['rebote-imposible',true,null,'position'],['manos-mantequilla',true,120,'position'],
++ ['actor',false,90,'position'],['palabras-prohibidas',false,60,'hits'],
++ ['yo-soy-objeto',false,90,'hits'],['cuantos-hay',true,null,'closeness']
++];
++for(const [id,simultaneous,seconds,mode] of mechanics)test(`contrato de mecánica y visibilidad: ${id}`,()=>{
++ const s=revised(),r=openRevised(s,id),f=r.full;
++ assert.equal(f.simultaneous,simultaneous);assert.equal(r.game.seconds,seconds);assert.equal(f.mode,mode);
++ if(mode==='closeness')F.fullAction(s,'target',{value:987654});
++ C.startTimer(s,10000);const dto=T.publicSnapshot(s).contest;
++ assert.equal(dto.timer.durationMs,(seconds??3600)*1000);
++ if(['hazme-sonido','palabras-prohibidas'].includes(id)){
++  assert.equal(dto.execution.publicCard.id,f.cards[r.currentTeamId].id);
++  if(id==='palabras-prohibidas')assert.deepEqual(dto.execution.publicCard.forbidden,f.cards[r.currentTeamId].forbidden);
++ }else{
++  assert.equal(dto.execution.publicCard,undefined);
++  for(const card of Object.values(f.cards))if(card)assert.ok(!JSON.stringify(dto).includes(card.text));
++ }
++ assert.equal(dto.execution.deck,undefined);assert.equal(dto.execution.cards,undefined);assert.equal(dto.execution.target,undefined);
++ C.pauseTimer(s,11000);assert.equal(T.publicSnapshot(s).contest.execution.publicCard,undefined);
++ T.validateState(T.clone(s));
++});
++
++test('posiciones configuradas en biblioteca se calculan con esa revisión, conservando el evento anterior',()=>{
++ const s=revised(),old=JSON.stringify(C.activeEvent(s));
++ const g=T.clone(s.contest.library.games.find(g=>g.id==='actor'));
++ g.scoring.positions=[80,60,40,20];g.victory='Tabla configurable de ensayo: 80/60/40/20.';
++ L.saveGame(s,g,{expectedVersion:g.ruleVersion,reason:'Configuración de ensayo'});
++ assert.equal(JSON.stringify(C.activeEvent(s)),old);
++ C.configureEventGames(s,C.activeEvent(s).selectedGames.map(g=>({id:g.id,ruleVersion:s.contest.library.games.find(x=>x.id===g.id).ruleVersion})));
++ const r=playRevised(s,'actor');
++ assert.deepEqual(F.calculateFull(C.activeEvent(s),r),{t1:80,t2:40,t3:20,t4:80});
++ T.validateState(T.clone(s));
++});
++
++test('actualizar futuras rondas conserva íntegra una ronda simultánea histórica ya puntuada',()=>{
++ const s=fresh(),r=play(s,'actor'),e=C.activeEvent(s),old=JSON.stringify(r),ledger=JSON.stringify(e.ledger);
++ installApproved(s,corrected);C.nextRound(s);
++ C.configureEventGames(s,e.selectedGames.map(g=>({id:g.id,ruleVersion:s.contest.library.games.find(x=>x.id===g.id).ruleVersion})));
++ assert.equal(JSON.stringify(r),old);assert.equal(JSON.stringify(e.ledger),ledger);
++ assert.equal(r.full.simultaneous,true);assert.equal(e.selectedGames.find(g=>g.id==='actor').executionMode,'turns');
++ T.validateState(T.clone(s));
++});
++
++test('ningún acierto fuera de plazo crea resultado y el turno siguiente queda sin arrancar',()=>{
++ const s=revised(),r=openRevised(s,'actor');C.startTimer(s,10000);
++ assert.throws(()=>F.fullAction(s,'complete',{teamId:'t1'},100001));
++ assert.equal(r.full.results.t1,undefined);assert.equal(C.recoverTimer(s,100001),true);
++ assert.equal(r.full.results.t1.completed,false);assert.equal(r.currentTeamId,'t2');
++ assert.equal(r.full.clock.status,'idle');assert.equal(r.full.clock.remainingMs,90000);
++ T.validateState(T.clone(s));
++});
+diff --git a/tests/offline-recovery.test.js b/tests/offline-recovery.test.js
+new file mode 100644
+index 0000000..310fead
+--- /dev/null
++++ b/tests/offline-recovery.test.js
+@@ -0,0 +1,26 @@
++import {test} from 'node:test';
++import assert from 'node:assert/strict';
++import {ensurePrivateOffline} from '../src/offline-host.js';
++
++test('una caché completa se verifica sin servidor y solo se intenta la red una vez',async()=>{
++ const oldFetch=globalThis.fetch,oldCaches=globalThis.caches,files=new Map();let requests=0,offline=false;
++ globalThis.caches={open:async()=>({put:async(path,response)=>files.set(path,response.clone()),match:async path=>files.get(path)?.clone()})};
++ globalThis.fetch=async()=>{requests++;if(offline)throw new TypeError('Servidor apagado');return new Response('recurso local');};
++ try{assert.equal(await ensurePrivateOffline(null),true);assert.ok(files.size>30);offline=true;requests=0;assert.equal(await ensurePrivateOffline(null),true);assert.equal(requests,1);}
++ finally{globalThis.fetch=oldFetch;globalThis.caches=oldCaches;}
++});
++
++test('una caché incompleta no se declara preparada cuando falla la red',async()=>{
++ const oldFetch=globalThis.fetch,oldCaches=globalThis.caches;
++ globalThis.caches={open:async()=>({put:async()=>{},match:async()=>undefined})};
++ globalThis.fetch=async()=>{throw new TypeError('Sin red');};
++ try{await assert.rejects(ensurePrivateOffline(null),/No se pudo preparar/);}
++ finally{globalThis.fetch=oldFetch;globalThis.caches=oldCaches;}
++});
++
++test('un fallo de autenticación LAN no se oculta con recursos privados cacheados',async()=>{
++ const oldCaches=globalThis.caches;let cacheReads=0;
++ globalThis.caches={open:async()=>({match:async()=>{cacheReads++;return new Response('privado');}})};
++ try{await assert.rejects(ensurePrivateOffline({privateFetch:async()=>{throw new Error('Código requerido');}}),/Código requerido/);assert.equal(cacheReads,0);}
++ finally{globalThis.caches=oldCaches;}
++});
+diff --git a/tests/test_mechanics_audit_lan.py b/tests/test_mechanics_audit_lan.py
+new file mode 100644
+index 0000000..dcbfe29
+--- /dev/null
++++ b/tests/test_mechanics_audit_lan.py
+@@ -0,0 +1,17 @@
++import unittest
++from full_engines import calculate
++
++
++class ConfiguredPositions(unittest.TestCase):
++    def test_configured_points_keep_competition_ties_and_zero_for_noncompletion(self):
++        tids = ['t1', 't2', 't3', 't4']
++        event = {'teams': [{'id': tid} for tid in tids]}
++        round_ = {
++            'representatives': {tid: 'person-'+tid for tid in tids},
++            'game': {'scoring': {'positions': [80, 60, 40, 20]}},
++            'full': {'mode': 'position', 'results': {
++                tid: {'completed': tid != 't4', 'ms': 2000 if tid == 't3' else 1000}
++                for tid in tids
++            }}
++        }
++        self.assertEqual(calculate(event, round_), {'t1': 80, 't2': 80, 't3': 40, 't4': 0})
+-- 
+2.43.0
+

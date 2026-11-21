@@ -1,6 +1,6 @@
 # Ensayo en computadora + HDMI + celular
 
-**La integración Work/Codex está bloqueada por fuentes faltantes.** Estas instrucciones permiten ensayar la base conservada, sin certificar la versión aún no integrada. Usar un evento de ensayo separado y exportar el respaldo del evento real antes de cualquier prueba.
+**La integración Work/Codex está disponible para ensayo físico, sin merge a main.** Se completaron 254 pruebas automatizadas y 14 rondas en navegador; HDMI, TV y celular físicos quedan pendientes. Usar un evento de ensayo separado y exportar el respaldo del evento real antes de cualquier prueba.
 
 ## Preparación
 
@@ -29,10 +29,10 @@ Crear un evento ENSAYO con cuatro equipos. Verificar mismo evento/ronda y marcad
 
 ## Sin Internet y recuperación
 
-Los archivos, bancos, fuentes e imágenes de la base están dentro del proyecto. Con el servidor corriendo y una red local activa, Internet no es necesario para jugar. No apagar el router: el celular sigue necesitando la LAN. En HTTP por IP local, algunos navegadores no habilitan service worker; la operación depende del servidor local abierto y no de una instalación PWA.
+Los archivos, bancos, fuentes e imágenes de la integración están dentro del proyecto. Con el servidor corriendo y una red local activa, Internet no es necesario para jugar. No apagar el router: el celular sigue necesitando la LAN. En HTTP por IP local, algunos navegadores no habilitan service worker; la operación depende del servidor local abierto y no de una instalación PWA.
 
 Pausar y exportar el ensayo. Desconectar brevemente el Wi-Fi del celular y reconectarlo; recargar y verificar mismo estado. Detener el servidor con Ctrl+C, reiniciarlo con el mismo comando/carpeta y volver a cargar conductor/TV. Verificar mismos equipos, ronda, tarjetas y puntuaciones; reintentar una confirmación ya registrada no debe duplicar movimientos. Si una escritura queda obsoleta, recargar antes de continuar; no sobrescribir el estado vigente.
 
-Registrar dispositivo, resolución, ronda, acción, resultado esperado/observado y capturas separadas de conductor y TV. Revisar ruleta, textos a distancia, tarjetas, reloj, marcador y ceremonia sin superposiciones. Conservar cualquier evidencia del diseño reciente de Codex para compararla cuando se recupere su código.
+Registrar dispositivo, resolución, ronda, acción, resultado esperado/observado y capturas separadas de conductor y TV. Revisar ruleta, textos a distancia, tarjetas, reloj, marcador y ceremonia sin superposiciones. Comparar las capturas de `evidencia/integracion-work-codex/` con la pantalla real.
 
 **Ensayo físico: pendiente hasta realizarlo.**

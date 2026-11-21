@@ -75,3 +75,12 @@ class ClosureLANTests(unittest.TestCase):
         self.assertTrue(frames[1]['public']['contest']['automaticReward'])
         r = frames[-1]['state']['contest']['events'][0]['rounds'][-1]
         self.assertEqual(r['full']['rewardSnapshot']['targets']['t1'], 't2')
+
+
+class ConfiguredPointsRegression(unittest.TestCase):
+    def test_rank_points_use_game_configuration(self):
+        from full_engines import calculate
+        teams = [{'id': 't'+str(i)} for i in range(1, 5)]
+        e = {'teams': teams}
+        r = {'representatives': {t['id']: 'participant' for t in teams}, 'game': {'scoring': {'positions': [80, 60, 40, 20]}}, 'full': {'mode': 'position', 'results': {t['id']: {'completed': True, 'ms': i*100} for i, t in enumerate(teams)}}}
+        self.assertEqual(calculate(e, r), dict(zip([t['id'] for t in teams], [80, 60, 40, 20])))
